@@ -1,0 +1,570 @@
+/* Text and links */
+form
+{
+	margin:0px;
+}
+body  {
+	font-size :11px;
+	font-family: arial, verdana, Microsoft JhengHei;
+	font-weight :Normal;
+	font-style :Normal;
+	text-align :Left;
+	color :#333333;
+	margin: 0;
+}
+
+td  {
+	font-size :11px;
+	font-weight :Normal;
+	font-style :Normal;
+	color :#333333;
+}
+a  {
+	text-decoration :None;
+	color :#333333;
+}
+
+a:visited  {
+	color :#333333;
+}
+
+a:active  {
+	color :#333333;
+}
+
+a:hover  {
+	color :#003366;
+	cursor: pointer;
+}
+
+LABEL {
+	cursor: pointer;
+}
+
+.LabelTxt  {
+	font-size :11px;
+	font-family: arial, verdana, Microsoft JhengHei;
+	font-weight :Normal;
+	font-style :Normal;
+	color :#333333;
+}
+
+.TDBold  {
+	font-size :11px;
+	font-family: arial, verdana, Microsoft JhengHei;
+	font-weight :Bold;
+	font-style :Normal;
+	color :#333333;
+}
+
+big { 
+	font-size: 22px; 
+	font-family:Verdana, Helvetica, Arial, Tahoma;
+	font-weight :Bold;
+	color :#333333;
+}
+
+strong { 
+	font-size: 11px; 
+	font-family:Verdana, Helvetica, Arial, Tahoma;
+	font-weight :Bold;
+	color :#333333;
+}
+
+textarea
+{
+	font-size: 11px; 
+	font-family:Verdana, Helvetica, Arial, Tahoma;
+}
+
+/* Input fields */
+.std {
+	z-index:10;
+	width:250px;
+	FONT-SIZE: 11px;
+}
+
+.ecomStd
+{
+	width:250px;
+	FONT-SIZE: 11px;
+}
+
+.stdNoWidth {
+    COLOR: #333333;
+    FONT-FAMILY: Verdana, Helvetica, Arial, Tahoma, Verdana, Arial;
+    FONT-SIZE: 11px;
+	z-index:10;
+}
+
+.stdNoColor {
+    FONT-FAMILY: Verdana, Helvetica, Arial, Tahoma, Verdana, Arial;
+    FONT-SIZE: 11px;
+	z-index:10;
+	width:250px;
+}
+
+/* Tabs */
+.tab, .tab_nocursor {
+    BACKGROUND: url(images/Tab_off.gif) no-repeat left top;
+}
+.tab_big, .tab_big_nocursor {
+    BACKGROUND: url(images/Tab_off_large.gif) no-repeat left top;
+}
+.tabMO {
+    BACKGROUND: url(images/Tab_mo.gif) #ffffff no-repeat left top;
+}
+.seltab, .seltab_nocursor {
+    BACKGROUND: url(images/Tab_active.gif) no-repeat left top;
+}
+.seltab_big, .seltab_big_nocursor  {
+    BACKGROUND: url(images/Tab_active_large.gif) no-repeat left top;
+}
+.tabMO, .tab_big_nocursor, .tab_nocursor, .tab_big, .tab {
+	BORDER-BOTTOM: #919B9C 1pt solid;
+}
+.tab, .tab_big, .tab_nocursor, .tab_big_nocursor, .tabMO, .seltab, .seltab_nocursor, .seltab_big, .seltab_big_nocursor {
+    font-family: Verdana, Helvetica, Arial, Tahoma;
+    font-size: 10px;
+    font-weight: Normal;
+    color: #003366;
+	padding: 3px 7px 0px 7px;
+}
+.tab, .tab_nocursor, .tabMO, .seltab, .seltab_nocursor {
+	width: 61px;
+}
+.tab_big, .tab_big_nocursor, .seltab_big, .seltab_big_nocursor {
+	width: 106px;
+}
+.tab, .tab_big, .tabMO, .seltab, .seltab_big {
+    CURSOR: pointer;
+}
+.hiddentab {
+    BORDER-BOTTOM: #919B9C 1pt solid;
+}
+
+#breadcrumb, .breadcrumb
+{
+	height:20px;
+	line-height:18px;
+	display:inherit;
+	vertical-align:middle;
+	padding-left:10px;
+}
+
+/* Tables in tabs */
+.tabTable {
+	/* border-bottom :1px solid #919B9C; by SED */
+	border-left :1px solid #919B9C;
+	border-right :1px solid #919B9C;
+	width:600px;
+	/*height:225px; By SED */ 
+	background-color:#FFFFFF;
+}
+.tabTable100 {
+	border-bottom :1px solid #919B9C;
+	border-left :1px solid #919B9C;
+	border-right :1px solid #919B9C;
+	width:100%;
+	height:94%;
+	background-color:#FFFFFF;
+}
+.tabTable100Small {
+	border-bottom :1px solid #919B9C;
+	border-left :1px solid #919B9C;
+	border-right :1px solid #919B9C;
+	width:100%;
+	height:85%;
+	background-color:#FFFFFF;
+}
+.tabTable100Large {
+	border-bottom :1px solid #919B9C;
+	border-left :1px solid #919B9C;
+	border-right :1px solid #919B9C;
+	width:100%;
+	height:100%;
+	background-color:#FFFFFF;
+}
+
+/* New button */
+button, .buttonSubmit {
+	height: 23px;
+	font-size: 11px;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-family: arial, verdana, Microsoft JhengHei;
+}
+
+
+.gbTitle {
+	Background-color: transparent;
+	font-size:10px;
+	font-weight:Bold;
+	color:#003366;
+}
+/* Alternate menus */
+.altMenu{
+	background-color:#f6f6f6;
+	position:absolute;
+	display:block;
+	width:150px;
+	left:10px;
+	top:10px;
+	padding:1px;
+	border:1px solid #002D96;
+	z-index:10000
+}
+
+.altMenuLeftPane
+{
+	left: 0px;
+	width: 25px;
+	position: absolute;
+	top: 0px;
+	height: 100%;
+	min-height: 100%;
+	/*filter:progid:DXImageTransform.Microsoft.Gradient(startColorStr='#e3efff', endColorStr='#87ade4', gradientType='1');*/
+	background: url(navigation_menu_back.jpg) repeat-y;
+}
+
+.altMenuImg{
+	margin-right:7px;
+	margin-left:3px;
+	border: 0px solid #000;
+	height: 16;
+	width: 16;
+}
+
+.altMenuDivider{
+	background-color:#6A8CCB;
+	width:81%;
+	height:1px;
+	margin-top:1px;
+	margin-bottom:1px;
+}
+
+.picPreview{
+	background-color:#FFFFFF;
+	position:absolute;
+	display:block;
+	left:10px;
+	top:10px;
+	border:1px solid #ACA899;
+}
+
+.altFileMenu{
+	background-color:#FFFFFF;
+	position:absolute;
+	display:block;
+	width:95px;
+	height:45px;
+	left:10px;
+	top:10px;
+	border:1px solid #ACA899;
+}
+
+.mout
+{
+	display:block;
+	height:22px;
+	/*border-width:1px;*/
+	width:100%;
+	margin-right: -25px;
+}
+
+.moov
+{
+	display:block;
+	cursor:pointer;
+	height:22px;
+	background-color:#FFEEC2;
+	border:1px solid #000080;
+	width:97%;
+	margin-right: -25px;
+}
+
+/* css hack to make changes in firefox but make IE ignore them. */
+html>body .mout {
+	height: 18px;
+	padding-top:1px;
+}
+html>body .moov {
+	height: 18px;
+	padding-top:1px;
+}
+html>body .altMenuDivider {
+	width:82%;
+}
+
+/* Disable */
+.disableImage{
+	/*filter:progid:DXImageTransform.Microsoft.Alpha(opacity=30)progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);*/
+}
+.disableText{
+	color:#C1C1C1;
+}
+.disableTextItalic{
+	color:#C1C1C1;
+	font-style:italic;
+}
+
+
+/*
+.mout{
+	height:18px;
+	border:1px solid #FFFFFF;
+}
+
+.moov{
+	cursor:pointer;
+	background-color:#C1D2EE;
+	height:18px;
+	border:1px solid #316AC5;
+}
+*/
+
+/* Cursors */
+.H {
+	cursor: pointer;
+}
+
+.A {
+	cursor: default;
+}
+
+/* Popup windows */
+.PrevL{
+	top:30px;
+	left:30px;
+	border: 1px solid #333333;
+	width:650px;
+	height:380px;
+	position:absolute;
+	background-color:#FFFFFF;
+}
+
+.Settings{
+	top:47px;
+	left:10px;
+	border: 1px solid #333333;
+	width:600px;
+	height:200px;
+	position:absolute;
+	background-color:#FFFFFF;
+}
+
+/* MyPage */
+.VerticalTabTable {
+	border-top :1px solid #919B9C;
+	border-bottom :1px solid #919B9C;
+	/*border-left :1px solid #919B9C;*/
+	background-color:#FFFFFF;
+}
+
+.VerticalTabOn {
+	border-left :1px; 
+	background-image: url(images/VTab_On.gif);
+	cursor: pointer;
+}
+
+.VerticalTabOff {
+	border-left :1px solid #919B9C; 
+	background-image: url(images/VTab_Off.gif);
+	cursor: pointer;
+}
+
+.graybg {
+	background-color:#E1E1E1;
+	border:1px solid #003366
+}
+
+.VsWfHeader {
+	BORDER-RIGHT: #e6e6e6 1px solid; 
+	BORDER-TOP: #e6e6e6 1px solid; 
+	PADDING-LEFT: 5px; 
+	BORDER-LEFT: #e6e6e6 1px solid; 
+	BORDER-BOTTOM: #e6e6e6 1px solid; 
+	HEIGHT: 20px; 
+	BACKGROUND-COLOR: #e6e6e6;
+	font-weight:bold;
+}
+
+/*
+Ecom Shop
+*/
+.LanguageCode2  {
+	font-size :9px;
+	font-family: arial, verdana, Microsoft JhengHei;
+	font-weight :Normal;
+	font-style :Normal;
+	color :#ffffff;
+}
+.LanguageCode2B  {
+	font-size :9px;
+	font-family: arial, verdana, Microsoft JhengHei;
+	font-weight :Normal;
+	font-style :Normal;
+	color :#000000;
+	text-align: center;
+}
+.DropDownButton			{height: 24px; cursor:pointer;}
+.DropDownButton_hover		{border: solid 1px #316AC5; background-color: #C1D2EE; height:24px; cursor:pointer;}
+
+.groupSelectedNotActive
+{
+	color:#C1C1C1;
+}
+.shopSelectedNotActive
+{
+	color:#C1C1C1;
+}
+
+/*
+Telerik r.a.d. control
+*/
+.RadGrid
+{
+	BORDER-RIGHT: #e6e6e6 0px solid; 
+	BORDER-TOP: #e6e6e6 0px solid; 
+	BORDER-LEFT: #e6e6e6 0px solid; 
+	BORDER-BOTTOM: #e6e6e6 0px solid; 
+}
+
+.Pager
+{
+	font-size : 11px;
+	font-family : Verdana, Helvetica, Arial, Tahoma;
+	font-weight : normal;
+	font-style : normal;
+	text-decoration : none;
+}
+
+.Pager A
+{
+	font-weight : bold;
+	font-weight : normal;
+}
+
+.Pager A:visited
+{
+}
+
+.Pager A:active
+{
+}
+
+.Pager A:hover
+{
+	color : #003366;
+	cursor : pointer;
+}
+
+.OutlookSubItem
+{
+	border-bottom: 1px solid #EAE9E1;
+	font-size: 11px;
+	background-color: #fafafa;
+}
+
+.OutlookTableBorder
+{
+	padding: 0px 0px 0px 0px;
+	border: 1px solid #ACA899;
+}
+
+.OutlookHeaderStart
+{
+	font: 11px Verdana, Helvetica, Arial, Tahoma;
+	border-bottom: 3px solid #D2CFBE;
+	font-weight: normal;
+	padding-left: 5px;
+}
+
+.OutlookHeader
+{
+	font: 11px Verdana, Helvetica, Arial, Tahoma;
+	border-bottom: 3px solid #D2CFBE;
+	font-weight: normal;
+	BORDER-LEFT: 2px outset white;
+	padding-left: 5px;
+	/*width: 100px;*/
+}
+
+.OutlookHeader A
+{
+	color: black;
+	text-decoration: none;
+	padding-left: 1px;
+}
+
+.OutlookItem TD
+{
+	border-bottom: 1px solid #EAE9E1;
+	font-size: 11px;
+	background-color: white;
+}
+
+.OutlookItemRedItemText TD
+{
+	border-bottom: 1px solid #EAE9E1;
+	font-size: 11px;
+	background-color: white;
+	color:Red;
+}
+
+.OutlookItemOver TD
+{
+	border-bottom: 1px solid #EAE9E1;
+	font-size: 11px;
+	background-color: #f3f1e7;
+}
+
+.OutlookItemDim TD
+{
+	border-bottom: 1px solid #EAE9E1;
+	font-size: 11px;
+	background-color: #fafafa;
+}
+
+/*
+.OutlookItemDimText TD
+{
+	border-bottom: 1px solid #EAE9E1;
+	font-size: 11px;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=30)progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+}
+*/
+
+.OutlookItemDimText A, .OutlookItemDimText TD A, .OutlookItemDimText A:hover, .OutlookItemDimText A:visited, .OutlookItemDimText A:active   
+{
+	color:#c2c2c2;
+}
+
+.OutlookItemRedText A, .OutlookItemRedText TD A, .OutlookItemRedText A:hover, .OutlookItemRedText A:visited, .OutlookItemRedText A:active   
+{
+	color:Red;
+}
+
+.OutlookItemInactiveText A, .OutlookItemInactiveText TD A, .OutlookItemInactiveText A:hover, .OutlookItemInactiveText A:visited, .OutlookItemInactiveText A:active   
+{
+	color:#FF4040;
+}
+
+.OutlookItemInactiveDimText A, .OutlookItemInactiveDimText TD A, .OutlookItemInactiveDimText A:hover, .OutlookItemInactiveDimText A:visited, .OutlookItemInactiveDimText A:active   
+{
+	color:#FFA3A3;
+}
+
+.topmenu {
+    width: 100%; 
+    table-layout: fixed;
+}
+.topmenu_td {
+    width: 100px;
+    vertical-align: top;         
+}
+
+.EcomAccess
+{
+	padding-left:20px;
+}

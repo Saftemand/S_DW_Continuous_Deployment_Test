@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>Print</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var img = new Image();
+			img.src = parent.document.getElementById('ipPrintFrame' + document.location.href.split('?paperID=')[1]).imageToLoad + '?RND=' + Math.floor(Math.random()*10000);
+			img.onload = scalePrintImage;
+			
+			function scalePrintImage()
+			{
+				var newWidth = this.width;
+				var newHeight = this.height;
+
+				if(this.width / this.height > 0,66)
+					document.getElementById('imgPrint').style.width = '100%';
+				else
+					document.getElementById('imgPrint').style.height = '100%';
+
+				document.getElementById('imgPrint').src = this.src;
+				
+				focus();
+				print();
+			}
+		</script>
+		
+		<img src="#" id="imgPrint" />
+	</body>
+</html>

@@ -1,0 +1,106 @@
+﻿.DWFrontendEditor {
+	display: block;
+	border: 0px solid black;
+	margin: 2px;
+	min-height: 64px;
+	min-width: 175px;
+    height: expression(runtimeStyle.height = offsetHeight < 64 ? "64px" : "auto"); 
+	width: expression(runtimeStyle.width = offsetWidth < 175 ? "175px" : "100%"); 
+}
+
+.DWFrontendEditorImage {
+}
+
+.DWFrontendEditorImage_Default {
+	border: 1px solid #7f9db9;
+	display: block;
+	height: 100%;
+	margin: 2px;
+}
+
+.DWFrontendEditorImage_NoItem {
+	background-color: #d9dde3;
+	height: 64px;
+}
+
+.DWFrontendEditorModule {
+	
+}
+
+.DWFrontendEditorModule_Default {
+	border: 1px solid #7f9db9;
+	display: block;
+	height: 100%;
+	margin: 2px;
+}
+
+.DWFrontendEditorModule_NoItem {
+	background-color: #d1ffb5;
+	height: 64px;
+}
+
+.DWFrontendEditorItemProgress {
+	position: absolute;
+	display: block;
+	background: url('/Admin/Images/Ribbon/UI/List/PipeL.gif' ) top left repeat-x !important;
+	border-bottom: 1px solid #9FAEC2 !important;
+}
+
+.DWFrontendEditorItemProgress ul 
+{
+	margin: 0px;
+	padding: 0px;
+	padding-right:2px;
+	padding-left:2px;
+	list-style: none;
+	
+}
+.DWFrontendEditorItemProgress ul li
+{
+	margin: 0px;
+	padding: 0px;
+	padding-right:2px;
+	list-style: none;
+	float: left;
+	display: inline;
+}
+
+.DWFrontendEditorItemProgress img {
+	border: 0px;
+	width: 24px;
+	height: 24px;
+	vertical-align: middle;
+}
+
+.DWFrontendEditorItemMenu
+{
+	position: absolute;
+	
+	border: solid 1px #9FAEC2;
+	border-bottom: 0px solid black;
+	
+	font-family: Arial, verdana, Microsoft JhengHei;
+	font-size: 11px;
+	
+	*display: table;
+}
+
+.DWFrontendEditorItemMenu .innerContainer
+{
+	*display: table-cell;
+	*white-space: nowrap;
+}
+
+.innerContainer ul li
+{
+	*float: none !important;
+}
+
+.DWFrontendEditorItemMenu a,
+.DWFrontendEditorItemMenu a:visited,
+.DWFrontendEditorItemMenu a:active,
+.DWFrontendEditorItemMenu a:hover
+{
+	color: #15428b !important;
+	text-decoration: none !important;
+}

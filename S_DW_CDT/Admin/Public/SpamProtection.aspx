@@ -1,0 +1,1 @@
+<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="SpamProtection.aspx.vb" Inherits="Dynamicweb.Admin.SpamProtection" %>

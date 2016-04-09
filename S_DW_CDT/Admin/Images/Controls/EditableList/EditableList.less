@@ -1,0 +1,382 @@
+﻿@import 'EditableListVariables';
+
+.editable-list {
+    font-family: arial, verdana, Microsoft JhengHei;
+    font-size: 11px;
+    color: #333333;
+    border: 1px solid @outer-border-color;
+
+    * {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    table.editable-list {
+        width: 100%;
+        border: none;
+        border-spacing: 0;
+        margin: 0;
+    }
+
+    img {
+        border: none;
+    }
+
+    .disabled {
+        cursor: auto !important;
+    }
+
+    .hidden {
+        display: none !important;
+    }
+
+    .no-paging {
+        overflow-x: auto !important;
+    }
+
+    .unselectable-text {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    .editable-list-button,
+    .editable-list-data {
+        cursor: pointer;
+    }
+
+    .editable-list-button {
+        &.disabled {
+            .disabled;
+            background-color: transparent;
+            opacity: 0.4;
+            color: gray;
+        }
+    }
+
+    div.editable-list-dropdown {
+        position: relative;
+        display: block;
+
+        > a {
+            display: block;
+            height: 100%;
+            width: 14px;
+            border: 1px solid transparent;
+
+            > span {
+                display: inline-block;
+                width: 0;
+                height: 0;
+                margin-top: 7px;
+                margin-left: 2px;
+                vertical-align: middle;
+                border-top: 4px solid;
+                border-right: 4px solid transparent;
+                border-left: 4px solid transparent;
+            }
+
+            &:hover {
+                border: 1px solid @button-border-hover-color;
+                background: #FFE7A2 !important;
+            }
+        }
+
+        > ul {
+            position: absolute;
+            list-style: none;
+            display: none;
+            top: 100%;
+            right: 0;
+            height: auto;
+            width: 136px;
+            padding: 2px 2px;
+            margin: 2px 0 0;
+            z-index: 10000;
+            background-color: #fff;
+            border: 1px solid @outer-border-color;
+            border-radius: 3px;
+            box-shadow: rgba(0, 0, 0, 0.172549) 0px 6px 12px 0px;
+
+            &.opened {
+                display: block;
+            }
+
+            li {
+                height: 22px;
+                line-height: 20px;
+                text-align: left;
+                border: 1px solid transparent;
+                border-radius: 2px;
+                cursor: pointer;
+
+                &:hover {
+                    border: 1px solid @button-border-hover-color;
+                    background: url(/Admin/Images/Ribbon/UI/Contextmenu/Bg.gif) left top repeat-x !important;
+                }
+
+                > span {
+                    position: relative;
+                    top: 1px;
+                    display: inline-block;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 1;
+                    margin: 0 4px;
+                    float: left;
+
+                    &:before {
+                        content: "";
+                    }
+                }
+
+                > a {
+                    display: inline-block;
+                    height: 100%;
+                    clear: both;
+                    font-weight: 400;
+                    line-height: 1.42857143;
+                    color: #333;
+                    white-space: nowrap;
+                    text-decoration: none;
+                    background: none !important;
+                    padding-bottom: 3px;
+                    padding-left: 5px;
+                    padding-top: 3px;
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+    .editable-list-cell {
+        height: 18px;
+        vertical-align: middle;
+        padding-left: 3px;
+        border-bottom: 1px solid @inner-border-color;
+
+        img {
+            margin-left: 8px;
+        }
+
+        a {
+            cursor: default;
+            color: @anchor-color;
+            padding-right: 10px;
+            text-decoration: none;
+            display: inline-block;
+            width: 20px;
+
+            &:hover {
+                background: url('/Admin/images/Ribbon/BtnBg.gif' ) center center;
+            }
+        }
+    }
+
+    .editable-list-header {
+        .editable-list-cell {
+            height: 22px;
+            background: url('/Admin/Images/Ribbon/UI/List/Pipe.gif' ) bottom left repeat-x;
+            cursor: default;
+
+            div {
+                height: 100%;
+
+                span {
+                    vertical-align: bottom;
+                }
+
+                .separator {
+                    display: inline-block;
+                    margin: 2px 2px 0 0;
+                    height: 13px;
+                    width: 1px;
+                    padding: 0;
+                    background: url("/Admin/Images/x.gif");
+                    background-color: @separator-color;
+                }
+
+                .sorting {
+                    float: right;
+
+                    > ul {
+                        li.sorting-ascending,
+                        li.sorting-descending {
+                            > span {
+                                width: 16px;
+                                height: 16px;
+                            }
+                        }
+
+                        li.sorting-ascending {
+                            > span {
+                                background-image: url("/Admin/Filemanager/Icons/sort_ascending.png");
+                            }
+                        }
+
+                        li.sorting-descending {
+                            > span {
+                                background-image: url("/Admin/Filemanager/Icons/sort_descending.png");
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.delete-button {
+                width: 60px;
+            }
+        }
+    }
+
+    .editable-list-body {
+        .editable-list-row {
+            &:hover {
+                background-color: @hover-color;
+            }
+        }
+
+        .editable-list-data {
+            span {
+                margin-left: 5px;
+            }
+        }
+
+        .editable-list-button {
+            span {
+                margin-right: auto;
+                margin-left: auto;
+                min-height: 16px;
+                min-width: 16px;
+                height: 16px;
+                width: 16px;
+                display: block;
+
+                &.no-image {
+                    width: auto;
+                    height: auto;
+                }
+            }
+
+            &.delete-button {
+                span {
+                    background-image: url(/Admin/Images/Ribbon/Icons/Small/Delete.png);
+                    background-repeat: no-repeat;
+                }
+            }
+
+            &.add-button {
+                .unselectable-text;
+
+                td {
+                    border: none;
+                    height: 24px;
+                    vertical-align: middle;
+                }
+
+                span {
+                    width: auto;
+                    color: #a9a9a9;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .editable-list-footer {
+        background-color: @background-color;
+        height: 21px;
+        padding-left: 2px;
+        padding-right: 2px;
+        line-height: 20px;
+        border-top: solid 1px @outer-border-color;
+        text-align: right;
+    }
+
+    .editable-list-editor {
+        margin-bottom: 2px;
+        border-spacing: 4px;
+
+        label {
+            cursor: default;
+        }
+
+        tr {
+            margin: 5px 5px;
+            vertical-align: middle;
+        }
+
+        input, button, select, textarea {
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+            padding-left: 2px !important;
+            background-color: #fff;
+            border: 1px solid @editor-control-border-color;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+            -moz-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+            -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+            -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+            transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+        }
+
+        button, select {
+            text-transform: none;
+        }
+
+        .editor-field-name {
+            min-width: 90px;
+            margin-right: 5px;
+        }
+
+        .editor-field-value {
+            input, select {
+                    width: 100%;
+                    min-width: 150px;
+                    height: @editor-control-height;
+
+                &:disabled {
+                    color: @editor-control-disabled-color;
+                    border-color: @editor-control-disabled-color;
+                }
+            }
+
+            select {
+                padding-left: 0 !important;
+            }
+
+            input[type=checkbox], input[type=radio] {
+                width: auto;
+                min-width: inherit;
+                background-color:transparent;
+                vertical-align:middle;
+                margin-right:3px;
+            }            
+        }
+    }
+
+
+
+    .dialog-button-ok,
+    .dialog-button-cancel {
+        background-color: #F0F0F0;
+        border: 1px solid @editor-control-border-color;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+        -moz-transition: background-color ease-in-out .15s,box-shadow ease-in-out .15s;
+        -o-transition: background-color ease-in-out .15s,box-shadow ease-in-out .15s;
+        -webkit-transition: background-color ease-in-out .15s,box-shadow ease-in-out .15s;
+        transition: background-color ease-in-out .15s,box-shadow ease-in-out .15s;
+
+        &:hover {
+            background-color: #fff;
+        }
+    }
+}

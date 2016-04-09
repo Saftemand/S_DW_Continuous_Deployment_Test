@@ -1,0 +1,287 @@
+﻿.smp-stats h2 {
+    color: #6b6b6b;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.smp-stats h2 span.text {
+    float: right;
+    padding-left: 30px;
+    height: 32px;
+    line-height: 32px;
+    background-image: url('/Admin/Images/Ribbon/Icons/Medium/Calendar.png');
+    background-position: 0 3px;
+    background-repeat: no-repeat;
+}
+
+.smp-stats h3 {
+    margin-top: -10px;
+    margin-bottom: 10px;
+    color: #939393;
+    font-size: 11px;
+    padding: 0;
+    font-weight: normal;
+}
+
+.smp-stats h3 span.text {
+    float: right;
+}
+
+.smp-stats h2,
+.smp-stats h3,
+.smp-stats .export {
+    width: 845px;
+    margin-left: 3px;
+}
+
+.smp-stats .factbox-split {
+    margin-bottom: 6px;
+}
+
+.smp-stats .links .dashboard-separator {
+    height: 10px !important;
+}
+
+.smp-stats .factbox-split .factbox-left,
+.smp-stats .factbox-split .factbox-right {
+    float: left;
+}
+
+.smp-stats .factbox-split .factbox-left {
+    margin-right: 3px;
+}
+
+.smp-stats .highlights {
+    margin-top: 10px;
+}
+
+.smp-stats ul.tabs,
+.smp-stats ul.tabs li,
+.smp-stats ul.values-big,
+.smp-stats ul.values-big li,
+ul.csv-source,
+ul.csv-source li,
+ul.csv-source,
+ul.csv-source li,
+.smp-stats ul.graph-legend,
+.smp-stats ul.graph-legend li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.smp-stats .empty {
+    padding: 2px;
+}
+
+.smp-stats ul.tabs {
+    margin-bottom: 10px;
+}
+
+.smp-stats ul.tabs li {
+    float: left;
+}
+
+.smp-stats ul.values-big li {
+    display: block;
+    height: 18px;
+    margin-bottom: 10px;
+}
+
+.smp-stats ul.tabs li input[type="radio"],
+.smp-stats ul.tabs li label,
+.smp-stats ul.values-big li .label,
+.smp-stats ul.values-big li .separator,
+.smp-stats ul.values-big li .value,
+ul.csv-source li input[type="radio"],
+ul.csv-source li label {
+    float: left;
+}
+
+.smp-stats ul.values-big li .value {
+    margin-top: -4px;
+}
+
+.smp-stats ul.values-big li .label {
+    margin-top: 1px;
+}
+
+.smp-stats ul.values-big li .separator {
+    margin-top: 0 !important;
+    text-align: center;
+    width: 14px;
+}
+
+.smp-stats ul.tabs li input[type="radio"],
+ul.csv-source li input[type="radio"] {
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    margin-right: 2px;
+    outline: none;
+    padding: 0;
+}
+
+.smp-stats ul.tabs li label,
+ul.csv-source li label {
+    margin-right: 10px;
+}
+
+.smp-stats ul.values-big li .value {
+    color: #4f76b5;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.smp-stats ul.values-big .adapterName {
+    color: #4f76b5;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top:10px; 
+}
+
+.smp-stats ul.values-big div.post {
+    border: solid 1px #B4BBCD;
+    height: 100px;
+}
+
+.smp-stats ul.values-big div.post img {
+    margin-right:10px;
+    float: left;
+    height: 100px;
+    width: 100px;
+}
+
+.smp-stats ul.values-big div.post a.postTitle {
+    text-decoration: none;
+    outline: none;
+    color: #3b5998;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.smp-stats ul.values-big div.post p.postDescription {
+    color: #808080;
+    font-size: 11px;
+}
+
+.smp-stats div.tab-contents {
+    display: none;
+    height: 111px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.smp-stats .highlights-empty {
+    padding-top: 10px;
+    height: 133px;
+}
+
+.smp-stats div.tab-contents.active {
+    display: block !important;
+}
+
+.smp-stats .links .list-container {
+    margin-top: 10px;
+    border: 1px solid #BDCCE0;
+}
+
+.smp-stats .links .list-container-has-records {
+    border-bottom: none !important;
+}
+
+.smp-stats .links div.tab-contents {
+    padding: 0 !important;
+    height: auto !important;
+}
+
+.smp-stats .links-empty {
+    padding-top: 10px;
+    height: 15px;
+}
+
+.smp-stats .export {
+    margin-top: 5px;
+}
+
+.smp-stats .export a {
+    float: right;
+    margin-left: 15px;
+    background-position: 0 2px;
+    background-repeat: no-repeat;
+    padding-left: 18px;
+    height: 20px;
+    line-height: 20px;
+}
+
+.smp-stats .export a.export-to-csv {
+    background-image: url('/Admin/Module/OMC/img/report_export_green_small.png');
+}
+
+.smp-stats .export a.export-to-pdf {
+    background-image: url('/Admin/Module/OMC/img/report_export_red_small.png');
+}
+
+.smp-stats ul.graph-legend li,
+.smp-stats ul.graph-legend li span {
+    float: left;
+}
+
+.smp-stats ul.graph-legend li span.color {
+    border: 1px solid #C3C3C3;
+    height: 8px;
+    width: 8px;
+    margin-top: 2px;
+}
+
+.smp-stats ul.graph-legend li span.label {
+    margin-left: 4px;
+    margin-right: 10px;
+}
+
+.smp-stats .graph-legend-wrapper {
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+div.export-to-csv {
+    margin: 10px;
+    height: 140px;
+}
+
+div.export-to-csv p {
+    margin: 0;
+}
+
+div.export-to-csv ul.csv-source {
+    margin: 10px;
+}
+
+div.export-to-csv ul.csv-source > li {
+    float: none;
+    display: block;
+    clear: left;
+    min-height: 20px;
+}
+
+div.export-to-csv ul.csv-source-category,
+div.export-to-csv ul.csv-source-category li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+div.export-to-csv ul.csv-source-category {
+    display: block;
+    height: 14px;
+    margin: 8px;
+    margin-left: 15px;
+}
+
+div.export-to-csv ul li.separator {
+    padding-top: 12px;
+}

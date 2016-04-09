@@ -1,0 +1,1 @@
+<%@ WebService Language="VB" CodeBehind="SolutionInfo.asmx.vb" Class="SolutionInfo.Service1" %>

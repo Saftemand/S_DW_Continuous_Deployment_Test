@@ -1,0 +1,2 @@
+<%@ Page Language="vb" AutoEventWireup="false" ValidateRequest="false" CodeBehind="Default.aspx.vb" Inherits="Dynamicweb.Admin.DefaultAspx" CodePage="65001" %>
+<asp:placeholder id="Output" runat="server" />

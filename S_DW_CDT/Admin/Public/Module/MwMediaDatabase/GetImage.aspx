@@ -1,0 +1,1 @@
+<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="GetImage.aspx.vb" Inherits="Dynamicweb.Modules.MwMediaDatabase.GetImageByItemNo" %>

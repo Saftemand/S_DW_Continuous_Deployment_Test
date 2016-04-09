@@ -1,0 +1,30 @@
+﻿.option-field-offset
+{
+	margin-left: 10px;
+}
+
+.hidden-message
+{
+	display: none;
+}
+
+tr.footer span
+{
+	margin-left: 2px;
+}
+
+div.grid-container
+{
+	border: 1px solid #6593cf;
+	width: 650px;
+}
+
+div.sorting-hint
+{
+	margin-top: 10px;
+	margin-left: 2px;
+	color: #8c8c8c;
+	padding-left: 20px;
+	height: 16px;
+	background: url('/Admin/Images/Ribbon/Icons/Small/information.png') top left no-repeat;
+}

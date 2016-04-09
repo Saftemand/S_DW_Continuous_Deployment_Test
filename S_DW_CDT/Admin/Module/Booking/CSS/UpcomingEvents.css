@@ -1,0 +1,78 @@
+﻿body
+{
+	background-color:White;
+}
+#myContent
+{
+	width:550px;
+	margin:10px auto auto 20px;
+}
+
+td
+{
+	border:solid 1px transparent;
+	padding-top:3px;
+	vertical-align:top;
+}
+
+#myContent span.name
+{
+    /*margin-left: 10px;*/
+    font-weight: bold;
+}
+
+#myContent h1
+{
+	font-size:15px;
+	color:#006E12;
+	margin:0px;
+	padding:0px;
+	font-weight:normal;
+}
+
+#myContent  h2
+{
+	margin:0px;
+	padding:2px;
+	/*float:left;*/
+	margin-right:10px;
+	font-size:12px;
+	font-weight:normal;
+	white-space: nowrap;
+}
+#myContent a.h2
+{
+	padding-right:10px;
+	border-right:solid 1px #c1c1c1;
+	font-weight:normal;
+	font-size:11px;
+	color:#0066CC;
+}
+
+#myContent h2 a:hover
+{
+	text-decoration:underline;
+}
+
+#myContent a.last
+{
+	border-right: 0px transparent !important;
+}
+
+#myContent h2 img
+{
+	margin-right:5px;
+	vertical-align:middle;
+}
+#myContent div.hover
+{
+	border:solid 1px transparent;
+}
+#myContent .over div
+{
+	padding:0px;
+	border:solid 1px #B9D7FC;
+	background-image:url(/Admin/Content/Moduletree/ControlBG.gif);
+	background-position:top left;
+	background-repeat:repeat-x;
+}

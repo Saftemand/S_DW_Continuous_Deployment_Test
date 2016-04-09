@@ -1,0 +1,16 @@
+<div id="rating-filter">
+    <h3><!--@Translate(RatingFilterTitle, "Rating")--></h3>
+    <ul>
+    <!--@LoopStart(Ecom:Filters.Ratings)-->
+    <li>
+	    <input type="checkbox"
+		    id="chk<!--@Filters:Current.TagName--><!--@Ecom:Filters.Ratings.LoopCounter-->" name="<!--@Filters:Current.TagName-->"
+		    value="<!--@Ecom:Filters.Rating.Value-->"<!--@If Defined(Ecom:Filters.Rating.Selected)--> checked="checked"<!--@EndIf(Ecom:Filters.Rating.Selected)--> />
+	
+	    <label for="chk<!--@Filters:Current.TagName--><!--@Ecom:Filters.Ratings.LoopCounter-->">
+		    <!--@Ecom:Filters.Rating.Label-->&nbsp;(<!--@Ecom:Filters.Rating.TotalFormatted-->)
+	    </label>
+    </li>
+    <!--@LoopEnd(Ecom:Filters.Ratings)-->
+    </ul>
+</div>

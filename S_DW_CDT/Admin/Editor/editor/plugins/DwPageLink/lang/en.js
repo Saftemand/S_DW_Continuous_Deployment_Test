@@ -1,0 +1,1 @@
+FCKLang.DwPageLinkTitle = 'Internal link';

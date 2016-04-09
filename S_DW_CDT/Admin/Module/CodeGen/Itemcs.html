@@ -1,0 +1,112 @@
+using System;
+using System.Data;
+using Dynamicweb;
+using Dynamicweb.Modules.Common;
+
+namespace <!--@Namespace-->
+{
+	public class <!--@ClassName-->
+		: DbObject
+	{
+		<!--@LoopStart(Columns)-->private <!--@Type--> _<!--@ShortName-->;
+		<!--@LoopEnd(Columns)-->
+
+#region Properties
+		<!--@LoopStart(Columns)-->
+		public <!--@Type--> <!--@ShortName-->
+		{
+			get { return _<!--@ShortName-->; }
+			set { _<!--@ShortName--> = value; }
+		}
+		<!--@LoopEnd(Columns)-->
+#endregion
+		
+		public <!--@ClassName-->()
+			: base("<!--@TableName-->", "<!--@KeyColumn-->", @"<!--@DatabaseName-->")
+		{
+		}
+		
+		protected override void FillRow(DataRow row)
+		{
+			row["<!--@KeyColumn-->"] = _id;
+			<!--@LoopStart(Columns)-->row["<!--@Name-->"] = _<!--@ShortName-->;
+			<!--@LoopEnd(Columns)-->
+		}
+		
+		public override void Fill(IDataReader dr)
+		{
+			_id = Base.ChkInteger(dr["<!--@KeyColumn-->"]);
+			<!--@LoopStart(Columns)-->_<!--@ShortName--> = <!--@Converted-->;
+			<!--@LoopEnd(Columns)-->
+		}
+
+		public static <!--@ClassName--> Get<!--@ClassName-->ById(int id)
+		{
+			string sql = "SELECT * FROM <!--@TableName--> WHERE <!--@KeyColumn--> = " + id;
+			using(IDataReader dr = Database.CreateDataReader(sql, @"<!--@DatabaseName-->"))
+			{
+				if (dr.Read())
+				{
+					<!--@ClassName--> item = new <!--@ClassName-->();
+					item.Fill(dr);
+					return item;
+				}
+			}
+			return null;
+		}
+		
+		public static  <!--@ClassName--> Get<!--@ClassName-->FromRequestForm(System.Web.HttpRequest request)
+		{
+			// TODO: Place code here 
+			throw new NotImplementedException();
+		}
+		
+		public static void Render(Dynamicweb.Rendering.Template t, <!--@ClassName--> o)
+		{
+			// TODO: Place code here 
+			throw new NotImplementedException();
+		}
+		
+		<!--@If Defined(Collections)-->
+		public static void Render(Dynamicweb.Rendering.Template t, <!--@ClassName-->Collection o)
+		{
+			// TODO: Place code here 
+			throw new NotImplementedException();
+		}
+		
+
+		public static <!--@ClassName-->Collection Get<!--@ClassName-->s()
+		{
+			const string sql = "SELECT * FROM <!--@TableName-->";
+			return Get<!--@ClassName-->sBySql(sql);
+		}
+
+		public static <!--@ClassName-->Collection Get<!--@ClassName-->sBySql(string sql)
+		{
+			<!--@ClassName-->Collection ic = new <!--@ClassName-->Collection();
+			<!--@ClassName--> i;
+			using(IDataReader dr = Database.CreateDataReader(sql, @"<!--@DatabaseName-->"))
+			{
+				while (dr.Read())
+				{
+					i = new <!--@ClassName-->();
+					i.Fill(dr);
+					ic.Add(i);
+				}
+			}
+			
+			
+			return ic;
+		}
+		<!--@EndIf(Collections)-->
+	}
+}
+
+<!--@If Defined(Collections)-->
+namespace <!--@Namespace-->
+{
+	public class <!--@ClassName-->Collection : System.Collections.ObjectModel.Collection< <!--@ClassName--> >
+	{
+	}
+}
+<!--@EndIf(Collections)-->

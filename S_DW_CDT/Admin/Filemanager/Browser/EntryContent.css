@@ -1,0 +1,128 @@
+﻿.fm_content
+{
+    margin: 0 0 0 2px;
+}
+
+.fm_column
+{
+    height: 17px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+
+.fm_column_metatag
+{
+    word-wrap:break-word;
+    width: 100px;
+}
+
+.fm_column_name
+{
+    white-space: nowrap;
+}
+
+.fm_column_modified,
+.fm_column_dimensions,
+.fm_column_size,
+.fm_column_colors
+{
+    text-align: left;
+    white-space: nowrap;
+}
+
+.fm_column_smallicon,
+.fm_column_delete
+{
+    text-align: center;
+}
+
+.fm_column_thumbnail
+{
+	background-color:inherit;
+	border:solid 1px #ffffff;
+	width:250px;
+	height:85px;
+	float:left;
+	margin:2px;
+	cursor:default;
+}
+.fm_column_thumbnail_chk
+{
+	position:absolute;
+	top:5px;
+	left:5px;
+	z-index:100;
+}
+.fm_column_thumbnail_img
+{
+	float: left;
+	overflow: hidden;
+	vertical-align:top;
+	position:relative;
+}
+.fm_column_thumbnail_text
+{
+	float: left;
+	overflow: hidden;
+	width:160px;
+}
+.fm_column_thumbnail:hover
+{
+	background-color:#ffffff;
+	border:solid 1px #D8F0FA;
+	background-image:url(/Admin/Content/Management/ControlBG.gif);
+	background-position:bottom left;
+	background-repeat:repeat-x;	
+}
+.fm_column_thumbnail.selected
+{
+	background-color: #FFF8DC;
+	border:solid 1px #D8F0FA;
+	width:250px;
+	height:85px;
+	float:left;
+	margin:2px;
+	cursor:default;
+}
+.fm_column_thumbnail:hover.selected
+{
+    background-color: #FFF8DC;
+    background-image:none;    
+}
+
+
+.fm_column_contentview
+{
+	background-color:inherit;
+	border:solid 1px #ffffff;	
+	height:40px;
+	float:left;
+	margin:2px;
+	cursor:default;
+	vertical-align:middle;	
+	width:50px;
+}
+.fm_column_contentview:hover
+{
+	background-color:#ffffff;
+	border:solid 1px #D8F0FA;
+	background-image:url(/Admin/Content/Management/ControlBG.gif);
+	background-position:bottom left;
+	background-repeat:repeat-x;	
+}
+.fm_column_contentview.selected
+{
+	background-color: #FFF8DC;
+	border:solid 1px #D8F0FA;	
+	height:40px;
+	float:left;
+	margin:2px;
+	cursor:default;	
+	width:50px;
+}
+.fm_column_contentview:hover.selected
+{
+    background-color: #FFF8DC;
+    background-image:none;    
+}

@@ -1,0 +1,1 @@
+FCKLang.DwSeoParagraphsDropdown = 'Paragraph';

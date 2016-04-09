@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+    <head>
+        <title>Insert/edit link</title>
+        <meta content="noindex, nofollow" name="robots" />
+
+        <script type="text/javascript">
+            var EditorInstance = window.parent.InnerDialogLoaded();
+
+            window.onload = function () {
+                var image = EditorInstance.DwSimpleImage.get_activeImage();
+
+                window.parent.SetOkButton(true);
+                EditorInstance.FCKLanguageManager.TranslatePage(document);
+
+                document.getElementById('txUrl').value = image.url;
+                document.getElementById('txWidth').value = image.width;
+                document.getElementById('txHeight').value = image.height;
+
+                setTimeout(function () {
+                    try {
+                        document.getElementById('txUrl').focus();
+                    } catch (ex) { }
+                }, 200);
+            }
+
+            function Ok() {
+                EditorInstance.DwSimpleImage.editImage(document.getElementById('txUrl').value,
+                    document.getElementById('txWidth').value, document.getElementById('txHeight').value);
+
+                return true;
+            }
+        </script>
+    </head>
+    <body>
+        <table cellspacing="0" cellpadding="0" border="0">
+            <tr>
+                <td style="width: 50px">
+                    <label for="txUrl" fcklang="DwSimpleImageUrl"></label>&nbsp;
+                </td>
+                <td>
+                    <input type="text" id="txUrl" style="width: 240px" />
+                </td>
+            </tr>
+            <tr valign="top">
+                <td>
+                    <label fcklang="DwSimpleImageLimitSize"></label>
+                </td>
+                <td>
+                    <table cellspacing="0" cellpadding="0" border="0">
+                        <tr>
+                            <td>
+                                <label for="txWidth" fcklang="DwSimpleImageWidth"></label>&nbsp;
+                            </td>
+                            <td>
+                                <input type="text" id="txWidth" style="width: 50px" />&nbsp;<label fcklang="DwSimpleImagePx"></label>
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="txHeight" fcklang="DwSimpleImageHeight"></label>&nbsp;
+                            </td>
+                            <td>
+                                <input type="text" id="txHeight" style="width: 50px" />&nbsp;<label fcklang="DwSimpleImagePx"></label>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

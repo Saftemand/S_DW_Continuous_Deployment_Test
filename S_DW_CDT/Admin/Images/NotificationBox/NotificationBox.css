@@ -1,0 +1,13 @@
+#NotificationBox {
+     position: absolute; right: 0px; bottom: 0px;
+}
+
+body > div#NotificationBox {
+     position: fixed;
+}
+
+/*div#NotificationBox {
+    right: auto; bottom: auto;
+    left: expression( ( -0 - NotificationBox.offsetWidth - 2 + ( document.documentElement.clientWidth ? document.documentElement.clientWidth : document.body.clientWidth ) + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+    top: expression( ( +0 - NotificationBox.offsetHeight - 55 + ( document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight ) + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}*/

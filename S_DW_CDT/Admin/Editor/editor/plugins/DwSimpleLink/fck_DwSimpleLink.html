@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+    <head>
+        <title>Insert/edit link</title>
+        <meta content="noindex, nofollow" name="robots" />
+
+        <script type="text/javascript">
+            var EditorInstance = window.parent.InnerDialogLoaded();
+
+            window.onload = function () {
+                var activeLink = EditorInstance.DwSimpleLink.get_activeLink();
+
+                window.parent.SetOkButton(true);
+                EditorInstance.FCKLanguageManager.TranslatePage(document);
+
+                document.getElementById('txUrl').value = activeLink.url;
+                document.getElementById('chkNewWindow').checked = !!activeLink.newWindow;
+
+                setTimeout(function () {
+                    try {
+                        document.getElementById('txUrl').focus();
+                    } catch (ex) { }
+                }, 200);
+            }
+
+            function Ok() {
+                EditorInstance.DwSimpleLink.editLink(document.getElementById('txUrl').value,
+                    document.getElementById('chkNewWindow').checked);
+
+                return true;
+            }
+        </script>
+    </head>
+    <body>
+        <table cellspacing="0" cellpadding="0" border="0">
+            <tr>
+                <td style="width: 30px">
+                    <label for="txUrl" fcklang="DwSimpleLinkUrl"></label>&nbsp;
+                </td>
+                <td>
+                    <input type="text" id="txUrl" style="width: 260px" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="right">
+                    <input type="checkbox" id="chkNewWindow" />&nbsp;
+                    <label for="chkNewWindow" fcklang="DwSimpleLinkNewWindow"></label>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

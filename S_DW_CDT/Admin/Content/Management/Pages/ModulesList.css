@@ -1,0 +1,182 @@
+﻿.cell
+{
+    height:20px;
+    width:150px;
+    margin:2px 2px 2px 2px;
+    float: left;
+}
+
+body
+{
+	background-color:#ffffff;
+}
+img
+{
+	border:0px;
+	vertical-align:bottom;
+}
+input
+{
+	
+}
+a
+{
+    vertical-align:bottom;
+    margin-left: 2px;
+}
+
+#myContent h1
+{
+	font-size:15px;
+	color:#006E12;
+	margin:0px;
+	padding:0px;
+	font-weight:normal;
+}
+
+input[type="checkbox"]
+{
+	margin:0px;
+	padding:0px;
+	line-height:13px;
+	height:13px;
+	margin-top:3px;
+}
+
+#_contentWrapper{
+	position:fixed;
+	top:88px;
+	left:0px;
+	bottom:53px;
+	right:1px;
+	overflow:auto;
+	border-top:1px solid #BDCCE0;
+}
+
+
+span.ShowTrue, li.ShowTrue
+{
+	margin:0px;
+	padding:0px;
+}
+
+span.ShowFalse, li.ShowFalse
+{
+	margin:0px;
+	padding:0px;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)"; 
+	filter:alpha(opacity=40);
+	-moz-opacity: 0.4;
+	opacity: 0.4;
+}
+.list ul
+{
+	min-width:640px;
+}
+#myribbon
+{
+	min-width:838px;
+}
+#items li
+{
+	cursor:default;
+	border-bottom:1px solid #BDCCE0;
+}
+
+.list li.header
+{
+	border-top:0px solid #BDCCE0;
+	min-width:640px;
+}
+
+#breadcrumb
+{
+	border-bottom:1px solid #BDCCE0;
+	height:20px;
+	line-height:18px;
+	display:inherit;
+	vertical-align:middle;
+	padding-left:10px;
+}
+
+#BottomInformationBg
+{
+	height:53px;
+	width:100%;
+	min-width:818px;
+	background-image:url('/Admin/Images/BottomInformationBg.png');
+	background-repeat:repeat-x;
+	position:fixed;
+	bottom:0px;
+}
+
+#BottomInformationBg img
+{
+	margin:10px;
+}
+
+#BottomInformationBg .label
+{
+	color: #5A6779;
+	padding-left:5px;
+	padding-right:5px;
+}
+
+.Infobar
+{
+	position:relative;
+	margin:3px;
+}
+
+.WorkflowState
+{
+	float:left;
+	margin-right:2px;
+}
+
+.C0
+{
+	vertical-align:middle;
+	padding:0px;
+	width:36px;
+}
+
+.C1
+{
+	vertical-align:middle;
+	padding:0px;
+	width:20px;
+}
+	
+.C2
+{
+	white-space:nowrap;
+	overflow:hidden;
+	width:225px;
+}
+
+.C3
+{
+	width:45px;
+	text-align:center;
+}
+.C3 img
+{
+	margin-top:3px;
+}	
+.C4
+{
+	width:150px;
+}
+	
+.C5
+{
+	white-space:nowrap;
+	overflow:hidden;
+	width:110px;
+}
+	
+.C6
+{
+	width:0px;
+}

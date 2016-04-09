@@ -1,0 +1,29 @@
+﻿html
+{
+	height:100%;
+}
+body
+{
+	height:100%;
+	margin: 0px;
+	padding: 0px;
+	font-family: Arial, Microsoft JhengHei;
+	font-size: 11px;
+	color: #15428b;
+	background-color:#bfdbff;
+	background: #159EDA url('/Admin/Access/DefaultNewUIbg.jpg') no-repeat top;
+	/*background-color:#E3EFFF;*/
+	/*background: #FFFFFF url('/Admin/Images/Ribbon/UI/ContentBG.gif') repeat-x top;*/
+}
+
+#logo
+{
+	color: #000000;
+	vertical-align:middle;
+	font-size:12px;
+	height:12px;
+	line-height:12px;
+	/*background-color:#ffffff;*/
+}
+
+

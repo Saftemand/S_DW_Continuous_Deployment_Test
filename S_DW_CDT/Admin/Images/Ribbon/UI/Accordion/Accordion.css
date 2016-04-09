@@ -1,0 +1,63 @@
+﻿body
+{
+	margin: 0px;
+	padding: 0px;
+}
+.accordion img
+{
+	border:0px;
+	vertical-align:middle;
+	margin-left:2px;
+	margin-right:5px;
+	margin-top:3px;
+	margin-bottom:2px;
+}
+.accordion ul
+{
+	font-family: Arial, Microsoft JhengHei;
+	font-size: 11px;
+	color: #15428b;
+	display:block;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	border-left:solid 1px #6593CF;
+	border-bottom:solid 1px #6593CF;
+	border-right:solid 1px #6593CF;
+}
+
+.accordion li
+{
+	height: 31px;
+	line-height: 31px;
+}
+.accordion li a
+{
+	cursor:pointer;
+	color: #15428b;
+	text-decoration: none;
+	font-weight:bold;
+	display: block;
+	height: 31px;
+	line-height: 31px;
+	border-top:solid 1px #A0AFC3;
+	background:url('bg2.gif') top left repeat-x;
+}
+.accordion li a:hover
+{
+	background:url('bgHover.gif') top left repeat-x;
+}
+.accordion li a:active
+{
+	color: #15428b;
+	background:url('bgActive.gif') top left repeat-x;
+}
+.accordion li.active a
+{
+	color: #15428b;
+	background:url('bgActive.gif') top left repeat-x;
+}
+.accordion li a:visited
+{
+	color: #15428b;
+}

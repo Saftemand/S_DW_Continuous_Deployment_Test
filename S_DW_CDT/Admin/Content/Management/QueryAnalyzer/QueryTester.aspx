@@ -1,0 +1,2 @@
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="QueryTester.aspx.vb" Inherits="Dynamicweb.Admin.Management.QueryAnalyzer.QueryTester" %><?xml version="1.0" encoding="iso-8859-1"?>
+<asp:label runat="server" id="ResponseMsg" text=""></asp:label>

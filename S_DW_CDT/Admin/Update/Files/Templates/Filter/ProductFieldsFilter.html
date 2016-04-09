@@ -1,0 +1,13 @@
+<div id="productfields-filter">
+	<h3><!--@Translate(ProductFieldsFilterTitle, "Product fields")--></h3>
+	<ul>
+		<!--@LoopStart(Ecom:Filters.ProductFields.Rows)-->
+		<li>
+			<input type="checkbox" id="item<!--@Ecom:Filters.ProductFields.Rows.LoopCounter-->" name="<!--@Filters:Current.TagName-->" value="<!--@Ecom:Filters.ProductFields.Row.Value-->" <!--@Ecom:Filters.ProductFields.Row.CheckedState--> />
+			<label for="item<!--@Ecom:Filters.ProductFields.Rows.LoopCounter-->">
+				<!--@Ecom:Filters.ProductFields.Row.Text-->&nbsp;<span>(<!--@Ecom:Filters.ProductFields.Row.TotalFormatted-->)</span>
+			</label>
+		</li>
+		<!--@LoopEnd(Ecom:Filters.ProductFields.Rows)-->
+	</ul>
+</div>

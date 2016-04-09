@@ -1,0 +1,207 @@
+﻿BODY.margin
+{
+    margin: 0px;
+}
+INPUT
+{
+    font-size: 11px;
+    font-family: verdana,arial;
+}
+SELECT
+{
+    font-size: 11px;
+    font-family: verdana,arial;
+}
+TEXTAREA
+{
+    font-size: 11px;
+    font-family: verdana,arial;
+}
+#Main_DW_Content
+{
+    overflow-y: hidden !important;
+}
+#MainTable > tbody > tr
+{
+    background: #DFE9F5 url(/Admin/images/Ribbon/UI/Tab/tab_bg.jpg) repeat-x scroll left bottom;
+}
+
+.tabTable100
+{
+    border: 0px !important;
+}
+
+.OutlookHeaderStart
+{
+    font: 11px Verdana, Helvetica, Arial, Tahoma;
+    border-bottom: 0px !important;
+    font-weight: normal;
+    padding-left: 5px;
+}
+.OutlookHeader
+{
+    font: 11px Verdana, Helvetica, Arial, Tahoma;
+    border-bottom: 0px !important;
+    font-weight: normal;
+    border-left: 2px outset white;
+    padding-left: 5px;
+}
+
+.ecom7TableBorder
+{
+    padding: 0px 0px 0px 0px;
+    border: solid 1px #9FAEC2;
+}
+
+#variantCombinationsTable td
+{
+    padding: 2px;
+}
+
+tr.separator, tr.separator * tr.separator, tr.separator > td tr.separator, tr.separator > td, tr.separator > td *
+{
+    height: 1px;
+    min-height: 1px;
+    max-height: 1px;
+    overflow: hidden;
+    background-color: #ACA899;
+    padding: 0px !important;
+}
+
+#breadcrumb
+{
+    border-bottom: #9faec2 1px solid;
+    line-height: 18px;
+    background-color: #ffffff;
+    padding-left: 10px;
+    display: inherit;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.pe-hidden
+{
+    display: none;
+}
+
+table span.RelatedGroup 
+{
+    width: 16px;
+    height: 16px;
+    display: inline-block; 
+    padding: 2px;
+    background: url(/Admin/images/Minus.gif) no-repeat center;
+}
+        
+table span.RelatedGroupPrimary
+{
+    background-image: url(/Admin/images/Check.gif) !important;
+}
+
+table.ProductRelatedData 
+{
+    background-color: window;
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+}
+
+table.ProductRelatedData tr 
+{
+    border-bottom: 1px solid;
+}
+
+table.ProductRelatedData td.filter
+{
+    background: url(/Admin/Images/Ribbon/Icons/Small/funnel.png) 20px 50% no-repeat;
+}
+
+td.LabelTop 
+{
+    vertical-align: top;
+    padding-top: 6px;
+    width: 170px;
+}
+
+.hide-error
+{
+    visibility:hidden;
+}
+
+#PriceMatrix, #VATGroupsList {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+.col.col-1,.col.col-2 {
+    width:340px;
+}
+
+.restore-inherited-val {
+    border:none;
+}
+
+.editor.type-6 .restore-inherited-val, /*int*/
+.editor.type-7 .restore-inherited-val, /*decimal*/
+.editor.type-10 .restore-inherited-val { /*textbox*/
+    vertical-align: middle;
+    margin-left: 4px;
+    margin-bottom: 2px;
+    border: 0;
+}
+
+
+.editor.type-4 .restore-inherited-val, /*date*/
+.editor.type-5 .restore-inherited-val { /*datetime*/
+    vertical-align: top;
+}
+
+.editor.type-8 .restore-inherited-val, /*link*/
+.editor.type-9 .restore-inherited-val /*fm*/
+ {
+    vertical-align:middle;
+    margin-left: 2px;
+}
+
+.editor.type-2 .restore-inherited-val { /*textarea*/
+    vertical-align: top;
+    margin-left: 4px;
+}
+
+.editor.type-3 .restore-inherited-val { /*checkbox*/
+    vertical-align: text-bottom;
+}
+
+.editor.type-14 .restore-inherited-val { /*rte*/
+    vertical-align:middle;
+}
+
+.editor.type-15 .restore-inherited-val { /*list*/
+    vertical-align: top;
+    margin-left: 4px;
+}
+
+.cat-field-row.inherited-val > .editor.type-1 .NewUIinput,
+.cat-field-row.inherited-val > .editor.type-10 .NewUIinput,
+.cat-field-row.inherited-val > .editor.type-11 .NewUIinput,
+.cat-field-row.inherited-val > .editor.type-12 .NewUIinput,
+.cat-field-row.inherited-val > .editor.type-13 .NewUIinput,
+.cat-field-row.inherited-val > .editor.type-2 textarea,
+.cat-field-row.inherited-val > .editor.type-4 select,
+.cat-field-row.inherited-val > .editor.type-5 select,
+.cat-field-row.inherited-val > .editor.type-6 input,
+.cat-field-row.inherited-val > .editor.type-7 input,
+.cat-field-row.inherited-val > .editor.type-8 input,
+.cat-field-row.inherited-val > .editor.type-9 select,
+.cat-field-row.inherited-val > .editor.type-14 > .cke,
+.cat-field-row.inherited-val > .editor.type-3 input[type=checkbox],
+.cat-field-row.inherited-val > .editor.type-15.pt-RadioButtonList label,
+.cat-field-row.inherited-val > .editor.type-15.pt-RadioButtonList input[type=radio],
+.cat-field-row.inherited-val > .editor.type-15.pt-CheckBoxList label,
+.cat-field-row.inherited-val > .editor.type-15.pt-CheckBoxList input[type=checkbox],
+.cat-field-row.inherited-val > .editor.type-15.pt-DropDownList select,
+.cat-field-row.inherited-val > .editor.type-15.pt-MultiSelectList select {
+    color:#b0b0b0 !important;
+}
+

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="Users">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="User">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="AccessUserID" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="AccessUserParentID" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="AccessUserUserName" type="xs:string" minOccurs="1" maxOccurs="1" />
+              <xs:element name="AccessUserPassword" type="xs:string" minOccurs="1" maxOccurs="1" />
+              <xs:element name="AccessUserName" type="xs:string" minOccurs="1" maxOccurs="1" />
+              <xs:element name="AccessUserDepartment" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="AccessUserEmail" type="xs:string" minOccurs="1" maxOccurs="1" />
+              <xs:element name="AccessUserPhone" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="AccessUserFax" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="AccessUserType" type="xs:string" minOccurs="1" maxOccurs="1" />
+              <xs:element name="AccessUserValidFrom" type="xs:string" minOccurs="1" maxOccurs="1" />
+              <xs:element name="AccessUserValidTo" type="xs:string" minOccurs="1" maxOccurs="1" />
+              <xs:element name="AccessUserPages" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="AccessUserAreas" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="AccessUserSettings" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="AccessUserModules" type="xs:string" minOccurs="1" maxOccurs="1" />
+              <xs:element name="AccessUserInformation" type="xs:string" minOccurs="1" maxOccurs="1" />
+              <xs:element name="AccessUserMyFolder" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="AccessUserAddress" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="AccessUserAddress2" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="AccessUserZip" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="AccessUserCity" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="AccessUserCountry" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="AccessUserJobTitle" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="AccessUserCompany" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="AccessUserPhonePriv" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="AccessUserMobile" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="AccessUserCustomerNumber" type="xs:string" minOccurs="1" maxOccurs="1" />
+              <xs:element name="AccessUserRedirectOnLogin" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="AccessUserCurrencyCharacter" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="AccessUserRead" type="xs:string" minOccurs="1" maxOccurs="1" />
+              <xs:element name="AccessUserAdsiMap" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="AccessUserPasswordDate" type="xs:string" minOccurs="1" maxOccurs="1" />
+              <xs:element name="AccessUserLastName" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="AccessUserMiddleName" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="AccessUserActive" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="AccessUserBusiness" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="AccessUserInitials" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="AccessUserComment" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="AccessUserLevel" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="AccessUserInheritAddress" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="AccessUserWeb" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="AccessUserSort" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="AccessUserStatus" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="AccessUserStatusBegin" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="AccessUserStatusEnd" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="AccessUserStatusComment" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="AccessUserEditorConfigurationID" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="AccessUserHideStat" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="AccessUserShopID" type="xs:string" minOccurs="1" maxOccurs="1" />
+              <xs:element name="AccessUserGroups" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="GroupID" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="GroupName" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+			  <xs:element name="AccessUserInformationFields" minOccurs="0" maxOccurs="1">
+  			    <xs:complexType>
+				  <xs:sequence>
+				    <xs:element name="Field" minOccurs="0" maxOccurs="unbounded">
+					  <xs:complexType>
+					    <xs:all minOccurs="0">
+						  <xs:element name="Name" type="xs:string" minOccurs="0" maxOccurs="1"/>
+						  <xs:element name="Value" type="xs:string" minOccurs="0" maxOccurs="1"/>
+					    </xs:all>
+					  </xs:complexType>
+				    </xs:element>
+				  </xs:sequence>
+			    </xs:complexType>
+			  </xs:element>
+
+                <xs:element name="UserCustomFields" minOccurs="0" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Field" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:all>
+                                        <xs:element name="FieldName" type="xs:string" minOccurs="1" maxOccurs="1" />
+                                        <xs:element name="FieldSystemName" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="FieldType" type="xs:string" minOccurs="1" maxOccurs="1" />
+                                        <xs:element name="FieldOption" type="xs:string" minOccurs="0" maxOccurs="1" />
+                                        <xs:element name="FieldValue" type="xs:string" minOccurs="0" maxOccurs="1" />
+                                    </xs:all>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+
+            </xs:all>
+            
+            <xs:attribute name="delete" type="xs:string" default="false" />
+            <xs:attribute name="sendmail" type="xs:string" default="false" />
+
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

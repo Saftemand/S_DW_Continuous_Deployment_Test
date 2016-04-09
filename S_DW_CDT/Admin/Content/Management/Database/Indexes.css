@@ -1,0 +1,20 @@
+﻿
+.database {
+}
+
+    .database .in-progress {
+        background-color: yellow !important;
+    }
+
+
+.list .table-name {
+    width: 200px;
+}
+
+.list .index-name {
+    width: 450px;
+}
+
+.list .result {
+    width: 80px;
+}

@@ -1,0 +1,42 @@
+﻿body {
+}
+
+.field_set {
+    margin-top:10px;
+}
+
+​.dic_header {
+    height:46px;
+}
+
+.grid_header {
+     display:none;
+ }
+
+ .grid_body {
+     margin-left:8px;
+ }
+
+.toolbar-filter{
+    float: right;
+    margin-top: 2px;
+    margin-right: 4px;
+}
+
+.toolbar-filter input.textInput {
+    height: 18px;
+    line-height: 18px;
+    width: 200px;
+    border: 1px solid #ABADB3;
+}
+
+.toolbar-filter input.submitImage,
+.toolbar-filter img.submitImage {
+    float: right;
+    margin-top: 0px;
+    height: 20px;
+    vertical-align: top;
+    border: 1px solid #ABADB3;
+    border-left: 0px solid black;
+    background: url('/Admin/Images/Ribbon/UI/List/PipeL.gif' ) top left repeat-x;
+}

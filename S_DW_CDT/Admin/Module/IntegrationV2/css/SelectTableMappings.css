@@ -1,0 +1,78 @@
+﻿/* File Created: januar 2, 2012 */
+        .sourceTableControl
+        {
+            display: inline-block;
+            width: 250px;
+        }
+        .destinationTableControl
+        {
+            width: 250px;
+        }
+        table.mappings
+        {
+            border-width: 1px;
+            border-style: none;
+            border-color: #f0f0f0;
+            border-spacing: 0px;    
+        }
+        table td.mappingstd
+        {
+           border-width: 1px;
+	padding: 0px;
+	border-style: inset;
+	border-color: #f0f0f0;
+	border-spacing:0px;
+	background-color: white;
+	
+	-moz-border-radius: ;
+
+        }
+        table th.mappingsth
+        {
+          border-width: 1px;
+	padding: 0px;
+	border-style:ridge;
+	border-color: #f0f0f0;
+		border-spacing:0px;
+
+
+        }
+        
+       .header
+        {
+            padding:10px;
+            position:fixed;
+            top:0px;
+            left:0px;
+            right:0px;
+            height:30px;
+            background-color: #fff;
+        }
+        .mainArea
+        {
+            position:fixed;
+            top:50px;
+            left:0px;
+            right:0px;
+            bottom:50px;
+            overflow:auto;
+            background-color: #f0f0f0;
+            height: 100%;
+                border-top: 1px solid #BDCCE0;
+                border-bottom: 1px solid #BDCCE0;
+                width:100%;
+                padding:5px;
+        }
+        .footer
+        {
+             position:fixed;
+             bottom:0px;
+            left:0px;
+            right:0px;
+            height:30px;
+            background-color: #f0f0f0;
+            bottom: 0;
+            text-align:right;
+            padding:10px;
+            border-top:1px solid #ccc;
+        }
