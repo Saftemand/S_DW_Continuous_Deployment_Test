@@ -1,1 +1,0 @@
-<%@ Page Codebehind="Cart.aspx.vb" Language="vb" AutoEventWireup="false" Inherits="Dynamicweb.Admin.Cart" %>

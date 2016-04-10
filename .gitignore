@@ -1,0 +1,57 @@
+**/Files/Templates/Designs/Bricks/_parsed/page.parsed.cshtml
+Databases
+packages
+**/Files/Templates/Designs/Bricks/assets/css
+**/Files/Templates/Designs/Bricks/assets/js
+**/Files/cache.net
+**/Files/Images/Products/
+
+# Frontend #
+.sass-cache
+*.orig
+# frontend scaffold
+**/sources/node_modules
+**/sources/sass/_font-icon-settings.scss
+**/assets/fonts/icon-font
+**/assets/javascripts/main.js
+**/assets/stylesheets/
+
+#################
+## Dynamicweb CMS
+#################
+
+## parsed files
+_parsed/
+## search queues
+_search/
+## updatelog
+updatelog.html.aspx
+*.log
+
+################
+## Visual Studio
+################
+
+## Ignore Visual Studio temporary files, build results, and
+[Bb]in/
+[Oo]bj/
+*.suo
+*.user
+
+##########
+## Windows
+##########
+
+## Windows image file caches
+Thumbs.db
+## Folder config file
+Desktop.ini
+## Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+#######
+## OS X
+#######
+
+## Desktop Services Store
+.DS_Store

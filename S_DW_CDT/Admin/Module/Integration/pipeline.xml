@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<pipeline title="Pipeline">
-  <sequence>
-    <activity title="Get file from FTP" type="1">
-    </activity>
-    <activity type="1">
-    </activity>
-  </sequence>
-</pipeline>

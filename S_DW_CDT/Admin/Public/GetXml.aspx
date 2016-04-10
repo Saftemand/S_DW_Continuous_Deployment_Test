@@ -1,1 +1,0 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="GetXml.aspx.vb" Inherits="Dynamicweb.Admin.GetXml" %>

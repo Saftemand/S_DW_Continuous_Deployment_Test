@@ -1,1 +1,0 @@
-<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="IpaperProcess.aspx.vb" Inherits="Dynamicweb.Admin.Ipaper.Backend.IpaperProcess" %>

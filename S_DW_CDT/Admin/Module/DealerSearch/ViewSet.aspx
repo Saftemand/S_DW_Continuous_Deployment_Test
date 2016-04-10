@@ -1,1 +1,0 @@
-<%@ Page Language="vb" AutoEventWireup="false" Codebehind="ViewSet.aspx.vb" Inherits="Dynamicweb.Admin.DealerSearch.Backend.ViewSet" %>

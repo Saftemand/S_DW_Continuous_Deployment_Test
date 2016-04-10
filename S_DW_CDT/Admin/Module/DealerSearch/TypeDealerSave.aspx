@@ -1,1 +1,0 @@
-<%@ Page Language="vb" AutoEventWireup="false" Codebehind="TypeDealerSave.aspx.vb" Inherits="Dynamicweb.Admin.DealerSearch.Backend.TypeDealerSave" %>

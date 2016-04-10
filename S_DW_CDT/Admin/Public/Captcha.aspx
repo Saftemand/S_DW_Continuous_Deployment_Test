@@ -1,1 +1,0 @@
-<%@ Page Language="vb" Codebehind="Captcha.aspx.vb" Inherits="Dynamicweb.Admin.Captcha" AutoEventWireup="false" %>

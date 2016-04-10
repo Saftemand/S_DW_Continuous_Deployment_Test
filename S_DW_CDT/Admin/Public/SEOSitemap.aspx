@@ -1,1 +1,0 @@
-<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="SEOSitemap.aspx.vb" Inherits="Dynamicweb.Admin.SEOSitemap" %>
