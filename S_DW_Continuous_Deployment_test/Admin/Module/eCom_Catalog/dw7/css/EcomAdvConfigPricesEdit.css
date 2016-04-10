@@ -1,0 +1,73 @@
+﻿ul {
+    margin: 0;
+    padding: 0;
+    clear: both;
+    height: 100%;
+    overflow: auto;
+}
+
+img {
+    border:none;
+}
+
+.list-wrapper {
+    width: 220px;
+    margin-left: 1px;
+    margin-bottom: 10px;
+}
+
+.list-content {
+    width: 200px;
+    height: 100px;
+    border: 1px solid #BDCCE0;
+    padding: 0;
+}
+
+.list-toolbar {
+    height: 100px;
+}
+
+.list-content ul {
+    color: gray;
+}
+
+.list-content ul.enabled  {
+    color: black;
+}
+
+.list-content ul.enabled li:hover {
+    background-color: #EBF7FD;
+    cursor: pointer;
+}
+
+.list-content ul.enabled li.selected {
+    background-color: Highlight;
+}
+
+#ColumnsSelector .list-wrapper {
+    width: 360px;
+    height: 100%;
+}
+
+#ColumnsSelector .list-header {
+    height: 20px;
+    width: 100%;
+    background: url('/Admin/Images/Ribbon/UI/List/Pipe.gif' ) top left repeat-x;
+    border: 1px solid #BDCCE0;
+    border-bottom: none;
+}
+
+#ColumnsSelector .list-content {
+    background-color: white;
+    height: 250px;
+    width: 100%;
+}
+
+#ColumnsSelector .list-content li {
+    border-bottom: 1px solid #BDCCE0;
+}
+
+#ColumnsSelector .list-content li span {
+    position: relative;
+    bottom: 2px;
+}

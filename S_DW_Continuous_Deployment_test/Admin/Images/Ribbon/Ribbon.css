@@ -1,0 +1,441 @@
+﻿body
+{
+	margin: 0px;
+	padding: 0px;
+}
+.Ribbon
+{
+	width: 99.9%;
+	min-width: 640px;
+	margin: 0px 0px 0px 1px;
+	padding-bottom: 2px;
+	padding-top: 1px;
+	font-family: Arial, Microsoft JhengHei;
+	font-size: 11px;
+	color: #15428b;
+	background: #ECF4FC url('images/tabarea_bg.gif' ) top left repeat-x;
+	border-bottom: 1px solid #BDCCE0;
+}
+.Ribbon .tabitems a
+{
+	cursor: default;
+	color: #15428b;
+	padding-right: 10px;
+	text-decoration: none;
+	display: block;
+	line-height: 25px;
+	float: left;
+}
+
+.Ribbon .tabitems a:focus
+{
+	outline: 0px solid black;
+}
+
+.Ribbon ul.tabitems
+{
+	margin: 0px;
+	padding: 0px;
+	padding-left: 0px;
+	list-style: none;
+	height: 25px;
+}
+.Ribbon ul.tabitems li
+{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	float: left;
+	display: block;
+	line-height: 25px;
+}
+.Ribbon ul.tabitems li img.starter
+{
+	margin-right: 3px;
+	height: 25px;
+	width: 6px;
+}
+
+.Ribbon ul.tabitems li.lastitem
+{
+	float: right;
+}
+
+.Ribbon ul.tabitems li.lastitem img.helpButton
+{
+	width: 16px;
+	height: 16px;
+	margin-top: 2px;
+	margin-right: 3px;
+	cursor: pointer;
+}
+
+.Ribbon ul.tabitems li.lastitem a.ribbon-collapse-button
+{
+    display: block;
+    width: 16px;
+    height: 16px;
+    
+    margin: 0px;
+    padding: 0px;
+    margin-top: 3px;
+    margin-right: 3px;
+    
+    background: transparent;
+}
+
+.Ribbon ul.tabitems li.lastitem a.ribbon-collapse-button:hover
+{
+    background: url('/Admin/Images/Ribbon/expand_hover.png') top left no-repeat !important;
+}
+
+.Ribbon ul.tabitems li.firstitem img.starter
+{
+	width: 25px;
+}
+.Ribbon ul.tabitems li.activeitem
+{
+	background: url('images/tab_act_bg.jpg' ) top right repeat-x;
+}
+.Ribbon ul.tabitems li.activeitem a img
+{
+	background: url('images/tab_act_start.jpg' ) top left no-repeat;
+}
+.Ribbon ul.tabitems li a:hover
+{
+	background: url('images/tab_hover_bg.jpg' ) top right repeat-x;
+	cursor: pointer;
+}
+
+.Ribbon ul.tabitems li a:focus
+{
+	outline: 0px solid black;
+}
+
+.Ribbon ul.tabitems li a:hover img.starter
+{
+	background: url('images/tab_hover_start.jpg' ) top left no-repeat;
+	cursor: pointer;
+}
+.Ribbon img.starter
+{
+	float: left;
+}
+.Ribbon img.ender
+{
+	float: right;
+}
+
+.Ribbon .tabarea
+{
+	height: 85px;
+	width: 100%;
+}
+.Ribbon .tabarea img.starter
+{
+	width: 3px;
+	height: 85px;
+}
+.Ribbon .tabarea img.ender
+{
+	width: 3px;
+	height: 89px;
+}
+.Ribbon .tabarea table.ribbon-tabarea-table
+{
+    margin-right: -200px;
+}
+.Ribbon .tabarea table.ribbon-tabarea-table,
+.Ribbon .tabarea .section
+{
+	height: 85px;
+	max-height: 85px;
+	float: left;
+}
+.Ribbon .tabarea table.ribbon-tabarea-table td.ribbon-tabarea-cell
+{
+	margin: 1px 2px 0px 0px;
+}
+.Ribbon .tabarea img.SectionStarter
+{
+	height: 85px;
+	width: 3px;
+	float: left;
+}
+
+.Ribbon .tabarea .section
+{
+	background: url('images/section_bg.jpg') top right no-repeat;
+}
+
+.Ribbon .tabarea .section table
+{
+	height: 85px;
+}
+.Ribbon .tabarea .section td
+{
+	background-image: none;
+}
+
+.Ribbon .tabarea .section .ribbon-section-form-checkbox label,
+.Ribbon .tabarea .section .ribbon-section-form-checkbox input
+{
+    float: left;
+}
+
+.Ribbon .tabarea .section .ribbon-section-form-checkbox label
+{
+    margin-left: 2px;
+    margin-top: 3px;
+}
+
+.Ribbon .tabarea .SC
+{
+	padding-top: 2px;
+	padding-right: 4px;
+	height: 64px;
+	vertical-align: top;
+}
+
+.Ribbon .tabarea .SC table tr td img
+{
+	border: 0px;
+	padding-left: 1px;
+	vertical-align: middle;
+}
+.Ribbon .tabarea .SC table
+{
+	margin-right: 4px;
+}
+.Ribbon .tabarea .SC table tr td a, .Ribbon .tabarea .SC table tr td span
+{
+	cursor: default;
+	color: #15428b;
+	padding-right: 10px;
+	text-decoration: none;
+	height: 22px;
+	display: inline-block;
+}
+
+.Ribbon .tabarea .SC table tr td span.ribbon-section-form-checkbox
+{
+    height: 18px;
+}
+
+.Ribbon .tabarea .SC table tr td a .btnHstart
+{
+	width: 2px;
+	height: 22px;
+}
+.Ribbon .tabarea .SC table tr td a:hover
+{
+	background: url('/Admin/images/Ribbon/BtnBg.gif' ) top right;
+	height: 22px;
+}
+
+.Ribbon .ribbonButtonOptionsDiv
+{
+	padding-bottom: 8px;
+}
+
+.Ribbon .smallSplitLeftButtonHoverInactive
+{
+	background:url("/admin/images/ribbon/images/SmallSplitRibbonButtonLeftItemHoverInactive.gif") top right !important;
+}
+
+.Ribbon .smallSplitRibbonButtonLeftStartHoverInactive
+{
+	background:url("/admin/images/ribbon/images/SmallSplitRibbonButtonLeftStartHoverInactive.gif") no-repeat scroll 0 0 transparent !important;
+	width: 2px;
+	height: 22px;
+}
+
+.Ribbon .tabarea .SC table tr td a:focus
+{
+	outline: 0px solid black;
+}
+
+.Ribbon .tabarea .SC table tr td a:hover .btnHstart
+{
+	background: url('/Admin/images/Ribbon/BtnLeft.gif' ) top left no-repeat;
+	width: 2px;
+	height: 22px;
+}
+
+.Ribbon .tabarea .SCL
+{
+	padding-top: 1px;
+	padding-right: 4px;
+	vertical-align: top;
+}
+
+.Ribbon .tabarea .SCL table tr td img
+{
+	border: 0px;
+	padding-left: 1px;
+}
+.Ribbon .tabarea .SCL table tr td span.ribbonItem
+{
+	text-align: center;
+	vertical-align: top;
+	display: inline-block;
+}
+
+.Ribbon .tabarea .SCL table tr td span.c
+{
+	padding-top: 2px;
+}
+.Ribbon .tabarea .SCL table tr td > a.ribbon-section-button
+{
+	color: #15428b;
+	cursor: default;
+	padding-right: 15px;
+	text-align: center;
+	text-decoration: none;
+	margin-top: 1px;
+	margin-right: 2px;
+	height: 66px;
+	display: inline-block;
+}
+.Ribbon .tabarea .SCL table tr td a .btnHstart
+{
+	margin-top: 0px;
+	margin-right: 12px;
+	width: 2px;
+	height: 66px;
+	vertical-align: top;
+}
+
+.Ribbon .tabarea .SCL table tr td > a.ribbon-section-button:hover, #SetupSplitTestBtn:hover, #ExperimentTestBtn:hover
+{
+ background: url('/Admin/images/Ribbon/BtnLBg.gif' ) top right;
+}
+#SetupSplitTestBtn, #ExperimentTestBtn{display:block; padding-right:15px;}
+#ExperimentTestBtn span{-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)"; filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)"; -moz-opacity: 0.4; }
+
+.Ribbon .tabarea .SCL table tr td > a.ribbon-section-button:focus
+{
+	outline: 0px solid black;
+}
+
+.Ribbon .tabarea .SCL table tr td a:hover .btnHstart
+{
+	background: url('/Admin/images/Ribbon/BtnLLeft.gif' ) top left no-repeat;
+	width: 2px;
+	margin-top: 0px;
+}
+
+.Ribbon .tabarea .sectionName
+{
+	text-align: center;
+	color: #7c8596;
+	height: 15px;
+	font-size: 11px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-right: 3px; /*background: url('/Admin/images/Ribbon/Snif.gif' ) right top no-repeat;*/
+}
+.Ribbon .tabarea .disabled
+{
+	background-color: transparent;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+	filter: alpha(opacity=40);
+	-moz-opacity: 0.4;
+	opacity: 0.4;
+}
+
+.Ribbon .tabarea .SC .active
+{
+	background: url('/Admin/images/Ribbon/BtnBgIa.gif' ) top right;
+}
+
+.Ribbon .tabarea .SC .hover
+{
+	background: url('/Admin/images/Ribbon/BtnBg.gif' ) top right;
+}
+
+.Ribbon .tabarea .SC .hover .btnHstart
+{
+	background: url('/Admin/images/Ribbon/BtnLeft.gif' ) top left no-repeat;
+}
+
+.Ribbon .tabarea .SC .active .btnHstart
+{
+	width: 2px;
+	height: 22px;
+	background: url('/Admin/images/Ribbon/BtnLeftIa.gif' ) top left no-repeat;
+}
+.Ribbon .tabarea .SCL .active
+{
+	background: url('/Admin/images/Ribbon/BtnLBgIa.gif' ) top right;
+}
+
+.Ribbon .tabarea .SCL .hover
+{
+	background: url('/Admin/images/Ribbon/BtnLBg.gif' ) top right;
+}
+
+.Ribbon .tabarea .SCL .hover .btnHstart
+{
+	background: url('/Admin/images/Ribbon/BtnLLeft.gif' ) top left no-repeat;
+}
+
+.Ribbon .tabarea .SCL .active .btnHstart
+{
+	width: 2px;
+	height: 66px;
+	padding-top: 0px;
+	background: url('/Admin/images/Ribbon/BtnLLeftIa.gif' ) top left no-repeat;
+}
+
+.Ribbon .tabarea .SCL table tr td span.c .scrollableMain
+{
+	background-color: #d6e4f5;
+	height: 56px;
+}
+
+.Ribbon .tabarea .SCL table tr td span.c .scrollableContent
+{
+	height: 56px;
+	overflow: hidden;
+}
+
+.Ribbon .tabarea .SCL table tr td span.c .scrollableContentLarge
+{
+	position: absolute;
+	border: 1px solid #9FAEC2;
+	background-color: #ffffff;
+}
+
+.scrollableContentLargeTitle
+{
+	height: 23px;
+	vertical-align: middle;
+	background: url('/Admin/Images/Ribbon/UI/List/PipeL.gif') top left repeat-x;
+	border-bottom: 1px solid #9FAEC2;
+	padding: 2px;
+	cursor: pointer;
+	text-align: left;
+}
+
+.scrollableContentLargeTitle > strong
+{
+	color: #15428b;
+	font-size: 14px;
+	font-weight: bolder;
+	font-family: Arial, Microsoft JhengHei;
+}
+
+.Ribbon .ribbon-disabled-overlay
+{
+    height: 115px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: #ffffff;
+    opacity: 0.5;
+    -moz-opacity: 0.5;
+    filter: alpha(opacity = 50);
+}

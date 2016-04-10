@@ -1,0 +1,19 @@
+#NewsletterCustomFields_Container, #NewsletterSubscriptionNewsletters_Container  {
+    width: 100%;
+    margin-top:5px;
+}
+#NewsletterCustomFields_Container td {
+    width: 50%;
+}
+#NewsletterSubscriptionNewsletters_Container td {
+    width: 50%;
+}
+#CustomFields fieldset {
+    margin: 0px;
+}
+#Categories fieldset{
+    margin: 0px;
+}
+fieldset {
+    margin: 5px;
+}

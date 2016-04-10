@@ -1,0 +1,48 @@
+﻿.EditUserRibbonDiv
+{
+	margin: 5px 5px 5px 5px;
+	vertical-align: middle;
+}
+
+#scrollDiv,
+#EditUserDiv
+ {
+	position:fixed;
+	top:118px;
+	left:0px;
+	bottom:0px;
+	right:1px;
+	overflow:auto;
+	z-index:100;
+}
+
+table.EditUserTable tr td 
+{
+	width: 170px;
+	vertical-align: top;
+	padding-top: 2px;
+}
+
+div.EditUserErrorDiv 
+{
+	 color: Red;
+}
+
+.EditCommPermissions label {
+    display: inline-block;
+    padding-left: 15px;
+    text-indent: -15px;
+}
+
+.EditCommPermissions input {
+    padding: 0;
+    margin:0 5px;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+}
+
+.EditCommPermissions input[type="checkbox"] {
+    cursor: pointer;
+}

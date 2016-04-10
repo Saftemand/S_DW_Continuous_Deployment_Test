@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>	
+	
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	
+	<xs:element name="Units">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Unit">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="UnitID" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="UnitName" type="xs:string" minOccurs="1" maxOccurs="1" />
+						</xs:all>
+						
+						<xs:attribute name="delete" type="xs:string" default="false" />
+						
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

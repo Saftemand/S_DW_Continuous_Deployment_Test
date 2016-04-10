@@ -1,0 +1,1 @@
+<%@ Page Language="vb" AutoEventWireup="false" Codebehind="IFDeleteSummary.aspx.vb" Inherits="Dynamicweb.Admin.StatisticsV3.IFDeleteSummary" %>

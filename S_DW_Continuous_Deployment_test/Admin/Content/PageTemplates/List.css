@@ -1,0 +1,108 @@
+﻿body
+{
+	background-color:White;
+}
+#breadcrumb
+{
+	height:20px;
+	line-height:18px;
+	border-bottom:1px solid #9FAEC2;
+	display:inherit;
+	vertical-align:middle;
+	padding-left:10px;
+	background-color:#ffffff;
+}
+#myContent
+{
+	width:450px;
+	margin:10px auto auto 20px;
+	padding-bottom: 53px;
+}
+
+#myContent td
+{
+	border:solid 1px transparent;
+	padding-top:3px;
+	vertical-align:top;
+}
+#myContent h1, #myContent h1 a
+{
+	min-width:350px;
+	font-size:15px;
+	color:#006E12;
+	margin:0px;
+	padding:0px;
+	font-weight:normal;
+}
+#myContent h1 a:hover
+{
+	text-decoration:underline;
+}
+#myContent small
+{
+	float:left;
+	clear:both;
+}
+
+#myContent h2
+{
+	margin:0px;
+	padding:0px;
+	float:left;
+	margin-right:10px;
+	font-size:12px;
+	font-weight:normal;
+}
+#myContent a.h2
+{
+	padding-right:10px;
+	border-right:solid 1px #c1c1c1;
+	font-weight:normal;
+	font-size:11px;
+	color:#0066CC;
+}
+#myContent h2 a:hover
+{
+	text-decoration:underline;
+}
+#myContent h2 img
+{
+	margin-right:5px;
+	vertical-align:middle;
+}
+#myContent div.hover
+{
+	border:solid 1px transparent;
+}
+#myContent .over div
+{
+	padding:0px;
+	border:solid 1px #B9D7FC;
+	background-image:url(/Admin/Content/Management/ControlBG.gif);
+	background-position:top left;
+	background-repeat:repeat-x;
+	cursor:pointer;
+}
+
+#BottomInformationBg
+{
+	height:53px;
+	width:100%;
+	min-width:818px;
+	background-image:url('/Admin/Images/BottomInformationBg.png');
+	background-repeat:repeat-x;
+	position:fixed; /*Have to be fixed - or it will be positined wrong.*/
+	bottom:0px;
+}
+
+#BottomInformationBg img
+{
+	margin:10px;
+}
+
+#BottomInformationBg .label
+{
+	color: #5A6779;
+	padding-left:5px;
+	padding-right:5px;
+}

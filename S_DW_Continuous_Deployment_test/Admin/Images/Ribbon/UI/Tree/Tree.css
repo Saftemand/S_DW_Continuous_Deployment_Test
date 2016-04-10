@@ -1,0 +1,278 @@
+.tree-content-progress, .tree-content-progress *
+{
+    cursor: progress !important;
+}
+
+.tree-node-edit
+{
+    height: 13px;
+    line-height: 13px;
+    border: 1px solid #c3c3c3;
+    width: 150px;
+    font-size: 11px;
+    margin-left: 2px;
+}
+
+.nav
+{
+	padding:46px 0px 0px 0px; 
+	width: 200px;
+	background-color: white;
+}
+.nav .tree
+{
+	width: 199px;
+	position:fixed; 
+	top:46px;
+	left:0px;
+	bottom:0px; 
+	right:0px; 
+	overflow:auto; 
+	background-color: white;
+	border-right: solid 1px #9FAEC2;
+	padding-left: 3px;
+}
+
+.nav .tree-exclude-subtitle
+{
+    top: 26px !important;
+}
+
+.nav .tree-exclude-title
+{
+    top: 20px !important;
+}
+
+.nav .tree-exclude-alltitles
+{
+    top: 0px !important;
+}
+
+.nav .title
+{
+	position:absolute; 
+	top:0px; 
+	left:0px;
+	width:199px;
+	height: 25px;
+	line-height: 24px;
+	
+	padding-left: 3px;
+	border-bottom: solid 1px #9FAEC2;
+	border-right: solid 1px #9FAEC2;
+	background: url('/Admin/Images/Ribbon/UI/List/PipeL.gif' ) top left repeat-x;
+	
+	color: #15428b;
+	font-family: Arial, Microsoft JhengHei;
+	font-weight: bolder;
+	font-size: 14px;
+}
+
+.nav .title > span
+{
+	float: left;
+}
+
+.nav .subtitle
+{
+	position:absolute; 
+	top:26px; 
+	left:0px;
+	width:199px;
+	height: 19px;
+	line-height: 16px;
+
+	padding-left: 3px;
+	border-bottom: solid 1px #BDCCE0;
+	border-right: solid 1px #9FAEC2;
+	background-color: #ECF4FC;
+	
+	color: #15428b;
+	font-family: Arial, Microsoft JhengHei;
+	font-weight: bold;
+}
+
+.nav .title > span,
+.nav .subtitle > span
+{
+	cursor: default;
+}
+
+
+.nav .subtitleArrow
+{
+	cursor: pointer;
+	background-image: url('/Admin/Images/DoubleArrowDown.gif');
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+
+.nav .subtitleFix
+{
+	height:1px;
+	background-color: white;
+}
+
+.nav .item
+{
+	height: 22px;
+	padding-left: 2px;
+	line-height: 17px;
+	font-family: Arial, Microsoft JhengHei;
+	color: #000000;
+	cursor: default;
+}
+
+.nav .itemDisabled
+{
+	background-color: #ffffff;
+	height: 22px;
+	padding-left: 2px;
+	line-height: 17px;
+	font-family: Arial, Microsoft JhengHei;
+	filter : progid:DXImageTransform.Microsoft.Alpha(opacity=30);
+	progid : DXImageTransform.Microsoft.BasicImage(grayscale=1);
+	-moz-opacity : 0.4;
+	cursor: default;
+}
+
+.treeDragBoxOuter
+{
+	position: absolute;
+}
+
+.treeDragBox
+{
+	border: 1px solid #5babe8;
+	background: url('/Admin/Images/Ribbon/UI/Toolbar/Pipe.gif') top left repeat-x;
+	color: #535353 !important;
+	height: 15px;
+	
+	display: block;
+	
+	padding: 8px;
+	
+	padding-left: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+
+.treeDragBox .treeDragBoxHandle
+{
+	display: block;
+	float: left;
+	width: 6px;
+	height: 15px;
+	background: url('/Admin/Images/Ribbon/UI/Toolbar/Start.gif') top left repeat-x !important;
+}
+
+.treeDragBox .treeDragBoxText
+{
+	display: block;
+	float: left;
+	padding-left: 4px;
+}
+
+.treeDropTarget
+{
+	background-color: #cfe4ff !important;
+}
+
+.treeDropTooltip
+{
+	border: 1px solid #c3c3c3;
+	background-color: #fffeba;
+	color: #535353;
+	cursor: default;
+	
+	display: block;
+	position: absolute;
+	z-index: 101;
+	
+	padding: 8px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+/* Container shadow */
+
+.shadowContainer,
+.shadowContainer .shadowLayer1,
+.shadowContainer .shadowLayer2,
+.shadowContainer .shadowLayer3,
+.shadowContainer .shadowContent
+{
+	display: block;
+}
+
+.shadowContainer .shadowLayer2,
+.shadowContainer .shadowLayer3,
+.shadowContainer .shadowContent {
+	position: relative;
+	left: -1px;
+	top: -1px;
+}
+ 
+.shadowContainer .shadowLayer1 {
+	background: #F1F0F1;
+}
+
+.shadowContainer .shadowLayer2 {
+	background: #DBDADB;
+}
+
+.shadowContainer .shadowLayer3 {
+	background: #B8B6B8;
+}
+
+/* End: Container shadow */
+
+.tree-toolbar-button
+{
+	float: right;
+	padding-top: 4px;
+	padding-right: 2px;
+	border: 0px solid black;
+}
+
+
+/*--------------------------------------------------|
+| dTree 2.05 | www.destroydrop.com/javascript/tree/ |
+|---------------------------------------------------|
+| Copyright (c) 2002-2003 Geir Landrö               |
+|--------------------------------------------------*/
+
+.dtree {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #666;
+	white-space: nowrap;
+}
+.dtree img {
+	border: 0px;
+	vertical-align: middle;
+}
+.dtree input[type='checkbox'] {
+	vertical-align: middle;
+}
+.dtree a {
+	color: #333;
+	text-decoration: none;
+}
+.dtree a.node, .dtree a.nodeSel {
+	white-space: nowrap;
+	padding: 1px 2px 1px 2px;
+}
+.dtree a.node:hover, .dtree a.nodeSel:hover {
+	color: #333;
+	text-decoration: underline;
+}
+.dtree a.nodeSel {
+	background-color: #c0d2ec;
+	font-weight: bold;
+}
+.dtree .clip 
+{
+	/* Disabled to allow scrolling if node names are long or there are many subnodes */
+	/*overflow: hidden;*/
+}

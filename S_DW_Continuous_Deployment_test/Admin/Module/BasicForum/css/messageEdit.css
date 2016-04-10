@@ -1,0 +1,86 @@
+﻿
+
+.forum-post-addfile
+{
+	margin-bottom: 10px;
+	width: 365px;
+}
+
+.forum-post-addfile input
+{
+	float: right;
+}
+
+.forum-post-addfile span
+{
+	float: left;
+}
+
+#FilesList
+{
+	padding: 2px;
+}
+
+.forum-post-file .file-name
+{
+	float: left;
+	width: 350px;
+	height: 16px;
+	line-height: 16px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.forum-post-file .file-delete
+{
+	text-decoration: none;
+	display: block;
+	float: left;
+	width: 16px;
+	height: 16px;
+	background: url('/Admin/Images/Ribbon/Icons/Small/Delete.png') top left no-repeat;
+}
+
+.forum-post-file .file-delete:hover
+{
+	text-decoration: none;
+}
+
+.forum-post-clear
+{
+	clear: both;
+	width: 0px;
+	height: 0px;
+	content: '.';
+}
+
+div#FilesList div input
+{
+	display: block;
+	float: right;
+}
+
+.forum-post-submit
+{
+	margin-top: 20px;
+}
+
+.forum-post-submit input.blue
+{
+	margin-right: 0px !important;
+	font-size: 14px;
+	width: 150px;
+	height: 30px;
+	line-height: 30px;
+}
+
+.forum-post-input
+{
+	width: 300px;
+}
+
+.forum-post-label
+{
+	width: 130px;
+}
+

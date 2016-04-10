@@ -1,0 +1,200 @@
+﻿html
+{
+	height:100%;
+}
+body
+{
+
+	height:100%;
+}
+form
+{
+	margin:0px;
+}
+
+.nobr
+{
+	white-space:nowrap;
+}
+
+.NewUIinput
+{
+	width: 100%;
+	height:17px;
+	border:solid 1px #ABADB3;
+}
+
+.std, .item-field-rich {
+	width: 80%;
+}
+
+.std
+{
+	padding:0px;
+	height:21px;
+	border:solid 1px #ABADB3;
+}
+
+.formArea
+{
+	padding: 3px;
+	padding-top:5px;
+	padding-right:10px;
+}
+
+#breadcrumb
+{
+	height:20px;
+	line-height:18px;
+	border-bottom:1px solid #9FAEC2;
+	display:inherit;
+	vertical-align:middle;
+	padding-left:10px;
+	background-color:#ffffff;
+}
+
+#content-inner, #footer
+{
+    position: fixed;
+    left: 0px;
+    right: 0px;
+}
+
+#content-inner {
+    top: 136px;
+    bottom: 53px;
+    padding: 1px;
+    padding-top: 0px;
+    background-color: white;
+    overflow: auto;
+}
+
+/*Hack for correct work of Maximize function of FCKEditor*/
+#content-inner[style]
+{
+    overflow: visible !important;
+}
+
+#footer
+{
+    bottom: 0px;
+    height: 53px;
+    overflow: hidden;
+    
+    background-image: url('/Admin/Images/BottomInformationBg.png');
+    background-repeat: repeat-x;
+}
+
+#footer img.icon
+{
+    display: block;
+    border: none;
+    margin: 8px;
+}
+
+#footer td div
+{
+    padding: 5px;
+}
+
+#footer tr.sub td div
+{
+    padding-top: 0px;
+}
+
+#footer td.label div
+{
+    text-align: right;
+}
+
+#footer td.value div
+{
+    width: 150px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+#footer td.value div.large
+{
+    width: 400px;
+}
+
+#footer td.bold div
+{
+    font-weight: bold;
+}
+
+/* Collase functional */
+a.item-edit-field-group-button-collapse
+{
+	display: inline-block;
+	background-image: url(/Admin/Images/Ribbon/expand.png);
+	background-repeat: no-repeat;
+	background-position: center;
+    border: 1px solid transparent;
+	margin-left: 6px;
+	margin-bottom: -2px;
+	width: 24px;
+	height: 10px;
+}
+
+a.item-edit-field-group-button-collapse:hover
+{
+    border: 1px solid #D5DFE5;
+}
+
+a.item-edit-field-group-button-collapse.collapsed
+{
+	background-image: url(/Admin/Images/Ribbon/collapse.png);
+}
+
+table.item-edit-field-group-content.collapsed
+{
+	display: none;
+}
+
+/* item types */
+div.item-types
+{
+	zoom: 1;
+	width: 500px;
+	height: 45px;
+	overflow: hidden;
+}
+
+div.item-types:after
+{
+	content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+div.item-types div.item-types-image,
+div.item-types div.item-types-description
+{
+	float: left;
+}
+
+div.item-types-image img
+{
+	width: 32px;
+    height: 32px;
+	margin: 3px;
+	border: none;
+}
+
+div.item-types-description 
+{
+    width: 250px;
+}
+
+div.item-types-description small 
+{
+    display: block; / for IE /
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+}

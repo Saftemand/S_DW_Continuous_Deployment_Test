@@ -1,0 +1,82 @@
+﻿div.templateSelectorDisabled span.templateItem
+{
+	padding: 2px;
+	display: block;
+	width: 300px;
+	min-height: 38px;
+	white-space: normal !important;
+	background-color:transparent;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)"; 
+	filter:alpha(opacity=40);
+	-moz-opacity: 0.4;
+	opacity: 0.4;
+	color: #c3c3c3;
+}
+
+div.templateSelector span.templateItem
+{
+	padding: 2px;
+	display: block;
+	width: 300px;
+	min-height: 38px;
+	white-space: normal !important;
+}
+
+div.templateSelector span.templateIcon img.iconImage
+{
+	float: left;
+}
+
+div.templateSelector span.templateDetails
+{
+	display: block;
+	height: auto;
+}
+
+div.templateSelector span.templateDetails span.ratingRow
+{
+	height: 16px;
+	line-height: 16px;
+	vertical-align: middle;
+}
+
+div.templateSelector span.templateDetails span.templateFieldName
+{
+	min-width: 55px;
+	display: inline-block;
+}
+
+div.templateSelector span.templateDetails span.ratingStar
+{
+	margin-top: 2px;
+	width: 16px;
+	height: 16px;
+	
+	display: inline-block;
+	
+	background-image: url('/Admin/Images/Star_small.png');
+	background-repeat: no-repeat;
+}
+
+div.templateSelector span.templateDetails span.detailsRecentlyUpdated
+{
+	font-weight: bold;
+	border-bottom: 1px solid #dddddd;
+}
+
+div.templateSelector span.templateDetails span.detailsUnknownDate
+{
+	color: #c3c3c3 !important;
+}
+
+div.templateSelector span.templateDetails span.detailsHeading
+{
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+div.templateSelector span.templateDetails span.detailsHeadingBig
+{
+	line-height: 24px;
+}
+

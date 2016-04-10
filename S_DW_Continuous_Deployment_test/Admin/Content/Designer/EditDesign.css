@@ -1,0 +1,116 @@
+﻿html,body
+{
+	margin:0;
+	padding:0;
+	height:100%;
+	width:100%;
+	overflow:hidden;
+}
+
+#preview
+{
+	position: fixed;
+	bottom: 20px;
+	top: 114px;
+	right: 0px;
+	left: 0px;
+}
+
+#previewFrame
+{
+	position: absolute;
+	top: 0px;
+	bottom: 20px;
+	right: 0px;
+	left: 0px;
+	width:100%;
+	height:100%;
+}
+
+#saveframe
+{
+	position: fixed;
+	bottom: 0px;
+	height:20px;
+	right: 0px;
+	left: 0px;
+	width:100%;
+	overflow:hidden;
+}
+
+div.layout-template
+{
+	zoom: 1;
+	width: 500px;
+	height: 45px;
+	overflow: hidden;
+}
+
+div.layout-template:after
+{
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+div.layout-template div.layout-template-image, div.layout-template div.layout-template-description
+{
+	float: left;
+}
+
+div.layout-template-image img
+{
+	width: 32px;
+	height: 32px;
+	margin: 3px;
+	border: none;
+}
+
+.richselectDiv
+{
+	float: left;
+	margin-right: 5px;
+}
+.richselectDiv .richselectitems
+{
+	height: 650px !important;
+}
+.richselectDiv .richselectitems a
+{
+	padding: 0px;
+	border: 0;
+}
+
+.richselectDiv .richselectitems a span
+{
+	line-height: 30px;
+}
+
+.richselectDiv .richselectitems a:hover, .richselectitems .selecteditem a:hover
+{
+	border: 0;
+}
+
+.richselectDiv .richselectitems .selecteditem a
+{
+	border: 0;
+	line-height: 30px;
+}
+.richselectDiv .richselect .selectboxcontent
+{
+	padding: 0;
+	width: 62px !important;
+	line-height: 30px;
+}
+.richselectDiv .color
+{
+	height: 30px;
+	display: block;
+	color: #333333;
+}
+.richselectDiv .light
+{
+	color: #e1e1e1;
+}

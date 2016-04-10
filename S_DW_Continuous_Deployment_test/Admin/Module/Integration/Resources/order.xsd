@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:element name="Orders">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Order">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="OrderID" type="xs:string" minOccurs="1" maxOccurs="1" />
+					        <xs:element name="OrderShopID" type="xs:string" minOccurs="0" maxOccurs="1" />
+					        <xs:element name="OrderDate" type="xs:string" minOccurs="0" maxOccurs="1" />
+					        <xs:element name="OrderModified" type="xs:string" minOccurs="0" maxOccurs="1" />
+					        <xs:element name="OrderComplete" type="xs:string" minOccurs="0" maxOccurs="1" />
+					        <xs:element name="OrderDeleted" type="xs:string" minOccurs="0" maxOccurs="1" />
+					        <xs:element name="OrderStateID" type="xs:string" minOccurs="0" maxOccurs="1" />
+					        <xs:element name="OrderVAT" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderIP" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderReferrer" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderTransactionValue" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderTransactionType" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderTransactionStatus" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderTransactionAmount" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderTransactionPayGatewayCode" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderTrackTraceNumber" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderShippingMethod" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderShippingMethodFee" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderPaymentMethod" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderPaymentMethodFee" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderSalesDiscount" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderCurrencyName" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderCurrencyRate" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderCurrencyCode" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderCart" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderFieldsXML" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderReSendEmail" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderCustomerNumber" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderCustomerCompany" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderCustomerName" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderCustomerAddress" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderCustomerAddress2" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderCustomerZip" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderCustomerCity" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderCustomerCountry" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderCustomerRegion" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderCustomerPhone" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderCustomerFax" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderCustomerEmail" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderCustomerCell" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderCustomerRefID" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderCustomerEAN" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderCustomerVatRegNumber" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderDeliveryCompany" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderDeliveryName" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderDeliveryAddress" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderDeliveryAddress2" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderDeliveryZip" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderDeliveryCity" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderDeliveryCountry" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderDeliveryRegion" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderDeliveryPhone" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderDeliveryFax" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderDeliveryEmail" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderDeliveryCell" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderTotalPrice" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderComment" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderCustomerComment" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderWeight" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderVolume" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderPriceWithVAT" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderPriceWithoutVAT" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderPriceVAT" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderPriceVATPercent" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderShippingFeeWithVAT" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderShippingFeeWithoutVAT" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderShippingFeeVAT" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderShippingFeeVATPercent" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderPaymentFeeWithVAT" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderPaymentFeeWithoutVAT" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderPaymentFeeVAT" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderPaymentFeeVATPercent" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderPriceBeforeFeesWithVAT" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderPriceBeforeFeesWithoutVAT" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderPriceBeforeFeesVAT" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderPriceBeforeFeesVATPercent" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderCustomerAccessUserID" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderCustomerAccessUserUserName" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderShippingMethodID" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderPaymentMethodID" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderGatewayResult" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderStepNum" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderTransactionNumber" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderCustomerCountryCode" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderDeliveryCountryCode" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderStepHistory" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderLanguageID" type="xs:string" minOccurs="1" maxOccurs="1" />
+							<xs:element name="OrderTransactionMailSend" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderShippingMethodDescription" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderPaymentMethodDescription" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="OrderCustomerNewsletterSubcribe" type="xs:string" minOccurs="0" maxOccurs="1" />			
+							<xs:element name="OrderGatewayPaymentStatus" type="xs:string" minOccurs="0" maxOccurs="1" />			
+							<xs:element name="OrderGatewayTransactionProblems" type="xs:string" minOccurs="0" maxOccurs="1" />			
+							<xs:element name="OrderGatewayUniqueID" type="xs:string" minOccurs="0" maxOccurs="1" />			
+							<xs:element name="OrderCaptureInfo" type="xs:string" minOccurs="0" maxOccurs="1" />			
+							<xs:element name="OrderCartV2StepIndex" type="xs:string" minOccurs="0" maxOccurs="1" />			
+							<xs:element name="OrderSecret" type="xs:string" minOccurs="0" maxOccurs="1" />			
+							<xs:element name="OrderShippingCountrySelection" type="xs:string" minOccurs="0" maxOccurs="1" />			
+							<xs:element name="OrderPaymentCountrySelection" type="xs:string" minOccurs="0" maxOccurs="1" />			
+							<xs:element name="OrderCustomerAccepted" type="xs:string" minOccurs="0" maxOccurs="1" />			
+							<xs:element name="OrderDebuggingInfo" type="xs:string" minOccurs="0" maxOccurs="1" />			
+							<xs:element name="OrderHasSetUserDetails" type="xs:string" minOccurs="0" maxOccurs="1" />			
+							<xs:element name="OrderTrackAndTraceID" type="xs:string" minOccurs="0" maxOccurs="1" />			
+							<xs:element name="OrderTrackAndTraceParameters" type="xs:string" minOccurs="0" maxOccurs="1" />			
+							<xs:element name="OrderCustomFields" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+								  <xs:sequence>
+									<xs:element name="Field" minOccurs="1" maxOccurs="unbounded">
+									  <xs:complexType>
+										<xs:all>
+										  <xs:element name="FieldName" type="xs:string" minOccurs="0" maxOccurs="1"/>
+										  <xs:element name="FieldSystemName" type="xs:string" minOccurs="1" maxOccurs="1"/>
+										  <xs:element name="FieldTagName" type="xs:string" minOccurs="0" maxOccurs="1" />
+										  <xs:element name="FieldTypeID" type="xs:string" minOccurs="0" maxOccurs="1" />
+										  <xs:element name="FieldTypeName" type="xs:string" minOccurs="0" maxOccurs="1" />
+										  <xs:element name="FieldValue" type="xs:string" minOccurs="0" maxOccurs="1" />
+										</xs:all>
+									  </xs:complexType>
+									</xs:element>
+								  </xs:sequence>
+								</xs:complexType>
+							  </xs:element>						
+							
+							<xs:element name="Shop" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:all>
+										<xs:element name="ShopID" type="xs:string" minOccurs="1" maxOccurs="1" />
+										<xs:element name="ShopName" type="xs:string" minOccurs="1" maxOccurs="1" />
+										<xs:element name="ShopCreated" type="xs:string" minOccurs="1" maxOccurs="1" />
+										<xs:element name="ShopDefault" type="xs:string" minOccurs="1" maxOccurs="1" />
+										<xs:element name="ShopIcon" type="xs:string" minOccurs="1" maxOccurs="1" />
+										<xs:element name="ShopOrderFlowID" type="xs:string" minOccurs="1" maxOccurs="1" />
+									</xs:all>
+								</xs:complexType>
+							</xs:element>
+							
+							<xs:element name="OrderState" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:all>
+										<xs:element name="OrderStateID" type="xs:string" minOccurs="1" maxOccurs="1" />
+										<xs:element name="OrderStateName" type="xs:string" minOccurs="1" maxOccurs="1" />
+										<xs:element name="OrderStateDescription" type="xs:string" minOccurs="1" maxOccurs="1" />
+										<xs:element name="OrderStateIsDefault" type="xs:string" minOccurs="1" maxOccurs="1" />
+										<xs:element name="OrderStateDontUseInstatistics" type="xs:string" minOccurs="1" maxOccurs="1" />
+										<xs:element name="OrderStateIsDeleted" type="xs:string" minOccurs="1" maxOccurs="1" />
+										<xs:element name="OrderStateNextState" type="xs:string" minOccurs="1" maxOccurs="1" />
+										<xs:element name="OrderStateNextStateDays" type="xs:string" minOccurs="1" maxOccurs="1" />
+										<xs:element name="OrderStateMailTemplate" type="xs:string" minOccurs="1" maxOccurs="1" />
+										<xs:element name="OrderFlowID" type="xs:string" minOccurs="1" maxOccurs="1" />
+										<xs:element name="OrderStateMailSender" type="xs:string" minOccurs="1" maxOccurs="1" />
+										<xs:element name="OrderStateMailSenderName" type="xs:string" minOccurs="1" maxOccurs="1" />
+										<xs:element name="OrderStateMailSubject" type="xs:string" minOccurs="1" maxOccurs="1" />		
+											
+									</xs:all>
+								</xs:complexType>
+							</xs:element>
+							
+							<xs:element name="OrderLines" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="OrderLine" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:all>
+													<xs:element name="OrderLineID" type="xs:string" minOccurs="1" maxOccurs="1" />
+													<xs:element name="OrderLineOrderID" type="xs:string" minOccurs="0" maxOccurs="1" />			
+													<xs:element name="OrderLineParentLineID" type="xs:string" minOccurs="0" maxOccurs="1" />
+													<xs:element name="OrderLineBOM" type="xs:string" minOccurs="0" maxOccurs="1" />
+													<xs:element name="OrderLineDate" type="xs:string" minOccurs="0" maxOccurs="1" />
+													<xs:element name="OrderLineModified" type="xs:string" minOccurs="0" maxOccurs="1" />
+													<xs:element name="OrderLineProductNumber" type="xs:string" minOccurs="0" maxOccurs="1" />
+													<xs:element name="OrderLineProductID" type="xs:string" minOccurs="0" maxOccurs="1" />
+													<xs:element name="OrderLineProductVariantID" type="xs:string" minOccurs="0" maxOccurs="1" />
+													<xs:element name="OrderLineProductName" type="xs:string" minOccurs="0" maxOccurs="1" />
+													<xs:element name="OrderLineProductVariantText" type="xs:string" minOccurs="0" maxOccurs="1" />
+													<xs:element name="OrderLineUnitPrice" type="xs:string" minOccurs="0" maxOccurs="1" />
+													<xs:element name="OrderLineVatPercent" type="xs:string" minOccurs="0" maxOccurs="1" />
+													<xs:element name="OrderLineVatPrice" type="xs:string" minOccurs="0" maxOccurs="1" />
+													<xs:element name="OrderLineQuantity" type="xs:string" minOccurs="0" maxOccurs="1" />
+													<xs:element name="OrderLineType" type="xs:string" minOccurs="0" maxOccurs="1" />
+													<xs:element name="OrderLineReference" type="xs:string" minOccurs="0" maxOccurs="1" />
+													<xs:element name="OrderLineBOMItemID" type="xs:string" minOccurs="0" maxOccurs="1" />
+													<xs:element name="OrderLineUnitID" type="xs:string" minOccurs="0" maxOccurs="1" />
+													<xs:element name="OrderLineWeight" type="xs:string" minOccurs="0" maxOccurs="1" />
+													<xs:element name="OrderLineVolume" type="xs:string" minOccurs="0" maxOccurs="1" />
+													<xs:element name="OrderLinePriceWithVAT" type="xs:string" minOccurs="0" maxOccurs="1" />
+													<xs:element name="OrderLinePriceWithoutVAT" type="xs:string" minOccurs="0" maxOccurs="1" />
+													<xs:element name="OrderLinePriceVAT" type="xs:string" minOccurs="0" maxOccurs="1" />
+													<xs:element name="OrderLinePriceVATPercent" type="xs:string" minOccurs="0" maxOccurs="1" />
+													<xs:element name="OrderLineUnitPriceWithVAT" type="xs:string" minOccurs="0" maxOccurs="1" />
+													<xs:element name="OrderLineUnitPriceWithoutVAT" type="xs:string" minOccurs="0" maxOccurs="1" />
+													<xs:element name="OrderLineUnitPriceVAT" type="xs:string" minOccurs="0" maxOccurs="1" />
+													<xs:element name="OrderLineUnitPriceVATPercent" type="xs:string" minOccurs="0" maxOccurs="1" />
+													<xs:element name="OrderLinePageId" type="xs:string" minOccurs="0" maxOccurs="1" />
+													<xs:element name="OrderLineDiscountID" type="xs:string" minOccurs="0" maxOccurs="1" />
+													<xs:element name="OrderLineFieldValues" type="xs:string" minOccurs="0" maxOccurs="1" />
+													
+												</xs:all>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							
+					    </xs:all>
+					    <xs:attribute name="delete" type="xs:string" default="false" />
+
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

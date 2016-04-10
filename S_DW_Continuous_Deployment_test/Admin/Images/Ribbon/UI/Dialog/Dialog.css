@@ -1,0 +1,100 @@
+﻿.sidebox
+{
+	position:absolute;
+	top:50px;
+	left:50px;
+	display:none;
+	margin: 0 auto; /* center for now */
+	background-color:#CAD9E8;
+    border:1px solid #374048;
+    border-radius: 6px;
+}
+
+.sidebox > .bodywrapper {
+    margin: 0 6px 6px;
+    padding: 0;
+    background-color:#F0F0F0;
+    border:1px solid #56616C;
+    border-radius: 2px;
+}
+
+.bodywrapper > .cmd-pane {
+    margin: 6px;
+}
+
+.sidebox fieldset 
+{
+	margin-bottom:0;
+}
+.boxhead
+{
+	margin: 0;
+	height:28px;
+	padding: 0;
+	vertical-align:middle;
+}
+
+.boxhead h2
+{
+	
+	font-family: Arial, Microsoft JhengHei;
+	margin: 0;
+	padding-left:10px;
+	height:28px;
+	line-height:28px;
+	font-size:11px;
+	color: #000000;
+	cursor:default;
+	vertical-align:middle;
+	text-align:left;
+}
+.sidebox table
+{
+	width:100%;
+	padding:0;
+}
+.sidebox td
+{
+	padding:0;
+}
+.sidebox .close
+{
+	text-align:right;
+	padding-right:8px;
+}
+.sidebox .close img
+{
+	cursor:pointer;
+}
+
+.sidebox button
+{
+	min-width:50px;
+	margin-right:3px;
+}
+
+.boxbody {
+    margin: 16px 6px 10px 6px;
+    padding: 0;
+}
+
+.boxbody.no-padding
+{
+	margin: 0;
+	padding: 0;
+}
+
+div.dialog-modal-overlay
+{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	z-index: 5;
+	background-color: #ffffff;
+	opacity: 0.4;
+	-moz-opacity: 0.4;
+	filter: alpha(opacity = 40);
+}
+

@@ -1,0 +1,1 @@
+<%@ Page AutoEventWireup="true" Codebehind="CategoryDelete.aspx.cs" InHerits="CategoryDelete" Language="C#" %>

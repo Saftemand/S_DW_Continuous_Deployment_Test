@@ -1,0 +1,35 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="EntryContent.master.vb"
+    Inherits="Dynamicweb.Admin.Browser.EntryContent" %>
+<%@ Import namespace="Dynamicweb.Backend" %>
+<%@ Register TagPrefix="dw" Namespace="Dynamicweb.Controls" Assembly="Dynamicweb.Controls" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="EntryContent.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript"> var ImagesFolderName = '<%=Dynamicweb.Content.Management.Installation.ImagesFolderName%>';</script>
+    <script type="text/javascript" src="EntryContent.js"></script>
+    <dw:ControlResources ID="ctrlResources" IncludePrototype="true" runat="server" />
+    <script type="text/javascript">
+        var __page = new FileManagerPage();
+
+        function showLoading() {
+               var __o = new overlay('__fmOverlay');
+                __o.message('<%=Translate.JSTranslate("Loading")%>');
+                __o.show();
+                //setTimeout('document.getElementById(\'__fmOverlay\').style.display = \'none\';', 2000);
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+</head>
+<body style="overflow:hidden">
+    <dw:Overlay ID="__fmOverlay" runat="server"></dw:Overlay>
+    <form id="form1" runat="server">
+    <div class="fm_content">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,89 @@
+﻿html
+{
+	height:100%;
+}
+body
+{
+	height:100%;
+	margin: 0px;
+	padding: 0px;
+	font-family: Arial, Microsoft JhengHei;
+	font-size: 11px;
+	color: #000000;
+	background-color:#bfdbff;
+	border:solid 0px none;
+}
+
+.Toolbar > ul
+{
+	background: transparent top left repeat-x;
+	border-bottom: solid 0px #6F9DD9;
+}
+.myToolbar{
+	background: url('/Admin/Images/Ribbon/appmenu_back2.gif' ) top left repeat-x;
+	border-bottom: solid 1px #9FAEC2;
+	height:27px;
+}
+
+.Toolbar > ul > li
+{
+	height: 27px;
+	line-height: 27px;
+	background: url('/Admin/Images/Ribbon/appmenu_back2.gif' ) top left repeat-x;
+	border-bottom: solid 1px #9FAEC2;
+}
+.Toolbar > ul > li a.toolbar-button
+{
+	margin-top:2px !important;
+	color: #15428b !important;
+}
+
+.Toolbar > ul > li span.toolbar-button-sep,
+.Toolbar > ul > li div.toolbar-button-sep
+{
+	background-color: #6893CF !important;
+	border-right: solid 1px #D6E6FB !important;
+}
+#Toolbar2 > ul
+{
+	float:right;
+}
+#versionInfo
+{
+	position:absolute;
+	top:2px;
+	left:100px;
+	right:100px;
+	text-align:center;
+	height:10px;
+	line-height:10px;
+	font-size:10px;
+	font-family:Arial;
+	color:#006699;
+}
+.top
+{
+	height: 38px;
+	background: url('TopBgClean.png' ) top left repeat-x;
+	background-color:#E1EAF4;
+	/*
+	padding:0px;
+	background-image:url(/Admin/Content/management/ControlBG.gif);
+	background-position:bottom left;
+	background-repeat:repeat-x;
+*/
+}
+.top img
+{
+	margin-left:7px;
+	margin-top:2px;
+	float:left;
+}
+.top .userInfo
+{
+	float:right;
+	color:#006699;
+	margin-right:5px;
+	text-align:right;
+	margin-top:2px;
+}

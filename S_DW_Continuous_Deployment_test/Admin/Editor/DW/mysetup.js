@@ -1,0 +1,1 @@
+FCKConfig.SkinPath = "/FCKeditor/editor/skins/Default/";

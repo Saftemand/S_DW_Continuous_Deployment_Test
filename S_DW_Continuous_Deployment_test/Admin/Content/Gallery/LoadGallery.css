@@ -1,0 +1,118 @@
+﻿/* List */
+.Item
+{
+	padding: 10px 0px 0px 10px;
+}
+
+.Item Table 
+{
+	border:solid 1px transparent;
+}
+.Item Table.TableMouseOver 
+{
+	padding:0px;
+	border:solid 1px #B9D7FC;
+	background-image:url(Images/ControlBG.gif);
+	background-position:top left;
+	background-repeat:repeat-x;
+}
+
+.ThumbCell 
+{
+	width:150px;
+	text-align:center;
+}
+
+.InfoCell 
+{
+	vertical-align:top;
+	max-width:300px;
+	width:300px;
+	overflow:hidden;
+}
+
+.InfoCell H1
+{
+	white-space:nowrap;
+	font-size:15px;
+	color:#006E12;
+	margin:0px;
+	padding:0px;
+	font-weight:normal;
+}
+.InfoTextRow 
+{
+	height:70px;
+}
+.TextCell 
+{
+	vertical-align:top;
+}
+.ShortDescription 
+{
+	padding-right:10px;
+	font-weight:normal;
+	font-size:11px;
+}
+.InfoButtonRow 
+{
+	height:30px;
+}
+.InfoCell .button_panel 
+{
+	text-align:right;
+	vertical-align:bottom;
+}
+.Item Table Table
+{
+	width:100%;
+	height:100%;
+}
+
+/* Preview */
+.PreviewDiv 
+{
+	margin:10px 10px 10px 10px;
+}
+.Description
+{
+	font-size:larger;
+}
+.HelpText 
+{
+	font-size:larger;
+	font-style:italic;
+}
+
+/* Status bar */
+#BottomInformationBg
+{
+	height:53px;
+	width:100%;
+	background-image:url('/Admin/Images/BottomInformationBg.png');
+	background-repeat:repeat-x;
+	position:fixed;
+	bottom:0px;
+}
+
+#BottomInformationBg img
+{
+	margin:10px;
+}
+
+/* Buttons */
+.button_hidden
+{
+	display: none;
+}
+.button_shown
+{
+	display: inline;
+}
+
+/* Loading */
+#LoadingDiv 
+{
+	text-align:center;
+	margin-top:50px;	
+}

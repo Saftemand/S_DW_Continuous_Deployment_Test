@@ -1,0 +1,53 @@
+﻿body
+{
+	background-color: #ffffff;
+	border: 0px solid black;
+}
+
+strong[title]
+{
+	color: red;
+}
+
+p
+{
+	padding: 0px;
+	margin: 0px;
+}
+
+ul
+{
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+
+.code
+{
+	font-family: Monospace;
+}
+
+.box
+{
+	border: 1px dashed #c4c4c4;
+	vertical-align: top;
+	padding: 4px;
+	background-color: #fff5cc;
+}
+
+.help
+{
+	border: 1px solid #c3c3c3;
+	padding-left: 3px;
+	padding-right: 3px;
+	font-weight: bold;
+	background-color: #deecff;
+}
+
+.submitCmd 
+{
+	height: 23px;
+	font-size: 11px;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-family :Verdana, Helvetica, Arial, Tahoma;
+}

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+	<xs:element name="Groups">
+	    <xs:complexType>
+			<xs:sequence>
+				<xs:element name="Group">
+					<xs:complexType>
+						<xs:all>
+				      <xs:element name="GroupID" type="xs:string" minOccurs="1" maxOccurs="1" />
+				      <xs:element name="GroupLanguageID" type="xs:string" minOccurs="0" maxOccurs="1" />
+				      <xs:element name="GroupName" type="xs:string" minOccurs="0" maxOccurs="1" />
+				      <xs:element name="GroupNumber" type="xs:string" minOccurs="0" maxOccurs="1" />
+				      <xs:element name="GroupSmallImage" type="xs:string" minOccurs="0" maxOccurs="1" />
+				      <xs:element name="GroupLargeImage" type="xs:string" minOccurs="0" maxOccurs="1" />
+				      <xs:element name="GroupDescription" type="xs:string" minOccurs="0" maxOccurs="1" />
+				      <xs:element name="GroupAssortment" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="GroupIcon" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="GroupNavigationShowInMenu" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="GroupNavigationShowInSiteMap" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="GroupNavigationClickable" type="xs:string" minOccurs="0" maxOccurs="1" />
+                    <xs:element name="GroupMetaTitle" type="xs:string" minOccurs="0" maxOccurs="1" />
+                    <xs:element name="GroupMetaKeywords" type="xs:string" minOccurs="0" maxOccurs="1" />
+                    <xs:element name="GroupMetaDescription" type="xs:string" minOccurs="0" maxOccurs="1" />
+                    <xs:element name="GroupMetaUrl" type="xs:string" minOccurs="0" maxOccurs="1" />
+
+                            <!-- Custom fields, 10-05-2009 -->
+              <xs:element name="CustomFields" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Field" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:all>
+                          <xs:element name="SystemName" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                          <xs:element name="Value" type="xs:string" minOccurs="1" maxOccurs="1" />
+                          <!-- The below properties are only needed if the field doesn't exist and needs to be created -->
+                          <!-- Only one of TypeID and TypeName is needed -->
+                          <xs:element name="Name" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                          <xs:element name="TagName" type="xs:string" minOccurs="0" maxOccurs="1" />
+                          <xs:element name="TypeID" type="xs:string" minOccurs="0" maxOccurs="1" />
+                          <xs:element name="TypeName" type="xs:string" minOccurs="0" maxOccurs="1" />
+                        </xs:all>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              
+              <!-- Deprecated. Use Shop. -->
+				      <xs:element name="Shops" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="ShopID" type="xs:string" minOccurs="0" maxOccurs="1" />
+									</xs:sequence>
+				        </xs:complexType>
+				      </xs:element>
+
+							<!-- Deprecated. Use ParentGroups. -->
+				      <xs:element name="Groups" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="GroupID" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+									</xs:sequence>
+				        </xs:complexType>
+				      </xs:element>
+
+							<!-- ParentGroups is a replacement for Groups offering SortOrder, 06-29-2009 -->
+							<xs:element name="ParentGroups" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="ParentGroup" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:all>
+													<xs:element name="ID" type="xs:string" minOccurs="1" maxOccurs="1" />
+													<xs:element name="SortOrder" type="xs:string" minOccurs="0" maxOccurs="1" />
+												</xs:all>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							
+							<!-- Shop is a replacement for Shops offering SortOrder, 06-29-2009 -->
+							<xs:element name="Shop" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:all>
+										<xs:element name="ID" type="xs:string" minOccurs="1" maxOccurs="1" />
+										<xs:element name="SortOrder" type="xs:string" minOccurs="0" maxOccurs="1" />
+									</xs:all>
+								</xs:complexType>
+							</xs:element>
+	              
+						</xs:all>
+						<xs:attribute name="delete" type="xs:string" default="false"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

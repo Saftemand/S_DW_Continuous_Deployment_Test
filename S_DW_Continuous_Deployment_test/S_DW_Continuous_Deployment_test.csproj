@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{61E84A2C-3B35-466B-8B46-9AFF24D84FE9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>S_DW_Continuous_Deployment_test</RootNamespace>
+    <AssemblyName>S_DW_Continuous_Deployment_test</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dynamicweb">
+      <HintPath>..\..\..\..\Downloads\Application(8.7.2.8)\bin\Dynamicweb.dll</HintPath>
+    </Reference>
+    <Reference Include="Dynamicweb.Admin">
+      <HintPath>..\..\..\..\Downloads\Application(8.7.2.8)\bin\Dynamicweb.Admin.dll</HintPath>
+    </Reference>
+    <Reference Include="Dynamicweb.Controls">
+      <HintPath>..\..\..\..\Downloads\Application(8.7.2.8)\bin\Dynamicweb.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Dynamicweb.Data">
+      <HintPath>..\..\..\..\Downloads\Application(8.7.2.8)\bin\Dynamicweb.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Dynamicweb.eCommerce.Cart.CheckoutHandlers, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Downloads\Application(8.7.2.8)\bin\Dynamicweb.eCommerce.Cart.CheckoutHandlers.dll</HintPath>
+    </Reference>
+    <Reference Include="Dynamicweb.Searching">
+      <HintPath>..\..\..\..\Downloads\Application(8.7.2.8)\bin\Dynamicweb.Searching.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CustomModules\CustomDealersearch\CategoryDelete.aspx" />
+    <Content Include="CustomModules\CustomDealersearch\CategoryEdit.aspx" />
+    <Content Include="CustomModules\CustomDealersearch\CategoryList.aspx" />
+    <Content Include="CustomModules\CustomDealersearch\CategorySave.aspx" />
+    <Content Include="CustomModules\CustomDealersearch\CustomDealersearch_Edit.aspx" />
+    <Content Include="CustomModules\CustomDealersearch\DealerCopy.aspx" />
+    <Content Include="CustomModules\CustomDealersearch\DealerDelete.aspx" />
+    <Content Include="CustomModules\CustomDealersearch\DealerEdit.aspx" />
+    <Content Include="CustomModules\CustomDealersearch\DealerList.aspx" />
+    <Content Include="CustomModules\CustomDealersearch\DealerSave.aspx" />
+    <Content Include="CustomModules\CustomDealersearch\Module_CustomDealersearch.gif" />
+    <Content Include="CustomModules\CustomDealersearch\Module_CustomDealersearch_Small.gif" />
+    <Content Include="CustomModules\HelloWorld\HelloWorld_Edit.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="x.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomModules\CustomDealersearch\CategoryDelete.aspx.cs">
+      <DependentUpon>CategoryDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomModules\CustomDealersearch\CategoryDelete.aspx.designer.cs">
+      <DependentUpon>CategoryDelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomModules\CustomDealersearch\CategoryEdit.aspx.cs">
+      <DependentUpon>CategoryEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomModules\CustomDealersearch\CategoryEdit.aspx.designer.cs">
+      <DependentUpon>CategoryEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomModules\CustomDealersearch\CategoryList.aspx.cs">
+      <DependentUpon>CategoryList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomModules\CustomDealersearch\CategoryList.aspx.designer.cs">
+      <DependentUpon>CategoryList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomModules\CustomDealersearch\CategorySave.aspx.cs">
+      <DependentUpon>CategorySave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomModules\CustomDealersearch\CategorySave.aspx.designer.cs">
+      <DependentUpon>CategorySave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomModules\CustomDealersearch\CustomDealersearch_Edit.aspx.cs">
+      <DependentUpon>CustomDealersearch_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomModules\CustomDealersearch\CustomDealersearch_Edit.aspx.designer.cs">
+      <DependentUpon>CustomDealersearch_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomModules\CustomDealersearch\DealerCopy.aspx.cs">
+      <DependentUpon>DealerCopy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomModules\CustomDealersearch\DealerCopy.aspx.designer.cs">
+      <DependentUpon>DealerCopy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomModules\CustomDealersearch\DealerDelete.aspx.cs">
+      <DependentUpon>DealerDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomModules\CustomDealersearch\DealerDelete.aspx.designer.cs">
+      <DependentUpon>DealerDelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomModules\CustomDealersearch\DealerEdit.aspx.cs">
+      <DependentUpon>DealerEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomModules\CustomDealersearch\DealerEdit.aspx.designer.cs">
+      <DependentUpon>DealerEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomModules\CustomDealersearch\DealerList.aspx.cs">
+      <DependentUpon>DealerList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomModules\CustomDealersearch\DealerList.aspx.designer.cs">
+      <DependentUpon>DealerList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomModules\CustomDealersearch\DealerSave.aspx.cs">
+      <DependentUpon>DealerSave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomModules\CustomDealersearch\DealerSave.aspx.designer.cs">
+      <DependentUpon>DealerSave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomModules\CustomDealersearch\Objects\Category.cs" />
+    <Compile Include="CustomModules\CustomDealersearch\Objects\CategoryCollection.cs" />
+    <Compile Include="CustomModules\CustomDealersearch\Objects\Dealer.cs" />
+    <Compile Include="CustomModules\CustomDealersearch\Objects\DealerCollection.cs" />
+    <Compile Include="CustomModules\CustomDealersearch\Objects\DealerSQL.cs" />
+    <Compile Include="CustomModules\CustomDealersearch\Objects\Frontend.cs" />
+    <Compile Include="CustomModules\HelloWorld\HelloWorld.cs" />
+    <Compile Include="CustomModules\HelloWorld\HelloWorld_Edit.aspx.cs">
+      <DependentUpon>HelloWorld_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomModules\HelloWorld\HelloWorld_Edit.aspx.designer.cs">
+      <DependentUpon>HelloWorld_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62846</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:62846/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

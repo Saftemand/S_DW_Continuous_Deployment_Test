@@ -1,0 +1,1 @@
+﻿<%@ Page Language="vb" AutoEventWireup="false" Codebehind="CategoryDelete.aspx.vb" Inherits="Dynamicweb.Admin.DealerSearch.Backend.CategoryDelete" %>

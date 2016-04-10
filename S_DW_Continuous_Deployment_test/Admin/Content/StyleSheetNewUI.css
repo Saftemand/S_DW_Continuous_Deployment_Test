@@ -1,0 +1,403 @@
+﻿html
+{
+	height:100%;
+	border:0;
+	margin:0;
+	padding:0;
+}
+body
+{
+	height:100%;
+	background-color:#ffffff;
+	/*background-color: #EFF5FA;*/
+	border:0;
+	margin:0px;
+	padding:0px;
+	font-family: arial, verdana, Microsoft JhengHei;
+	font-size: 11px;
+	color :#333333;
+	border-right:1px solid #9FAEC2;
+}
+.blueBody
+{
+	background-color: #EFF5FA;
+}
+button, input.newUIbutton{
+	font-family: arial, verdana, Microsoft JhengHei;
+	font-size: 11px;
+	padding-left:3px;
+	padding-right:3px;
+}
+form
+{
+	margin:0px;
+	padding:0px;
+	border:0;
+}
+
+label {
+	cursor: pointer;
+}
+
+.label
+{
+	color: #5A6779;
+}
+
+small{
+	color :#b0b0b0;
+}
+
+a  {
+	text-decoration :None;
+	color :#333333;
+}
+
+a:visited  {
+	color :#333333;
+}
+
+a:active  {
+	color :#333333;
+}
+
+a:hover  {
+	color :#003366;
+	cursor: pointer;
+}
+
+a.rma-link 
+{
+    color: #0051FF;
+}
+
+a.rma-link:active
+{
+    color: #0051FF;
+}
+
+a.rma-link:visited
+{
+    color: #0051FF;
+}
+
+a.rma-link:hover
+{
+    text-decoration: underline;
+    color: #0051FF;
+}
+
+.NewUIinput, .std, textarea
+{
+	width: 250px;
+	border:solid 1px #ABADB3;
+	font-family: arial, verdana, Microsoft JhengHei;
+	font-size: 11px;
+    padding: 1px;
+	resize: none;
+}
+
+input[type=text].std, 
+input[type=text].NewUIinput, 
+input[type=password].std, 
+input[type=password].NewUIinput, 
+select.std,
+select.NewUIinput,
+textarea {
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.NewUIcheckbox
+{
+	border:solid 1px #ABADB3;
+	font-family: arial, verdana, Microsoft JhengHei;
+	font-size: 11px;
+}
+.h, .H
+{
+	cursor:pointer;
+}
+
+#breadcrumb, .breadcrumb
+{
+	height:20px;
+	line-height:18px;
+	display:inherit;
+	vertical-align:middle;
+	padding-left:10px;
+	border-bottom: 1px solid #BDCCE0;
+}
+
+.gbTitle {
+	Background-color: transparent;
+	font-size:11px;
+	font-weight:Bold;
+	color:#003366;
+	vertical-align:middle;
+}
+
+h1.title
+{
+	margin:0px;
+	padding-left: 5px;
+	border-bottom: solid 1px #9FAEC2;
+	background: url('/Admin/Images/Ribbon/UI/List/PipeL.gif' ) top left repeat-x;
+	height:25px;
+	line-height:23px;
+	vertical-align:middle;
+
+	color: #15428b;
+	font-family: Arial, Microsoft JhengHei;
+	font-weight: bolder;
+	font-size: 14px;
+}
+h2.subtitle
+{
+	margin:0px;
+	padding-left: 5px;
+	border-bottom: solid 1px #BDCCE0;
+	border-top: solid 1px #ffffff;
+	background-color: #ECF4FC;
+	height: 18px;
+	line-height: 16px;
+	vertical-align:middle;
+	
+	color: #15428b;
+	font-family: Arial, Microsoft JhengHei;
+	font-weight: bold;
+	font-size: 11px;
+}
+.CplHeading
+{
+	font-size: 14px; 
+	font-family: Verdana, Arial, Helvetica; 
+	font-weight: Bold;
+}
+.tabTable {
+	width:600px;
+}
+
+/* Global styles for item management */
+ 
+.item-clearfix:after 
+{
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.item-clearfix
+{
+	display: inline-block;
+}
+ 
+html[xmlns] .item-clearfix
+{
+	display: block;
+}
+ 
+* html .item-clearfix
+{
+	height: 1%;
+}
+
+.item-editor-box
+{
+    width: 250px;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.item-editor-box ul,
+.item-editor-box ul li
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.item-editor-box ul
+{
+    margin: 2px;
+    margin-left: 0px;
+}
+
+.item-editor-box ul li
+{
+    height: 18px;
+    line-height: 18px;
+    width: 250px;
+    white-space: nowrap;
+}
+
+.item-editor-box ul li.item-clearfix input,
+.item-editor-box ul li.item-clearfix label
+{
+    float: left;
+}
+
+.item-editor-box ul li.item-clearfix input
+{
+    width: 16px;
+    height: 16px;
+    margin: 2px;
+    margin-left: 1px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    padding: 0px;
+    outline: none;
+}
+
+.item-editor-box ul li.item-clearfix label
+{
+    margin-left: 2px;
+    white-space: nowrap;
+}
+
+ul.item-breadcrumb,
+ul.item-breadcrumb li
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+ul.item-breadcrumb li
+{
+    float: left;
+    margin-right: 5px;
+    height: 20px;
+    line-height: 20px;
+}
+
+ul.item-breadcrumb li.item-breadcrumb-arrow
+{
+    margin-top: -1px;
+}
+
+ul.item-breadcrumb li.item-breadcrumb-item-active
+{
+    font-weight: bold;
+}
+
+ul.unstyled
+{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+ul.unstyled input
+{
+    margin-left: 0;
+}
+
+textarea.item-field
+{
+    resize: none;
+    height: 125px;
+    
+    padding: 0px;
+    
+    padding: 1px\9; /* IE8 and below */
+    *padding: 1px;  /* IE7 and below */
+}
+
+input[type="checkbox"].item-field
+{
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+    width: 16px;
+    height: 16px;
+}
+
+div.item-field-rich
+{
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    outline: none;
+    overflow: hidden;
+}
+
+/* End: Global styles for item management */
+
+.center-block {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.text-justify {
+  text-align: justify;
+}
+
+.remark {
+  color: GrayText;
+  font-size:10px;
+}
+
+.pull-right {
+  float: right !important;
+}
+.pull-left {
+  float: left !important;
+}
+
+.clearfix:before, .clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.left-label
+{
+    width: 170px;
+    vertical-align: top;
+}
+
+.item-field .item-field-row + .item-field-row {
+    margin-top: 4px;
+}
+.item-field .item-field-row input[type="checkbox"] {
+    vertical-align: middle;
+}
+
+.std.width-1-of-2 {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 125px;
+	display: inline-block;
+    padding: 1px;
+}
+
+    .std.width-1-of-2 + .std.width-1-of-2,
+    .std.width-1-of-2 + button {
+        margin-left: 4px;
+    }
+

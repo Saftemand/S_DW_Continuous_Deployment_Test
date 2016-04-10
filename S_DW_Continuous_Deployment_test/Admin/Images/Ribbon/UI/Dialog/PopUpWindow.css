@@ -1,0 +1,33 @@
+﻿div.popup-window > div.popup-progress
+{
+	font-weight: bold;
+	text-align: center;
+	color: #555555;
+	background-color: #f0f0f0;
+	padding-bottom: 20px;
+}
+
+div.popup-window > div.popup-progress > div.popup-progress-image
+{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+div.popup-window > div.popup-content > iframe.popup-content-frame
+{
+	background-color: Transparent;
+}
+
+div.popup-window-modal-overlay
+{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	z-index: 5;
+	background-color: #ffffff;
+	opacity: 0.4;
+	-moz-opacity: 0.4;
+	filter: alpha(opacity = 40);
+}

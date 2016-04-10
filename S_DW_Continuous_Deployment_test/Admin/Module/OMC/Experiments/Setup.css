@@ -1,0 +1,208 @@
+﻿.header
+{
+    padding: 5px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 30px;
+    background-color: #fff;
+    background: url(/Admin/Content/Management/ControlBG.gif) left top;
+	background-repeat: repeat-x;
+}
+.header h1 
+{
+	color:#006e12;
+	font-size:15px;
+	font-weight:normal;
+	line-height:30px;
+	margin:0;
+}
+.mainArea
+{
+    position: fixed;
+    top: 40px;
+    left: 0px;
+    right: 0px;
+    bottom: 50px;
+    overflow:auto;
+    background-color: #fff;
+    border-top: 1px solid #BDCCE0;
+    border-bottom: 1px solid #BDCCE0;
+    padding:10px;
+}
+
+.option, .option2
+{
+	width:544px;
+	height: 100px;
+	color: #233980;
+	font-size: 14px;
+	display: block;
+	
+	background-position: 1px 2px;
+	border: #ffffff 1px solid;
+	padding-bottom: 0px;
+	padding-left: 10px;
+	padding-right: 0px;
+	padding-top: 5px;
+	margin-bottom:10px;
+	vertical-align:top;
+	cursor:pointer;
+}
+
+.option b, .option2 b
+{
+	padding-top:5px;
+}
+.option img, .option2 img
+{
+	vertical-align:top;
+}
+.option li, .option2 li
+{
+	font-size:12px;
+}
+.option ul, .option2 ul
+{
+	margin:0;
+	margin-left:15px;
+	margin-bottom:15px;
+}
+.option2 li
+{
+	list-style:none;
+	margin-bottom:5px;
+}
+
+.option2 ol li
+{
+	list-style-type:decimal;
+}
+
+.option:hover
+{
+	background: url(/Admin/Content/Management/ControlBG.gif) left bottom;
+	background-repeat: repeat-x;
+	border: #b9d7fc 1px solid;
+}
+.footer
+{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 30px;
+    background-color: #f0f0f0;
+    bottom: 0;
+    text-align: right;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    background: url(/Admin/Content/Management/ControlBG.gif) left bottom;
+}
+
+.report table
+{
+	width:100%;
+}
+
+.report table th
+{
+	border-bottom: 1px solid #BDCCE0;
+	border-top: 1px solid #BDCCE0;
+    height: 30px;
+    padding:0;
+    background-color: #fff;
+    background: url(/Admin/Content/Management/ControlBG.gif) left top;
+	background-repeat: repeat-x;
+	padding-right:10px;
+	text-align:right;
+}
+.report table tbody td
+{
+	text-align:right;
+	height:25px;
+	border-bottom: 1px solid #BDCCE0;
+	padding-right:10px;
+}
+
+.report table tbody td.name, .report table th.name
+{
+	text-align:left;
+	font-weight:bold;
+	padding-left:10px;
+	width:200px;
+}
+
+.report table tbody td.name
+{
+	font-weight:normal;
+}
+
+.links a
+{
+	margin-left:25px;
+	text-decoration:underline;
+	color:#15428b;
+}
+
+.links a.active
+{
+	font-weight:bold;
+}
+
+.links.report a
+{
+	margin-left:15px;
+}
+
+/* item types */
+div.richselect{
+    margin-left: 15px;
+}
+
+div.item-types
+{
+	zoom: 1;
+	width: 500px;
+	height: 45px;
+	overflow: hidden;
+}
+
+div.item-types:after
+{
+	content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+div.item-types div.item-types-image,
+div.item-types div.item-types-description
+{
+	float: left;
+}
+
+div.item-types-image img
+{
+	width: 32px;
+    height: 32px;
+	margin: 3px;
+	border: none;
+}
+
+div.item-types-description 
+{
+    width: 250px;
+}
+
+div.item-types-description small 
+{
+    display: block; / for IE /
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+}

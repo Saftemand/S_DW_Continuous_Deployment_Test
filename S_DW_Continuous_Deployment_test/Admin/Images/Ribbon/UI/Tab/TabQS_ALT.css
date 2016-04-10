@@ -1,0 +1,159 @@
+﻿html,body
+{
+	margin: 0px;
+	padding: 0px;
+	background: #bfdbff;
+	font-size :11px;
+	font-family :Verdana, Helvetica, Arial, Tahoma;
+	font-weight :Normal;
+	font-style :Normal;
+	text-align :Left;
+	color :#333333;
+}
+.NewUiTab
+{
+	margin: 0px;
+	padding: 0px;
+	border:0px;
+	width:600px;
+	margin-left: 0px;
+	margin-top: 0px;
+	font-family: Arial, Microsoft JhengHei;
+	font-size: 11px;
+	color: #15428b;
+	border-top :0px solid #6593CF;
+	border-left :0px solid #6593CF;
+	border-right :1px solid #6593CF;
+}
+
+.NewUiTab .tabspacer
+{
+	margin: 0px;
+	padding: 0px;
+	border:0px;
+	background-color:#DDECFF;
+	border-bottom:solid 1px #ADD1FF;
+	height:2px;
+	line-height:2px;
+	font-size:0px;
+}
+
+.NewUiTab .tabitemscontainer
+{
+	margin: 0px;
+	padding: 0px;
+	border:0px;
+	background-color:#DDECFF;
+	padding-top:2px;
+	vertical-align:bottom;
+	border-bottom:solid 1px #ADD1FF;
+	color: #15428b;
+	height:19px;
+	line-height:19px;
+}
+.NewUiTab .tabitems a
+{
+	cursor: default;
+	color: #15428b;
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	padding-right: 10px;
+	text-decoration: none;
+	display: block;
+	float: left;
+	height:21px;
+	line-height:21px;
+	
+}
+.NewUiTab ul.tabitems
+{
+	border:0px;
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	height:21px;
+	line-height:21px;
+	
+}
+.NewUiTab ul.tabitems li
+{
+	margin: 0px;
+	padding: 0px;
+	border:0px;
+	margin-left:3px;
+	list-style: none;
+	display: block;
+	float: left;
+	height:21px;
+	line-height:21px;
+	background: url('/Admin/images/Ribbon/UI/Tab/Btn.gif' ) top right repeat-x;
+
+}
+.NewUiTab .tabtext
+{
+	position:relative;
+	height:12px;
+	margin-bottom:-6px;
+}
+.NewUiTab ul.tabitems li img.starter
+{
+	margin: 0px;
+	padding: 0px;
+	border:0px;
+	vertical-align:top;
+	height:21px;
+	width: 2px;
+	margin-right:8px;
+	background: url('/Admin/images/Ribbon/UI/Tab/Start.gif' ) top left no-repeat;
+}
+.NewUiTab ul.tabitems li.activeitem
+{
+	
+	background: url('/Admin/images/Ribbon/UI/Tab/BtnActive.gif' ) top right repeat-x;
+}
+.NewUiTab ul.tabitems li.activeitem img.starter
+{
+	background: url('/Admin/images/Ribbon/UI/Tab/StartActive.gif' ) top left no-repeat;
+}
+.NewUiTab ul.tabitems li a:hover
+{
+	background: url('/Admin/images/Ribbon/UI/Tab/BtnHover.gif' ) top right repeat-x;
+}
+.NewUiTab ul.tabitems li a:hover img.starter
+{
+	background: url('/Admin/images/Ribbon/UI/Tab/StartHover.gif' ) top left no-repeat;
+}
+
+.tabTable {
+	border-bottom :1px solid #6593CF;
+	border-left :1px solid #6593CF;
+	border-right :1px solid #6593CF;
+	width:600px;
+	height:225px;
+	background-color:#ffffff;
+	margin-left: 1px;
+}
+
+.NewUiTab .title
+{
+	color: #15428b;
+	margin: 0px;
+	padding: 0px;
+	padding-left:5px;
+	line-height: 25px;
+	font-size:14px;
+	border-top :1px solid #FFFFFF;
+	border-bottom :1px solid #6593CF;
+	background: url('/Admin/images/Ribbon/UI/Tab/BG.gif' ) top right repeat-x;
+	
+}
+
+.NewUiTab .title strong
+{
+	color: #15428b;
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: bolder;
+	font-family: Arial, Microsoft JhengHei;
+}

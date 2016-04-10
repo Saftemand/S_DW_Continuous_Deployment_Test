@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NavigationTree>
+  <Settings>
+    <Setting Level="1">
+      <NavigationImage Value="/Files/Navigation/new_arrow.gif" />
+      <NavigationMouseoverImage Value="/Files/Navigation/new_arrow_mo.gif" />
+      <NavigationActiveImage Value="/Files/Navigation/new_arrow_hit.gif" />
+      <NavigationImgAfter Value="" />
+      <NavigationDividerImage Value="/Files/Navigation/menu_streg.gif" />
+      <NavigationHideSpacer Value="" />
+      <NavigationSpace Value="2" />
+    </Setting>
+    <Setting Level="2">
+      <NavigationImage Value="/Files/Navigation/menu1_over.gif" />
+      <NavigationMouseoverImage Value="" />
+      <NavigationActiveImage Value="" />
+      <NavigationImgAfter Value="" />
+      <NavigationDividerImage Value="" />
+      <NavigationHideSpacer Value="" />
+      <NavigationSpace Value="3" />
+    </Setting>
+    <Setting Level="3">
+      <NavigationImage Value="" />
+      <NavigationMouseoverImage Value="" />
+      <NavigationActiveImage Value="" />
+      <NavigationImgAfter Value="" />
+      <NavigationDividerImage Value="" />
+      <NavigationHideSpacer Value="" />
+      <NavigationSpace Value="3" />
+    </Setting>
+    <Setting Level="4">
+      <NavigationImage Value="" />
+      <NavigationMouseoverImage Value="" />
+      <NavigationActiveImage Value="" />
+      <NavigationImgAfter Value="" />
+      <NavigationDividerImage Value="" />
+      <NavigationHideSpacer Value="" />
+      <NavigationSpace Value="3" />
+    </Setting>
+    <Setting Level="5">
+      <NavigationImage Value="" />
+      <NavigationMouseoverImage Value="" />
+      <NavigationActiveImage Value="" />
+      <NavigationImgAfter Value="" />
+      <NavigationDividerImage Value="" />
+      <NavigationHideSpacer Value="" />
+      <NavigationSpace Value="3" />
+    </Setting>
+  </Settings>
+  <Page ID="3" MenuText="Side 2" MouseOver="" Href="Default.aspx?ID=3" FriendlyHref="Default.aspx?ID=3" Title="(Forside)" Image="/Files/Navigation/menu1.gif" ImageActive="" ImageMouseOver="" Allowclick="True" ShowInSitemap="True" AbsoluteLevel="1" RelativeLevel="1" Sort="1" LastInLevel="False" InPath="False" ChildCount="1" class="L1" />
+  <Page ID="25" MenuText="Side 3.1" MouseOver="Side 3" Href="Default.aspx?ID=25" FriendlyHref="Default.aspx?ID=25" Title="(Forside)" Image="" ImageActive="" ImageMouseOver="" Allowclick="True" ShowInSitemap="True" AbsoluteLevel="1" RelativeLevel="1" Sort="2" LastInLevel="False" InPath="False" ChildCount="2" class="L1" />
+  <Page ID="81" MenuText="Søg" MouseOver="" Href="Default.aspx?ID=81" FriendlyHref="Default.aspx?ID=81" Title="(Forside)" Image="" ImageActive="" ImageMouseOver="" Allowclick="True" ShowInSitemap="True" AbsoluteLevel="1" RelativeLevel="1" Sort="3" LastInLevel="False" InPath="True" ChildCount="6" class="L1_Active">
+    <Page ID="91" MenuText="What's up" MouseOver="" Href="Default.aspx?ID=91" FriendlyHref="Default.aspx?ID=91" Title="(Forside)" Image="" ImageActive="" ImageMouseOver="" Allowclick="True" ShowInSitemap="True" AbsoluteLevel="2" RelativeLevel="2" Sort="1" LastInLevel="False" InPath="False" ChildCount="0" class="L2" />
+    <Page ID="93" MenuText="You game?" MouseOver="" Href="Default.aspx?ID=93" FriendlyHref="Default.aspx?ID=93" Title="(Forside)" Image="" ImageActive="" ImageMouseOver="" Allowclick="True" ShowInSitemap="True" AbsoluteLevel="2" RelativeLevel="2" Sort="2" LastInLevel="False" InPath="False" ChildCount="0" class="L2" />
+    <Page ID="94" MenuText="Me &amp; My" MouseOver="" Href="Default.aspx?ID=94" FriendlyHref="Default.aspx?ID=94" Title="(Forside)" Image="" ImageActive="" ImageMouseOver="" Allowclick="True" ShowInSitemap="True" AbsoluteLevel="2" RelativeLevel="2" Sort="3" LastInLevel="False" InPath="False" ChildCount="0" class="L2" />
+    <Page ID="95" MenuText="## Rocks ! ##" MouseOver="## Rocks ! ##" Href="Default.aspx?ID=95" FriendlyHref="Default.aspx?ID=95" Title="(Forside)" Image="" ImageActive="" ImageMouseOver="" Allowclick="True" ShowInSitemap="True" AbsoluteLevel="2" RelativeLevel="2" Sort="4" LastInLevel="False" InPath="False" ChildCount="0" class="L2" />
+    <Page ID="96" MenuText="интернете" MouseOver="интернете" Href="Default.aspx?ID=96" FriendlyHref="Default.aspx?ID=96" Title="(Forside)" Image="" ImageActive="" ImageMouseOver="" Allowclick="True" ShowInSitemap="True" AbsoluteLevel="2" RelativeLevel="2" Sort="5" LastInLevel="False" InPath="False" ChildCount="0" class="L2" />
+    <Page ID="97" MenuText="ウェブ全体から検索" MouseOver="ウェブ全体から検索" Href="Default.aspx?ID=97" FriendlyHref="Default.aspx?ID=97" Title="(Forside)" Image="" ImageActive="" ImageMouseOver="" Allowclick="True" ShowInSitemap="True" AbsoluteLevel="2" RelativeLevel="2" Sort="6" LastInLevel="True" InPath="True" ChildCount="1" class="L2_Active">
+      <Page ID="83" MenuText="العربيةالبحث في" MouseOver="" Href="Default.aspx?ID=83" FriendlyHref="Default.aspx?ID=83" Title="(Forside)" Image="" ImageActive="" ImageMouseOver="" Allowclick="True" ShowInSitemap="True" AbsoluteLevel="3" RelativeLevel="3" Sort="1" LastInLevel="True" InPath="True" ChildCount="0" class="L3_Active" />
+    </Page>
+  </Page>
+  <Page ID="78" MenuText="test fjollet" MouseOver="test" Href="Default.aspx?ID=78" FriendlyHref="Default.aspx?ID=78" Title="(Forside)" Image="" ImageActive="" ImageMouseOver="" Allowclick="True" ShowInSitemap="True" AbsoluteLevel="1" RelativeLevel="1" Sort="4" LastInLevel="False" InPath="False" ChildCount="0" class="L1" />
+  <Page ID="98" MenuText="news" MouseOver="news" Href="Default.aspx?ID=98" FriendlyHref="Default.aspx?ID=98" Title="(Forside)" Image="" ImageActive="" ImageMouseOver="" Allowclick="True" ShowInSitemap="True" AbsoluteLevel="1" RelativeLevel="1" Sort="5" LastInLevel="False" InPath="False" ChildCount="0" class="L1" />
+  <Page ID="99" MenuText="Atteno" MouseOver="Atteno" Href="Default.aspx?ID=99" FriendlyHref="Default.aspx?ID=99" Title="(Forside)" Image="" ImageActive="" ImageMouseOver="" Allowclick="True" ShowInSitemap="True" AbsoluteLevel="1" RelativeLevel="1" Sort="6" LastInLevel="False" InPath="False" ChildCount="0" class="L1" />
+  <Page ID="120" MenuText="Kalender" MouseOver="" Href="Default.aspx?ID=120" FriendlyHref="Default.aspx?ID=120" Title="(Forside)" Image="" ImageActive="" ImageMouseOver="" Allowclick="True" ShowInSitemap="True" AbsoluteLevel="1" RelativeLevel="1" Sort="7" LastInLevel="False" InPath="False" ChildCount="0" class="L1" />
+  <Page ID="133" MenuText="Undervisning" MouseOver="Undervisning" Href="Default.aspx?ID=150" FriendlyHref="Default.aspx?ID=133" Title="(Forside)" Image="" ImageActive="" ImageMouseOver="" Allowclick="True" ShowInSitemap="True" AbsoluteLevel="1" RelativeLevel="1" Sort="8" LastInLevel="False" InPath="False" ChildCount="1" class="L1" />
+  <Page ID="371" MenuText="Forum" MouseOver="Forum" Href="Default.aspx?ID=371" FriendlyHref="Default.aspx?ID=371" Title="(Forside)" Image="" ImageActive="" ImageMouseOver="" Allowclick="True" ShowInSitemap="True" AbsoluteLevel="1" RelativeLevel="1" Sort="9" LastInLevel="False" InPath="False" ChildCount="0" class="L1" />
+  <Page ID="376" MenuText="raptest" MouseOver="raptest" Href="Default.aspx?ID=376" FriendlyHref="Default.aspx?ID=376" Title="(Forside)" Image="" ImageActive="" ImageMouseOver="" Allowclick="True" ShowInSitemap="True" AbsoluteLevel="1" RelativeLevel="1" Sort="10" LastInLevel="False" InPath="False" ChildCount="2" class="L1" />
+  <Page ID="378" MenuText="NP" MouseOver="" Href="Default.aspx?ID=378" FriendlyHref="Default.aspx?ID=378" Title="(Forside)" Image="" ImageActive="" ImageMouseOver="" Allowclick="True" ShowInSitemap="True" AbsoluteLevel="1" RelativeLevel="1" Sort="11" LastInLevel="False" InPath="False" ChildCount="7" class="L1" />
+  <Page ID="387" MenuText="test" MouseOver="test" Href="Default.aspx?ID=387" FriendlyHref="Default.aspx?ID=387" Title="(Forside)" Image="" ImageActive="" ImageMouseOver="" Allowclick="True" ShowInSitemap="True" AbsoluteLevel="1" RelativeLevel="1" Sort="12" LastInLevel="False" InPath="False" ChildCount="1" class="L1" />
+  <Page ID="393" MenuText="Page 1" MouseOver="Page 1" Href="Default.aspx?ID=393" FriendlyHref="Default.aspx?ID=393" Title="(Forside)" Image="" ImageActive="" ImageMouseOver="" Allowclick="True" ShowInSitemap="True" AbsoluteLevel="1" RelativeLevel="1" Sort="13" LastInLevel="False" InPath="False" ChildCount="0" class="L1" />
+  <Page ID="394" MenuText="Page &lt;b&gt;2&lt;/b&gt;" MouseOver="Page 2" Href="Default.aspx?ID=394" FriendlyHref="Default.aspx?ID=394" Title="(Forside)" Image="" ImageActive="" ImageMouseOver="" Allowclick="True" ShowInSitemap="True" AbsoluteLevel="1" RelativeLevel="1" Sort="14" LastInLevel="False" InPath="False" ChildCount="0" class="L1" />
+  <Page ID="412" MenuText="Forum" MouseOver="Forum" Href="Default.aspx?ID=412" FriendlyHref="Default.aspx?ID=412" Title="(Forside)" Image="" ImageActive="" ImageMouseOver="" Allowclick="True" ShowInSitemap="True" AbsoluteLevel="1" RelativeLevel="1" Sort="15" LastInLevel="False" InPath="False" ChildCount="0" class="L1" />
+  <Page ID="84" MenuText="BBR" MouseOver="BBR" Href="Default.aspx?ID=84" FriendlyHref="Default.aspx?ID=84" Title="(Forside)" Image="" ImageActive="" ImageMouseOver="" Allowclick="True" ShowInSitemap="True" AbsoluteLevel="1" RelativeLevel="1" Sort="16" LastInLevel="False" InPath="False" ChildCount="0" class="L1" />
+  <Page ID="137" MenuText="tfc" MouseOver="tfc" Href="Default.aspx?ID=137" FriendlyHref="Default.aspx?ID=137" Title="(Forside)" Image="" ImageActive="" ImageMouseOver="" Allowclick="True" ShowInSitemap="True" AbsoluteLevel="1" RelativeLevel="1" Sort="17" LastInLevel="False" InPath="False" ChildCount="0" class="L1" />
+  <Page ID="464" MenuText="Forside" MouseOver="Forside" Href="Default.aspx?ID=464" FriendlyHref="Default.aspx?ID=464" Title="(Forside)" Image="" ImageActive="" ImageMouseOver="" Allowclick="True" ShowInSitemap="True" AbsoluteLevel="1" RelativeLevel="1" Sort="18" LastInLevel="False" InPath="False" ChildCount="1" class="L1" />
+  <Page ID="92" MenuText="tv/video" MouseOver="" Href="Default.aspx?ID=92" FriendlyHref="Default.aspx?ID=92" Title="(Forside)" Image="" ImageActive="" ImageMouseOver="" Allowclick="True" ShowInSitemap="True" AbsoluteLevel="1" RelativeLevel="1" Sort="19" LastInLevel="False" InPath="False" ChildCount="0" class="L1" />
+  <Page ID="121" MenuText="Kurv" MouseOver="" Href="Default.aspx?ID=121" FriendlyHref="Default.aspx?ID=121" Title="(Forside)" Image="" ImageActive="" ImageMouseOver="" Allowclick="True" ShowInSitemap="True" AbsoluteLevel="1" RelativeLevel="1" Sort="20" LastInLevel="False" InPath="False" ChildCount="0" class="L1" />
+  <Page ID="2" MenuText="Side 1.1" MouseOver="Side 1.1" Href="Default.aspx?ID=2" FriendlyHref="Default.aspx?ID=2" Title="(Forside)" Image="" ImageActive="" ImageMouseOver="" Allowclick="True" ShowInSitemap="True" AbsoluteLevel="1" RelativeLevel="1" Sort="21" LastInLevel="False" InPath="False" ChildCount="1" class="L1" />
+  <Page ID="414" MenuText="Link Management" MouseOver="Link Management" Href="Default.aspx?ID=414" FriendlyHref="Default.aspx?ID=414" Title="(Forside)" Image="" ImageActive="" ImageMouseOver="" Allowclick="True" ShowInSitemap="True" AbsoluteLevel="1" RelativeLevel="1" Sort="22" LastInLevel="False" InPath="False" ChildCount="0" class="L1" />
+  <Page ID="390" MenuText="Ny underside" MouseOver="" Href="Default.aspx?ID=390" FriendlyHref="Default.aspx?ID=390" Title="(Forside)" Image="" ImageActive="" ImageMouseOver="" Allowclick="True" ShowInSitemap="True" AbsoluteLevel="1" RelativeLevel="1" Sort="23" LastInLevel="False" InPath="False" ChildCount="0" class="L1" />
+  <Page ID="1" MenuText="Page 1" MouseOver="Page 1" Href="Default.aspx?ID=1" FriendlyHref="Default.aspx?ID=1" Title="(Forside)" Image="" ImageActive="" ImageMouseOver="" Allowclick="True" ShowInSitemap="True" AbsoluteLevel="1" RelativeLevel="1" Sort="24" LastInLevel="True" InPath="False" ChildCount="2" class="L1" />
+</NavigationTree>

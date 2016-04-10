@@ -1,0 +1,268 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Main.Master.vb" Inherits="Dynamicweb.Admin.eComBackend.MainMaster" %>
+
+<%@ Register TagPrefix="dw" Namespace="Dynamicweb.Controls" Assembly="Dynamicweb.Controls" %>
+<%@ Register TagPrefix="dw" TagName="Accordion" Src="/Admin/Content/Accordion/Accordion.ascx" %>
+<%@ Register TagPrefix="ecom" Namespace="Dynamicweb.Admin.eComBackend" Assembly="Dynamicweb.Admin" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head runat="server">
+            <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+            <title></title>
+            
+            <dw:ControlResources ID="ctrlResources" IncludePrototype="true" IncludeRequireJS="True" IncludeClientSideSupport="true" IncludeUIStylesheet="true" runat="server" >
+                <Items>
+                    <dw:GenericResource Url="/Admin/Content/JsLib/dw/Utilities.js" />
+                </Items>
+            </dw:ControlResources>
+        
+            <link rel="Stylesheet" type="text/css" href="/Admin/Module/eCom_Catalog/dw7/css/Main.css" />
+            <link rel="Stylesheet" type="text/css" href="/Admin/Module/eCom_Catalog/dw7/css/Main.css" />    
+            <script type="text/javascript" src="/Admin/Module/eCom_Catalog/dw7/js/Main.js"></script>
+            
+            <asp:ContentPlaceHolder ID="HeadHolder" runat="server">
+            </asp:ContentPlaceHolder>
+    </head>
+    <script type="text/javascript">
+        function AssortmentRebuildCtxMenuState()
+        {
+            var obj = ContextMenu.callingItemID.split(';');
+
+            if(obj[3] == '1')
+                return 'disabled';
+            else
+                return 'enabled';
+        }
+    </script>
+    <body>
+        <ecom:Form ID="Form1" runat="server">
+            <table id="ecomTab" width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr valign="top">
+                    <td id="cellTreeCollapsed" style="width: 24px; display: none">
+                        <img id="imgShowNav" class="tree-toolbar-button" style="cursor: pointer" src="/Admin/images/OpenTreeView_off.gif"
+                            runat="server" />
+                    </td>
+                    <td id="cellTree" style="width: 250px;<%=MasterAreaStyle%>">
+                        <div class="cellTreeContainer">
+                            <dw:Tree ID="MainTree" LoadOnDemand="true" EnableControlMenu="true" DragAndDrop-AllowDrag="Allow"
+                                UseCookies="true" ShowRoot="false" Title="eCommerce" SubTitle="Navigation" TranslateTitle="false" runat="server">
+                            </dw:Tree>
+                            <div id="accordionContainer">
+                                <dw:Accordion ID="Accordion" SelectedButton="ecommerce" runat="server" ContextMenuID="AccordionMenu" />
+                            </div>
+                        </div>
+                        <div id="treeEndMarker" style="height: 1px">
+                        </div>
+                    </td>
+                    <td id="slider" style="<%=MasterAreaStyle%>">
+                        <div id="sliderHandle">
+                            &nbsp;</div>
+                    </td>
+                    <td id="cellContent">
+                     
+                            <dw:StretchedContainer ID="OuterContainer" Scroll="Hidden" Stretch="Fill" Anchor="document"
+                                runat="server">
+                                <asp:ContentPlaceHolder ID="ContentHolder" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </dw:StretchedContainer>
+                     
+                    </td>
+                </tr>
+            </table>
+            <dw:ContextMenu ID="AccordionMenu" runat="server" OnClientSelectView="eCommerce.MasterPage.onAccordionContextMenuView">
+                <dw:ContextMenuButton ID="cmdPages" Text="Open in new window" runat="server" ImagePath="/Admin/Images/Ribbon/Icons/Small/Document.png" OnClientClick="eCommerce.MasterPage.onAccordionContextMenu(this, 'page()');" Views="page" />
+                <dw:ContextMenuButton ID="cmdFiles" Text="Open in new window" runat="server" ImagePath="/Admin/Images/Ribbon/Icons/Small/Document.png" OnClientClick="eCommerce.MasterPage.onAccordionContextMenu(this, 'filemanager()');" Views="filemanager" />
+                <dw:ContextMenuButton ID="cmdManagementCenter" Text="Open in new window" runat="server" ImagePath="/Admin/Images/Ribbon/Icons/Small/Document.png" OnClientClick="eCommerce.MasterPage.onAccordionContextMenu(this, 'mgmtcenter()');" Views="managementcenter" />
+                <dw:ContextMenuButton ID="cmdEcom" Text="Open in new window" runat="server" ImagePath="/Admin/Images/Ribbon/Icons/Small/Document.png" OnClientClick="eCommerce.MasterPage.onAccordionContextMenu(this, 'ecom()');" Views="ecom" />
+                <dw:ContextMenuButton ID="cmdOmc" Text="Open in new window" runat="server" ImagePath="/Admin/Images/Ribbon/Icons/Small/Document.png" OnClientClick="eCommerce.MasterPage.onAccordionContextMenu(this, 'omc()');" Views="omc" />
+                <dw:ContextMenuButton ID="cmdModules" Text="Open in new window" runat="server" ImagePath="/Admin/Images/Ribbon/Icons/Small/Document.png" OnClientClick="eCommerce.MasterPage.onAccordionContextMenu(this, 'modules()');" Views="modules" />
+                <dw:ContextMenuButton ID="cmdUserManagement" Text="Open in new window" runat="server" ImagePath="/Admin/Images/Ribbon/Icons/Small/Document.png" OnClientClick="eCommerce.MasterPage.onAccordionContextMenu(this, 'userManagement()');" Views="usermanagement" />
+            </dw:ContextMenu>
+
+            <dw:ContextMenu ID="GroupDropMenu" OnShow="eCommerce.SystemTree.getInstance().onDropMenuVisibilityChanged(true);"
+                OnHide="eCommerce.SystemTree.getInstance().onDropMenuVisibilityChanged(false);"
+                runat="server">
+                <dw:ContextMenuButton ID="cmdMove" Text="Flyt_hertil" OnClientClick="eCommerce.SystemTree.getInstance().onDropMenuAction('MoveToGroup');" ImagePath="/Admin/Images/Ribbon/Icons/Small/folder_up.png" runat="server" />
+                <dw:ContextMenuButton ID="cmdAttach" Text="Attach to this group" OnClientClick="eCommerce.SystemTree.getInstance().onDropMenuAction('AttachToGroup');" ImagePath="/Admin/Images/Ribbon/Icons/Small/folder_add.png" runat="server" />
+            </dw:ContextMenu>
+            
+            <dw:ContextMenu ID="GroupDropMenuMove" OnShow="eCommerce.SystemTree.getInstance().onDropMenuVisibilityChanged(true);"
+                OnHide="eCommerce.SystemTree.getInstance().onDropMenuVisibilityChanged(false);"
+                runat="server">
+                <dw:ContextMenuButton ID="cmdMoveOnly" Text="Flyt_hertil" OnClientClick="eCommerce.SystemTree.getInstance().onDropMenuAction('MoveToGroup');"
+                    ImagePath="/Admin/Images/Ribbon/Icons/Small/folder_up.png" runat="server" />
+            </dw:ContextMenu>
+            <dw:ContextMenu ID="GroupsTreeContextDisabled" OnShow="eCommerce.groupsMenuOnShow();" runat="server">
+                <dw:ContextMenuButton ID="ContextMenuButton1" Text="Edit group" OnClientClick="eCommerce.editGroup();"
+                    ImagePath="/admin/module/ecom_catalog/dw7/images/content/eCom_Groups_small.gif"
+                    runat="server" />
+            </dw:ContextMenu>
+            
+            <dw:ContextMenu ID="GroupsTreeContext" OnShow="eCommerce.groupsMenuOnShow();" runat="server">
+                
+                <dw:ContextMenuButton ID="NewSubgroupButton" Text="New subgroup" OnClientClick="eCommerce.newGroup();"
+                    ImagePath="/admin/module/ecom_catalog/dw7/images/content/eCom_Groups_add_small.gif"
+                    runat="server" />
+                
+                <dw:ContextMenuButton ID="ContextMenuButton5" Text="Edit group" OnClientClick="eCommerce.editGroup();"
+                    ImagePath="/admin/module/ecom_catalog/dw7/images/content/eCom_Groups_small.gif"
+                    runat="server" />
+                
+                <dw:ContextMenuButton ID="ContextMenuButton7" Text="Attach subgroup" OnClientClick="eCommerce.appendGroup();"
+                    ImagePath="/admin/module/ecom_catalog/dw7/images/content/eCom_Groups_attach_small.gif"
+                    runat="server" />
+                
+                <dw:ContextMenuButton ID="ContextMenuButton8" Text="Delete group" OnClientClick="eCommerce.deleteGroup();"
+                    ImagePath="/admin/module/ecom_catalog/dw7/images/content/eCom_Groups_delete_small.gif"
+                    runat="server" />
+                
+                <dw:ContextMenuButton ID="NewProductButton" Divide="Before" Text="New product" OnClientClick="eCommerce.newProduct();"
+                    ImagePath="/admin/module/ecom_catalog/dw7/images/content/ecom_product_add_small.gif"
+                    runat="server" />
+                
+                <dw:ContextMenuButton ID="ContextMenuButton2" Text="Attach products" OnClientClick="eCommerce.appendProduct();"
+                    ImagePath="/admin/module/ecom_catalog/dw7/images/content/eCom_Product_attach_small.gif"
+                    runat="server" />
+                
+                <dw:ContextMenuButton ID="ContextMenuButton3" Text="Sort products" OnClientClick="eCommerce.sortProducts();"
+                    ImagePath="/admin/module/ecom_catalog/dw7/images/content/eCom_Product_sort_small.gif"
+                    runat="server" />
+                
+                <dw:ContextMenuButton ID="ContextMenuButton9" Divide="Before" Text="Permissions"
+                    OnClientClick="eCommerce.permissions();" ImagePath="/admin/module/ecom_catalog/dw7/images/content/ecom_user_permission_small.gif"
+                    runat="server" />
+                    
+            </dw:ContextMenu>
+            <dw:ContextMenu ID="GroupsTreeNoPermissionsContext" OnShow="eCommerce.groupsMenuOnShow();" runat="server">
+                <dw:ContextMenuButton ID="cmdNoPermNewGroup" Text="New subgroup" OnClientClick="eCommerce.newGroup();"
+                    ImagePath="/admin/module/ecom_catalog/dw7/images/content/eCom_Groups_add_small.gif"
+                    runat="server" />
+                <dw:ContextMenuButton ID="cmdNoPermEditGroup" Text="Edit group" OnClientClick="eCommerce.editGroup();"
+                    ImagePath="/admin/module/ecom_catalog/dw7/images/content/eCom_Groups_small.gif"
+                    runat="server" />
+                <dw:ContextMenuButton ID="cmdNoPermAttachGroup" Text="Attach subgroup" OnClientClick="eCommerce.appendGroup();"
+                    ImagePath="/admin/module/ecom_catalog/dw7/images/content/eCom_Groups_attach_small.gif"
+                    runat="server" />
+                <dw:ContextMenuButton ID="cmdNoPermDeleteGroup" Text="Delete group" OnClientClick="eCommerce.deleteGroup();"
+                    ImagePath="/admin/module/ecom_catalog/dw7/images/content/eCom_Groups_delete_small.gif"
+                    runat="server" />
+                <dw:ContextMenuButton ID="cmdNoPermNewProduct" Divide="Before" Text="New product" OnClientClick="eCommerce.newProduct();"
+                    ImagePath="/admin/module/ecom_catalog/dw7/images/content/ecom_product_add_small.gif"
+                    runat="server" />
+                <dw:ContextMenuButton ID="cmdNoPermAttachProduct" Text="Attach products" OnClientClick="eCommerce.appendProduct();"
+                    ImagePath="/admin/module/ecom_catalog/dw7/images/content/eCom_Product_attach_small.gif"
+                    runat="server" />
+                <dw:ContextMenuButton ID="cmdNoPermSorProduct" Text="Sort products" OnClientClick="eCommerce.sortProducts();"
+                    ImagePath="/admin/module/ecom_catalog/dw7/images/content/eCom_Product_sort_small.gif"
+                    runat="server" />
+            </dw:ContextMenu>
+            <dw:ContextMenu ID="ShopTreeContext" OnClientSelectView="eCommerce.onSelectShopContextView"
+                OnShow="eCommerce.groupsMenuOnShow();" runat="server">
+                <dw:ContextMenuButton ID="cmdNewGroup" Text="New group" OnClientClick="eCommerce.newGroup();"
+                    ImagePath="/admin/module/ecom_catalog/dw7/images/content/eCom_Groups_add_small.gif"
+                    runat="server" />
+                <dw:ContextMenuButton ID="cmdEditShop" Text="Edit shop" OnClientClick="eCommerce.editShop(eCommerce.callingShopID());"
+                    ImagePath="/admin/module/ecom_catalog/dw7/images/content/eCom_shop_small.gif"
+                    runat="server" />
+                <dw:ContextMenuButton ID="cmdDeleteShop" Text="Delete shop" OnClientClick="eCommerce.deleteShop(eCommerce.callingShopID());"
+                    ImagePath="/admin/module/ecom_catalog/dw7/images/content/eCom_shop_delete_small.gif"
+                    runat="server" />
+                <dw:ContextMenuButton ID="cmdSortShopGroups" Text="Sort groups" Divide="Before" OnClientClick="eCommerce.sortShopGroups(eCommerce.callingShopID());"
+                    ImagePath="/admin/module/ecom_catalog/dw7/images/content/group_sort.gif" runat="server" />
+                <dw:ContextMenuButton ID="cmdShopPermissions" Text="Permissions" Divide="Before"
+                    OnClientClick="eCommerce.permissions('SHOP');" ImagePath="/admin/module/ecom_catalog/dw7/images/content/ecom_user_permission_small.gif"
+                    runat="server" />
+            </dw:ContextMenu>
+            
+            <dw:ContextMenu ID="OrdersTreeContext" OnShow="eCommerce.groupsMenuOnShow();" runat="server">
+                <dw:ContextMenuButton ID="cmdOrderPermissions" Text="Permissions"
+                    OnClientClick="eCommerce.permissions('ORDERS');" ImagePath="/admin/module/ecom_catalog/dw7/images/content/ecom_user_permission_small.gif" runat="server" />
+            </dw:ContextMenu>
+
+            <dw:ContextMenu ID="QuotesTreeContext" OnShow="eCommerce.groupsMenuOnShow();" runat="server">
+                <dw:ContextMenuButton ID="ContextMenuButton20" Text="Permissions"
+                    OnClientClick="eCommerce.permissions('QUOTES');" ImagePath="/admin/module/ecom_catalog/dw7/images/content/ecom_user_permission_small.gif" runat="server" />
+            </dw:ContextMenu>
+
+            <dw:Contextmenu ID="FolderSmartSearchContextMenu" runat="server">
+                <dw:ContextmenuButton ID="ContextmenuButton12" runat="server" Divide="None" Image="View_Add" Text="New smart search" OnClientClick="eCommerce.AddSmartSearch();" />
+            </dw:Contextmenu>
+
+            <dw:Contextmenu ID="AssortmentFolderContextMenu" runat="server">
+                <dw:ContextmenuButton ID="ContextmenuButton6" runat="server" Divide="None" ImagePath="/Admin/Module/eCom_Catalog/dw7/images/tree/Module_eCom_Assortment_add.gif" Text="New assortment" OnClientClick="eCommerce.AddAssortment();" />
+            </dw:Contextmenu>
+
+            <dw:ContextMenu ID="AssortmentContextMenu" runat="server">
+                <dw:ContextMenuButton ID="ContextmenuButton13" runat="server" Divide="None" ImagePath="/Admin/Module/eCom_Catalog/dw7/images/tree/Module_eCom_Assortment_add_small.gif" Text="New assortment" OnClientClick="eCommerce.AddAssortment();" />
+                <dw:ContextMenuButton ID="ContextmenuButton14" runat="server" Divide="None" ImagePath="/Admin/Module/eCom_Catalog/dw7/images/tree/Module_eCom_Assortment_small.gif" Text="Edit assortment" OnClientClick="eCommerce.EditAssortment();" />
+                <dw:ContextMenuButton ID="ContextmenuButton15" runat="server" Divide="After" ImagePath="/Admin/Module/eCom_Catalog/dw7/images/tree/Module_eCom_Assortment_delete_small.gif" Text="Delete assortment" OnClientClick="eCommerce.DeleteAssortment();" />
+                <dw:ContextMenuButton ID="ContextmenuButton16" runat="server" Divide="None" ImagePath="/Admin/Module/eCom_Catalog/dw7/images/tree/eCom_Shop_attach_small.gif" Text="Attach shops" OnClientClick="eCommerce.AttachShop();" />
+                <dw:ContextMenuButton ID="ContextmenuButton17" runat="server" Divide="None" ImagePath="/Admin/Module/eCom_Catalog/dw7/images/tree/eCom_Groups_attach_small.gif" Text="Attach groups" OnClientClick="eCommerce.AttachGroup();" />
+                <dw:ContextMenuButton ID="ContextmenuButton18" runat="server" Divide="After" ImagePath="/Admin/Module/eCom_Catalog/dw7/images/tree/eCom_Product_attach_small.gif" Text="Attach products" OnClientClick="eCommerce.AttachProduct();" />
+                <dw:ContextMenuButton ID="ctxRebuildAssortment" runat="server" OnClientGetState="AssortmentRebuildCtxMenuState();" Divide="None" ImagePath="/Admin/Module/eCom_Catalog/dw7/images/tree/Module_eCom_Payment_small.gif" Text="Rebuild assortment" OnClientClick="eCommerce.RebuildAssortment();" />
+            </dw:ContextMenu>
+            
+            <dw:Contextmenu ID="AssortmentContextMenuDisabled" runat="server">
+                <dw:ContextmenuButton ID="ContextmenuButton19" runat="server" Divide="None" ImagePath="/Admin/Module/eCom_Catalog/dw7/images/tree/Module_eCom_Assortment_small.gif" Text="Edit assortment" OnClientClick="eCommerce.EditAssortment();" />
+            </dw:Contextmenu>
+
+            <dw:Contextmenu ID="SmartSearchContextMenu" OnShow="eCommerce.searchesMenuOnShow();" runat="server">
+		        <dw:ContextmenuButton ID="ContextmenuButton4" runat="server" Divide="None" Image="View_Add" Text="New smart search" OnClientClick="eCommerce.AddSmartSearch();" />
+		        <dw:ContextmenuButton ID="ContextmenuButton10" runat="server" Divide="None" Image="View_Edit" Text="Edit smart search" OnClientClick="eCommerce.EditSmartSearch();" />
+		        <dw:ContextmenuButton ID="ContextmenuButton11" runat="server" Divide="None" Image="View_Delete" Text="Delete smart search" OnClientClick="onDeleteSmartSearch();" />
+	        </dw:Contextmenu>
+            
+            <!-- Translated messages used in Javascript -->
+            <span id="spUnableToDrop" style="display: none">
+                <dw:TranslateLabel ID="lbUnableDropGroup" Text="This action is not allowed" runat="server" />
+            </span><span id="spMoveToShop" style="display: none">
+                <dw:TranslateLabel ID="lbMoveToShop" Text="Selecting the shop will remove the group from all other groups. Do you wish to continue?"
+                    runat="server" />
+            </span><span id="spDeleteShopEmpty" style="display: none">
+                <dw:TranslateLabel ID="lbDeleteShop" Text="Are_you_sure_you_want_to_delete_this_shop?"
+                    runat="server" />
+            </span><span id="spDeleteShop" style="display: none">
+                <dw:TranslateLabel ID="lbDeleteShopHeading" Text="Are_you_sure_you_want_to_delete_this_shop?"
+                    runat="server" />
+                <br />
+                <br />
+                <dw:TranslateLabel ID="lbFollowingIssuesOccured" Text="Following issues occured :"
+                    runat="server" />
+                <br />
+                <dw:TranslateLabel ID="lbThisShopHasGroups" Text="This shop has group(s)." runat="server" />
+                <br />
+                <dw:TranslateLabel ID="lbGroupsWillBeDeleted" Text="- Group and subgroup(s) will be deleted!"
+                    runat="server" />
+                <br />
+                <dw:TranslateLabel ID="lbProductsWillBeDeleted" Text="- All product(s) will be deleted!"
+                    runat="server" />
+            </span>
+        </ecom:Form>
+        			<script type="text/javascript">
+        				parent.frames.left.hidePageFrame();
+		    </script>
+
+        <script type="text/javascript">
+            //<![CDATA[
+            $(document.body).observe('unload', function() {
+                eCommerce.MasterPage.getInstance().dispose();
+            });
+
+            eCommerce.MasterPage.getInstance().initialize('<%=Me.UniqueID%>');
+            eCommerce.MasterPage.getInstance().get_terminology()['AssortDelConfirmText1'] = '<%=Dynamicweb.Backend.Translate.JsTranslate("There are shops/groups/products attached to the assortment. ")%>';
+            eCommerce.MasterPage.getInstance().get_terminology()['AssortDelConfirmText2'] = '<%=Dynamicweb.Backend.Translate.JsTranslate("There are users/userGroups associated with the assortment. ")%>';
+            eCommerce.MasterPage.getInstance().get_terminology()['AssortDelConfirmText3'] = '<%=Dynamicweb.Backend.Translate.JsTranslate("Are you sure you want to delete?")%>';
+            eCommerce.MasterPage.getInstance().get_terminology()['AssortDelButtonText'] = '<%=Dynamicweb.Backend.Translate.JsTranslate("Delete")%>';
+            eCommerce.MasterPage.getInstance().get_terminology()['AssortmentSaveWarning'] = '<%=Dynamicweb.Backend.Translate.JsTranslate("You need to save the assortment...")%>';
+
+            function onDeleteSmartSearch() {
+                if (confirm('<%=Dynamicweb.Backend.Translate.JsTranslate("Delete smart search?")%>')) {
+                    eCommerce.DeleteSmartSearch();
+                }
+            }                      
+            //]]>
+        </script>
+    </body>
+<dw:PopUpWindow ID="pwDialog" ContentUrl="" AutoReload="true" ShowClose="true" ShowCancelButton="false" ShowOkButton="False" runat="server"
+    Width="360" Height="80" TranslateTitle="true" UseTabularLayout="true" HidePadding="true" SnapToScreen="true" IsModal="true" />
+
+</html>

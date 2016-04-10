@@ -1,0 +1,123 @@
+﻿html 
+{
+	overflow: hidden;
+}
+
+html, body, table#MainTable {
+    height: 100%;
+    width: 100%;
+}
+
+.grid 
+{
+	overflow: auto;
+	background-color: #ECF4FC;
+}
+
+.dTitle
+{
+    height: 23px;
+    vertical-align: middle;
+	background: url('../FileEditor/images/pipe.gif') top left repeat-x;
+	border-bottom: 1px solid #bdcce0;
+	padding: 2px;
+}
+.dTitle strong{
+    color: #15428b;
+    font-size: 14px;
+    font-weight: bolder;
+    font-family: Arial, Microsoft JhengHei;
+    
+}
+.dSubTitle
+{
+    background-color:#ECF4FC;
+    height:19px;
+    padding-left:2px;
+    padding-top:1px;
+    border-top:solid 1px #FFFFFF;
+    border-left:solid 1px #FFFFFF;
+    border-bottom:solid 1px #bdcce0;
+    font-family: Arial, Microsoft JhengHei;
+    font-weight:bold;
+    color: #15428b;
+}
+
+.dContent 
+{
+	background-color: #ECF4FC;
+	border: 1px solid #bdcce0;
+}
+
+.dContentInner 
+{
+	background-color: #ffffff;
+}
+
+.dListActive
+{
+	background-color: #fff0b2;
+	
+}
+
+.contentTable 
+{
+	background-color: #ffffff; 
+	border-left: 1px solid #bdcce0;
+	border-right: 1px solid #bdcce0;
+	border-bottom: 1px solid #bdcce0;
+}
+
+.BrowseKey_Global
+{
+	/*background-color: #ffe0e0;*/
+	background-color: #ffffff;
+}
+
+.BrowseKey_Local
+{
+	background-color: #ffffff;
+}
+
+.keyTableHeading
+{
+	width:100%;
+	cursor:default;
+}
+
+.keyTableHeading td
+{
+	background: url('/Admin/Images/Ribbon/UI/List/Pipe.gif' ) top left repeat-x;
+	font-family: Arial, Microsoft JhengHei;
+	font-size: 11px;
+	
+	border-top: 1px solid #bdcce0;
+	border-bottom: 1px solid #bdcce0;
+	padding-left: 4px;
+	padding-right: 4px;
+	height: 21px;
+}
+
+.keyTableRow
+{
+	height: 21px;
+}
+
+.keyTableRow td
+{
+	border-bottom: 1px solid #E3EFFF;
+}
+
+.bigText
+{
+	font-family: Arial, Microsoft JhengHei;
+	font-style: italic;
+	color: #15428b;
+	font-size: 14px;
+	padding: 5px;
+}
+
+.searchable
+{
+	/* needed to search for all keys in the document */
+}

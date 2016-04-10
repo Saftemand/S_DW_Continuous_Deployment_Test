@@ -1,0 +1,1 @@
+<%@ Page AutoEventWireup="true" Codebehind="DealerDelete.aspx.cs" Inherits="DealerDelete" Language="C#" %>

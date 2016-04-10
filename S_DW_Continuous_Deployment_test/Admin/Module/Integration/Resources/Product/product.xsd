@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" ?>	
+	
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="Products">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Product">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="ProductID" type="xs:string" minOccurs="1" maxOccurs="1" />
+              <xs:element name="ProductLanguageID" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="ProductDefaultShopID" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="ProductNumber" type="xs:string" />
+              <xs:element name="ProductName" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="ProductShortDescription" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="ProductLongDescription" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="ProductStock" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="ProductStockGroupID" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="ProductWeight" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="ProductVolume" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="ProductVatGroupID" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="ProductManufacturerID" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="ProductActive" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="ProductPeriodID" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="ProductCreated" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="ProductUpdated" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="ProductType" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="ProductPriceType" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="ProductVariantID" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="ProductImageSmall" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="ProductImageMedium" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="ProductImageLarge" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="ProductLink1" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="ProductLink2" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="ProductPrice" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="ProductDefaultUnitID" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="ProductDefaultVariantComboID" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="ProductPriceMatrixUnit" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="ProductPriceMatrixVariant" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="ProductPriceMatrixPeriod" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="ProductPriceMatrixMultiplePrices" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="ProductPriceMatrixQuantitySpecification" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="ProductPriceCnt" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="ProductVariantCnt" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="ProductVariantProductCnt" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="ProductVariantGroupCnt" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="ProductRelatedCnt" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="ProductUnitCnt" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="ProductMetaTitle" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="ProductMetaKeywords" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="ProductMetaDescription" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="ProductMetaUrl" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="ProductExcludeFromIndex" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="ProductExcludeFromCustomizedUrls" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="ProductExcludeFromAllProducts" type="xs:string" minOccurs="0" maxOccurs="1" />
+
+              <xs:element name="ProductGroups" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="GroupID" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+              <xs:element name="ProductVariantGroups" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+
+                    <!-- GroupID and ProductVariants are deprecated - use the structure VariantGroup instead -->
+                    <xs:element name="GroupID" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="ProductVariants" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="VariantID" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+
+                    <xs:element name="VariantGroup" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:all>
+                          <xs:element name="VariantGroupID" minOccurs="0" maxOccurs="1" type="xs:string"/>
+                          <xs:element name="VariantGroupName" minOccurs="0" maxOccurs="1" type="xs:string"/>
+                          <xs:element name="VariantOptions" minOccurs="0" maxOccurs="1">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="VariantOption" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:all>
+                                      <xs:element name="VariantOptionID" minOccurs="0" maxOccurs="1" type="xs:string" />
+                                      <xs:element name="VariantOptionName" minOccurs="0" maxOccurs="1" type="xs:string" />
+                                    </xs:all>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:all>
+                      </xs:complexType>
+                    </xs:element>
+                    
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+              <xs:element name="VariantCombinations" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="VariantCombination" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+              <xs:element name="ProductRelatedGroups" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Group" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:all>
+                          <xs:element name="GroupID" type="xs:string" />
+                          <xs:element name="ProductRelations">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="ProductID" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:all>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+              <xs:element name="ProductUnits" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Unit" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:all minOccurs="0">
+                          <xs:element name="UnitID" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                          <xs:element name="UnitName" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                        </xs:all>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+              <xs:element name="ProductCustomFields" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Field" minOccurs="1" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:all>
+                          <xs:element name="FieldName" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                          <xs:element name="FieldSystemName" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                          <xs:element name="FieldTagName" type="xs:string" minOccurs="0" maxOccurs="1" />
+                          <xs:element name="FieldTypeID" type="xs:string" minOccurs="0" maxOccurs="1" />
+                          <xs:element name="FieldTypeName" type="xs:string" minOccurs="0" maxOccurs="1" />
+                          <xs:element name="FieldValue" type="xs:string" minOccurs="0" maxOccurs="1" />
+                        </xs:all>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+            </xs:all>
+            <xs:attribute name="delete" type="xs:string" default="false" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

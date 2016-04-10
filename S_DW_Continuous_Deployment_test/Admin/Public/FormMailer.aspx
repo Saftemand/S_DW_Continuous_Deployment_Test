@@ -1,0 +1,1 @@
+<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="FormMailer.aspx.vb" Inherits="Dynamicweb.Admin.FormMailer" validateRequest="false" %>

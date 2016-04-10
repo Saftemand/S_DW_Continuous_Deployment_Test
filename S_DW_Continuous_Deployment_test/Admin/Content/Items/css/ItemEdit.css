@@ -1,0 +1,187 @@
+﻿html, body
+{
+    overflow: hidden;
+    border: none !important;
+}
+
+#breadcrumb, #content, #footer
+{
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    overflow-x: hidden;
+}
+
+#menu
+{
+    height: 114px;    
+    padding-top: 0px;
+    overflow: hidden;
+    margin: 0px 0px 0px 1px;
+    background: #ECF4FC url('/Admin/Images/Ribbon/images/tabarea_bg.gif') top left repeat-x;
+}
+
+#menu .Ribbon
+{
+    margin-left: 0px !important;
+}
+
+#breadcrumb
+{
+    top: 115px;
+    background-color: #fff;
+    overflow: hidden;
+    white-space: nowrap;
+    border-bottom: 1px solid #BDCCE0;
+    padding-left: 5px;
+}
+
+#content
+{
+    top: 138px;
+    bottom: 53px;
+    padding: 1px;
+    background-color: #fff;
+    overflow: auto;
+}
+
+/*Hack for correct work of Maximize function of FCKEditor*/
+#content[style*=z-index]
+{
+    overflow: visible !important;
+}
+
+
+#footer
+{
+    bottom: 0px;
+    height: 53px;
+    overflow: hidden;
+    
+    background-image: url('/Admin/Images/BottomInformationBg.png');
+    background-repeat: repeat-x;
+}
+
+#footer img.icon
+{
+    display: block;
+    border: none;
+    margin: 8px;
+}
+
+#footer td div
+{
+    padding: 5px;
+}
+
+#footer tr.sub td div
+{
+    padding-top: 0px;
+}
+
+#footer td.label div
+{
+    text-align: right;
+}
+
+#footer td.value div
+{
+    width: 150px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+#footer td.value div.large
+{
+    width: 300px;
+}
+
+#footer td.bold div
+{
+    font-weight: bold;
+}
+
+/* Collase functional */
+a.item-edit-field-group-button-collapse
+{
+	display: inline-block;
+	background-image: url(/Admin/Images/Ribbon/expand.png);
+	background-repeat: no-repeat;
+	background-position: center;
+    border: 1px solid transparent;
+	margin-left: 6px;
+	margin-bottom: -2px;
+	width: 24px;
+	height: 10px;
+}
+
+a.item-edit-field-group-button-collapse:hover
+{
+    border: 1px solid #D5DFE5;
+}
+
+a.item-edit-field-group-button-collapse.collapsed
+{
+	background-image: url(/Admin/Images/Ribbon/collapse.png);
+}
+
+table.item-edit-field-group-content.collapsed
+{
+	display: none;
+}
+
+
+/* item types */
+div.item-types
+{
+	zoom: 1;
+	width: 500px;
+	height: 45px;
+	overflow: hidden;
+}
+
+div.item-types:after
+{
+	content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+div.item-types div.item-types-image,
+div.item-types div.item-types-description
+{
+	float: left;
+}
+
+div.item-types-image img
+{
+	width: 32px;
+    height: 32px;
+	margin: 3px;
+	border: none;
+}
+
+div.item-types-description 
+{
+    width: 250px;
+}
+
+div.item-types-description small 
+{
+    display: block; / for IE /
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+}
+
+.item-type-container fieldset {
+    margin-left: 0px;
+}
+
+.item-type-container table td {
+    padding-left: 0px;
+}
+

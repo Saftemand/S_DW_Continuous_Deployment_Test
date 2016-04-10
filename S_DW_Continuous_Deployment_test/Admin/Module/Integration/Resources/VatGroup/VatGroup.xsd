@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:element name="VatGroups">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="VatGroup">
+					<xs:complexType>
+						<xs:all>
+							<!-- ID+LanguageID is the primary key -->
+							<xs:element name="ID" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="LanguageID" type="xs:string" minOccurs="0" maxOccurs="1" />
+							<xs:element name="GroupName" type="xs:string" minOccurs="1" maxOccurs="1" />
+							<xs:element name="VatName" type="xs:string" minOccurs="1" maxOccurs="1" />
+
+							<xs:element name="Countries" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Country" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:all>
+													<xs:element name="CountryCode" type="xs:string" minOccurs="1" maxOccurs="1" />
+													<xs:element name="Rate" type="xs:string" minOccurs="1" maxOccurs="1" />
+												</xs:all>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+
+						</xs:all>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

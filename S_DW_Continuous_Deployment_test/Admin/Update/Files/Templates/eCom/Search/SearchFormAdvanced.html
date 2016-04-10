@@ -1,0 +1,59 @@
+﻿<!-- Resources -->
+<script type="text/javascript" src="/Admin/Content/JsLib/dw/InstantSearch.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/Files/System/InstantSearch.css" />
+
+<!-- Search field -->
+<input type="text" class="dw-instant-search" id="txFreeTextQuery" autocomplete="off" name="eComQuery" value="<!--@Ecom:Search.Query-->" />
+
+<!-- "Suggested queries" template -->
+<div id="divSuggestions" class="dw-search-suggestions" style="display: none">
+    <a class="dw-suggestion-item"></a>
+    <div class="dw-no-suggestions">
+        <!--@Translate(Ecom:InstantSearch.NoSuggestions, "No suggestions")-->
+    </div>
+</div>
+
+<!-- "Instant search results" template -->
+<div id="divResults">
+    <!-- "Search item" template -->
+    <div class="dw-search-result" style="display: none">
+        <a class="dw-search-result-url">
+            <span class="dw-search-result-name"></span>
+        </a>
+
+        <img class="dw-search-result-smallimage" src="" />
+
+        <small class="dw-search-result-shortdescription"></small>
+        <strong class="dw-search-result-defaultprice"></strong>
+
+        <div class="dw-clear"></div>
+    </div>
+
+    <!-- "No results" template -->
+    <div class="dw-no-results" style="display: none">
+        <!--@Translate(Ecom:InstantSearch.NoResults, "No results")-->
+    </div>
+</div>
+
+<script type="text/javascript">
+    Dynamicweb.Frontend.Document.Current.ready(function() {
+        
+        // Initial setup (configuring global variables)
+        Dynamicweb.Frontend.InstantSearch.setup({
+            pageID: <!--@Ecom:Search.Page.ID-->,                // An ID of the target page
+            paragraphID: <!--@Ecom:Search.Paragraph.ID-->,      // An ID of the target paragraph (with "eCom_Catalog" module attached)
+            url: '/Admin/Public/eCom/InstantSearch.ashx',       // Custom handler (for reducing interaction time)
+            delay: 250                                          // Number of milliseconds to wait before performing any calls to the server
+        });
+        
+        // 1. Enabling search results to be displayed instantly when user types anything in the above textbox
+        Dynamicweb.Frontend.InstantSearch.setEnableInstantSearch('txFreeTextQuery', true, {
+            contentID: 'divResults',                            // An ID of the content template
+            request: { 'InstantSearchDataAmount': 'Basic' },    // Specifying that we need only basic information (for reducing interaction time)    
+            onItemDataBound: function(sender, args) {           // Fired after the data item is bound to the corresponding template   
+                // Setting up correct product URL
+                args.template.field('url', '/Default.aspx?ID=<!--@Ecom:Search.Page.ID-->&ProductID=' + args.data.ID);
+            }
+        });
+    });
+</script>

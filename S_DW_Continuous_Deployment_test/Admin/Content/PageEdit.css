@@ -1,0 +1,203 @@
+﻿input, #ddMaxLevels {
+    margin-left: 0;
+}
+
+.nobr
+{
+	padding-left:3px;
+	white-space:nowrap;
+}
+#breadcrumb
+{
+	height:20px;
+	line-height:18px;
+	border-bottom:1px solid #9FAEC2;
+	display:inherit;
+	vertical-align:middle;
+	padding-left:10px;
+	background-color:#ffffff;
+}
+
+#InfoBar_SuggestedTitleInforbar, #InfoBar_SuggestedKeywordsInforbar
+{
+	width:254px;
+	cursor:pointer;
+}
+
+.selectorContainer > div > div > div
+{
+	border: 1px solid #7f9db9 !important;
+	background-color: #FFFFFF !important;
+}
+
+#myribbon
+{
+    position:fixed;
+    top:0px;
+    left:0px;
+    z-index:102;
+    min-width:1000px;
+}
+
+#_contentWrapper{
+	position:fixed;
+	top:116px;
+	left:0px;
+	bottom:0px;
+	right:1px;
+	overflow:auto;
+	z-index:100;
+}
+/*Hack for correct work of Maximize function of FCKEditor*/
+#_contentWrapper[style]
+{
+    overflow: visible !important;
+}
+
+/* Collase functional */
+a.item-edit-field-group-button-collapse
+{
+	display: inline-block;
+	background-image: url(/Admin/Images/Ribbon/expand.png);
+	background-repeat: no-repeat;
+	background-position: center;
+    border: 1px solid transparent;
+	margin-left: 6px;
+	margin-bottom: -2px;
+	width: 24px;
+	height: 10px;
+}
+
+a.item-edit-field-group-button-collapse:hover
+{
+    border: 1px solid #D5DFE5;
+}
+
+a.item-edit-field-group-button-collapse.collapsed
+{
+	background-image: url(/Admin/Images/Ribbon/collapse.png);
+}
+
+table.item-edit-field-group-content.collapsed
+{
+	display: none;
+}
+
+label.group-header {
+    display: block;
+    margin: 5px 0;
+}
+
+#NavigationDialog.sidebox {
+    -moz-background-size: 115% 100%;
+    -o-background-size: 115% 100%;
+    -webkit-background-size: 115% 100%;
+    background-size: 115% 100%;
+}
+
+#NavigationDialog div.boxbody {
+    -moz-background-size: 8px 100%;
+    -o-background-size: 8px 100%;
+    -webkit-background-size: 8px 100%;
+    background-size: 8px 100%;
+}
+
+.page-content-type {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+div.page-content-type {
+    margin: 0px;
+    padding: 0px;
+    margin-top: 5px;
+}
+
+select.page-content-type {
+    float: left;
+    display: inline-block;
+    margin-top: 0px;
+}
+
+input.page-content-type {
+    width: 229px;
+    height: 18px;
+    line-height: 18px;
+    margin: 10px 0px 15px 0px;
+    padding: 1px;
+    font-size: 11px;
+    font-family: Arial, verdana, Microsoft JhengHei;
+}
+
+a.page-content-type {
+    float: left;
+    margin: 0 3px 0px 5px;
+    border: 1px solid #abadb3;
+    background-color: #e8e8e8;
+    background-image: url('/Admin/Images/Ribbon/Icons/Small/Add2.png');
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+}
+
+.item-edit-field {
+    float: left;
+    width: 48%;
+}
+
+.item-edit-field:first-of-type {
+    margin-left: 10px;
+}
+
+.item-edit-field-label {
+    display: inline-block;
+    margin: 5px 0 5px 0;
+}
+
+/* item types */
+div.item-types
+{
+	zoom: 1;
+	width: 500px;
+	height: 45px;
+	overflow: hidden;
+}
+
+div.item-types:after
+{
+	content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+div.item-types div.item-types-image,
+div.item-types div.item-types-description
+{
+	float: left;
+}
+
+div.item-types-image img
+{
+	width: 32px;
+    height: 32px;
+	margin: 3px;
+	border: none;
+}
+
+div.item-types-description 
+{
+    width: 250px;
+}
+
+div.item-types-description small 
+{
+    display: block; / for IE /
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+}

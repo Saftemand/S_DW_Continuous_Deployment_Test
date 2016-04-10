@@ -1,0 +1,304 @@
+body
+{
+	margin: 0px;
+	padding: 0px;
+}
+.Ribbon
+{
+	width: 99.9%;
+	margin: 0px;
+	margin-left:1px;
+	padding-bottom:2px;
+	padding-top: 5px;
+	font-family: Arial, Microsoft JhengHei;
+	font-size: 11px;
+	color: #15428b;
+	background: #bfdbff;
+}
+.Ribbon .tabitems a
+{
+	cursor:default;
+	color: #15428b;
+	padding-right: 10px;
+	text-decoration: none;
+	display: block;
+	line-height: 25px;
+	float: left;
+}
+.Ribbon ul.tabitems
+{
+	margin: 0px;
+	padding:0px;
+	padding-left:0px;
+	list-style: none;
+	height: 25px;
+	background: url('/Admin/images/Ribbon/tab_main_bg.gif' ) top right repeat-x;
+}
+.Ribbon ul.tabitems li
+{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	float: left;
+	display: block;
+	line-height: 25px;
+}
+.Ribbon ul.tabitems li img.starter
+{
+	margin-right: 3px;
+	height: 25px;
+	width: 6px;
+}
+
+.Ribbon ul.tabitems li.firstitem img.starter
+{
+	background: url('/Admin/images/Ribbon/tab_firstitem_start.gif' ) bottom left no-repeat;
+	width: 25px;
+}
+.Ribbon ul.tabitems li.activeitem
+{
+	background: url('/Admin/images/Ribbon/tab_act_bg.jpg' ) top right repeat-x;
+}
+.Ribbon ul.tabitems li.activeitem a img
+{
+	background: url('/Admin/images/Ribbon/tab_act_start.jpg' ) top left no-repeat;
+}
+.Ribbon ul.tabitems li a:hover
+{
+	background: url('/Admin/images/Ribbon/tab_hover_bg.jpg' ) top right;
+}
+.Ribbon ul.tabitems li a:hover img.starter
+{
+	background: url('/Admin/images/Ribbon/tab_hover_start.jpg' ) top left no-repeat;
+}
+.Ribbon img.starter
+{
+	float: left;
+}
+.Ribbon img.ender
+{
+	float: right;
+}
+
+.Ribbon .tabarea
+{
+	background: url('/Admin/images/Ribbon/tabarea_bg.jpg' ) top left repeat-x;
+	height: 89px;
+	width: 100%;
+}
+.Ribbon .tabarea img.starter
+{
+	background: url('/Admin/images/Ribbon/tabarea_start.gif' );
+	width: 3px;
+	height: 89px;
+}
+.Ribbon .tabarea img.ender
+{
+	background: url('/Admin/images/Ribbon/tabarea_end.gif' );
+	width: 3px;
+	height: 89px;
+}
+.Ribbon .tabarea table
+{
+	height: 85px;
+	max-height: 85px;
+	float: left;
+}
+.Ribbon .tabarea td
+{
+	background: url('/Admin/images/Ribbon/tabsection_bg.gif' ) top right;
+	margin: 1px 2px 0px 0px;
+}
+.Ribbon .tabarea img.SectionStarter
+{
+	background: url('/Admin/images/Ribbon/tabsection_start.jpg' ) top left;
+	height: 85px;
+	width: 3px;
+	float: left;
+}
+.Ribbon .tabarea .section table
+{
+	height: 85px;
+}
+.Ribbon .tabarea .section td
+{
+	background-image: none;
+}
+.Ribbon .tabarea .SC
+{
+	padding-top:2px;
+	padding-right:4px;
+	height: 64px;
+	vertical-align: top;
+}
+
+.Ribbon .tabarea .SC table tr td img
+{
+	border: 0px;
+	padding-left: 1px;
+	vertical-align: middle;
+}
+.Ribbon .tabarea .SC table tr td a, .Ribbon .tabarea .SC table tr td span
+{
+	cursor:default;
+	color: #15428b;
+	padding-right: 10px;
+	text-decoration: none;
+	height: 22px;
+	display:inline-block;
+}
+.Ribbon .tabarea .SC table tr td a .btnHstart
+{
+	width: 2px;
+	height: 22px;
+}
+.Ribbon .tabarea .SC table tr td a:hover
+{
+	background: url('/Admin/images/Ribbon/BtnBg.gif' ) top right;
+	height: 22px;
+}
+.Ribbon .tabarea .SC table tr td a:hover .btnHstart
+{
+	background: url('/Admin/images/Ribbon/BtnLeft.gif' ) top left no-repeat;
+	width: 2px;
+	height: 22px;
+}
+
+.Ribbon .tabarea .SCL
+{
+	padding-top:1px;
+	padding-right:4px;
+	vertical-align: top;
+}
+
+.Ribbon .tabarea .SCL table tr td img
+{
+	border: 0px;
+	padding-left: 1px;
+}
+.Ribbon .tabarea .SCL table tr td span
+{
+	text-align:center;
+	vertical-align:top; 
+	display:inline-block;
+}
+
+.Ribbon .tabarea .SCL table tr td span.c
+{
+	padding-top:2px;
+}
+.Ribbon .tabarea .SCL table tr td a
+{
+	color: #15428b;
+	cursor:default;
+	padding-right: 15px;
+	text-align:center;
+	text-decoration: none;
+	margin-top:1px;
+	height:66px;
+	display:inline-block;
+	
+}
+.Ribbon .tabarea .SCL table tr td a .btnHstart
+{
+	margin-top:0px;
+	margin-right:12px;
+	width: 2px;
+	height: 66px;
+	vertical-align: top;
+	
+}
+
+.Ribbon .tabarea .SCL table tr td a:hover
+{
+	background: url('/Admin/images/Ribbon/BtnLBg.gif' ) top right;
+	
+}
+.Ribbon .tabarea .SCL table tr td a:hover .btnHstart
+{
+	background: url('/Admin/images/Ribbon/BtnLLeft.gif' ) top left no-repeat;
+	width: 2px;
+	margin-top:0px;
+}
+
+.Ribbon .tabarea .sectionName
+{
+	text-align: center;
+	color: #3e6aaa;
+	height: 15px;
+	font-size: 11px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-right: 3px;
+	/*background: url('/Admin/images/Ribbon/Snif.gif' ) right top no-repeat;*/
+}
+.Ribbon .tabarea .disabled
+{
+	background-color:transparent;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)"; 
+	filter:alpha(opacity=40);
+	-moz-opacity: 0.4;
+	opacity: 0.4;
+}
+
+.Ribbon .tabarea .SC .active
+{
+	background: url('/Admin/images/Ribbon/BtnBgIa.gif' ) top right;
+}
+
+
+
+.Ribbon .tabarea .SC .active .btnHstart
+{
+	width: 2px;
+	height: 22px;
+	background: url('/Admin/images/Ribbon/BtnLeftIa.gif' ) top left no-repeat;
+}
+.Ribbon .tabarea .SCL .active
+{
+	background: url('/Admin/images/Ribbon/BtnLBgIa.gif' ) top right;
+}
+
+.Ribbon .tabarea .SCL .active .btnHstart
+{
+	width: 2px;
+	height: 66px;
+	padding-top:0px;
+	background: url('/Admin/images/Ribbon/BtnLLeftIa.gif' ) top left no-repeat;
+}
+
+.Ribbon .tabarea .SCL table tr td span.c .scrollableMain
+{
+	background-color: #d6e4f5;
+	height: 56px;
+}
+
+.Ribbon .tabarea .SCL table tr td span.c .scrollableContent
+{
+	height: 56px;
+	overflow: hidden;	
+}
+
+.Ribbon .tabarea .SCL table tr td span.c .scrollableContentLarge
+{
+	position: absolute;
+	border: 1px solid #6593cf;
+	background-color: #ffffff;
+}
+
+.scrollableContentLargeTitle {
+	height: 23px;
+    vertical-align: middle;
+	background: url('/Admin/Filemanager/FileEditor/images/pipe.gif') top left repeat-x;
+	border-bottom: 1px solid #6593CF;
+	padding: 2px;
+	cursor: pointer;
+	text-align: left;
+}
+
+.scrollableContentLargeTitle > strong {
+	color: #15428b;
+    font-size: 14px;
+    font-weight: bolder;
+    font-family: Arial, Microsoft JhengHei;
+}

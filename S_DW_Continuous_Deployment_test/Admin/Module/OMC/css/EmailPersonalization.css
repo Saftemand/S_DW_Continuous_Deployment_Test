@@ -1,0 +1,71 @@
+﻿        html, body
+        {
+            background-color: #f0f0f0;
+            overflow: hidden;
+        }
+        
+        .list-container 
+        {
+        	height: 380px;
+        	overflow: auto;
+        }
+
+        .Toolbar > ul
+        {
+            position: absolute;
+            right: 0px;
+        }
+
+        #ListTable {
+            user-select: none;
+            -ms-user-select: none;
+            -moz-user-select: none;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
+        }
+
+        #ListTable tbody tr td:not(:first-child):not(:last-child)
+        {
+            cursor: pointer;
+            width: 40px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        #ListTable tbody tr td.cell-show-as
+        {
+            background-image:url(/Admin/images/Minus.gif);
+        }
+
+        #ListTable tbody tr td.cell-show-as.show
+        {
+            background-image:url(/Admin/images/Check.gif);
+        }        
+                
+        #ListTable tbody tr td.cell-segment span
+        {                        
+            background-image: url(/Admin/images/Minus.gif);            
+        }        
+        #ListTable tbody tr td.cell-segment.selected span
+        {            
+            background-image:url(/Admin/images/Check.gif);         
+        }                
+        #ListTable tbody tr.show td.cell-segment.selected span
+        {                        
+            background-image:url(/Admin/images/Check.gif);                                     
+        }
+        #ListTable tbody tr td.cell-segment span,
+        #ListTable tbody tr td.cell-segment.selected span,
+        #ListTable tbody tr.show td.cell-segment.selected span
+        {            
+            display: block;
+            height: 11px;
+            width: 11px;
+            margin: 0 auto;
+        }
+        #ListTable tbody tr td.cell-segment span.default,
+        #ListTable tbody tr td.cell-segment.selected span.default,
+        #ListTable tbody tr.show td.cell-segment.selected span.default 
+        {
+            opacity: 0.4;
+        }
