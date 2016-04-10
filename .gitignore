@@ -34,7 +34,6 @@ updatelog.html.aspx
 
 ## Ignore Visual Studio temporary files, build results, and
 [Bb]in/
-[Oo]bj/
 *.suo
 *.user
 
