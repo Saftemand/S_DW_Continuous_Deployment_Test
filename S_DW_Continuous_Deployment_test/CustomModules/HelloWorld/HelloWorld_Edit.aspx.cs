@@ -10,7 +10,7 @@ namespace CustomModules.HelloWorld
             Properties properties = Dynamicweb.Properties.LoadProperties();
 
             //Set default values
-            properties.SetDefaultValue("HelloText", "Hi Dynamicweb!");
+            properties.SetDefaultValue("HelloText", "Hi Dynamicweb, we have a change!");
 
             HelloText.Value = properties["HelloText"].ToString();
         }
