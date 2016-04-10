@@ -1,0 +1,12 @@
+<script type="text/html-template" id="OrderlineAjaxTemplate">
+	@* To insert content from the json feed, just write the items as if it were built directly from the loop Ex. "Obj.name" *@
+
+    <tr>
+		<td class="text-center"><img src="/Admin/Public/GetImage.ashx?width=50&height=50&crop=5&image=Obj.image&Compression=99" class="img-center" alt=""></td>
+		<td><a href="Obj.link">Obj.name</a></td>
+		<td class="text-center">Obj.quantity</td>
+		<td class="text-right"><nobr>
+			Obj.totalprice
+		</nobr></td>
+	</tr>
+</script>

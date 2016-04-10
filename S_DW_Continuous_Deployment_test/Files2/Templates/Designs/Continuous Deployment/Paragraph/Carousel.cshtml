@@ -1,0 +1,201 @@
+@Title("Banner")
+@Description("Default template a site-banner")
+
+@Include("../_wrap/WrapMethods.cshtml")
+@Include("../_wrap/FluidBreakout.cshtml")
+@Include("Layout.cshtml")
+
+@{
+    string rawstring = "";
+
+	<!-- FONT SETTINGS -->
+	string TitleFont = CustomFont(GetString("Item.TitleFont.Font"), GetString("Item.TitleFont.CustomFont"));
+	string TitleSize = GetString("Item.TitleFont.Size") + "px";
+	string TitleColor = GetString("Item.TitleFont.Color.Color");
+	string TitleLineHeight = CheckExistence(GetString("Item.TitleFont.LineHeight"), "1");
+	string TitleSpacing = CheckExistence(GetString("Item.TitleFont.LetterSpacing"), "0");
+	string TitleCasing = GetString("Item.TitleFont.Casing");
+	string TitleWeight = CheckExistence(GetString("Item.TitleFont.Weight"), "300");
+
+	string SubFont = CustomFont(GetString("Item.SubtitleFont.Font"), GetString("Item.TitleFont.CustomFont"));
+	string SubSize = GetString("Item.SubtitleFont.Size") + "px";
+	string SubColor = GetString("Item.SubtitleFont.Color.Color");
+	string SubLineHeight = CheckExistence(GetString("Item.SubtitleFont.LineHeight"), "1");
+	string SubtitleSpacing = CheckExistence(GetString("Item.SubtitleFont.LetterSpacing"), "0");
+	string SubCasing = GetString("Item.SubtitleFont.Casing");
+	string SubtitleWeight = CheckExistence(GetString("Item.SubtitleFont.Weight"), "300");
+
+    string textpos = "0px";
+
+    if (GetString("Item.Mode") == "clean") {
+    	<style>
+    		.carousel-text {
+    			text-shadow: 0px 0px 0px rgba(0, 0, 0, 0) !important;
+    		}
+    	</style>
+	}
+
+    if (GetString("Item.Mode") == "shadow") {
+    	<style>
+    		.carousel-text {
+    			text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.6) !important;
+    		}
+    	</style>
+	}
+
+	if (GetString("Item.Mode") == "boxed") {
+		<style>
+    		.carousel-text {
+    			background-color: @GetString("Item.CaptionBackgroundColor.Color");
+    			padding-left: 6px;
+    		}	
+    	</style>
+	}
+
+	if (GetString("Item.Mode") == "box") {
+		<style>
+    		.carousel-caption {
+    			padding: 16px;
+    			background-color: @GetString("Item.CaptionBackgroundColor.Color");
+    			bottom: initial;
+    			left: initial;
+    			width: 300px;
+    			opacity: 0.9;
+    		}
+
+    		.carousel-caption > a > h2 {
+    			margin-top: 0;
+    		}
+    	</style>
+	}
+
+    <!-- COLUMNS + FLUID CONTROLS-->
+    string column = "";
+
+	if (!GetBoolean("Item.Fluid")){
+		NewRow();
+
+		column = ColumnClass();
+	}
+	else
+	{
+		Fluid();
+	}
+
+
+	string TextClass = "";
+
+	if (GetString("Item.Position") == "left"){
+		<style>
+    		.carousel-caption {
+    			text-align: left !important;
+    		}
+    	</style>
+	}
+	
+	if (GetString("Item.Position") == "center"){
+		<style>
+    		.carousel-caption {
+    			text-align: center !important;
+    		}
+    	</style>
+	}
+
+	if (GetString("Item.Position") == "right"){
+		<style>
+    		.carousel-caption {
+    			text-align: right !important;
+    		}
+    	</style>
+	}
+}
+
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=@TitleFont:100,200,300,400,500,600,700,800,900">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=@SubFont:100,200,300,400,500,600,700,800,900">
+
+<!-- Fluid settings --> 
+@DivBreakout()
+
+<div class="@column">
+	@{
+		textpos = ((GetInteger("Item.Height")/2)-(GetInteger("Item.TitleFont.Size")+GetInteger("Item.SubtitleFont.Size")+20)).ToString() + "px";
+	}
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<div class="carousel-inner" role="listbox" style="height:@GetString("Item.Height")px !important">
+		    @{
+				var count = 0;
+				var focus = "active";
+		    }
+		    
+		    @foreach (LoopItem i in GetLoop("Item.Images")){
+			    
+				if (count > 0){
+				    focus = "";
+				}
+				
+				var image = System.Web.HttpContext.Current.Server.UrlEncode(i.GetString("Item.Images.Image"));
+				
+				<div class="item @focus">  
+					<img src="/Admin/Public/GetImage.ashx?width=1920&amp;Compression=75&amp;image=@image">
+				    <div class="container">
+				    	<div class="carousel-caption" style="top: @textpos !important">
+							@if (i.GetString("Item.Images.Link") != ""){
+							    <a href="@i.GetString("Item.Images.Link")">
+								    <h2><span style="font-family: @TitleFont; font-size: @TitleSize; color: @TitleColor; line-height: @TitleLineHeight; text-transform: @TitleCasing; font-weight: @TitleWeight; letter-spacing: @TitleSpacing;" class="title carousel-text">@i.GetString("Item.Images.Title")&nbsp;</span></h2>
+								    @if (i.GetString("Item.Images.Subtitle") != ""){
+								    	<span style="font-family: @SubFont; font-size: @SubSize; color: @SubColor; line-height: @SubLineHeight; text-transform: @SubCasing; font-weight: @SubtitleWeight; letter-spacing: @SubtitleSpacing" class="subtitle carousel-text">@i.GetString("Item.Images.Subtitle")&nbsp;</span>
+								    }
+							    </a>
+							} else {
+								<h2><span style="font-family: @TitleFont; font-size: @TitleSize; color: @TitleColor; line-height: @TitleLineHeight; text-transform: @TitleCasing; font-weight: @TitleWeight; letter-spacing: @TitleSpacing;" class="title carousel-text">@i.GetString("Item.Images.Title")&nbsp;</span></h2>
+								if (i.GetString("Item.Images.Subtitle") != ""){
+									<span style="font-family: @SubFont; font-size: @SubSize; color: @SubColor; line-height: @SubLineHeight; text-transform: @SubCasing; font-weight: @SubtitleWeight; letter-spacing: @SubtitleSpacing" class="subtitle carousel-text">@i.GetString("Item.Images.Subtitle")&nbsp;</span>
+								}
+							}
+						</div>
+				    </div>
+				</div>
+			    
+				count++;
+		    }
+
+		</div>
+		
+		<!-- Controls -->
+		<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+	        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	        <span class="sr-only">Previous</span>
+	    </a>
+		<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+	        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	        <span class="sr-only">Next</span>
+	    </a>
+    </div>
+ </div>
+
+<!-- Fluid settings -->    
+@DivBreakbackin()
+
+@functions{
+	private string CustomFont (string firstfont, string secondfont)
+	{
+		if (firstfont == "custom")
+		{
+			return secondfont;
+		}
+		else
+		{
+			return firstfont;
+		}
+	}
+
+	private string CheckExistence (string stringitem, string defaultvalue)
+	{
+		if (!string.IsNullOrWhiteSpace(stringitem)) {
+            return stringitem;
+        } else {
+            return defaultvalue;
+        }
+	}
+}

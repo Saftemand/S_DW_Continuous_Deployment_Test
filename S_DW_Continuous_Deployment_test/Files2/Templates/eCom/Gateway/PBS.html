@@ -1,0 +1,46 @@
+<script language="JavaScript" type="text/javascript">
+newwin = null;
+function doPopup(f) {
+
+  newwin = window.open ('about:blank','Payment','scrollbars,status,width=550,height=600');
+  newwin.focus();
+  if(!self.name) { self.name = 'paywin'; }
+  if (!newwin.opener) { newwin.opener = self; }
+
+  if(f.PBSForm){
+  	f.PBSForm.opener.value = self.name;
+  } else {
+  	f.opener.value = self.name;
+  }
+  
+  return true;
+} 
+</script>
+
+<form method="POST" action="https://pay.pbs-international.dk/pipay/pay" name="PBSForm" onsubmit="return doPopup(this);" target="Payment">
+	<input type="hidden" name="merchantID" value="<!--@Ecom:Order.Gateway.Merchant-->">
+	<input type="hidden" name="OrderID" value="<!--@Ecom:Order.ID-->">
+	<input type="hidden" name="amount" value="<!--@Ecom:Order.Price.PricePIP-->">
+	<input type="hidden" name="currencyCode" value="<!--@Ecom:Order.Price.Currency.Code-->">
+
+	<INPUT type=hidden name=acceptUrl value="<!--@Ecom:Order.Gateway.Page.OK-->">
+	<INPUT type=hidden name=cancelUrl value="<!--@Ecom:Order.Gateway.Page.Cancel-->">
+	<INPUT type=hidden name=callbackUrl value="<!--@Ecom:Order.Gateway.Page.CallBack-->">
+
+
+
+	<input type="hidden" name="serverFlag" value="T">
+
+
+	<input type="button" name="Start betaling" value="Start betaling" id="Button1" onclick="StartPayment();">
+</form>
+	   
+
+<script language="JavaScript" type="text/javascript">
+function StartPayment(){
+	doPopup(document.forms.PBSForm);
+	setTimeout('document.PBSForm.submit()', 500);
+}
+StartPayment();
+</script>
+

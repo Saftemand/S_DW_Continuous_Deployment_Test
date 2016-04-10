@@ -1,0 +1,155 @@
+@Title("Banner")
+@Description("Default template a site-banner")
+
+@Include("../_wrap/WrapMethods.cshtml")
+@Include("../_wrap/FluidBreakout.cshtml")
+@Include("Layout.cshtml")
+
+@{
+    string rawstring = "";
+    string image = "";
+
+    if (GetString("Item.Background.Image.Image") == "custom")
+    {
+    	image = GetString("Item.Background.Image.CustomImage");
+    } 
+    else if (GetString("Item.Background.Image.Image") == "no-image")
+    {
+    	image = "";
+	}
+	else 
+	{
+		image = "/Templates/Designs/Dwsimple/images/background/" + GetString("Item.Background.Image.Image");
+	}
+
+	<!-- FONT SETTINGS -->
+	string TitleFont = CustomFont(GetString("Item.TitleFont.Font"), GetString("Item.TitleFont.CustomFont"));
+	string TitleSize = GetString("Item.TitleFont.Size") + "px";
+	string TitleColor = GetString("Item.TitleFont.Color.Color");
+	string TitleLineHeight = CheckExistence(GetString("Item.TitleFont.LineHeight"), "1");
+	string TitleSpacing = CheckExistence(GetString("Item.TitleFont.LetterSpacing"), "0");
+	string TitleCasing = GetString("Item.TitleFont.Casing");
+	string TitleWeight = CheckExistence(GetString("Item.TitleFont.Weight"), "300");
+
+	string SubFont = CustomFont(GetString("Item.SubtitleFont.Font"), GetString("Item.TitleFont.CustomFont"));
+	string SubSize = GetString("Item.SubtitleFont.Size") + "px";
+	string SubColor = GetString("Item.SubtitleFont.Color.Color");
+	string SubLineHeight = CheckExistence(GetString("Item.SubtitleFont.LineHeight"), "1");
+	string SubtitleSpacing = CheckExistence(GetString("Item.SubtitleFont.LetterSpacing"), "0");
+	string SubCasing = GetString("Item.SubtitleFont.Casing");
+	string SubtitleWeight = CheckExistence(GetString("Item.SubtitleFont.Weight"), "300");
+
+    string textpos = "0px";
+
+    if (GetString("Item.Mode") == "shadow") {
+    	<style>
+    		.dw-carousel-caption {
+    			text-shadow: 0px 0px 8px #333;
+    		}
+    	</style>
+	}
+
+	if (GetString("Item.Mode") == "boxed") {
+		<style>
+    		.dw-carousel-caption {
+    			background-color: @GetString("Item.CaptionBackgroundColor.Color");
+    		}
+    	</style>
+	}
+
+    <!-- COLUMNS + FLUID CONTROLS-->
+    string column = "";
+
+	if (!GetBoolean("Item.Fluid")){
+		NewRow();
+
+		column = ColumnClass();
+	}
+	else
+	{
+		Fluid();
+	}
+
+
+	string TextClass = "";
+
+	if (GetString("Item.Position") == "left"){
+		TextClass = "container";
+	}
+	
+	if (GetString("Item.Position") == "center"){
+		TextClass = "text-center";
+	}
+
+	if (GetString("Item.Position") == "right"){
+		TextClass = "container text-right";
+	}
+
+	if (!GetBoolean("Item.Fluid")){
+		TextClass += " extra-padding";
+	}
+}
+
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=@TitleFont:100,200,300,400,500,600,700,800,900">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=@SubFont:100,200,300,400,500,600,700,800,900">
+
+<!-- Fluid settings --> 
+@DivBreakout()
+
+<div class="@column">
+	@if (!string.IsNullOrWhiteSpace(@image)){
+		rawstring = "<section style=\"height: " + @GetString("Item.Height") + "px !important; background: url('/Admin/Public/Getimage.ashx?width=1920&amp;compression=75&amp;Crop=5&amp;image=" + @image + "') no-repeat 0 0; background-position: center; margin-bottom: 30px\">";
+	    <text>@rawstring</text>
+	} else  {
+	    rawstring = "<section style=\"background-color: " + @GetString("Item.Background.Color.Color") + "; height: " + @GetString("Item.Height") + "px !important; margin-bottom: 30px \">";
+	    <text>@rawstring</text>
+	}
+
+	@{
+		textpos = ((GetInteger("Item.Height")/2)-(GetInteger("Item.TitleFont.Size") + GetInteger("Item.SubtitleFont.Size"))).ToString() + "px";
+	}
+
+	<div class="@TextClass">
+		<div style="padding-top: @textpos">
+		    <div><span class="title dw-carousel-caption" style="font-family: @TitleFont; font-size: @TitleSize; color: @TitleColor; line-height: @TitleLineHeight; text-transform: @TitleCasing; font-weight: @TitleWeight; letter-spacing: @TitleSpacing;">&nbsp;@GetString("Item.Title")&nbsp;</span></div>
+		    @if (!string.IsNullOrWhiteSpace(@GetString("Item.Subtitle"))){
+				<div>
+				    <span class="subtitle dw-carousel-caption" style="font-family: @SubFont; font-size: @SubSize; color: @SubColor; line-height: @SubLineHeight; text-transform: @SubCasing; font-weight: @SubtitleWeight; letter-spacing: @SubtitleSpacing">&nbsp;&nbsp;&nbsp;@GetString("Item.Subtitle")&nbsp;&nbsp;&nbsp;</span>
+				</div>
+			}
+			<span class="clearfix"></span>
+
+			@if (!string.IsNullOrWhiteSpace(GetString("Item.Link"))){
+			    string link = @GetString("Item.Link");
+
+			    <a href="@link" class="btn btn-dw-primary">@GetString("Item.LinkText")</a>
+			}
+		</div>
+	</div>
+</div>
+
+<!-- Fluid settings -->    
+@DivBreakbackin()
+
+@functions{
+	private string CustomFont (string firstfont, string secondfont)
+	{
+		if (firstfont == "custom")
+		{
+			return secondfont;
+		}
+		else
+		{
+			return firstfont;
+		}
+	}
+
+	private string CheckExistence (string stringitem, string defaultvalue)
+	{
+		if (!string.IsNullOrWhiteSpace(stringitem)) {
+            return stringitem;
+        } else {
+            return defaultvalue;
+        }
+	}
+}

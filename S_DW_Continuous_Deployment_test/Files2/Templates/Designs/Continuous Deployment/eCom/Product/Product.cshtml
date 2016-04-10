@@ -1,0 +1,382 @@
+﻿@Include("../ProductList/includes/ProductListRender.cshtml")
+<script src="/Files/Templates/Designs/DwSimple/js/ProductVariantsAjax.js"></script>
+
+@{
+	string image = "";
+	string grouplink = "";
+	string productname = "";
+	string imagesize = "";
+	string infosize = "";
+	var pid = GetValue("Ecom:Product.ID");
+
+	switch(Pageview.Area.Item["EcommerceProductcardImageSize"].ToString()) {
+		case "small":
+			imagesize = "4";
+			infosize = "8";
+		break;
+
+		case "medium":
+			imagesize = "6";
+			infosize = "6";
+		break;
+
+		case "large":
+			imagesize = "12";
+			infosize = "12";
+		break;
+	}
+}
+
+<div class="col-md-12 col-sm-12 col-xs-12">
+	<div class="row product">
+
+		@* The image area *@
+
+		<div class="col-md-@imagesize col-sm-12 col-xs-12">
+			<div class="product-gallery">
+				
+				@* Discount sticker *@
+
+				@if (GetString("Ecom:Product.Discount.Price") != GetString("Ecom:Product.Price")) {
+					if (@Pageview.Area.Item["EcommerceStickerType"].ToString() == "ribbon") {
+						<span class="ribbon base">@Translate("On sale!", "On sale!")</span>
+					}	
+					if (@Pageview.Area.Item["EcommerceStickerType"].ToString() == "ball") {
+						<span class="ball">@Translate("On sale!", "On sale!")</span>
+					}
+				}
+				
+
+				@* Product images *@
+
+				@{
+					image = System.Web.HttpContext.Current.Server.UrlEncode(GetString("Ecom:Product.ImageLarge.Default.Clean"));
+				}
+				
+				<div class="primary-image">
+					<a href="@image" class="fancybox">
+						<img src="@image" class="img-responsive" alt="Product image">
+					</a>
+				</div>
+				<div>&nbsp;</div>
+				<div class="row">
+					@foreach (LoopItem detail in GetLoop("Details")) {
+						image = System.Web.HttpContext.Current.Server.UrlEncode(detail.GetString("Ecom:Product:Detail.Image.Clean"));
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="thumbnail-images">
+								<a href="@image" class="fancybox">
+									<img src="@image" alt="">
+								</a>
+							</div>
+						</div>
+					}
+				</div>
+			</div>
+		</div>
+
+		@* The main product information area *@
+
+		<div class="col-md-@infosize col-sm-12 col-xs-12">
+			<form name="@pid" id="@pid" method="post" action="/Default.aspx">
+			@GetValue("Ecom:Product.Form.Clean")
+				<div class="product-info" vocab="http://schema.org/" typeof="Product" id="productinfo">
+
+					@* Product description *@
+
+					<h1><span property="name">@GetString("Ecom:Product.Name")</span> @GetString("Ecom:Product.SelectedVariantComboName")</h1>
+					<span class="clearfix"></span>
+					<div property="description" id="description">
+						@GetString("Ecom:Product.ShortDescription")
+					</div>
+					<span class="clearfix"></span>
+					
+					
+					@* Variants *@
+
+					<div id="productvariants">
+						<!-- SELECTOR MAIN -->
+						@{
+							var pageid = GetValue("Ecom:Product:Page.ID");
+							var productid = GetValue("Ecom:Product.ID");
+						}
+
+						<script type="text/javascript">
+							var presetting = true;
+							var VariantID = "@GetValue("Ecom:Product.SelectedVariantComboID")"; 
+							var VariantOptions = VariantID.split('.');
+							var Page = "/Default.aspx?ID=@pageid&ProductID=@productid";
+				
+							var Selector = new VariantSelector();
+
+							@foreach (LoopItem variantgroup in GetLoop("VariantGroups"))
+							{
+					
+								var variantgroupid = variantgroup.GetValue("Ecom:VariantGroup.ID");
+								var variantgroupname = variantgroup.GetString("Ecom:VariantGroup.Name");
+					
+								<text>group = new VariantGroup("@variantgroupid", "@variantgroupname");</text>
+								foreach (LoopItem variantoption in variantgroup.GetLoop("VariantOptions"))
+								{
+									var variantoptionid = variantoption.GetValue("Ecom:VariantOption.ID");
+									var variantoptionname = variantoption.GetString("Ecom:VariantOption.Name");
+									<text>group.Options.push(new VariantOption("@variantoptionid", "@variantoptionname"));</text>
+								}
+								<text>Selector.Groups.push(group);</text>
+							}
+
+							@foreach (LoopItem variantcomb in GetLoop("VariantCombinations"))
+							{
+					
+							var variantcombid = variantcomb.GetValue("Ecom:VariantCombination.VariantID");
+								<text>Selector.Combinations.push(new VariantCombination("@variantcombid"));</text>
+
+							}
+
+							for (g = 0; g < Selector.Groups.length; g++) {
+								document.write("<br><b>" + Selector.Groups[g].Name + "</b><br>");
+								document.write("<select id='COMBO" + g + "' style='width:40%' onchange=\"UpdateCombo(" + g + ");\">\n</select><br>\n");
+							}
+				
+							FillCombo(0);
+							for (vo = 0; vo < VariantOptions.length; vo++) {
+								PresetCombo(vo, VariantOptions[vo]);
+							}
+
+							presetting = false;
+						</script>
+					</div>
+					<hr/>
+
+					@* Product details *@
+
+					<div property="offers" typeof="Offer">
+						<div class="row">
+							<span class="clearfix"></span>
+							<div class="product-short-info">
+								@if (!string.IsNullOrWhiteSpace(GetString("Ecom:Product:Stock.Text"))) {
+									image = GetString("Ecom:Product:Stock.Image.Clean");
+		
+									<div class="col-md-6 col-xs-12">
+										<p><small>@Translate("Availability", "Availability"): <span property="availability">@GetString("Ecom:Product:Stock.Text")</span>: </small><img src="@image" alt="@GetString("ecom:product:stock.text")" style="width:7px !important; height:7px !important" /></p>
+									</div>
+									<div class="col-md-6 col-xs-12">
+										<p><small>@Translate("Delivery", "Delivery"): @GetString("Ecom:Product:Stock.DeliveryText")&nbsp;@GetString("Ecom:Product:Stock.DeliveryUnit")</small></p>
+									</div>
+								}
+
+								<div class="col-md-6 col-xs-12">
+									<p><small>@Translate("Product number", "Product number"): <span property="identifier">@GetString("Ecom:Product.Number")</span></small></p>
+								</div>
+
+								@if (GetLoop("BOMProducts").Count > 0) {
+									<div class="col-md-12 col-xs-12" id="includingproducts">
+										<hr/>
+										<h3 class="section-title">@Translate("Including products", "Including products")</h3>
+
+										@foreach (LoopItem bomproduct in GetLoop("BOMProducts")){
+											var bomimage = bomproduct.GetString("Ecom:Product.ImageSmall.Clean");
+
+											<ul>
+												<li class="bomlist"><a href="@bomproduct.GetString("Ecom:Product.Link.Clean.PID")">
+													<img src="/Admin/Public/GetImage.ashx?width=50&amp;image=@bomimage&amp;Compression=99" alt="">
+													<text>&nbsp;&nbsp;&nbsp;</text>@bomproduct.GetString("Ecom:Product.Name")
+												</a></li>
+											</ul>
+										}
+
+										<table cellspacing="0" cellpadding="0" border="0">
+											@foreach (LoopItem bomconfig in GetLoop("BOMConfigurators")) {
+												<tr>
+												  	<td>
+														<b>@bomconfig.GetString("Ecom:Product.Configurator.Name")</b><br>
+														<select name="@bomconfig.GetString("Ecom:Product.Configurator.ID")">   
+														    @foreach (LoopItem configproduct in GetLoop("ConfiguratorProducts")){
+														   		<option value="@configproduct.GetString("Ecom:Product.ID")" @configproduct.GetString("Ecom:Product.Configurator.Selected") > @configproduct.GetString("Ecom:Product.Name") ( @configproduct.GetString("Ecom:Product.ActualPrice") ) </option>
+														    }
+														</select>
+												  	</td>
+												</tr>	
+											}
+										</table>
+									</div>
+								}
+							</div>
+						</div>
+						<hr/>
+
+						@* Prices and actions *@
+
+						<div class="row">
+							<div class="col-md-12 col-xs-12">
+								@{ var currency = GetString("Ecom:Product.Price.Currency.Code"); }
+	
+								<meta property="priceCurrency" content="@currency" />
+								
+								@if (GetString("Ecom:Product.Discount.Price") != GetString("Ecom:Product.Price")) {
+
+									<span class="price pull-left" style="font-size: 28px !important" property="price">
+										@GetString("Ecom:Product.Discount.Price")
+									</span>
+									<span>&nbsp;&nbsp;</span>
+									<p style="margin-top: 0px !important; padding-top: 10px !important; color: #AAAAAA !important; font-size: 12px !important; position: absolute; text-decoration: line-through">
+										<strong>@GetString("Ecom:Product.Price")</strong>
+										<!-- @GetString("Ecom:Product.Discount.TotalPercentWithVATFormatted") -->
+									</p>
+								} else {
+									<span class="price pull-left" style="font-size: 28px !important; margin-top:4px !important" property="price">
+										@GetString("Ecom:Product.Discount.Price")
+                                     
+                                     
+									</span>
+								}
+
+								<button type="submit" name="submit" onclick="AddToCart(event, '@GetString("Ecom:Product.ID")', $(this).siblings('input.quantity').val());" class="btn btn-dw-cart pull-right"><strong>@Translate("Add to cart", "Add to cart")</strong></button>
+								<input type="number" name="Quantity" value="1" class="pull-right quantity" style="width:60px; text-align:center; margin-right:15px !important; height:34px;">  
+							</div> 
+						</div> 
+						<hr/>   
+					</div>
+				</div>
+			</form>
+		</div>
+		
+
+		@* Buy with loyalty points start *@
+
+		@if(Dynamicweb.Base.IsModuleInstalled("LoyaltyPoints")) {
+        	var productPoints = GetDouble("Ecom:Product.PointPrice");
+
+			<div class="col-md-6 col-sm-12 col-xs-12">
+             
+                @if (productPoints > 0)
+             	{
+		            <span class="price pull-left" style="font-size: 22px !important; margin-top:4px !important">@productPoints @Translate("Points", "Points")</span>
+		     
+        			var user = Dynamicweb.Modules.UserManagement.User.get_Current(Dynamicweb.Modules.UserManagement.PagePermissionLevels.Frontend);
+        			if (user == null)
+        			{
+            			<p></p>
+						<div class="alert alert-info m-t-10 pull-right">@Translate("Sign in to buy this product using points")</div>
+       				}
+        			else
+        			{
+                        var availablePoints = user != null ? user.PointBalance : 0;
+                        var cart = Dynamicweb.eCommerce.Common.Context.Cart;
+                        var pointsUsedInCart = cart != null ? cart.TotalPoints : 0;
+
+                        if (availablePoints < productPoints + pointsUsedInCart)
+                        {
+                        	<p></p>
+                            <div class="alert alert-danger m-t-10 pull-right">@string.Format(Translate("You don't have enough points to buy this product using points ({0:0.00}/{1:0.00})"), availablePoints, productPoints + pointsUsedInCart)</div>
+                        }
+                        else
+                        {	
+                        	var ProductID = GetValue("Ecom:Product.ID");
+
+                           	<form method="post" role="form">
+                                <input type="hidden" name="ProductID" value="@ProductID" />
+                                <button type="submit" onclick="UpdateCart();" class="btn btn-dw-secondary pull-right" name="CartCmd" value="addWithPoints">@Translate("Buy for") @productPoints @Translate("points")</button>
+                            </form>
+                        }
+        			}
+   				}
+        	</div>
+	       	<div class="col-md-6 col-sm-12 col-xs-12">
+	       		<hr/>
+	       	</div>
+       	}
+
+       	@* Buy with loyalty points end *@
+	</div>
+
+	<div class="row">
+		<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<h2>@Translate("Description", "Description")</h2>
+						<p>
+							@GetString("Ecom:Product.LongDescription")
+						</p>
+					</div>
+				</div>
+				<div class="row"><hr/></div>
+
+
+				@* Related products *@
+				
+				@if (Pageview.Area.Item["RelatedProducts"].ToString() == "True") {
+					if (GetString("Ecom:Product.RelatedCount") != "0"){
+
+						<div class="row">
+							<div class="col-md-12 col-sm-12 col-xs-12">
+								<h3 class="dw-section-title"><span>@Translate("Related products", "Related products")</span></h3>
+							</div>
+						</div>
+
+						foreach (LoopItem relatedgroup in GetLoop("ProductRelatedGroups")) {
+							<div class="row">
+								@{
+									var relatedproductloop = relatedgroup.GetLoop("RelatedProducts").OrderByDescending(g => g.GetString("Ecom:Product.LoopCounter")).Take(3).ToList();
+									@GetProductList(relatedproductloop, 3, 3, 1);
+								}
+							</div>
+							<div class="row"><hr/></div>
+						}
+					}
+				}
+
+				@if (Pageview.Area.Item["CustomersAlsoSaw"].ToString() == "True"){
+					if (GetString("eCom:Related.CustomersWhoSawThisAlsoSaw.Count") != "0"){
+						<div class="row">
+							<div class="col-md-12 col-sm-12 col-xs-12">
+								<h3 class="dw-section-title"><span>@Translate("Other costumers also saw", "Other costumers also saw")</span></h3>
+							</div>
+						</div>
+						<div class="row">
+							@{
+								var alsoproductgroup = GetLoop("eCom:Related.CustomersWhoSawThisAlsoSaw").OrderByDescending(g => g.GetString("Ecom:Product.LoopCounter")).Take(3).ToList();
+								@GetProductList(alsoproductgroup, 3, 3, 1);
+							}
+						</div>
+						<div class="row"><hr/></div>
+					}
+				}
+				
+				@if (Pageview.Area.Item["YourLastSeenProducts"].ToString() == "True"){
+					if (GetString("eCom:Related.YouHaveSeenTheseProducts.Count") != "0"){
+						<div class="row">
+							<div class="col-md-12 col-sm-12 col-xs-12">
+								<h3 class="dw-section-title"><span>@Translate("Recently viewed items", "Recently viewed items")</span></h3>
+							</div>
+						</div>
+						<div class="row">
+							@{
+								var recentproductgroup = GetLoop("eCom:Related.YouHaveSeenTheseProducts").OrderByDescending(g => g.GetString("Ecom:Product.LoopCounter")).Take(3).ToList();
+								@GetProductList(recentproductgroup, 3, 3, 1);
+							}
+						</div>
+						<div class="row"><hr/></div>
+					}
+				}
+				
+				@if (Pageview.Area.Item["ProductsFromCategory"].ToString() == "True"){
+					if (GetString("eCom:Related.WhatAboutTheseProducts.Count") != "0"){
+						<div class="row">
+							<div class="col-md-12 col-sm-12 col-xs-12">
+								<h3 class="dw-section-title"><span>@Translate("Other great products in the same category", "Other great products in the same category")</span></h3>
+							</div>
+						</div>
+						<div class="row">
+							@{
+								var aboutproductgroup = GetLoop("eCom:Related.WhatAboutTheseProducts").OrderByDescending(g => g.GetString("Ecom:Product.LoopCounter")).Take(3).ToList();
+								@GetProductList(aboutproductgroup, 3, 3, 1);
+							}
+						</div>
+						<div class="row"><hr/></div>
+					}
+				}
+				<div class="row"><div class="col-md-12 col-sm-12 col-xs-12">&nbsp;</div></div>
+			</div>
+		</div>
+	</div>        
+</div>

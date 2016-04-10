@@ -1,0 +1,71 @@
+<!--@Ecom:Order:CartForm.Start-->
+<h2>Basket (step 1 of 5)</h2>
+<table cellspacing="0" cellpadding="0" border="0" width="100%" id="orderdetails">
+<tr class="basketheader">
+	<td>Product name</td>
+	<td>Amount</td>
+	<td align="right">Price</td>
+	<td></td>
+</tr>
+<!--@LoopStart(OrderLines)-->
+<tr class="orderline<!--@Ecom:Order:OrderLine.Type--> orderline">
+	<td nowrap>
+	    <a href="<!--@Ecom:Order:OrderLine.ProductLink-->">
+	        <!--@Ecom:Order:OrderLine.ProductName.Short-->
+	        <!--@If Defined(Ecom:Order:OrderLine.ProductVariantText)-->
+	            (<!--@Ecom:Order:OrderLine.ProductVariantText-->)
+	        <!--@EndIf(Ecom:Order:OrderLine.ProductVariantText)-->
+	    </a>
+	</td>
+	<td><!--@Ecom:Order:OrderLine.Quantity--></td>
+	<td align="right" nowrap><!--@Ecom:Order:OrderLine.TotalPrice--></td>
+	<td align="right" nowrap>
+	    <a class="orderfunctions" href="<!--@Ecom:Order:OrderLine.IncrementLink-->"><img src="/Files/Billeder/Ecom/Grafik/basket-inc.gif" border="0"></a>
+	    <a class="orderfunctions" href="<!--@Ecom:Order:OrderLine.DecrementLink-->"><img src="/Files/Billeder/Ecom/Grafik/basket-dec.gif" border="0"></a>
+	    <a class="orderfunctions" href="<!--@Ecom:Order:OrderLine.DeleteLink-->"><img src="/Files/Billeder/Ecom/Grafik/basket-rem.gif" border="0"></a>
+	</td>
+</tr>
+<!--@LoopStart(VariantCombinations)-->
+<tr>
+	<td><!--@Ecom:VariantCombination.Product.Name--></td>
+	<td><!--@Ecom:VariantCombination.Product.Amount--></td>
+	<td align="right"><!--@Ecom:VariantCombination.Product.Price--></td>
+	<td align="right" nowrap>
+	    
+	</td>
+</tr>
+<!--@LoopEnd(VariantCombinations)-->
+<!--@LoopStart(Order.OrderLineFields)-->
+<tr class="orderlinefield">
+	<td colspan="5">
+		<label for="<!--@Ecom:Order:OrderLine.OrderLineField.InputTextField.Name-->"><!--@Ecom:Order:OrderLine.OrderLineField.Name--></label>
+		<input name="<!--@Ecom:Order:OrderLine.OrderLineField.InputTextField.Name-->" id="<!--@Ecom:Order:OrderLine.OrderLineField.InputTextField.Name-->" maxlength="" type="text" value="" />
+	</td>
+	<!--DwTemplateTags-->
+</tr>
+<!--@LoopEnd(Order.OrderLineFields)-->
+
+<!--@LoopStart(BOMItems)-->
+<tr class="orderline">
+	<td nowrap><!--@Ecom:Order:OrderLine.ProductName.Short--></td>
+	<td nowrap><!--@Ecom:Order:OrderLine.Quantity--></td>
+        <td></td>
+	<td nowrap><!--@Ecom:Order:OrderLine.TotalPrice--></td>
+	<td></td>
+</tr>
+<!--@LoopEnd(BOMItems)-->
+<!--@LoopEnd(OrderLines)-->
+<tr class="total">
+	<td>Total</td>
+	<td></td>
+	<td align="right"><!--@Ecom:Order.OrderLines.Total.PriceWithVAT--></td>
+</tr>
+<tr class="footer">
+	<td colspan="5">
+		<a href="<!--@Global:Pageview.Url-->&amp;cartcmd=emptycart" class="prevstep">Empty basket</a>
+    	<a href="<!--@Ecom:Order:CartForm.SubmitOrder-->" class="nextstep">Order</a>    
+	</td>
+</tr>
+</table>
+<!--@Ecom:Order:CartForm.Start-->
+

@@ -1,0 +1,118 @@
+﻿@inherits Dynamicweb.Rendering.RazorTemplateBase<Dynamicweb.Rendering.RazorTemplateModel<Dynamicweb.Rendering.Template>>
+
+@SnippetStart("StyleSheet")
+<style>
+    .loyaltypoints tbody tr {
+        cursor: pointer;
+    }
+</style>
+@SnippetEnd("StyleSheet")
+<style>
+     @@media only screen and (max-width: 800px) {
+	
+	/* Force table to not be like tables anymore */
+	table, 
+	thead, 
+	tbody, 
+	th, 
+	td, 
+	tr { 
+		display: block; 
+	}
+ 
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+ 
+	tr { border: 1px solid #ccc; }
+ 
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: none; 
+		position: relative;
+		padding-left: 50% !important; 
+		white-space: normal;
+		text-align:left;
+	}
+ 
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+		text-align:left;
+		font-weight: bold;
+	}
+ 
+	/*
+	Label the data
+	*/
+	td:before { content: attr(data-title); }
+    }
+</style>
+<div class="loyaltypoints list">
+  <h3 class="section-title">@GetGlobalValue("Global:Page.Name")</h3>
+    @{
+        var transactions = GetLoop("Ecom:LoyaltyPoints.TransactionList");
+    }
+
+    @if (transactions.Count == 0)
+    {
+        <div class="alert alert-info">@Translate("No loyalty points")</div>
+    }
+    else
+    {
+        <table class="table table-hover">
+            <thead>
+                <tr class="CustomerCenterMenu" style="background: none !important; font-weight: bold">
+                    <td class="quantity">@Translate("Points")</td>
+                    <td class="date">@Translate("Date")
+                  </td>
+                    <td class="date">@Translate("Expiration date")
+            
+                  </td>
+                    <td class="comment">@Translate("Comment")</td>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th class="quantity">@Dynamicweb.Modules.UserManagement.User.get_Current(Dynamicweb.Modules.UserManagement.PagePermissionLevels.Frontend).PointBalance.ToString("0.00")</th>
+                    <th></th>
+                    <th></th>
+                    <th>Total</th>
+                </tr>
+            </tfoot>
+            <tbody>
+                @foreach (var transaction in transactions)
+                {
+                    <tr data-href='@transaction.GetValue("Ecom:LoyaltyPoints.Transaction.DetailsUrl")'>
+                        <td  data-title="@Translate("Date", "Date")" class="quantity">@transaction.GetDouble("Ecom:LoyaltyPoints.Transaction.Points").ToString("0.00")</td>
+                        <td class="date">@transaction.GetDate("Ecom:LoyaltyPoints.Transaction.Date")</td>
+                        <td class="date">@transaction.GetDate("Ecom:LoyaltyPoints.Transaction.ExpirationDate")</td>
+                        <td class="comment">@transaction.GetString("Ecom:LoyaltyPoints.Transaction.Comment")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <script>
+            (function () {
+                // @@see http://stackoverflow.com/questions/17147821/how-to-make-a-whole-row-in-a-table-clickable-as-a-link
+                var items = document.querySelectorAll('.loyaltypoints tbody tr');
+                for (var i = 0, item; item = items[i]; i++) {
+                    item.addEventListener('click', function () {
+                        document.location = this.getAttribute('data-href');
+                    });
+                }
+            }())</script>
+    }
+</div>
+@*TemplateTags("LoyaltyPoints")*@

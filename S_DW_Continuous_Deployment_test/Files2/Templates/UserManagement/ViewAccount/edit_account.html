@@ -1,0 +1,80 @@
+<h2>Edit account '<!--@UserManagement:Account.Name-->'</h2>
+<!--@LoopStart(FormValidationErrors)-->
+	<!--@HeaderStart-->
+		<div id="errormessages">
+			<ul>
+	<!--@HeaderEnd-->
+				<li>Error in the input field "<!--@UserManagement:Account.FormValidationError.FieldNiceName-->": <a href="javascript:document.getElementById('<!--@UserManagement:Account.FormValidationError.FieldName-->').focus();"><!--@UserManagement:Account.FormValidationError.Message--></a></li>
+	<!--@FooterStart-->
+			</ul>
+		</div>
+	<!--@FooterEnd-->
+<!--@LoopEnd(FormValidationErrors)-->
+<!--@UserManagement:Account.FormStart-->
+	<table>
+		<tr>
+			<th align="left"><!--@Translate(Name, "Name")-->: </th>
+			<td><!--@UserManagement:Account.Name.Input--></td>
+		</tr>
+		<tr>
+			<th align="left"><!--@Translate(Email, "Email")-->: </th>
+			<td><!--@UserManagement:Account.Email.Input--></td>
+		</tr>				
+		<tr>
+			<th align="left"><!--@Translate(Department, "Department")-->: </th>
+			<td><!--@UserManagement:Account.Department.Input--></td>
+		</tr>
+		<tr>
+			<th align="left"><!--@Translate(Phone, "Phone")-->: </th>
+			<td><!--@UserManagement:Account.Phone.Input--></td>
+		</tr>
+		<tr>
+			<th align="left"><!--@Translate(PhonePrivate, "Private phone")-->: </th>
+			<td><!--@UserManagement:Account.PhonePrivate.Input--></td>
+		</tr>
+		<tr>
+			<th align="left"><!--@Translate(PhoneBusiness, "Business phone")-->: </th>
+			<td><!--@UserManagement:Account.PhoneBusiness.Input--></td>
+		</tr>
+		<tr>
+			<th align="left"><!--@Translate(PhoneMobile, "Mobile phone")-->: </th>
+			<td><!--@UserManagement:Account.PhoneMobile.Input--></td>
+		</tr>
+		<tr>
+			<th align="left"><!--@Translate(Fax, "Fax")-->: </th>
+			<td><!--@UserManagement:Account.Fax.Input--></td>
+		</tr>
+		<tr>
+			<th align="left"><!--@Translate(Address, "Address")-->: </th>
+			<td><!--@UserManagement:Account.Address.Input--></td>
+		</tr>
+		<tr>
+			<th align="left"><!--@Translate(Address2, "Address 2")-->: </th>
+			<td><!--@UserManagement:Account.Address2.Input--></td>
+		</tr>
+		<tr>
+			<th align="left"><!--@Translate(Zip, "Zip")-->: </th>
+			<td><!--@UserManagement:Account.Zip.Input--></td>
+		</tr>
+		<tr>
+			<th align="left"><!--@Translate(City, "City")-->: </th>
+			<td><!--@UserManagement:Account.City.Input--></td>
+		</tr>
+		<tr>
+			<th align="left"><!--@Translate(Country, "Country")-->: </th>
+			<td><!--@UserManagement:Account.Country.Input--></td>
+		</tr>
+		<tr>
+			<th align="left"><!--@Translate(JobTitle, "Jobtitle")-->: </th>
+			<td><!--@UserManagement:Account.JobTitle.Input--></td>
+		</tr>
+		<tr>
+			<th align="left"><!--@Translate(Company, "Company")-->: </th>
+			<td><!--@UserManagement:Account.Company.Input--></td>
+		</tr>		
+	</table>
+	<input type="submit" id="submitter" value="<!--@Translate(updateAccount, "Update Account")-->">
+<!--@UserManagement:Account.FormEnd-->
+<!--@If Defined(UserManagement:Account.DetailUrl)-->
+	<a href="<!--@UserManagement:Account.DetailUrl-->">Back to detail view</a>
+<!--@EndIf(UserManagement:Account.DetailUrl)-->

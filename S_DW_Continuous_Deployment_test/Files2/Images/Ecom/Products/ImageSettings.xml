@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Active>true</Active>
+  <Width>0</Width>
+  <Height>0</Height>
+  <CropOffset>KeepAspectRatio</CropOffset>
+  <Quality>100</Quality>
+  <OverwriteOriginal>true</OverwriteOriginal>
+  <EnforceOutputFormat>false</EnforceOutputFormat>
+  <LimitToTheseExtensions>false</LimitToTheseExtensions>
+  <ProcessedExtensions />
+  <LastApply>2015-01-08T14:38:00.2675531+01:00</LastApply>
+  <ThumbSettings>
+    <ThumbnailSettings>
+      <Selected>true</Selected>
+      <Width>100</Width>
+      <Height>100</Height>
+      <CropOffset>KeepAspectRatio</CropOffset>
+      <Quality>100</Quality>
+      <PostfixName />
+      <SubfolderName>Small</SubfolderName>
+      <LastApply>2015-01-08T14:38:00.2988007+01:00</LastApply>
+    </ThumbnailSettings>
+  </ThumbSettings>
+  <ApplySettingsToSubfolders>false</ApplySettingsToSubfolders>
+</ImageSettings>

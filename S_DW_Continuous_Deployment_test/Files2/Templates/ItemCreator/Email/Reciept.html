@@ -1,0 +1,35 @@
+Thanks for your interest.
+You have submitted the following data.
+
+<table>
+    <thead>
+	    <tr>
+			<th>Group name</th>
+		</tr>
+	</thead>
+	<tbody>
+		<!--@LoopStart(Item.Groups)-->
+	    <tr>
+		    <td>
+			    <!--@Item.Group.Id-->
+				<table>
+				    <thead>
+						<tr>
+						   <th>Field name</th>
+						   <th>Field value</th>
+						</tr>
+					</thead>
+					<tbody>
+					    <!--@LoopStart(Item.Fields)-->
+						<tr>
+						    <td><!--@Item.Field.Name--></td>
+							<td><!--@Item.Field.Value--></td>
+						</tr>
+						<!--@LoopEnd(Item.Fields)-->
+					</tbody>
+				</table>
+			</td>
+		</tr>
+		<!--@LoopEnd(Item.Groups)-->
+	</tbody>
+</table>

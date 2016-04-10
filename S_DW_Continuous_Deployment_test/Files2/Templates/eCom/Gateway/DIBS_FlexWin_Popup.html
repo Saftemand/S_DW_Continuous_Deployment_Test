@@ -1,0 +1,29 @@
+<script language="JavaScript" type="text/javascript">
+<!--
+newwin = null;
+function doPopup() {
+  var url = '/Admin/Module/eCom_Cart/Gateway/DIBS_FlexWin.aspx' + 
+            '?merchant=<!--@Ecom:Order.Gateway.Merchant-->' + 
+            '&lang=<!--@Ecom:Order.Gateway.LanguageCode.UpperCase-->' + 
+            '&amount=<!--@Ecom:Order.Price.PricePIP-->' + 
+            '&currency=<!--@Ecom:Order.Price.Currency.Code-->' +
+            '&orderid=<!--@Ecom:Order.ID-->' +
+    <!--@If Defined(Ecom:Order.Gateway.TestMode)-->
+            '&test=<!--@Ecom:Order.Gateway.TestMode-->' +
+    <!--@EndIf(Ecom:Order.Gateway.TestMode)-->
+            '&accepturl=' + escape("<!--@Ecom:Order.Gateway.Page.OK-->") +
+            '&cancelurl=' + escape("<!--@Ecom:Order.Gateway.Page.Cancel-->") +
+            '&callbackurl=' + escape("<!--@Ecom:Order.Gateway.Page.CallBack-->") +
+            '&ordertext=' + escape("<!--@Ecom:Order.Gateway.OrderText-->") +
+            '&HTTP_COOKIE=' + escape("<!--@Ecom:Order.Gateway.HTTP_COOKIE-->");
+  //alert(url);
+  var thisA = document.getElementById("jsLink");
+  thisA.href = url;
+  newwin = window.open('', 'Betaling','scrollbars,status,width=550,height=600');
+    if (!newwin.opener) {newwin.opener = self;}
+  newwin.focus();
+  return true;
+} 
+//-->
+</script> 
+<a id="jsLink" href="#" target="Betaling" onclick="javascript:doPopup();">Start betaling</a>

@@ -1,0 +1,16 @@
+﻿<WebsiteItemLayouts>
+  <PageItemLayouts>
+    <ItemLayout systemname="Calendar" template="" />
+    <ItemLayout systemname="Folder" template="" />
+    <ItemLayout systemname="Innovadis" template="" />
+    <ItemLayout systemname="Innovadis2" template="" />
+    <ItemLayout systemname="News" template="" />
+  </PageItemLayouts>
+  <ParagraphItemLayouts>
+    <ItemLayout systemname="Calendar" template="" />
+    <ItemLayout systemname="Folder" template="" />
+    <ItemLayout systemname="FrontpageReference" template="" />
+    <ItemLayout systemname="Innovadis" template="" />
+    <ItemLayout systemname="Innovadis2" template="" />
+  </ParagraphItemLayouts>
+</WebsiteItemLayouts>

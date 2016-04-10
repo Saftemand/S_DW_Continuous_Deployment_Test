@@ -1,0 +1,243 @@
+@functions{
+	public class FontSettings
+	{
+		public class Logo 
+		{
+			public static string FontFamily { get; set; }
+			public static string FontSize { get; set; }
+			public static string FontWeight { get; set; }
+			public static string Color { get; set; }
+			public static string LineHeight { get; set; }
+			public static string Casing { get; set; }
+			public static string LetterSpacing { get; set; }
+		}
+
+		public class Slogan 
+		{
+			public static string FontFamily { get; set; }
+			public static string FontSize { get; set; }
+			public static string FontWeight { get; set; }
+			public static string Color { get; set; }
+			public static string LineHeight { get; set; }
+			public static string Casing { get; set; }
+			public static string LetterSpacing { get; set; }
+		}
+
+		public class H1
+		{
+			public static string FontFamily { get; set; }
+			public static string FontSize { get; set; }
+			public static string FontWeight { get; set; }
+			public static string Color { get; set; }
+			public static string LineHeight { get; set; }
+			public static string Casing { get; set; }
+			public static string LetterSpacing { get; set; }
+		}
+
+		public class H2
+		{
+			public static string FontFamily { get; set; }
+			public static string FontSize { get; set; }
+			public static string FontWeight { get; set; }
+			public static string Color { get; set; }
+			public static string LineHeight { get; set; }
+			public static string Casing { get; set; }
+			public static string LetterSpacing { get; set; }
+		}
+	
+		public class Body
+		{
+			public static string FontFamily { get; set; }
+			public static string FontSize { get; set; }
+			public static string FontWeight { get; set; }
+			public static string Color { get; set; }
+			public static string LineHeight { get; set; }
+			public static string Casing { get; set; }
+			public static string LetterSpacing { get; set; }
+		}
+	}
+
+	private void InitFontSettings()
+	{
+		//LOGO
+		FontSettings.Logo.FontFamily = CustomFont(GetString("Item.Area.LogoFont.Font"), GetString("Item.Area.LogoFont.CustomFont"));
+		FontSettings.Logo.FontSize = GetString("Item.Area.LogoFont.Size")+"px";
+		FontSettings.Logo.FontWeight = CheckExistence(GetString("Item.Area.LogoFont.Weight"), "normal");
+		FontSettings.Logo.LineHeight = CheckExistence(GetString("Item.Area.LogoFont.LineHeight"), "1");
+		FontSettings.Logo.LetterSpacing = GetString("Item.Area.LogoFont.LetterSpacing") + "px";
+        FontSettings.Logo.Casing = GetString("Item.Area.LogoFont.Casing");
+        FontSettings.Logo.Color = GetString("Item.Area.LogoFont.Color.Color");
+
+
+        //SLOGAN
+		FontSettings.Slogan.FontFamily = CustomFont(GetString("Item.Area.LogoSloganFont.Font"), GetString("Item.Area.LogoSloganFont.CustomFont"));
+		FontSettings.Slogan.FontSize = GetString("Item.Area.LogoSloganFont.Size")+"px";
+		FontSettings.Slogan.FontWeight = CheckExistence(GetString("Item.Area.LogoSloganFont.Weight"), "normal");
+		FontSettings.Slogan.LineHeight = CheckExistence(GetString("Item.Area.LogoSloganFont.LineHeight"), "1");
+		FontSettings.Slogan.LetterSpacing = GetString("Item.Area.LogoSloganFont.LetterSpacing") + "px";
+        FontSettings.Slogan.Casing = GetString("Item.Area.LogoSloganFont.Casing");
+        FontSettings.Slogan.Color = GetString("Item.Area.LogoSloganFont.Color.Color");
+
+
+		//HEADINGS
+		FontSettings.H1.FontFamily = CustomFont(GetString("Item.Area.HeadingsH1.Font"), GetString("Item.Area.HeadingsH1.CustomFont"));
+		FontSettings.H1.FontSize = GetString("Item.Area.HeadingsH1.Size")+"px";
+		FontSettings.H1.FontWeight = CheckExistence(GetString("Item.Area.HeadingsH1.Weight"), "normal");
+		FontSettings.H1.LineHeight = CheckExistence(GetString("Item.Area.HeadingsH1.LineHeight"), "1");
+		FontSettings.H1.LetterSpacing = GetString("Item.Area.HeadingsH1.LetterSpacing") + "px";
+        FontSettings.H1.Casing = GetString("Item.Area.HeadingsH1.Casing");
+        FontSettings.H1.Color = GetString("Item.Area.HeadingsH1.Color.Color");
+        
+        FontSettings.H2.FontFamily = CustomFont(GetString("Item.Area.HeadingsH2.Font"), GetString("Item.Area.HeadingsH2.CustomFont"));
+        FontSettings.H2.FontSize = GetString("Item.Area.HeadingsH2.Size")+"px";
+        FontSettings.H2.FontWeight = CheckExistence(GetString("Item.Area.HeadingsH2.Weight"), "normal");
+        FontSettings.H2.LineHeight = CheckExistence(GetString("Item.Area.HeadingsH2.LineHeight"), "1");
+        FontSettings.H2.LetterSpacing = GetString("Item.Area.HeadingsH2.LetterSpacing") + "px";
+        FontSettings.H2.Casing = GetString("Item.Area.HeadingsH2.Casing");
+        FontSettings.H2.Color = GetString("Item.Area.HeadingsH2.Color.Color");
+        
+
+		//BODY
+		FontSettings.Body.FontFamily = CustomFont(GetString("Item.Area.BodyFont.Font"), GetString("Item.Area.BodyFont.CustomFont"));
+		FontSettings.Body.FontSize = GetString("Item.Area.BodyFont.Size") + "px";
+		FontSettings.Body.FontWeight = CheckExistence(GetString("Item.Area.BodyFont.Weight"), "normal");
+        FontSettings.Body.LineHeight = CheckExistence(GetString("Item.Area.BodyFont.LineHeight"), "1");
+        FontSettings.Body.LetterSpacing = GetString("Item.Area.BodyFont.LetterSpacing") + "px";
+        FontSettings.Body.Casing = GetString("Item.Area.BodyFont.Casing");
+        FontSettings.Body.Color = GetString("Item.Area.BodyFont.Color.Color");
+
+
+		gfonts.Add(FontSettings.Logo.FontFamily, "");
+		
+		if (!gfonts.ContainsKey(FontSettings.Slogan.FontFamily))
+		{
+			gfonts.Add(FontSettings.Slogan.FontFamily, "");
+		}
+		if (!gfonts.ContainsKey(FontSettings.H1.FontFamily))
+		{
+			gfonts.Add(FontSettings.H1.FontFamily, "");
+		}
+		if (!gfonts.ContainsKey(FontSettings.H2.FontFamily))
+		{
+			gfonts.Add(FontSettings.H2.FontFamily, "");
+		}
+		if (!gfonts.ContainsKey(FontSettings.Body.FontFamily))
+		{
+			gfonts.Add(FontSettings.Body.FontFamily, "");
+		}
+
+	}
+
+	private string CustomFont (string firstfont, string secondfont)
+	{
+		if (firstfont == "custom")
+		{
+			return secondfont;
+		}
+		else
+		{
+			return firstfont;
+		}
+	}
+
+	private string CheckExistence (string stringitem, string defaultvalue)
+	{
+		if (!string.IsNullOrWhiteSpace(stringitem)) {
+            return stringitem;
+        } else {
+            return defaultvalue;
+        }
+	}
+
+	private System.Collections.Generic.Dictionary<string, object> gfonts = new System.Collections.Generic.Dictionary<string, object>();
+}
+
+@{
+	InitFontSettings();
+}
+
+@helper GoogleFonts()
+{
+	if (gfonts != null)
+	{
+		foreach (var item in gfonts)
+		{
+			<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=@item.Key:100,200,300,400,500,600,700,800,900">
+		}
+	}
+}
+
+@functions{
+	public string FontStylesCSS()
+	{
+		string CssString = @"
+		.dw-logotext {
+			font-family: " + FontSettings.Logo.FontFamily + @";
+			font-size: " + FontSettings.Logo.FontSize + @";
+            font-weight: " + FontSettings.Logo.FontWeight + @";
+            line-height: " + FontSettings.Logo.LineHeight + @" !important;
+            letter-spacing: " + FontSettings.Logo.LetterSpacing + @";
+            text-transform: " + FontSettings.Logo.Casing + @";
+            color: " + FontSettings.Logo.Color + @";
+		}
+
+		.dw-slogantext {
+			font-family: " + FontSettings.Slogan.FontFamily + @";
+			font-size: " + FontSettings.Slogan.FontSize + @";
+            font-weight: " + FontSettings.Slogan.FontWeight + @";
+            line-height: " + FontSettings.Slogan.LineHeight + @" !important;
+            letter-spacing: " + FontSettings.Slogan.LetterSpacing + @";
+            text-transform: " + FontSettings.Slogan.Casing + @";
+            color: " + FontSettings.Slogan.Color + @";
+		}
+
+        h1 {
+            font-family: " + FontSettings.H1.FontFamily + @" !important;
+            font-size: " + FontSettings.H1.FontSize + @";
+            color: " + FontSettings.H1.Color + @";
+            line-height: " + FontSettings.H1.LineHeight + @" !important;
+            text-transform: " + FontSettings.H1.Casing + @";
+            font-weight: " + FontSettings.H1.FontWeight + @";
+            letter-spacing: " + FontSettings.H1.LetterSpacing + @" !important;
+        }
+
+
+        h2, h3, h4, h5, h6 {
+            margin-top: 0.7em;
+            margin-bottom: 0.7em;
+
+            font-family: " + FontSettings.H2.FontFamily + @" !important;
+            font-size: " + FontSettings.H2.FontSize + @";
+            color: " + FontSettings.H2.Color + @";
+            line-height: " + FontSettings.H2.LineHeight + @";
+            text-transform: " + FontSettings.H2.Casing + @" !important;
+            font-weight: " + FontSettings.H2.FontWeight + @" !important;
+            letter-spacing: " + FontSettings.H2.LetterSpacing + @" !important;
+        }
+
+        h4, h5, h6 {
+            font-size: 16px !important;
+        }
+
+        body {
+            font-family: " + FontSettings.Body.FontFamily + @" !important;
+            font-size: " + FontSettings.Body.FontSize + @";
+            color: " + FontSettings.Body.Color + @";
+            line-height: " + FontSettings.Body.LineHeight + @" !important;
+            text-transform: " + FontSettings.Body.Casing + @";
+            font-weight: " + FontSettings.Body.FontWeight + @";
+            letter-spacing: " + FontSettings.Body.LetterSpacing + @" !important;
+        }
+
+        .navbar-wp .navbar-nav > li > a {
+            font-family: " + FontSettings.Body.FontFamily + @" !important;
+        }
+
+        .section-title {
+            margin-top: 0.7em;
+            margin-bottom: 0.7em;
+        }
+	";
+		return CssString;
+	}
+}

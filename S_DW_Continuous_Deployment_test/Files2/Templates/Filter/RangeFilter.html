@@ -1,0 +1,28 @@
+<div id="range-filter">
+	<h3><!--@Translate(RangeFilterTitle, "Range")--></h3>
+	<ul>
+		<li>
+			<input type="radio" id="rangeNotSpecified" name="<!--@Filters:Current.TagName-->" value="" />
+			<label for="rangeNotSpecified">
+				<!--@Translate(RangeFilterNotSpecified, "Not specified")-->
+			</label>
+		</li>
+		<!--@LoopStart(Ecom:Filters.Range.Rows)-->
+		<li>
+			<input type="radio" id="range<!--@Ecom:Filters.Range.Rows.LoopCounter-->" name="<!--@Filters:Current.TagName-->" value="<!--@Ecom:Filters.Range.Row.Lower-->-<!--@Ecom:Filters.Range.Row.Upper-->" <!--@Ecom:Filters.Range.Row.CheckedState--> />
+			<label for="range<!--@Ecom:Filters.Range.Rows.LoopCounter-->">
+				<!--@Ecom:Filters.Range.Row.Lower-->&nbsp;-&nbsp;
+				<!--@If Defined(Ecom:Filters.Range.Row.IsUnlimited)-->
+				<!--@Translate(RangeFilterUnlimited, "[unlimited]")-->
+				<!--@EndIf(Ecom:Filters.Range.Row.IsUnlimited)-->
+				
+				<!--@If Not Defined(Ecom:Filters.Range.Row.IsUnlimited)-->
+				<!--@Ecom:Filters.Range.Row.Upper-->
+				<!--@EndIf(Ecom:Filters.Range.Row.IsUnlimited)-->
+				&nbsp;<span>(<!--@Ecom:Filters.Range.Row.TotalFormatted-->)</span>
+			</label>
+		</li>
+		<!--@LoopEnd(Ecom:Filters.Range.Rows)-->
+	</ul>
+</div>
+

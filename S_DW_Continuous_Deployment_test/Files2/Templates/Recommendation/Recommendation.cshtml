@@ -1,0 +1,133 @@
+﻿@inherits Dynamicweb.Rendering.RazorTemplateBase<Dynamicweb.Rendering.RazorTemplateModel<Dynamicweb.Rendering.Template>>
+
+@using System.Web;
+
+@{
+    var elementId = "recommendation-" + GetValue("ElementId");
+    var useRecommendationContext = false;
+    var recommendationsUrl = GetString("RecommendationsUrl");
+    if (string.IsNullOrEmpty(recommendationsUrl))
+    {
+        useRecommendationContext = true;
+        recommendationsUrl = GetString("RecommendationsUrlBase");
+    }
+}
+
+@if (!string.IsNullOrEmpty(recommendationsUrl))
+{
+    var cart = Dynamicweb.eCommerce.Common.Context.Cart;
+    if (cart != null)
+    {
+        <div style="display: none" id="cart-content">
+            @foreach (var line in cart.OrderLines)
+            {
+                <span data-product-auto-id="@line.Product.AutoId"></span>
+            }
+        </div>
+    }
+
+    <div class="recommendations" id="@elementId">
+        <script type="text/dynamicweb-ecom-template" id="dynamicweb-recommendations-template">
+            <div class="recommendation">
+                <a href="{{ProductDetailsUrl}}" class="btn">
+                    <div class="image"><img class="img-responsive img-circle" src="/Admin/Public/GetImage.ashx?Image={{ImageUrlLarge}}&amp;width=200" width="200" height="200" /></div>
+                    <div class="name">{{Name}}</div>
+                </a>
+                <form method="post">
+                    <input type="hidden" name="ProductId" value="{{ID}}" />
+                    <input ng-if="product.VariantID" type="hidden" name="VariantId" value="{{VariantID}}" />
+                    <button type="submit" name="CartCmd" value="add">@Translate("Add to cart")</button>
+                </form>
+            </div>
+        </script>
+    </div>
+
+    @SnippetStart("StyleSheet")
+    <style>
+        .recommendations {
+            margin: 1em 0;
+        }
+
+            .recommendations .recommendation {
+                display: inline-block;
+                width: 25%;
+                text-align: center;
+            }
+    </style>
+    @SnippetEnd("StyleSheet")
+
+    @SnippetStart("JavaScriptBottom")
+    <script src='@GetValue("Template:BaseUrl")javascripts/recommendation.js'></script>
+    <script>
+        (function () {
+            var recommendationsUrl = '@recommendationsUrl',
+            Recommendation = Dynamicweb.Recommendation,
+            render = function (template, data) {
+                return template.replace(/\{{2}([^}]+)\}{2}/g, function (_, key) {
+                    return typeof data[key] != 'undefined' ? data[key] : key;
+                });
+            };
+
+            @if (useRecommendationContext) {
+				<text>
+            var getProductIds = function (config) {
+                var
+                    attributeName,
+                    selector,
+                    parent,
+                    productsIds = [],
+                i, id, node,
+                nodes;
+                config || (config = {});
+
+                attributeName = config.attributeName || 'data-product-auto-id';
+                selector = config.selector || null;
+                parent = config.parent || document;
+
+                nodes = parent.querySelectorAll(selector ? selector : '[' + attributeName + ']');
+                for (i = 0; node = nodes[i]; i++) {
+                    id = parseInt(node.getAttribute(attributeName));
+                    if (!isNaN(id)) {
+                        productsIds.push(id);
+                    }
+                }
+
+                return productsIds;
+            },
+
+            getProductsQuery = function (productsIds) {
+                return (productsIds && productsIds.length > 0) ? '&product=' + productsIds.join('&product=') : null;
+            },
+
+                productsQuery = getProductsQuery(getProductIds({
+                    selector: '#cart-content *'
+                }));
+
+            if (productsQuery) {
+                recommendationsUrl = Recommendation.addQueryString(recommendationsUrl, productsQuery, 'type=item');
+            } else {
+                recommendationsUrl = null;
+            }
+            </text>
+}
+
+            if (recommendationsUrl) {
+                Recommendation.loadRecommendations({
+                    recommendationsUrl: recommendationsUrl,
+                    renderProducts: function (products) {
+                        var i, product, content,
+                            template = document.getElementById('dynamicweb-recommendations-template').innerHTML.replace(/^\s+/, '').replace(/\s+$/, '')
+                        container = document.getElementById('@elementId');
+                        if (template && container && products) {
+                            content = [];
+                            for (i = 0; product = products[i]; i++) {
+                                content.push(render(template, product));
+                            }
+                            container.innerHTML = content.join('');
+                        }
+                    }
+                });
+            }
+        }())</script>
+    @SnippetEnd("JavaScriptBottom")
+}

@@ -1,0 +1,43 @@
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+newwin = null;
+function doPopup(f) {
+  newwin = window.open('', 'Betaling','scrollbars,status,width=550,height=600');
+  newwin.focus();
+
+  if(!self.name) { self.name = 'shopwin'; }
+  if (!newwin.opener) { newwin.opener = self; }
+
+  f.opener.value = self.name;
+  return true;
+} 
+
+function StartPayment(){
+  var form = document.getElementById("DIBSPaymentForm");
+  setTimeout('form.submit()', 500);
+}
+//-->
+</SCRIPT> 
+
+<form method="post" action="https://payment.architrade.com/payment/start.pml" id="DIBSPaymentForm" onsubmit="return doPopup(this);" target="Betaling">
+	<INPUT type=hidden name=merchant id=merchant value="<!--@Ecom:Order.Gateway.Merchant-->">
+	<INPUT type=hidden name=lang id=lang value="<!--@Ecom:Order.Gateway.LanguageCode.UpperCase-->">
+	<INPUT type=hidden name=amount id=amount value="<!--@Ecom:Order.Price.PricePIP-->">
+	<INPUT type=hidden name=currency id=currency value="<!--@Ecom:Order.Price.Currency.Code-->">
+	<INPUT type=hidden name=orderid id=orderid value="<!--@Ecom:Order.ID-->">
+
+	<INPUT type=hidden name=accepturl id=accepturl value="<!--@Ecom:Order.Gateway.Page.OK-->">
+	<INPUT type=hidden name=cancelurl id=cancelurl value="<!--@Ecom:Order.Gateway.Page.Cancel-->">
+	<INPUT type=hidden name=callbackurl id=callbackurl value="<!--@Ecom:Order.Gateway.Page.Result-->">
+	<INPUT type=hidden name=receipturl id=receipturl value="<!--@Ecom:Order.Gateway.Page.Result-->">	
+
+	<input type="hidden" name="opener" value="shopwin">
+	<input type="hidden" name="test" value="foo">
+        <input type="submit" id="Submit1" name="Start betaling" value="Start betaling">
+</form>
+
+
+<script language="JavaScript" type="text/javascript">
+StartPayment();
+</script>
+

@@ -1,0 +1,211 @@
+@{
+	string sitelink = Pageview.Area.Item["OtherDomain"].ToString();
+	string imageone = sitelink + "/Admin/Public/GetImage.ashx?width=420&height=237&crop=0&image=" + GetString("Item.Col1Image");
+	string imagetwo = sitelink + "/Admin/Public/GetImage.ashx?width=420&height=237&crop=0&image=" + GetString("Item.Col2Image");
+	string linkone = GetString("Item.Col1Link");
+	string linktwo = GetString("Item.Col2Link");
+
+   string primarycolor = GetString("Item.HorizonalColorLine.Color");
+}
+
+<!-- Two Column -->
+<table width="100%" bgcolor="#d8d8d8" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="left-image">
+   <tbody>
+      <tr>
+         <td>
+            <table width="560" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+               <tbody>
+                  <tr>
+                     <td width="100%">
+                        <table bgcolor="#ffffff" width="560" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                           <tbody>
+                              <!-- Spacing -->
+                              <tr>
+                                 <td height="20" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+                              </tr>
+                              <tr>
+                                 <td width="20"></td>
+                                 <td>
+                                    <!-- col 1 -->
+                                    <table width="250" align="left" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
+                                       <tbody>
+                                          <!-- image 1 -->
+                                          <tr>
+                                             <td width="250" height="150" align="center" class="devicewidth">
+                                                <img src="@imageone" alt="" border="0" width="250" height="150" style="display:block; border:none; outline:none; text-decoration:none;" class="col3img">
+                                             </td>
+                                          </tr>
+                                          <!-- end of image 1 -->
+                                          <tr>
+                                             <td>
+                                                <!-- start of text content table -->  
+                                                <table width="250" align="center" border="0" cellpadding="0" cellspacing="0" class="devicewidthinner">
+                                                   <tbody>
+                                                      <!-- Spacing -->
+                                                      <tr>
+                                                         <td width="100%" height="15" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+                                                      </tr>
+                                                      <!-- Spacing -->
+                                                      <!-- title1 -->
+                                                      <tr>
+                                                         <td style="font-family: Helvetica, arial, sans-serif; font-size: 18px; color: #333333; text-align:left;line-height: 20px;" st-title="3col-title1">
+                                                            @GetString("Item.Col1Heading")
+                                                         </td>
+                                                      </tr>
+                                                      <!-- end of title1 -->
+                                                      <!-- Spacing -->
+                                                      <tr>
+                                                         <td width="100%" height="15" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+                                                      </tr>
+                                                      <!-- Spacing -->
+                                                      <!-- content1 -->
+                                                      <tr>
+                                                         <td style="font-family: Helvetica, arial, sans-serif; font-size: 13px; color: #95a5a6; text-align:left;line-height: 20px;" st-content="3col-para1">
+                                                            @GetString("Item.Col1Text")
+                                                         </td>
+                                                      </tr>
+                                                      <!-- end of content1 -->
+                                                      <!-- Spacing -->
+                                                      <tr>
+                                                         <td width="100%" height="15" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+                                                      </tr>
+                                                      <!-- Spacing -->
+                                                      @if (!string.IsNullOrWhiteSpace(linkone)) {
+                                                         <!-- button -->
+                                                         <tr>
+                                                            <td>
+                                                               <table height="30" align="left" valign="middle" border="0" cellpadding="0" cellspacing="0" class="tablet-button" st-button="edit">
+                                                                  <tbody>
+                                                                     <tr>
+                                                                        <td width="auto" align="center" valign="middle" height="30" style=" background-color:@primarycolor; border-top-left-radius:2px; border-bottom-left-radius:2px; border-top-right-radius:2px; border-bottom-right-radius:2px;background-clip: padding-box;font-size:13px; font-family:Helvetica, arial, sans-serif; text-align:center;  color:#ffffff; font-weight: 300; padding-left:18px; padding-right:18px;">
+                                                                        
+                                                                           <span style="color: #ffffff; font-weight: 300;">
+                                                                              <a style="color: #ffffff; text-align:center;text-decoration: none;" href="@linkone">@GetString("Item.Col1LinkText")</a>
+                                                                           </span>
+                                                                        </td>
+                                                                     </tr>
+                                                                  </tbody>
+                                                               </table>
+                                                            </td>
+                                                         </tr>
+                                                         <!-- /button -->
+                                                      }
+                                                   </tbody>
+                                                </table>
+                                             </td>
+                                          </tr>
+                                          <!-- end of text content table -->
+                                       </tbody>
+                                    </table>
+                                    <!-- spacing -->
+                                    <table width="15" align="left" border="0" cellpadding="0" cellspacing="0" class="removeMobile">
+                                       <tbody>
+                                          <tr>
+                                             <td width="100%" height="15" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <!-- end of spacing -->
+                                    <!-- col 2 -->
+                                    <table width="250" align="left" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
+                                       <tbody>
+                                          <!-- image 2 -->
+                                          <tr>
+                                             <td width="250" height="150" align="center" class="devicewidth">
+                                                <img src="@imagetwo" alt="" border="0" width="250" height="150" style="display:block; border:none; outline:none; text-decoration:none;" class="col3img">
+                                             </td>
+                                          </tr>
+                                          <!-- end of image2 -->
+                                          <tr>
+                                             <td>
+                                                <!-- start of text content table -->  
+                                                <table width="250" align="center" border="0" cellpadding="0" cellspacing="0" class="devicewidthinner">
+                                                   <tbody>
+                                                      <!-- Spacing -->
+                                                      <tr>
+                                                         <td width="100%" height="15" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+                                                      </tr>
+                                                      <!-- Spacing -->
+                                                      <!-- title2 -->
+                                                      <tr>
+                                                         <td style="font-family: Helvetica, arial, sans-serif; font-size: 18px; color: #333333; text-align:left;line-height: 20px;" st-title="3col-title2">
+                                                            @GetString("Item.Col2Heading")
+                                                         </td>
+                                                      </tr>
+                                                      <!-- end of title2 -->
+                                                      <!-- Spacing -->
+                                                      <tr>
+                                                         <td width="100%" height="15" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+                                                      </tr>
+                                                      <!-- Spacing -->
+                                                      <!-- content2 -->
+                                                      <tr>
+                                                         <td style="font-family: Helvetica, arial, sans-serif; font-size: 13px; color: #95a5a6; text-align:left;line-height: 20px;" st-content="3col-para2">
+                                                            @GetString("Item.Col2Text")
+                                                         </td>
+                                                      </tr>
+                                                      <!-- end of content2 -->
+                                                      <!-- Spacing -->
+                                                      <tr>
+                                                         <td width="100%" height="15" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+                                                      </tr>
+                                                      <!-- /Spacing -->
+                                                      @if (!string.IsNullOrWhiteSpace(linktwo)) {
+                                                         <!-- button -->
+                                                         <tr>
+                                                            <td>
+                                                               <table height="30" align="left" valign="middle" border="0" cellpadding="0" cellspacing="0" class="tablet-button" st-button="edit">
+                                                                  <tbody>
+                                                                     <tr>
+                                                                        <td width="auto" align="center" valign="middle" height="30" style=" background-color:@primarycolor; border-top-left-radius:2px; border-bottom-left-radius:2px; border-top-right-radius:2px; border-bottom-right-radius:2px;background-clip: padding-box;font-size:13px; font-family:Helvetica, arial, sans-serif; text-align:center;  color:#ffffff; font-weight: 300; padding-left:18px; padding-right:18px;">
+                                                                        
+                                                                           <span style="color: #ffffff; font-weight: 300;">
+                                                                              <a style="color: #ffffff; text-align:center;text-decoration: none;" href="@linktwo">@GetString("Item.Col2LinkText")</a>
+                                                                           </span>
+                                                                        </td>
+                                                                     </tr>
+                                                                  </tbody>
+                                                               </table>
+                                                            </td>
+                                                         </tr>
+                                                         <!-- /button -->
+                                                      }
+                                                   </tbody>
+                                                </table>
+                                             </td>
+                                          </tr>
+                                          <!-- end of text content table -->
+                                       </tbody>
+                                    </table>
+                                    <!-- end of col 2 -->
+                                    <!-- Spacing -->
+		                              <tr>
+		                                 <td height="20" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+		                              </tr>
+		                              <!-- Spacing -->
+                                    <!-- Spacing -->
+		                              <tr>
+		                                 <table cellspacing="0" cellpadding="0">
+		                                    <tbody>
+		                                       <tr>
+		                                          <td width="90" bgcolor="@GetString("Item.HorizonalColorLine.Color")"></td>
+		                                          <td height="2" bgcolor="#EEE" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+		                                       </tr>
+		                                    </tbody>
+		                                 </table>
+		                              </tr>
+		                              <!-- Spacing -->
+                                 </td>
+                                 <td width="20"></td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                     <!-- Spacing -->
+                  </tr>
+               </tbody>
+            </table>
+         </td>
+      </tr>
+   </tbody>
+</table>
