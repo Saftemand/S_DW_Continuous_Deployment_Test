@@ -1,0 +1,88 @@
+<h2>Order approvement (step 4 of 5)</h2>
+<table cellspacing="0" cellpadding="0" border="0" width="100%" id="orderdetails">
+<tr class="basketheader">
+	<td>Amount</td>
+	<td>Name</td>
+	<td>Weight</td>
+	<td>Volume</td>
+	<td>Price</td>
+</tr>
+<!--@LoopStart(OrderLines)-->
+<tr class="orderline">
+	<td><!--@Ecom:Order:OrderLine.Quantity--></td>
+	<td nowrap>
+	    <a href="<!--@Ecom:Order:OrderLine.ProductLink-->">
+	        <!--@Ecom:Order:OrderLine.ProductName.Short-->
+	        <!--@If Defined(Ecom:Order:OrderLine.ProductVariantText)-->
+	            (<!--@Ecom:Order:OrderLine.ProductVariantText-->)
+	        <!--@EndIf(Ecom:Order:OrderLine.ProductVariantText)-->
+	    </a>
+	</td>
+	<td align="right"><!--@Ecom:Order:OrderLine.Weight--></td>
+	<td align="right"><!--@Ecom:Order:OrderLine.Volume--></td>
+	<td align="right"><!--@Ecom:Order:OrderLine.Price.PriceFormatted--></td>
+</tr>
+<!--@LoopEnd(OrderLines)-->
+<tr class="separator">
+	<td colspan="5"></td>
+</tr>
+<tr class="total">
+	<td></td>
+	<td>Total</td>
+	<td></td>
+	<td></td>
+	<td align="right"><!--@Ecom:Order.PriceWithoutFees.PriceFormatted--></td>
+</tr>
+<tr class="fee">
+	<td></td>
+	<td>Paymentfee</td>
+	<td></td>
+	<td></td>
+	<td align="right"><!--@Ecom:Order.PaymentFee.PriceFormatted--></td>
+</tr>
+<tr class="fee">
+	<td></td>
+	<td>Deliveryfee</td>
+	<td align="right"><!--@Ecom:Order.Weight--></td>
+	<td align="right"><!--@Ecom:Order.Volume--></td>
+	<td align="right"><!--@Ecom:Order.ShippingFee.PriceFormatted--></td>
+</tr>
+<tr class="separator">
+	<td colspan="5"></td>
+</tr>
+<tr class="total">
+	<td align="right"></td>
+	<td>Total with VAT</td>
+	<td></td>
+	<td colspan="2" align="right"><!--@Ecom:Order.Price.PriceWithVATFormatted--></td>
+</tr>
+<tr class="fee">
+	<td></td>
+	<td>VAT</td>
+	<td></td>
+	<td></td>
+	<td align="right"><b><!--@Ecom:Order.Price.VATFormatted--></b></td>
+</tr>
+<tr class="fee">
+	<td></td>
+	<td>Total without VAT</td>
+	<td></td>
+	<td></td>
+	<td align="right"><b><!--@Ecom:Order.Price.PriceWithoutVATFormatted--></b></td>
+</tr>
+<tr class="separator">
+	<td colspan="5"></td>
+</tr>
+
+<tr class="footer">
+	<td colspan="4"><a href="<!--@Ecom:Order.PrevStep-->" class="prevstep">Back</a> | <a href="<!--@Global:Pageview.Url-->&amp;cartcmd=emptycart" class="prevstep">Empty basket</a></td>
+	<td ><a href="javascript:AcceptOrder();" class="nextstep">Order</a></td>
+</tr>
+<tr>
+    <td colspan="5">
+        <form name="terms" method="POST" action="<!--@Ecom:Order.NextStep-->">
+            <input type="checkbox" name="acceptTerms" value="ON" >&nbsp;I hereby confirm that I have read and accept the <a href="/default.aspx?id=75">terms</a>.
+        </form>
+    </td>
+</tr>
+</table>

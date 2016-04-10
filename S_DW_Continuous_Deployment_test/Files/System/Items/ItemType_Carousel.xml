@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-16" standalone="yes"?>
+<items>
+  <item category="Content" name="Carousel" systemName="Carousel" description="" icon="/Admin/Images/Ribbon/Icons/Small/Remove_disabled.png" largeIcon="/Admin/Images/Ribbon/Icons/Remove_disabled.png" includeInUrlIndex="False" pageDefaultView="item" fieldForTitle="" title="" inherits="Layout" useCache="False">
+    <fields>
+      <field name="Images" systemName="Images" description="" type="System.Collections.Generic.IEnumerable`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib">
+        <editor type="Dynamicweb.Content.Items.Editors.ItemListEditor, Dynamicweb">
+          <editorConfuguration><Parameters addin="Dynamicweb.Content.Items.Editors.ItemListEditor"><Parameter addin="Dynamicweb.Content.Items.Editors.ItemListEditor" name="Item type" value="CarouselImages" /><Parameter addin="Dynamicweb.Content.Items.Editors.ItemListEditor" name="Sort by" value="" /><Parameter addin="Dynamicweb.Content.Items.Editors.ItemListEditor" name="Sort order" value="DESC" /></Parameters></editorConfuguration>
+        </editor>
+        <options sourceType="Static">
+          <Static>
+            <option name="Title" value="Title" icon="" />
+            <option name="Image" value="Image" icon="" />
+            <option name="Text" value="Text" icon="" />
+            <option name="link" value="Link" icon="" />
+          </Static>
+        </options>
+      </field>
+      <field name="Position" systemName="Position" description="" type="System.String, mscorlib" defaultValueCulture="en-US" defaultValue="left">
+        <editor type="Dynamicweb.Content.Items.Editors.RadioButtonListEditor`1, Dynamicweb">
+          <editorConfuguration><Parameters addin="Dynamicweb.Content.Items.Editors.RadioButtonListEditor`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"><Parameter addin="Dynamicweb.Content.Items.Editors.RadioButtonListEditor`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" name="LabelPosition" value="0" /><Parameter addin="Dynamicweb.Content.Items.Editors.RadioButtonListEditor`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" name="IconPosition" value="3" /><Parameter addin="Dynamicweb.Content.Items.Editors.RadioButtonListEditor`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" name="IconMaxWidth" value="0" /><Parameter addin="Dynamicweb.Content.Items.Editors.RadioButtonListEditor`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" name="IconMaxHeight" value="0" /></Parameters></editorConfuguration>
+        </editor>
+        <validators>
+          <validator type="Dynamicweb.Content.Items.Editors.RequiredValidator, Dynamicweb" errorMessage="" />
+        </validators>
+        <options sourceType="Static">
+          <Static>
+            <option name="Left" value="left" icon="Templates/Designs/Dwsimple/images/itemtypes/DW_BannerLeft.jpg" />
+            <option name="Center" value="center" icon="Templates/Designs/Dwsimple/images/itemtypes/DW_BannerCenter.jpg" />
+            <option name="Right" value="right" icon="Templates/Designs/Dwsimple/images/itemtypes/DW_BannerRight.jpg" />
+          </Static>
+        </options>
+      </field>
+      <field name="Mode" systemName="Mode" description="" type="System.String, mscorlib" defaultValueCulture="en-US" defaultValue="clean">
+        <editor type="Dynamicweb.Content.Items.Editors.RadioButtonListEditor`1, Dynamicweb">
+          <editorConfuguration><Parameters addin="Dynamicweb.Content.Items.Editors.RadioButtonListEditor`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"><Parameter addin="Dynamicweb.Content.Items.Editors.RadioButtonListEditor`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" name="LabelPosition" value="0" /><Parameter addin="Dynamicweb.Content.Items.Editors.RadioButtonListEditor`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" name="IconPosition" value="5" /><Parameter addin="Dynamicweb.Content.Items.Editors.RadioButtonListEditor`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" name="IconMaxWidth" value="0" /><Parameter addin="Dynamicweb.Content.Items.Editors.RadioButtonListEditor`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" name="IconMaxHeight" value="0" /></Parameters></editorConfuguration>
+        </editor>
+        <validators>
+          <validator type="Dynamicweb.Content.Items.Editors.RequiredValidator, Dynamicweb" errorMessage="" />
+        </validators>
+        <options sourceType="Static">
+          <Static>
+            <option name="Clean" value="clean" icon="Templates/Designs/Dwsimple/images/itemtypes/DW_TextClean.jpg" />
+            <option name="Shadow" value="shadow" icon="Templates/Designs/Dwsimple/images/itemtypes/DW_TextShadow.jpg" />
+            <option name="Boxed" value="boxed" icon="Templates/Designs/Dwsimple/images/itemtypes/DW_TextBoxed.jpg" />
+            <option name="Box" value="box" icon="Templates/Designs/Dwsimple/images/itemtypes/DW_TextBox.jpg" />
+          </Static>
+        </options>
+      </field>
+      <field name="Caption background color" systemName="CaptionBackgroundColor" description="" type="System.String, mscorlib">
+        <editor type="Dynamicweb.Content.Items.Editors.ItemTypeEditor, Dynamicweb">
+          <editorConfuguration><Parameters addin="Dynamicweb.Content.Items.Editors.ItemTypeEditor"><Parameter addin="Dynamicweb.Content.Items.Editors.ItemTypeEditor" name="Item type" value="Palette" /></Parameters></editorConfuguration>
+        </editor>
+      </field>
+      <field name="Title" systemName="TitleFont" description="" type="System.String, mscorlib">
+        <editor type="Dynamicweb.Content.Items.Editors.ItemTypeEditor, Dynamicweb">
+          <editorConfuguration><Parameters addin="Dynamicweb.Content.Items.Editors.ItemTypeEditor"><Parameter addin="Dynamicweb.Content.Items.Editors.ItemTypeEditor" name="Item type" value="Font" /></Parameters></editorConfuguration>
+        </editor>
+      </field>
+      <field name="Subtitle" systemName="SubtitleFont" description="" type="System.String, mscorlib">
+        <editor type="Dynamicweb.Content.Items.Editors.ItemTypeEditor, Dynamicweb">
+          <editorConfuguration><Parameters addin="Dynamicweb.Content.Items.Editors.ItemTypeEditor"><Parameter addin="Dynamicweb.Content.Items.Editors.ItemTypeEditor" name="Item type" value="Font" /></Parameters></editorConfuguration>
+        </editor>
+      </field>
+      <field name="Height" systemName="Height" description="" type="System.String, mscorlib" defaultValueCulture="en-US" defaultValue="220">
+        <editor type="Dynamicweb.Content.Items.Editors.DropDownListEditor`1, Dynamicweb">
+          <editorConfuguration />
+        </editor>
+        <options sourceType="Static">
+          <Static>
+            <option name="100px" value="100" icon="" />
+            <option name="160px" value="160" icon="" />
+            <option name="220px" value="220" icon="" />
+            <option name="300px" value="300" icon="" />
+            <option name="440px" value="440" icon="" />
+            <option name="520px" value="520" icon="" />
+            <option name="650px" value="650" icon="" />
+          </Static>
+        </options>
+      </field>
+      <field name="Fluid" systemName="Fluid" description="Important! Ignores the above width settings." type="System.Boolean, mscorlib" defaultValueCulture="en-US" defaultValue="False">
+        <editor type="Dynamicweb.Content.Items.Editors.CheckboxEditor, Dynamicweb">
+          <editorConfuguration />
+        </editor>
+      </field>
+    </fields>
+    <rules>
+      <rule name="Allow in websites" type="Dynamicweb.Content.Items.Activation.AreaRestrictionRule, Dynamicweb" value="*" />
+      <rule name="Allowed children" type="Dynamicweb.Content.Items.Activation.ChildRestrictionRule, Dynamicweb" value="RegularPage" />
+      <rule name="" type="Dynamicweb.Content.Items.Activation.ModuleAttachmentRestrictionRule, Dynamicweb" value="Nothing" />
+      <rule name="Allowed parents" type="Dynamicweb.Content.Items.Activation.ParentRestrictionRule, Dynamicweb" value="RootOfWebsite,RegularPage" />
+      <rule name="Enable item type for" type="Dynamicweb.Content.Items.Activation.StructureRestrictionRule, Dynamicweb" value="Paragraphs" />
+    </rules>
+    <layout>
+      <groups>
+        <group name="Slides" systemName="Images" collapsibleState="None" visibilityField="" visibilityCondition="0" visibilityConditionValueType="" visibilityConditionValue="">
+          <fields>
+            <field systemName="Images" />
+            <field systemName="Position" />
+            <field systemName="Mode" />
+            <field systemName="CaptionBackgroundColor" />
+          </fields>
+        </group>
+        <group name="Fonts" systemName="Fonts" collapsibleState="Collapsed" visibilityField="" visibilityCondition="0" visibilityConditionValueType="" visibilityConditionValue="">
+          <fields>
+            <field systemName="TitleFont" />
+            <field systemName="SubtitleFont" />
+          </fields>
+        </group>
+        <group name="Layout settings" systemName="LayoutSettings" collapsibleState="None" visibilityField="" visibilityCondition="0" visibilityConditionValueType="" visibilityConditionValue="">
+          <fields>
+            <field systemName="Height" />
+            <field systemName="Width" />
+            <field systemName="WidthMobile" />
+            <field systemName="Fluid" />
+          </fields>
+        </group>
+      </groups>
+    </layout>
+  </item>
+</items>

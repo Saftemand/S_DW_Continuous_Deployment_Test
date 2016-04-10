@@ -1,0 +1,45 @@
+<script language="JavaScript" type="text/javascript">
+newwin = null;
+function doPopup(f) {
+
+  newwin = window.open ('about:blank','Betaling','scrollbars,status,width=550,height=600');
+  newwin.focus();
+  if(!self.name) { self.name = 'shopwin'; }
+  if (!newwin.opener) { newwin.opener = self; }
+
+  if(f.DIBSPaymentForm){
+  	f.DIBSPaymentForm.opener.value = self.name;
+  } else {
+  	f.opener.value = self.name;
+  }
+  
+  return true;
+} 
+</script>
+
+    <form action='https://www.paypal.com/cgi-bin/webscr' method='post' ID="PayPalForm" name="PayPalForm" onsubmit="return doPopup(this);" target="Betaling">
+      <input type='hidden' name='cmd' value='_xclick'>
+      <input type='hidden' name='currency_code' value='<!--@Ecom:Order.Price.Currency.Code-->'> 
+      <input type='hidden' name='business' value='<!--@Ecom:Order.Gateway.Email-->'>
+      <input type="hidden" name="rm" value="2">
+    
+      <input type='hidden' name='item_name' value='Delta Q'>
+      <input type='hidden' name='item_number' value='<!--@Ecom:Order.ID-->'>
+      <input type='hidden' name='invoice' value='<!--@Ecom:Order.ID-->'>
+
+      <input type='hidden' name='amount' value='<!--@Ecom:Order.Gateway.Price-->'>
+
+      <input type="hidden" name="return" value="<!--@Ecom:Order.Gateway.Page.OK-->">
+      <input type="hidden" name="cancel_return" value="<!--@Ecom:Order.Gateway.Page.Cancel-->">
+
+      <input type="button" name="Start betaling" value="Start betaling" id="Submit1" onclick="StartPayment();">
+    </form>
+
+
+<script language="JavaScript" type="text/javascript">
+function StartPayment(){
+	doPopup(document.forms.DIBSPaymentForm);
+	setTimeout('document.DIBSPaymentForm.submit()', 500);
+}
+StartPayment();
+</script>

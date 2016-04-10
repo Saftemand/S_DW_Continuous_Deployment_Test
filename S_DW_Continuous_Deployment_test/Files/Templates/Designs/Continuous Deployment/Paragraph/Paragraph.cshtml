@@ -1,0 +1,239 @@
+@Include("Layout.cshtml")
+
+@NewRow()
+
+<div class="@ColumnClass()">
+
+	@if (GetString("Item.Order") == "title-first" || GetString("Item.Order") == "")
+	{
+			@RenderHeading()
+			@RenderImage()
+			@RenderSubHeading()
+			@RenderText()
+			@RenderModule()
+			@RenderButton()
+	}
+
+	@if (GetString("Item.Order") == "image-first")
+	{
+			<p>&nbsp;</p>
+			@RenderImage()
+			@RenderHeading()
+			@RenderSubHeading()
+			@RenderText()
+			@RenderModule()
+			@RenderButton()
+	}
+
+	@if (GetString("Item.Order") == "title-sub-first")
+	{
+			@RenderHeading()
+			@RenderSubHeading()
+			@RenderImage()
+			@RenderText()
+			@RenderModule()
+			@RenderButton()
+	}
+
+	@if (GetString("Item.Order") == "icon-xs")
+	{
+		<div class="col-md-2">
+			@RenderImage()
+		</div>
+		<div class="col-md-10">
+			@RenderHeading()
+			@RenderSubHeading()
+			@RenderText()
+			@RenderModule()
+			@RenderButton()
+		</div>
+	}
+
+	@if (GetString("Item.Order") == "icon-sm")
+	{
+		<div class="col-md-3">
+			@RenderImage()
+		</div>
+		<div class="col-md-9">
+			@RenderHeading()
+			@RenderSubHeading()
+			@RenderText()
+			@RenderModule()
+			@RenderButton()
+		</div>
+	}
+
+	@if (GetString("Item.Order") == "icon-md")
+	{
+		<div class="col-md-4">
+			@RenderImage()
+		</div>
+		<div class="col-md-8">
+			@RenderHeading()
+			@RenderSubHeading()
+			@RenderText()
+			@RenderModule()
+			@RenderButton()
+		</div>
+	}
+	
+</div>
+
+
+@helper RenderHeading()
+{
+	if (GetBoolean("Item.ShowTitle") != false){
+		if (!string.IsNullOrEmpty(GetString("Item.Title")))
+		{
+			<h1 class="dw-section-title">
+				<span>
+					@GetString("Item.Title") 
+				</span>
+			</h1>
+		}
+	}
+}
+
+@helper RenderButton()
+{	
+	var Url = GetString("Item.Link");
+
+	if (!string.IsNullOrEmpty(Url) && !string.IsNullOrEmpty(GetString("Item.LinkText")))
+	{	
+		if (Url.Contains("http"))
+		{
+			<text>
+				<p class="pull-right" style="margin-bottom: 30px !important">
+					<a href="@GetString("Item.Link")" target="_blank" class="btn btn-dw-primary pull-right">@GetString("Item.LinkText")</a>
+				</p>
+			</text>
+		}
+		else if (Url.Contains("/"))
+		{
+			<text>
+				<p class="pull-right" style="margin-bottom: 30px !important">
+					<a href="@GetString("Item.Link")" class="btn btn-dw-primary pull-right" download>@GetString("Item.LinkText")</a>
+				</p>
+			</text>
+		}
+		else
+		{
+			<text>
+				<p class="pull-right" style="margin-bottom: 30px !important">
+					<a href="@GetString("Item.Link")" class="btn btn-dw-primary pull-right">@GetString("Item.LinkText")</a>
+				</p>
+			</text>
+		}
+	}
+}
+
+@helper RenderSubHeading()
+{
+	if (!string.IsNullOrEmpty(GetString("Item.Subtitle")))
+	{
+		<h2>
+			@GetString("Item.Subtitle")
+		</h2>
+	}
+}
+
+@helper RenderText()
+{
+	if (!string.IsNullOrWhiteSpace(GetString("Item.Text"))){
+		<div class="figure">
+			@GetString("Item.Text")
+		</div>
+	}
+}
+
+@helper RenderModule()
+{
+	@GetString("ParagraphModule")
+}
+
+@helper RenderImage()
+{
+	if (!string.IsNullOrEmpty(GetString("Item.Image")))
+	{
+		var image = System.Web.HttpContext.Current.Server.UrlEncode(GetString("Item.Image"));
+		
+		<!-- Choosing the smallest possible width that will work with responsive sizes -->
+		string optimizedwidth = "1280";
+
+		switch (GetString("Item.Width")){
+			case "12":
+				optimizedwidth = "1280";
+				break;
+			case "9":
+				optimizedwidth = "960";
+				break;
+			case "6":
+				optimizedwidth = "722";
+				break;
+			case "3":
+				optimizedwidth = "722";
+				break;
+			case "8":
+				optimizedwidth = "960";
+				break;
+			case "4":
+				optimizedwidth = "722";
+				break;
+		}
+
+		string optimizedheight = ((Convert.ToInt32(optimizedwidth)/16)*9).ToString();
+
+		if (GetString("Item.ImageStyle") == "ball") {
+			optimizedwidth = "500";
+			optimizedheight = "500";
+		}
+
+		
+		if (string.IsNullOrEmpty(GetString("Item.Link")))
+		{
+			<div class="img-responsive dw-std-image">
+				<img class="content-image img-responsive" width="@optimizedwidth" height="@optimizedheight" style="@GetImageBorderCss()" src="/Admin/Public/GetImage.ashx?width=@optimizedwidth&amp;height=@optimizedheight&amp;crop=7&amp;Compression=75&amp;image=@image" alt=""/>
+			</div>
+		} else {
+			<a href="@GetString("Item.Link")">
+				<div class="img-responsive dw-std-image">
+					<a href="@GetString("Item.Link")" target="_parent" ><img class="content-image img-responsive" width="@optimizedwidth" height="@optimizedheight" style="@GetImageBorderCss()" src="/Admin/Public/GetImage.ashx?width=@optimizedwidth&amp;height=@optimizedheight&amp;crop=7&amp;Compression=75&amp;image=@image" alt=""/></a>
+				</div>
+			</a>
+		}
+	}
+}
+
+@functions {
+	private string GetImageBorderCss()
+	{
+		if (GetString("Item.ImageStyle") == "cover")
+		{
+			return "padding: 8px";
+		}
+		else if (GetString("Item.ImageStyle") == "cover-border")
+		{
+			return "padding: 4px; border: 1px solid #e1e1e1; border-radius: 0px !important";
+		}
+		else if (GetString("Item.ImageStyle") == "frame")
+		{
+			return "padding: 6px; border: 1px solid #e1e1e1; border-radius: 0px !important";
+		}
+		else if (GetString("Item.ImageStyle") == "rounded")
+		{
+			return "border-radius: 8px !important";
+		}
+		else if (GetString("Item.ImageStyle") == "ball")
+		{
+			return "border-radius: 1000px !important";
+		}
+		else if (GetString("Item.ImageStyle") == "shadow")
+		{
+			return "box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2)";
+		}
+		else
+		{
+			return string.Empty;
+		}
+	}
+}

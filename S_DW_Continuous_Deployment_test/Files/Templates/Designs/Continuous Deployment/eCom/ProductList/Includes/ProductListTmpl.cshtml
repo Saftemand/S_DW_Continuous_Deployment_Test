@@ -1,0 +1,32 @@
+<script type="text/html-template" id="ProductCardTemplate">
+	@* To insert content from the json feed, just write the items as if it were built directly from the loop Ex. "Obj.name" *@
+
+    <div class="Row">
+		<div class="productlist col-md-4 col-sm-4 col-xs-4">
+			<div class="boxproduct wp-block product">
+				<div class="listproductright">
+	                <a href="Obj.link" title="Obj.name">
+						<figure style="" class="productfigure">
+	                    	<img alt="Obj.link" src="/Admin/Public/Getimage.ashx?width=300&amp;height=300&amp;compression=85&amp;Crop=5&amp;image=Obj.image" class="img-responsive img-center">
+	               		</figure>
+	               </a>
+	        	</div>
+	        	<div class="extracolumn">
+                    <h2 class="product-title"><a href="Obj.link">Obj.name</a></h2>
+                    <div style="shortproductdescription">
+						<p>Obj.description</p>
+					</div>
+            	</div>
+            	<div class="listproductleft wp-block-footer">
+					<span class="productprice price pull-left" style="font-size: 16px !important"><strong>Obj.price</strong></span><span>&nbsp;&nbsp;</span>
+                    <div class="productmorebr pull-right">
+						<a href="Obj.link" class="btn btn-sm btn-dw-primary"><span>@Translate("Read more", "Read more")</span></a>
+					</div>
+					<div class="productmorebr pull-right">
+						<a href="" class="btn btn-sm btn-dw-primary buybtn" onclick="AddToCart(event, 'Obj.id');"><span>@Translate("Buy", "Buy")</span></a>
+					</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>

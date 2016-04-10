@@ -1,0 +1,38 @@
+<script language="JavaScript" type="text/javascript">
+newwin = null;
+function doPopup(f) {
+
+  newwin = window.open ('about:blank','Betaling','scrollbars,status,width=550,height=600');
+  newwin.focus();
+  if(!self.name) { self.name = 'shopwin'; }
+  if (!newwin.opener) { newwin.opener = self; }
+
+  if(f.DebitechPaymentForm){
+  	f.DebitechPaymentForm.opener.value = self.name;
+  } else {
+  	f.opener.value = self.name;
+  }
+  
+  return true;
+} 
+</script>
+
+<form method="post" action="https://secure.incab.se/verify/bin/<!--@Ecom:Order.Gateway.Account-->/index" name="DebitechPaymentForm" onsubmit="return doPopup(this);" target="Betaling"> 
+	<INPUT type="HIDDEN" name="pageSet" value="standard">
+	<INPUT TYPE="HIDDEN" NAME="method" VALUE="<!--@Ecom:Order.Gateway.Method-->">
+	<INPUT TYPE="HIDDEN" NAME="Test" VALUE="1">
+	<INPUT TYPE="HIDDEN" NAME="currency" VALUE="<!--@Ecom:Order.Price.Currency.Code-->">
+	<INPUT TYPE="HIDDEN" NAME="orderNo" value="<!--@Ecom:Order.ID-->">
+
+	<input type="button" name="Start betaling" value="Start betaling" id="Submit1" onclick="StartPayment();">
+</form>
+
+
+<script language="JavaScript" type="text/javascript">
+function StartPayment(){
+	doPopup(document.forms.DebitechPaymentForm);
+	setTimeout('document.DebitechPaymentForm.submit()', 500);
+}
+StartPayment();
+</script>
+

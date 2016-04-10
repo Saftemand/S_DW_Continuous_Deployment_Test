@@ -1,0 +1,222 @@
+<h2>Order confirmation</h2>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" id="reciept">
+    <tr>
+        <td width="50%" valign="top">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" id="billing">
+	            <tr>
+	                <td width="100%" valign="top" colspan="2"><h3>Billing address</h3></td>
+	            </tr>
+	            <tr>
+	                <td valign="top">Company</td>
+	                <td valign="top">:<!--@Ecom:Order.Customer.Company--></td>
+	            </tr>
+	            <tr>
+	                <td valign="top">Name</td>
+	                <td valign="top">:<!--@Ecom:Order.Customer.Name--></td>
+	            </tr>
+	            <tr>
+	                <td valign="top">Adress</td>
+	                <td valign="top">:<!--@Ecom:Order.Customer.Address--></td>
+	            </tr>
+	            <tr>
+	                <td valign="top">Adress 2</td>
+	                <td valign="top">:<!--@Ecom:Order.Customer.Address2--></td>
+	            </tr>
+	            <tr>
+	                <td valign="top">Zipcode / Town</td>
+	                <td valign="top">:<!--@Ecom:Order.Customer.Zip-->&nbsp;<!--@Ecom:Order.Customer.City--></td>
+	            </tr>
+	            <tr>
+	                <td valign="top">Country</td>
+	                <td valign="top">:<!--@Ecom:Order.Customer.Country--></td>
+	            </tr>
+	            <tr>
+	                <td valign="top">EAN</td>
+	                <td valign="top">:<!--@Ecom:Order.Customer.EAN--></td>
+	            </tr>
+	            <tr>
+	                <td valign="top">Phone</td>
+	                <td valign="top">:<!--@Ecom:Order.Customer.Phone--></td>
+	            </tr>
+	            <tr>
+	                <td valign="top">Fax</td>
+	                <td valign="top">:<!--@Ecom:Order.Customer.Fax--></td>
+	            </tr>
+	            <tr>
+	                <td valign="top">Mobile</td>
+	                <td valign="top">:<!--@Ecom:Order.Customer.Cell--></td>
+	            </tr>
+	            <tr>
+	                <td valign="top">E-mail</td>
+	                <td valign="top">:<!--@Ecom:Order.Customer.Email--></td>
+	            </tr>
+            </table>
+        </td>
+        <td width="50%" valign="top">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" id="delivery">
+                <tr>
+                    <td width="100%" valign="top" colspan="2"><h3>Delivery address</h3></td>
+                </tr>
+                <tr>
+                    <td valign="top">Company</td>
+                    <td valign="top">:<!--@Ecom:Order.Delivery.Company--></td>
+                </tr>
+                <tr>
+                    <td valign="top">Name</td>
+                    <td valign="top">:<!--@Ecom:Order.Delivery.Name--></td>
+                </tr>
+                <tr>
+                    <td valign="top">Adress</td>
+                    <td valign="top">:<!--@Ecom:Order.Delivery.Address--></td>
+                </tr>
+                <tr>
+                    <td valign="top">Adress 2</td>
+                    <td valign="top">:<!--@Ecom:Order.Delivery.Address2--></td>
+                </tr>
+                <tr>
+                    <td valign="top">Zipcode / City</td>
+                    <td valign="top">:<!--@Ecom:Order.Delivery.Zip-->&nbsp;<!--@Ecom:Order.Delivery.City--></td>
+                </tr>
+                <tr>
+                    <td valign="top">Country</td>
+                    <td valign="top">:<!--@Ecom:Order.Delivery.Country--></td>
+                </tr>
+                <tr>
+                    <td valign="top">Phone</td>
+                    <td valign="top">:<!--@Ecom:Order.Delivery.Phone--></td>
+                </tr>
+                <tr>
+                    <td valign="top">Fax</td>
+                    <td valign="top">:<!--@Ecom:Order.Delivery.Fax--></td>
+                </tr>
+                <tr>
+                    <td valign="top">Mobile</td>
+                    <td valign="top">:<!--@Ecom:Order.Delivery.Cell--></td>
+                </tr>
+                <tr>
+                    <td valign="top">E-mail</td>
+                    <td valign="top">:<!--@Ecom:Order.Delivery.Email--></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" valign="top">
+            <table border="0" cellspacing="0" cellpadding="0" ID="orderinformations">
+	            <tr>
+	                <td valign="top" colspan="2"><h3>Orderinformations</h3></td>
+	            </tr>
+	            <tr>
+	                <td valign="top">Ordernumber</td>
+	                <td valign="top">:<!--@Ecom:Order.ID--></td>
+	            </tr>
+	            <tr>
+	                <td valign="top">Orderdate</td>
+	                <td valign="top">:<!--@Ecom:Order.Date--></td>
+	            </tr>
+	            <tr>
+	                <td valign="top">Client IP</td>
+	                <td valign="top">:<!--@Ecom:Order.IP--></td>
+	            </tr>
+	            <tr>
+	                <td valign="top">Payment method</td>
+	                <td valign="top">:<!--@Ecom:Order.PaymentMethod--></td>
+	            </tr>
+	            <!--@If Defined(Ecom:Order.TransactionNumber)-->
+	            <tr>
+	                <td valign="top">Transaction number</td>
+	                <td valign="top">:<!--@Ecom:Order.TransactionNumber--></td>
+	            </tr>
+	            <!--@EndIf(Ecom:Order.TransactionNumber)-->
+	        </table>
+        </td>
+    </tr>
+</table>
+
+
+<table cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-top: 15px;">
+<tr>
+    <td colspan="5">
+        <h3>Orderspecification</h3>
+    </td>
+</tr>
+<tr class="basketheader">
+	<td>Amount</td>
+	<td>Name</td>
+	<td>Weight</td>
+	<td>Volume</td>
+	<td>Price</td>
+</tr>
+<!--@LoopStart(OrderLines)-->
+<tr class="orderline">
+	<td><!--@Ecom:Order:OrderLine.Quantity--></td>
+	<td nowrap>
+	    <a href="<!--@Ecom:Order:OrderLine.ProductLink-->">
+	        <!--@Ecom:Order:OrderLine.ProductName.Short-->
+	        <!--@If Defined(Ecom:Order:OrderLine.ProductVariantText)-->
+	            (<!--@Ecom:Order:OrderLine.ProductVariantText-->)
+	        <!--@EndIf(Ecom:Order:OrderLine.ProductVariantText)-->
+	    </a>
+	</td>
+	<td align="right"><!--@Ecom:Order:OrderLine.Weight--></td>
+	<td align="right"><!--@Ecom:Order:OrderLine.Volume--></td>
+	<td align="right"><!--@Ecom:Order:OrderLine.Price.PriceFormatted--></td>
+</tr>
+<!--@LoopEnd(OrderLines)-->
+<tr class="separator">
+	<td colspan="5"></td>
+</tr>
+<tr class="total">
+	<td></td>
+	<td>Total</td>
+	<td></td>
+	<td></td>
+	<td align="right"><!--@Ecom:Order.PriceWithoutFees.PriceFormatted--></td>
+</tr>
+<tr class="fee">
+	<td></td>
+	<td>Paymentfee</td>
+	<td></td>
+	<td></td>
+	<td align="right"><!--@Ecom:Order.PaymentFee.PriceFormatted--></td>
+</tr>
+<tr class="fee">
+	<td></td>
+	<td>Deliveryfee</td>
+	<td align="right"><!--@Ecom:Order.Weight--></td>
+	<td align="right"><!--@Ecom:Order.Volume--></td>
+	<td align="right"><!--@Ecom:Order.ShippingFee.PriceFormatted--></td>
+</tr>
+<tr class="separator">
+	<td colspan="5"></td>
+</tr>
+<tr class="total">
+	<td align="right"></td>
+	<td>Total with VAT</td>
+	<td></td>
+	<td colspan="2" align="right"><!--@Ecom:Order.Price.PriceWithVATFormatted--></td>
+</tr>
+<tr class="fee">
+	<td></td>
+	<td>VAT</td>
+	<td></td>
+	<td></td>
+	<td align="right"><b><!--@Ecom:Order.Price.VATFormatted--></b></td>
+</tr>
+<tr class="fee">
+	<td></td>
+	<td>Total without VAT</td>
+	<td></td>
+	<td></td>
+	<td align="right"><b><!--@Ecom:Order.Price.PriceWithoutVATFormatted--></b></td>
+</tr>
+<tr class="separator">
+	<td colspan="5"></td>
+</tr>
+<tr>
+    <td colspan="5">
+        <b>Note</b> :<br>
+        <!--@Ecom:Order.Customer.Comment-->
+    </td>
+</tr>
+</table>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-16" standalone="yes"?>
+<items>
+  <item category="Content" name="TemplateTags" systemName="TemplateTags" description="Demonstration of available Template Tags. Use with caution! " icon="/Admin/Images/Ribbon/Icons/Small/document_stop.png" largeIcon="/Admin/Images/Ribbon/Icons/document_stop.png" includeInUrlIndex="False" pageDefaultView="item" fieldForTitle="" title="" inherits="">
+    <fields>
+      <field name="TemplateTags" systemName="TemplateTags" description="" type="System.String, mscorlib">
+        <editor type="Dynamicweb.Content.Items.Editors.TextEditor, Dynamicweb">
+          <editorConfuguration />
+        </editor>
+      </field>
+      <field name="User test" systemName="UserTest" description="" type="System.Collections.Generic.IEnumerable`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib">
+        <editor type="Dynamicweb.Content.Items.Editors.UserEditor, Dynamicweb">
+          <editorConfuguration />
+        </editor>
+      </field>
+    </fields>
+    <rules>
+      <rule name="Allow in websites" type="Dynamicweb.Content.Items.Activation.AreaRestrictionRule, Dynamicweb" value="1" />
+      <rule name="" type="Dynamicweb.Content.Items.Activation.ModuleAttachmentRestrictionRule, Dynamicweb" value="Nothing" />
+      <rule name="Enable item type for" type="Dynamicweb.Content.Items.Activation.StructureRestrictionRule, Dynamicweb" value="Paragraphs" />
+    </rules>
+    <layout>
+      <groups>
+        <group name="General" systemName="General" collapsibleState="None" visibilityField="" visibilityCondition="" visibilityConditionValueType="" visibilityConditionValue="">
+          <fields>
+            <field systemName="TemplateTags" />
+            <field systemName="UserTest" />
+          </fields>
+        </group>
+      </groups>
+    </layout>
+  </item>
+</items>

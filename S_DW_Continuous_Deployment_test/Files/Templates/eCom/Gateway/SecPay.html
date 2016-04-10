@@ -1,0 +1,44 @@
+<script language="JavaScript" type="text/javascript">
+newwin = null;
+function doPopup(f) {
+
+  newwin = window.open ('about:blank','Payment','scrollbars,status,width=550,height=600');
+  newwin.focus();
+  if(!self.name) { self.name = 'paywin'; }
+  if (!newwin.opener) { newwin.opener = self; }
+
+  if(f.SecPayForm){
+  	f.SecPayForm.opener.value = self.name;
+  } else {
+  	f.opener.value = self.name;
+  }
+  
+  return true;
+} 
+</script>
+
+
+<form method="POST" action="https://www.secpay.com/java-bin/ValCard" name="SecPayForm" onsubmit="return doPopup(this);" target="Payment">
+	<input type="hidden" name="merchant" value="<!--@Ecom:Order.Gateway.Merchant-->">
+	<input type="hidden" name="amount" value="<!--@Ecom:Order.Price.PricePIP-->">
+	<input type="hidden" name="callback" value="<!--@Ecom:Order.Gateway.Page.CallBack-->">
+	<input type="hidden" name="currency" value="<!--@Ecom:Order.Price.Currency.Code-->">
+	<input type="hidden" name="trans_id" value="<!--@Ecom:Order.ID-->">
+	<input type="hidden" name="callback" value="<!--@Ecom:Order.Gateway.Page.CallBack-->">
+
+	<input type="hidden" name="ssl_cb" value="false">
+	<input type="hidden" name="test_status" value="true">
+	
+	<input type="button" name="Start betaling" value="Start betaling" id="Button1" onclick="StartPayment();">
+</form>
+	   
+
+<script language="JavaScript" type="text/javascript">
+function StartPayment(){
+	doPopup(document.forms.SecPayForm);
+	setTimeout('document.SecPayForm.submit()', 500);
+}
+StartPayment();
+</script>
+
+

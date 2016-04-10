@@ -1,0 +1,13 @@
+@{
+	var isfolder = GetString("FilepublishFileIcon").IndexOf("/dir");
+}
+
+<tr>
+	@if (isfolder == -1){
+		<td>@GetString("FilepublishFileIcon")<a href="@GetString("FilepublishFileLink")" download="@GetString("FilepublishFileLink")"> @GetString("FilepublishFileName")</a></td>
+	} else {
+		<td>@GetString("FilepublishFileIcon")<a href="@GetString("FilepublishFileLink")"> @GetString("FilepublishFileName")</a></td>
+	}
+	<td class="td-right">@GetString("FilepublishFileSizeKB")</td>
+	<td class="td-right">@GetString("FilepublishFileDatemodified")</td>
+</tr>

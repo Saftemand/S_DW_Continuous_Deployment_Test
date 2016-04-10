@@ -1,0 +1,70 @@
+<!--@ValidateFunctions-->
+<h2>Create user</h2>
+
+<!--@LoopStart(Validation)-->
+    <span id="<!--@Validation:Validator.ID-->" <!--@Validation:Validator.Display-->><!--@Validation:Validator.Message--></span>
+<!--@LoopEnd(Validation)-->
+<form method="post" action="" onsubmit="return ValidateForm();" id="usercreate">
+	<input type="hidden" name="DWextranet_AccessUserDefinedListItems" value="<!--@DWextranet_AccessUserDefinedListItems-->" />
+	<fieldset>
+		<legend>Required information</legend>
+		<ul>
+			<li>
+				<label for="Login">Username</label>
+				<!--@Login_ctrl-->
+				<!--@Login_validator-->
+			</li>
+			<li>
+				<label for="Password">Password</label>
+				<!--@Password_ctrl-->
+				<!--@Password_validator-->
+			</li>
+			<li>
+				<label for="Password2">Confirm password</label>
+				<!--@Password2_ctrl-->
+				<!--@Password2_validator-->
+			</li>
+			<li>
+				<label for="Password2">Name</label>
+				<!--@Name_ctrl-->
+				<!--@Name_validator-->
+			</li>
+			<li>
+				<label for="Password2">Email</label>
+				<!--@Email_ctrl-->
+				<!--@Email_validator-->
+			</li>
+		</ul>
+		<!--@If Defined(Extranet:EmailWarning.Show)-->
+		<span id="rowEmailWarning">
+			<!--@Extranet:EmailWarning.Text-->
+		</span>
+		<!--@EndIf(Extranet:EmailWarning.Show)-->
+	</fieldset>
+	<fieldset>
+		<legend>Optional information</legend>
+		<ul>
+			<li>
+				<label for="Login">Phone</label>
+				<!--@Phone_ctrl-->
+				<!--@Phone_validator-->
+			</li>
+			<li>
+				<label for="Login">Fax</label>
+				<!--@Fax_ctrl-->
+				<!--@Fax_validator-->
+			</li>
+			<li>
+				<label for="Login">Address</label>
+				<!--@Address_ctrl-->
+				<!--@Address_validator-->
+			</li>
+		</ul>
+		<table width="100%" cellpadding="0" cellspacing="0">
+            <!--@DWextranet_AccessUserDefinedList-->			
+		</table>
+	</fieldset>
+	<input name="Submit" type="submit" value="Save" class="button" />
+	<input name="Cancel" type="submit" value="Cancel" class="button" onclick="__isFormValid=true;"/>
+</form>
+

@@ -1,0 +1,13 @@
+<div id="groups-filter">
+	<h3><!--@Translate(GroupsFilterTitle, "Categories")--></h3>
+	<ul>
+		<!--@LoopStart(Ecom:Filters.Groups)-->
+		<li>
+			<input type="checkbox" id="<!--@Ecom:Group.ID-->" name="<!--@Filters:Current.TagName-->" value="<!--@Ecom:Group.ID-->" <!--@Ecom:Group.CheckedState--> />
+			<label for="<!--@Ecom:Group.ID-->">
+				<!--@Ecom:Group.Name-->&nbsp;<span>(<!--@Ecom:Group.ProductsCount-->)</span>
+			</label>
+		</li>
+		<!--@LoopEnd(Ecom:Filters.Groups)-->
+	</ul>
+</div>

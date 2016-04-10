@@ -1,0 +1,26 @@
+﻿<link rel="stylesheet" href="/Files/Templates/ItemCreator/ItemCreator.css" />
+<div class="items">
+    <div class="item-edit-form">
+        <!--@ItemCreator:Edit.Form.Begin--> 
+			<p> <!--@ItemCreator:Edit.Status--> </p>
+		
+            <div class="item-edit-fields-outer">
+                <!--@ItemCreator:Edit.Form-->   
+            </div> 
+
+            <div class="item-edit-submission">
+                <input type="button" value='<!--@Translate(ItemCreator:Edit.Cancel, "Cancel")-->' />
+                <input type="submit" value='<!--@Translate(ItemCreator:Edit.Save, "Save changes")-->' />
+            </div>
+
+					<div class="validation-error">					
+						<ul>			
+							<!--@LoopStart(ItemCreator:Edit.Form.ValidationErrors)-->		
+								<li><!--@ItemCreator:Edit.Form.Validation.FieldName-->: <!--@ItemPublisher:Edit.Form.Validation.Error--></li>
+							<!--@LoopEnd(ItemCreator:Edit.Form.ValidationErrors)-->	
+						</ul>
+					</div>						
+            <div class="items-clear"></div>
+        <!--@ItemCreator:Edit.Form.End--> 
+    </div>
+</div>

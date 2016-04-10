@@ -1,0 +1,55 @@
+<form method="get" name="PaymentForm" id="PaymentForm">
+    <input type="hidden" name="ID" value="<!--@Global:Page.ID-->" />
+    <input type="hidden" name="CheckoutHandlerOrderID" value="<!--@Ecom:Order.ID-->" />
+    <input type="hidden" name="Action" value="Token" />
+
+    <!-- Payment Information -->
+    <h2><!--@Translate(paymentinformation, "Payment Information")--></h2>
+    <p>
+        <label><!--@Translate(orderid, "Order Id")-->: <b><!--@Ecom:Order.ID--></b></label> <br />
+        <label><!--@Translate(amount, "Amount")-->: <b><!--@Ecom:Order.Price.PriceWithVATFormatted--></b></label> <br />
+        <label><!--@Translate(currency, "Currency")-->: <b><!--@Ecom:Order.Currency--></b></label>
+    </p>
+
+    <div>
+        <label for="CardholderName"><!--@Translate(cardholder, "Cardholder name")--></label>
+        <div>
+            <input type='text' style='width:250px;' size='16' name='CardholderName' id='CardholderName' value='<!--@ChargeLogic.CardholderName-->' />
+            *<span class="comment">(<!--@Translate(cardholdercomment, "The cardholder name as it appears on the card")-->)</span>
+        </div>
+    </div>
+    <div>
+        <label><!--@Translate(cardnumber, "Credit card number")--></label>
+        <div id='CreditCardNumber'>
+            <input type="hidden" name="CreditCardToken" value="<!--@ChargeLogic.LastCardTokenID-->" />
+            <b><!--@ChargeLogic.LastCardTokenName--></b>
+        </div>
+    </div>
+    <!--@If Defined(ChargeLogic.Message)-->
+    <div class="error">
+        <!--@ChargeLogic.Message-->
+    </div>
+    <!--@EndIf(ChargeLogic.Message)-->
+
+    <br />
+    <input type="submit" value="Send" onclick="this.disabled = true; PaymentForm.submit();" />
+    <input type="submit" value="Change card" onclick="ChangeCard()" />
+</form>
+
+<style type="text/css">
+    .comment {
+        font-size: 10px;
+    }
+
+    .error {
+        color: #D63301;
+        background-color: #FFCCBA;
+    }
+</style>
+
+<script type="text/javascript">
+    function ChangeCard() {
+        PaymentForm.Action.value = "ChangeCard";
+        PaymentForm.submit();
+    }
+</script>

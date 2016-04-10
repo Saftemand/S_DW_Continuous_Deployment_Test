@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-16" standalone="yes"?>
+<items>
+  <item category="Content" name="Multi purpose paragraph" systemName="MultiPurposeParagraph" description="For unstructured content with heading, subheading, image, text and link" icon="/Admin/Images/Ribbon/Icons/Small/documents.png" largeIcon="/Admin/Images/Ribbon/Icons/documents.png" includeInUrlIndex="False" fieldForTitle="" title="">
+    <fields>
+      <field name="Heading" systemName="Heading" description="" type="System.String, mscorlib">
+        <editor type="Dynamicweb.Content.Items.Editors.TextEditor, Dynamicweb">
+          <editorConfuguration />
+        </editor>
+      </field>
+      <field name="Subheading" systemName="Subheading" description="" type="System.String, mscorlib">
+        <editor type="Dynamicweb.Content.Items.Editors.LongTextEditor, Dynamicweb">
+          <editorConfuguration><Parameters><Parameter addin="Dynamicweb.Content.Items.Editors.LongTextEditor" name="Rows" value="3" /><Parameter addin="Dynamicweb.Content.Items.Editors.LongTextEditor" name="Cols" value="" /></Parameters></editorConfuguration>
+        </editor>
+      </field>
+      <field name="Image" systemName="Image" description="" type="System.String, mscorlib">
+        <editor type="Dynamicweb.Content.Items.Editors.FileEditor, Dynamicweb">
+          <editorConfuguration><Parameters><Parameter addin="Dynamicweb.Content.Items.Editors.FileEditor" name="Base directory" value="/Billeder/Gallery/Bikes" /><Parameter addin="Dynamicweb.Content.Items.Editors.FileEditor" name="Extensions" value="jpg,png,gif" /></Parameters></editorConfuguration>
+        </editor>
+      </field>
+      <field name="Text" systemName="Text" description="" type="System.String, mscorlib">
+        <editor type="Dynamicweb.Content.Items.Editors.RichTextEditor, Dynamicweb">
+          <editorConfuguration><Parameters><Parameter addin="Dynamicweb.Content.Items.Editors.RichTextEditor" name="SelectConfgurationId" value="0" /></Parameters></editorConfuguration>
+        </editor>
+      </field>
+      <field name="Link" systemName="Link" description="" type="System.String, mscorlib">
+        <editor type="Dynamicweb.Content.Items.Editors.LinkEditor, Dynamicweb">
+          <editorConfuguration><Parameters><Parameter addin="Dynamicweb.Content.Items.Editors.LinkEditor" name="SelectOnlyID" value="True" /></Parameters></editorConfuguration>
+        </editor>
+      </field>
+      <field name="Link text" systemName="Linktext" description="" type="System.String, mscorlib">
+        <editor type="Dynamicweb.Content.Items.Editors.TextEditor, Dynamicweb">
+          <editorConfuguration />
+        </editor>
+      </field>
+      <field name="Width" systemName="LayoutSettingsWidth" description="" type="System.String, mscorlib" defaultValueCulture="en-US" defaultValue="12">
+        <editor type="Dynamicweb.Content.Items.Editors.RadioButtonListEditor`1, Dynamicweb">
+          <editorConfuguration><Parameters addin="Dynamicweb.Content.Items.Editors.RadioButtonListEditor`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"><Parameter addin="Dynamicweb.Content.Items.Editors.RadioButtonListEditor`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" name="LabelPosition" value="0" /><Parameter addin="Dynamicweb.Content.Items.Editors.RadioButtonListEditor`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" name="IconPosition" value="6" /><Parameter addin="Dynamicweb.Content.Items.Editors.RadioButtonListEditor`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" name="IconMaxWidth" value="0" /><Parameter addin="Dynamicweb.Content.Items.Editors.RadioButtonListEditor`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" name="IconMaxHeight" value="0" /></Parameters></editorConfuguration>
+        </editor>
+        <options sourceType="Static">
+          <Static>
+            <option name="25%" value="3" icon="ItemTypes/BootstrapWidth/25.gif" />
+            <option name="33%" value="4" icon="ItemTypes/BootstrapWidth/33.gif" />
+            <option name="50%" value="6" icon="ItemTypes/BootstrapWidth/50.gif" />
+            <option name="66%" value="8" icon="ItemTypes/BootstrapWidth/66.gif" />
+            <option name="75%" value="9" icon="ItemTypes/BootstrapWidth/75.gif" />
+            <option name="100%" value="12" icon="ItemTypes/BootstrapWidth/100.gif" />
+          </Static>
+        </options>
+      </field>
+      <field name="Order" systemName="Order" description="" type="System.String, mscorlib" defaultValueCulture="en-US" defaultValue="title-first">
+        <editor type="Dynamicweb.Content.Items.Editors.RadioButtonListEditor`1, Dynamicweb">
+          <editorConfuguration><Parameters addin="Dynamicweb.Content.Items.Editors.RadioButtonListEditor`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"><Parameter addin="Dynamicweb.Content.Items.Editors.RadioButtonListEditor`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" name="LabelPosition" value="0" /><Parameter addin="Dynamicweb.Content.Items.Editors.RadioButtonListEditor`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" name="IconPosition" value="4" /><Parameter addin="Dynamicweb.Content.Items.Editors.RadioButtonListEditor`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" name="IconMaxWidth" value="0" /><Parameter addin="Dynamicweb.Content.Items.Editors.RadioButtonListEditor`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" name="IconMaxHeight" value="0" /></Parameters></editorConfuguration>
+        </editor>
+        <options sourceType="Static">
+          <Static>
+            <option name="Title first" value="title-first" icon="" />
+            <option name="Image first" value="image-first" icon="" />
+            <option name="Title+Sub first" value="title-sub-first" icon="" />
+          </Static>
+        </options>
+      </field>
+      <field name="Image border" systemName="LayoutSettingsImageBorder" description="" type="System.Boolean, mscorlib" defaultValueCulture="en-US" defaultValue="False">
+        <editor type="Dynamicweb.Content.Items.Editors.CheckboxEditor, Dynamicweb">
+          <editorConfuguration />
+        </editor>
+      </field>
+    </fields>
+    <rules>
+      <rule name="Allow in websites" type="Dynamicweb.Content.Items.Activation.AreaRestrictionRule, Dynamicweb" value="3029" />
+      <rule name="Allowed parents" type="Dynamicweb.Content.Items.Activation.ParentRestrictionRule, Dynamicweb" value="RegularPage" />
+      <rule name="Enable item type for" type="Dynamicweb.Content.Items.Activation.StructureRestrictionRule, Dynamicweb" value="Paragraphs" />
+    </rules>
+    <layout>
+      <groups>
+        <group name="Content" systemName="General" collapsibleState="None">
+          <fields>
+            <field systemName="Heading" />
+            <field systemName="Subheading" />
+            <field systemName="Image" />
+            <field systemName="Text" />
+          </fields>
+        </group>
+        <group name="Link" systemName="Link" collapsibleState="None">
+          <fields>
+            <field systemName="Link" />
+            <field systemName="Linktext" />
+          </fields>
+        </group>
+        <group name="Layout settings" systemName="LayoutSettings" collapsibleState="None">
+          <fields>
+            <field systemName="LayoutSettingsWidth" />
+            <field systemName="Order" />
+            <field systemName="LayoutSettingsImageBorder" />
+          </fields>
+        </group>
+      </groups>
+    </layout>
+  </item>
+</items>

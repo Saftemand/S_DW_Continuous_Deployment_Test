@@ -1,0 +1,45 @@
+@{
+	init();
+}
+
+@functions {
+	private int columnsWritten { get; set; }
+	private int columns { get; set; }
+
+	public void init()
+	{
+		columnsWritten = Dynamicweb.Input.FormatInteger(System.Web.HttpContext.Current.Items["currentColumns"]);
+		columns = GetInteger("Item.Width");
+		System.Web.HttpContext.Current.Items["currentColumns"] = columnsWritten + GetInteger("Item.Width");
+	}
+
+	public void Fluid()
+	{
+		columnsWritten = Dynamicweb.Input.FormatInteger(System.Web.HttpContext.Current.Items["currentColumns"]);
+		columns = 12;
+		System.Web.HttpContext.Current.Items["currentColumns"] = columnsWritten + 12;
+	}
+
+	public string ColumnClass()
+	{
+		if (GetString("Item.WidthMobile") == "hide"){
+			return "col-md-" + GetString("Item.Width") + " hidden-xs";
+		} else {
+			return "col-md-" + GetString("Item.Width") + " col-xs-" + GetString("Item.WidthMobile");
+		}
+	}
+	
+	public string NewRow()
+	{
+		if (columns + columnsWritten > 12)
+		{
+			System.Web.HttpContext.Current.Items["currentColumns"] = columns;
+			return "</div><div class=\"row\">";
+		}
+		else
+		{
+			return string.Empty;
+		}
+		
+	}
+}

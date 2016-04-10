@@ -1,0 +1,250 @@
+﻿<script type="text/javascript" language="javascript" src="Files/Templates/Ecom/functions.js"></script>
+
+<script type="text/javascript" language="JavaScript">
+
+function infoDirectRequest() {
+    var form = document.submitUserData;
+    var field1 = document.createElement('input');
+    field1.type = 'hidden';
+    field1.name = 'CartCmd';
+    field1.id = 'CartCmd';
+    field1.value = 'FetchingCustomerFromInfodirekt';
+    form.appendChild(field1);
+    var field2 = document.createElement('input');
+    field2.type = 'hidden';
+    field2.name = 'customerPhone';
+    field2.id = 'customerPhone';
+    field2.value = document.getElementById('EcomOrderCustomerPhone').value;
+    form.appendChild(field2);
+    form.action = "<!--@Ecom:Order.CurrentStep-->";
+    form.submit(); 
+}
+
+function SetSelectedLanguage() {
+  var opt = document.submitUserData.EcomOrderCustomerCountry.options;
+  for (var i=1;i<opt.length;i++) {
+    if (opt[i].value == "<!--@Ecom:Order.Customer.Country-->") {
+      opt[i].selected = true;
+    }
+      }
+
+  opt = document.submitUserData.EcomOrderDeliveryCountry.options;
+  for (var i=1;i<opt.length;i++) {
+    if (opt[i].value == "<!--@Ecom:Order.Delivery.Country-->") {
+      opt[i].selected = true;
+    }
+      }
+}
+</script>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+  <table width="100%" border="0" cellspacing="1" cellpadding="0">
+  <tr>
+  <td>
+    <table width="100%" border="0" cellspacing="0" cellpadding="8">
+    <tr><td colspan="2"><b>Eksisterende kunde</b></font></td></tr>
+    <tr>
+    <td colspan="2">
+
+      <form method="post" action="?" name="getUserProfile">
+      <table cellpadding="0" cellspacing="0" border="0">
+      <tr>
+      <td width="130">Indtast email</td>
+      <td colspan="2"><input type="text" size="25" name="userid" value=""></font></td>
+      </tr>
+      <tr>
+      <td width="130">Kodeord</td>
+      <td><input type="password" size="25" name="userpassword" value=""></td>
+      <td>&nbsp;<input type="button" name="" value="OK">&nbsp;<input type="button" name="" value="Glemt kodeord"></td>
+      </tr>
+      </table>
+      </form>
+
+    </td>
+    </tr>
+
+    <tr><td colspan="2"><hr size="1" noshade></td></tr>
+
+    <tr>
+    <td width="50%" valign="top"><b>Fakturerings adresse</b></td>
+    <td width="50%" valign="top"><b>Alternativ adresse</b><br>(Kun hvis anderledes fra fakturerings adresse)</td>
+    </tr>
+
+    <form method="post" action="<!--@Ecom:Order.NextStep-->" name="submitUserData">
+    <tr>
+    <td width="50%" valign="top">
+
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+      <td width="50%">Rekvirerings nr.</td>
+      <td><input type="text" name="EcomOrderCustomerRefID" id="" value="<!--@Ecom:Order.Customer.RefID-->"></td>
+      </tr>
+      <tr>
+      <td width="50%">SE nr.</td>
+      <td><input type="text" name="EcomOrderCustomerVatRegNumber" id="EcomOrderCustomerVatRegNumber" value="<!--@Ecom:Order.Customer.VatRegNumber-->"></td>
+      </tr>
+      <tr>
+      <td width="50%">Firma</td>
+      <td><input type="text" name="EcomOrderCustomerCompany" id="EcomOrderCustomerCompany" value="<!--@Ecom:Order.Customer.Company-->"></td>
+      </tr>
+      <tr>
+      <td width="50%">Navn</td>
+      <td><input type="text" name="EcomOrderCustomerName" id="EcomOrderCustomerName" value="<!--@Ecom:Order.Customer.Name-->"></td>
+      </tr>
+      <tr>
+      <td width="50%">Adresse</td>
+      <td><input type="text" name="EcomOrderCustomerAddress" id="EcomOrderCustomerAddress" value="<!--@Ecom:Order.Customer.Address-->"></td>
+      </tr>
+      <tr>
+      <td width="50%">Adresse 2</td>
+      <td><input type="text" name="EcomOrderCustomerAddress2" id="EcomOrderCustomerAddress2" value="<!--@Ecom:Order.Customer.Address2-->"></td>
+      </tr>
+      <tr>
+      <td width="50%">Postnr</td>
+      <td><input type="text" name="EcomOrderCustomerZip" id="EcomOrderCustomerZip" value="<!--@Ecom:Order.Customer.Zip-->"></td>
+      </tr>
+      <tr>
+      <td width="50%">By</td>
+      <td><input type="text" name="EcomOrderCustomerCity" id="EcomOrderCustomerCity" value="<!--@Ecom:Order.Customer.City-->"></td>
+      </tr>
+      <tr>
+      <td width="50%">Land</td>
+      <td>
+        <select name="EcomOrderCustomerCountry" id="EcomOrderCustomerCountry" style="width:99%">
+        <!--@LoopStart(Countries)-->
+          <!--@LoopStart(CountryTexts)-->
+          <OPTION VALUE="<!--@Ecom:CountryText.Code2-->"><!--@Ecom:CountryText.Name--></OPTION>
+          <!--@LoopEnd(CountryTexts)-->
+        <!--@LoopEnd(Countries)-->
+        </select>
+      </td>
+      </tr>
+      <tr>
+      <td width="50%">EAN nr.</td>
+      <td><input type="text" name="EcomOrderCustomerEAN" id="EcomOrderCustomerEAN" value="<!--@Ecom:Order.Customer.EAN-->"></td>
+      </tr>
+      <tr>
+      <td width="50%">Telefon</td>
+      <td nowrap>
+			<input type="text" name="EcomOrderCustomerPhone" id="EcomOrderCustomerPhone" value="<!--@Ecom:Order.Customer.Phone-->">
+			<a href="javascript:infoDirectRequest();"><img src=/Files/Billeder/Ecom/Grafik/infoDirekt.gif alt="Info direkt service" border=0></a>
+	  </td>
+      </tr>
+      <tr>
+      <td width="50%">Fax</td>
+      <td><input type="text" name="EcomOrderCustomerFax" id="EcomOrderCustomerFax" value="<!--@Ecom:Order.Customer.Fax-->"></td>
+      </tr>
+      <tr>
+      <td width="50%">Mobil</td>
+      <td><input type="text" name="EcomOrderCustomerCell" id="EcomOrderCustomerCell" value="<!--@Ecom:Order.Customer.Cell-->"></td>
+      </tr>
+      <tr>
+      <td width="50%">E-mail</td>
+      <td><input type="text" name="EcomOrderCustomerEmail" id="EcomOrderCustomerEmail" value="<!--@Ecom:Order.Customer.Email-->"></td>
+      </tr>
+      <tr>
+      <td width="50%">Notat</td>
+      <td><textarea rows="6" name="EcomOrderCustomerComment" id="EcomOrderCustomerComment" cols="19" style="overflow:auto"><!--@Ecom:Order.Customer.Comment--></textarea></td>
+      </tr>
+      </tr>
+      </table>
+
+    </td>
+    <td width="50%" valign="top">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" ID="Table1">
+      <tr>
+      <td width="50%">Firma</td>
+      <td><input type="text" name="EcomOrderDeliveryCompany" id="EcomOrderDeliveryCompany" value="<!--@Ecom:Order.Delivery.Company-->" ID="Text3"></td>
+      </tr>
+      <tr>
+      <td width="50%">Navn</td>
+      <td><input type="text" name="EcomOrderDeliveryName" id="EcomOrderDeliveryName" value="<!--@Ecom:Order.Delivery.Name-->" ID="Text4"></td>
+      </tr>
+      <tr>
+      <td width="50%">Adresse</td>
+      <td><input type="text" name="EcomOrderDeliveryAddress" id="EcomOrderDeliveryAddress" value="<!--@Ecom:Order.Delivery.Address-->" ID="Text5"></td>
+      </tr>
+      <tr>
+      <td width="50%">Adresse 2</td>
+      <td><input type="text" name="EcomOrderDeliveryAddress2" id="EcomOrderDeliveryAddress2" value="<!--@Ecom:Order.Delivery.Address2-->" ID="Text6"></td>
+      </tr>
+      <tr>
+      <td width="50%">Postnr</td>
+      <td><input type="text" name="EcomOrderDeliveryZip" id="EcomOrderDeliveryZip" value="<!--@Ecom:Order.Delivery.Zip-->" ID="Text7"></td>
+      </tr>
+      <tr>
+      <td width="50%">By</td>
+      <td><input type="text" name="EcomOrderDeliveryCity" id="EcomOrderDeliveryCity" value="<!--@Ecom:Order.Delivery.City-->" ID="Text8"></td>
+      </tr>
+      <tr>
+      <td width="50%">Land</td>
+      <td>
+        <select name="EcomOrderDeliveryCountry" id="EcomOrderDeliveryCountry" style="width:99%" ID="Select1">
+        <!--@LoopStart(Countries)-->
+          <!--@LoopStart(CountryTexts)-->
+          <OPTION VALUE="<!--@Ecom:CountryText.Code2-->"><!--@Ecom:CountryText.Name--></OPTION>
+          <!--@LoopEnd(CountryTexts)-->
+        <!--@LoopEnd(Countries)-->
+        </select>
+      </td>
+      </tr>
+      <tr>
+      <td width="50%">Telefon</td>
+      <td><input type="text" name="EcomOrderDeliveryPhone" id="EcomOrderDeliveryPhone" value="<!--@Ecom:Order.Delivery.Phone-->" ID="Text10"></td>
+      </tr>
+      <tr>
+      <td width="50%">Fax</td>
+      <td><input type="text" name="EcomOrderDeliveryFax" id="EcomOrderDeliveryFax" value="<!--@Ecom:Order.Delivery.Fax-->" ID="Text11"></td>
+      </tr>
+      <tr>
+      <td width="50%">Mobil</td>
+      <td><input type="text" name="EcomOrderDeliveryCell" id="EcomOrderDeliveryCell" value="<!--@Ecom:Order.Delivery.Cell-->" ID="Text12"></td>
+      </tr>
+      <tr>
+      <td width="50%">E-mail</td>
+      <td><input type="text" name="EcomOrderDeliveryEmail" id="EcomOrderDeliveryEmail" value="<!--@Ecom:Order.Delivery.Email-->" ID="Text13"></td>
+      </tr>
+      </tr>
+      </table>
+
+    </td>
+    </tr>
+    
+    <tr>
+    <td>
+    <a href="<!--@Ecom:Order.PrevStep-->">Tilbage</a> ## <a href="javascript:submitForm();">Vidre</a><br><br>
+    </td>
+    </tr>
+
+    </form>
+    
+    </table>
+  
+
+  </td>
+  </tr>
+  </table>
+
+</td>
+</tr>
+</table>
+
+<!--@LoopStart(Errors)-->
+	<!--@HeaderStart-->
+		<div id="errormessages">
+			<ul>
+	<!--@HeaderEnd-->
+				<li><!--@Ecom:Order.Error.Text--></li>
+	<!--@FooterStart-->
+			</ul>
+		</div>
+	<!--@FooterEnd-->
+<!--@LoopEnd(Errors)-->
+
+<script>
+SetSelectedLanguage();
+</script>
+

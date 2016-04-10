@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>LeadsMail</title>
+  <style type="text/css">
+    body {
+      font: normal 14px/21px arial;
+      color: #333333; }
+
+    a {
+      color: #15428b; }
+
+    h1, h2, h3, h4 {
+      font: bold 12px/18px arial;
+      color: #15428b;
+      margin: 15px 0 5px; }
+
+    h1 {
+      font-size: 18px; }
+
+    h2 {
+      font-size: 16px; }
+
+    h3 {
+      font-size: 14px; }
+
+    ul {
+      margin: 0 0 10px;
+      padding: 0;
+      font-size: 12px; }
+      ul li {
+        list-style-type: none; }
+      ul i {
+        color: #999; }
+      ul span {
+        display: inline-block;
+        width: 20%; }
+
+    fieldset {
+      border: 1px solid #bdcce0;
+      margin: 0 0 10px; }
+      fieldset legend {
+        font: bold 11px/11px arial;
+        color: #15428b; }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+      border: 1px solid #bdcce0;
+      font-size: 12px;
+      width: 100%; }
+      table thead {
+        background-color: #ecf4fc;
+        border-bottom: 1px solid #bdcce0;
+        color: #15428b;
+        font-weight: bold; }
+      table tr, table td {
+        padding: 0;
+        margin: 0; }
+      table td {
+        padding: 2px 5px;
+        border-left: 1px solid #bdcce0; }
+  </style>
+</head>
+<body>
+	  <table>
+		<tbody>
+		  <tr>
+			<td>
+				<span>Company: </span><!--@LeadsMail:Company-->
+			</td>
+			<td>
+				<span>Engagement Index: </span><!--@LeadsMail:EngagementIndex-->
+			</td>
+		  </tr>
+		  <tr>
+			<td>
+				<span>Last visit: </span><!--@LeadsMail:LastVisit-->
+			</td>
+			<td>
+				<span>Page views: </span><!--@LeadsMail:PageViews-->
+			</td>
+		  </tr>
+		</tbody>
+	  </table>
+
+  <fieldset>
+    <legend>Pages visited</legend>
+    <table>
+      <thead>
+        <tr>
+          <td width="25%">Name</td>
+          <td width="50%">Website/Language</td>
+          <td width="25%">View page</td>
+        </tr>
+      </thead>
+      <tbody>
+			<!--@If Defined(LeadsMail:PagesVisited.Exist)-->
+	  		<!--@LoopStart(LeadsMail:PagesVisited)-->
+			<tr>
+			  <td><!--@LeadsMail:PagesVisited.PageName--></td>
+			  <td><a href="<!--@LeadsMail:PagesVisited.ViewPageLink-->"><!--@LeadsMail:PagesVisited.WebSite--></a></td>
+			  <td><a href="<!--@LeadsMail:PagesVisited.ViewPageLink-->">View</a></td>
+			</tr>
+	  		<!--@LoopEnd(LeadsMail:PagesVisited)-->
+			<!--@EndIf(LeadsMail:PagesVisited.Exist)-->
+			<!--@If Not Defined(LeadsMail:PagesVisited.Exist)-->
+			<tr>
+				<td colspan="3" class="error">
+				  No files found
+				</td>
+			</tr>
+			<!--@EndIf(LeadsMail:PagesVisited.Exist)-->
+		<tbody>
+    </table>
+  </fieldset>
+  
+  <fieldset>
+    <legend>Downloads</legend>
+	  <table>
+		<thead>
+		  <tr>
+			<td>Path</td>
+		  </tr>
+		</thead>
+		<tbody>
+		  <!--@If Defined(LeadsMail:Downloads.Exist)-->
+		  <!--@LoopStart(LeadsMail:Downloads)-->
+		  <tr>
+			<td>
+			  <!--@LeadsMail:Downloads.File-->
+			</td>
+		  </tr>
+		  <!--@LoopEnd(LeadsMail:Downloads)-->
+		  <!--@EndIf(LeadsMail:Downloads.Exist)-->
+		  <!--@If Not Defined(LeadsMail:Downloads.Exist)-->
+		  <tr>
+			<td class="error">
+			  No files found
+			</td>
+		  </tr>
+		  <!--@EndIf(LeadsMail:Downloads.Exist)-->
+		</tbody>
+	  </table>
+  </fieldset>
+  
+  <fieldset>
+    <legend>Referrer</legend>
+	  <ul>
+		<li>
+		  <span>URL</span><!--@LeadsMail:Referrer.URL-->
+		</li>
+		<li>
+		  <span>Host</span><!--@LeadsMail:Referrer.Host-->
+		</li>
+		<li>
+		  <span>Domain</span><!--@LeadsMail:Referrer.Domain-->
+		</li>
+		<li>
+		  <span>Path</span><!--@LeadsMail:Referrer.Path-->
+		</li>
+	  </ul>
+	  <ul>
+		<li>
+		  <span>Keywords</span>
+		  <i><!--@LeadsMail:Referrer.Keywords--></i>
+		</li>
+		<li>
+		  <span>Page number</span>
+		  <i><!--@LeadsMail:Referrer.PageNumber--></i>
+		</li>
+		<li>
+		  <span>Position</span>
+		  <i><!--@LeadsMail:Referrer.Position--></i>
+		</li>
+	  </ul>
+	  <table>
+		<thead>
+		  <tr>
+			<td width="50%">Name</td>
+			<td width="50%">Value</td>
+		  </tr>
+		</thead>
+		<tbody>
+		  <tr>
+			<td colspan="2" class="error">No parameters found</td>
+		  </tr>
+		</tbody>
+	  </table>
+  </fieldset>
+
+  <fieldset>
+    <legend>Profiles</legend>
+	  <ul>
+		<li>
+		  <span>Primary profile</span><!--@LeadsMail:Profile.PrimaryProfile-->
+		</li>
+		<li>
+		  <span>Secondary profile</span><!--@LeadsMail:Profile.SecondaryProfile-->
+		</li>
+	  </ul>
+	  <table>
+		<thead>
+		  <tr>
+			<td width="50%">Name</td>
+			<td width="50%">points earned</td>
+		  </tr>
+		</thead>
+		<tbody>
+		  <!--@If Defined(LeadsMail:Profile.Exist)-->
+		  <!--@LoopStart(LeadsMail:Profile)-->
+		  <tr>
+			<td width="50%"><!--@LeadsMail:Profile.ProfileName--></td>
+			<td width="50%"><!--@LeadsMail:Profile.PointsEarned--></td>
+		  </tr>
+		  <!--@LoopEnd(LeadsMail:Profiles)-->
+		  <!--@EndIf(LeadsMail:Profile.Exist)-->
+		  <!--@If Not Defined(LeadsMail:Profile.Exist)-->
+		  <tr>
+			<td colspan="2" class="error">No parameters found</td>
+		  </tr>
+		  <!--@EndIf(LeadsMail:Profile.Exist)-->
+		</tbody>
+	  </table>
+  </fieldset>
+
+  <fieldset>
+    <legend>Location</legend>
+	  <ul>
+		<li>
+		  <span>IP-address</span><!--@LeadsMail:Location.IPAddress-->
+		</li>
+		<li>
+		  <span>ISP</span><!--@LeadsMail:Location.ISP-->
+		</li>
+		<li>
+		  <span>Domain</span><!--@LeadsMail:Location.Domain-->
+		</li>
+		<li>
+		  <span>Company</span><!--@LeadsMail:Location.Company-->
+		</li>
+		<li>
+		  <span>Zip code</span><!--@LeadsMail:Location.ZipCode-->
+		</li>
+		<li>
+		  <span>City</span><!--@LeadsMail:Location.City-->
+		</li>
+		<li>
+		  <span>Region</span><!--@LeadsMail:Location.Region-->
+		</li>
+		<li>
+		  <span>Country</span><!--@LeadsMail:Location.Country-->
+		</li>
+		<li>
+		  <span>Coordinates</span><!--@LeadsMail:Location.Coordinates-->
+		</li>
+	  </ul>
+  </fieldset>
+
+  <fieldset>
+    <legend>Advertising</legend>
+	  <ul>
+		<li>
+		  <span>Campaign</span><!--@LeadsMail:Advertising.Campaign-->
+		</li>
+		<li>
+		  <span>Medium</span><!--@LeadsMail:Advertising.Medium-->
+		</li>
+		<li>
+		  <span>Source</span><!--@LeadsMail:Advertising.Source-->
+		</li>
+		<li>
+		  <span>Term</span><!--@LeadsMail:Advertising.Term-->
+		</li>
+	  </ul>
+  </fieldset>
+
+  <fieldset>
+    <legend>Visits</legend>
+	  <table>
+		<thead>
+		  <tr>
+			<td width="25%">IP-address</td>
+			<td width="25%">Visit date</td>
+			<td width="15%">Pageviews</td>
+			<td width="35%">Company</td>
+		  </tr>
+		</thead>
+		<tbody>
+		  <!--@If Defined(LeadsMail:Visits.Exist)-->
+		  <!--@LoopStart(LeadsMail:Visits)-->
+		  <tr>
+			<td width="25%"><!--@LeadsMail:Visits.IPAddress--></td>
+			<td width="25%"><!--@LeadsMail:Visits.VisitDate--></td>
+			<td width="15%"><!--@LeadsMail:Visits.PageViews--></td>
+			<td width="35%"><!--@LeadsMail:Visits.Country--></td>
+		  </tr>
+		  <!--@LoopEnd(LeadsMail:Visits)-->
+		  <!--@EndIf(LeadsMail:Visits.Exist)-->
+		  <!--@If Not Defined(LeadsMail:Visits.Exist)-->
+		  <tr>
+			<td colspan="4" class="error">No parameters found</td>
+		  </tr>
+		  <!--@EndIf(LeadsMail:Visits.Exist)-->
+
+		</tbody>
+	  </table>
+  </fieldset>
+
+  <fieldset>
+    <legend>Session</legend>
+	  <ul>
+		<li>
+		  <span>Id</span><!--@LeadsMail:Session.Id-->
+		</li>
+		<li>
+		  <span>Visitor Id</span><!--@LeadsMail:Session.VisitorId-->
+		</li>
+		<li>
+		  <span>Period</span><!--@LeadsMail:Session.Period-->
+		</li>
+		<li>
+		  <span>Duration</span><!--@LeadsMail:Session.Duration-->
+		</li>
+	  </ul>
+  </fieldset>
+
+  <fieldset>
+    <legend>Activity</legend>
+	  <ul>
+		<li>
+		  <span>Website/Language</span><!--@LeadsMail:Activity.WebSite-->
+		</li>
+		<li>
+		  <span>Landing page</span><!--@LeadsMail:Activity.LandingPage-->
+		</li>
+		<li>
+		  <span>Exit page</span><!--@LeadsMail:Activity.ExitPage-->
+		</li>
+		<li>
+		  <span>Pageviews</span><!--@LeadsMail:Activity.PageViews-->
+		</li>
+		<li>
+		  <span>Average time on page</span><!--@LeadsMail:Activity.AverageTimeOnPage-->
+		</li>
+	  </ul>
+  </fieldset>
+
+  <fieldset>
+    <legend>System</legend>
+	  <ul>
+		<li>
+		  <span>Operating system</span><!--@LeadsMail:System.OperatingSystem-->
+		</li>
+		<li>
+		  <span>Screen settings</span><!--@LeadsMail:System.ScreenSettings-->
+		</li>
+	  </ul>
+  </fieldset>
+
+  <fieldset>
+    <legend>Browser</legend>
+	  <ul>
+		<li>
+		  <span>Name</span><!--@LeadsMail:Browser.Name-->
+		</li>
+		<li>
+		  <span>Language</span><!--@LeadsMail:Browser.Language-->
+		</li>
+		<li>
+		  <span>Is mobile</span><!--@LeadsMail:Browser.IsMobile-->
+		</li>
+	  </ul>
+  </fieldset>
+  </body>
+</html>

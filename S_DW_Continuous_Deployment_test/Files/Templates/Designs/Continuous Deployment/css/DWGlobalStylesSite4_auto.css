@@ -1,0 +1,482 @@
+﻿
+		.dw-logotext {
+			font-family: Lora;
+			font-size: 38px;
+            font-weight: normal;
+            line-height: 1 !important;
+            letter-spacing: px;
+            text-transform: ;
+            color: #FFFFFF;
+		}
+
+		.dw-slogantext {
+			font-family: Ubuntu;
+			font-size: 22px;
+            font-weight: normal;
+            line-height: 1 !important;
+            letter-spacing: px;
+            text-transform: ;
+            color: #151515;
+		}
+
+        h1 {
+            font-family: Ubuntu !important;
+            font-size: 28px;
+            color: #151515;
+            line-height: 1 !important;
+            text-transform: ;
+            font-weight: normal;
+            letter-spacing: px !important;
+        }
+
+
+        h2, h3, h4, h5, h6 {
+            margin-top: 0.7em;
+            margin-bottom: 0.7em;
+
+            font-family: Ubuntu !important;
+            font-size: 22px;
+            color: #151515;
+            line-height: 1;
+            text-transform:  !important;
+            font-weight: normal !important;
+            letter-spacing: px !important;
+        }
+
+        h4, h5, h6 {
+            font-size: 16px !important;
+        }
+
+        body {
+            font-family: Ubuntu !important;
+            font-size: 15px;
+            color: #151515;
+            line-height: 1 !important;
+            text-transform: ;
+            font-weight: normal;
+            letter-spacing: px !important;
+        }
+
+        .navbar-wp .navbar-nav > li > a {
+            font-family: Ubuntu !important;
+        }
+
+        .section-title {
+            margin-top: 0.7em;
+            margin-bottom: 0.7em;
+        }
+	/*Colors*/
+		a:hover, a:focus, a:active {
+    		color: #151515;
+    	}
+    	.navbar-wp, .navbar-wp.affix, .navbar-wp .navbar-nav > li > a {
+    		color: #FFFFFF;
+   	 	}
+   	 	.navbar-wp .navbar-nav > .active > a, .navbar-wp .navbar-nav > .active > a:hover, .navbar-wp .navbar-nav > .active > a:focus {
+    		color: #FFFFFF;
+    	}
+		
+	    .navbar-wp .navbar-nav > li > a:hover, .navbar-wp .navbar-nav > li > a:focus {
+	        border-top: 0px solid #151515;
+	        color: #FFFFFF;
+	    }
+	    .navbar-wp .navbar-nav > li > a span:after {
+		    background-color: #151515;
+		}
+		.btn-dw-primary {
+		    color: #FFF;
+		    background-color: #151515;
+		    border-color: #151515;
+		}
+		.btn-dw-secondary {
+		    color: #FFFFFF;
+		    background-color: #151515;
+		    border-color: #151515;
+		}
+		.btn-dw-cart {
+		    color: #FFF;
+		    background-color: #C22F73;
+		    border-color: #C22F73;
+		}
+		.dw-section-title {
+    		border-color: #151515;
+		}
+		.dw-minicart-update {
+			color: #FFF !important;
+		    background-color: #151515;
+		    transition: all 0.3s ease-in-out 0s;
+		}
+		.pagination > li > a, .pagination > li > a:hover, .pagination > li > a:focus, .pagination > li > a:active {
+			color: #151515;
+		}
+	    .form-control:hover, .form-control:focus, .form-control:active  {
+	        border-color: #151515 !important;
+	    }
+	    .bg-2 {
+	        background: #151515 !important;
+	    }
+	    .blockquote-1:hover {
+	        border-color: #151515 !important;
+	    }
+	    .navbar-wp .navbar-nav > li > a.dropdown-form-toggle, .navbar-wp .navbar-nav > li > a.dropdown-form-toggle:hover, .navbar-wp .navbar-nav > li > a.dropdown-form-toggle:focus {
+	        color: #151515;
+	    }
+	    .navbar-wp .navbar-nav > .open > a.dropdown-form-toggle, .navbar-wp .navbar-nav > .open > a.dropdown-form-toggle:hover, .navbar-wp .navbar-nav > .open > a.dropdown-form-toggle:focus {
+	        color: #151515;
+	    }
+	    .navbar-wp .navbar-nav > li > a:hover, .navbar-wp .navbar-nav > li > a:focus {
+		    border: 0px solid #151515;
+		}
+	    .navbar-wp .navbar-toggle:hover, .navbar-wp .navbar-toggle:focus {
+	        background-color: #151515 !important;
+	        border-color: #151515 !important;
+	    }
+	    .navbar-wp .dropdown-menu {
+	        border-top: 1px solid #151515 !important;
+	        border-bottom: 3px solid #151515 !important;
+	    }
+	    .navbar-wp .dropdown-menu > li > a:hover {
+	        background: #151515 !important;
+	        color: #fff;
+	    }
+	    .navbar-wp .dropdown-menu .active {
+	        background: #151515 !important;
+	        color: #fff;
+	    }
+	    .navbar-wp.navbar-contrasted .dropdown-menu > li > a:hover {
+	        background: #151515 !important;
+	    }
+	    .nav > ul > li > a:hover {
+	        color: #151515;
+	    }
+	    .lw .w-box.w-box-inverse .thmb-img i {
+	        color: #151515 !important;
+	    }
+	    .w-box.w-box-inverse .thmb-img:hover i {
+	        background: #151515 !important;
+	    }
+	    .c-box {
+	        border: 1px solid #151515 !important;
+	    }
+	    .c-box .c-box-header {
+	        background: #151515 !important;
+	    }
+	    .w-section .aside-feature:hover .icon-feature, .w-section .aside-feature:hover h4 {
+	        color: #151515 !important;
+	    }
+	    .layer-slider-wrapper .title.title-base {
+	        background: #151515 !important;
+	    }
+	    .layer-slider-wrapper .subtitle {
+	        color: #151515 !important;
+	    }
+	    .layer-slider-wrapper .list-item {
+	        color: #151515 !important;
+	    }
+	    .box-element.box-element-bordered {
+	        border: 1px solid #151515 !important;
+	    }
+	    .carousel-2 .carousel-indicators .active {
+	        background-color: #151515 !important;
+	    }
+	    .carousel-2 .carousel-nav a {
+	        color: #151515 !important;
+	    }
+	    .carousel-2 .carousel-nav a:hover {
+	        background: #151515 !important;
+	    }
+	    .carousel-3 .carousel-nav a {
+	        color: #151515 !important;
+	    }
+	    .carousel-3 .carousel-nav a:hover {
+	        background: #151515 !important;
+	    }
+	    .like-button .button.liked i {
+	        color: #151515 !important;
+	    }
+	    ul.list-listings li.featured {
+	        border-color: #151515 !important;
+	    }
+	    ul.list-check li i {
+	        color: #151515 !important;
+	    }
+	    ul.dw-categories li a:hover, ul.dw-categories a:focus, ul.dw-categories a:active{
+	        color: #FFFFFF;
+	        background-color: #151515;
+	        border-color: #151515;
+	    }
+	    ul.categories li a:hover, ul.categories a:focus, ul.categories a:active{
+	        color: #FFFFFF;
+	        background-color: #151515;
+	        border-color: #151515;
+	    }
+	    .timeline .event:nth-child(2n):before {
+	        background-color: #151515 !important;
+	    }
+	    .timeline .event:nth-child(2n-1):before {
+	        background-color: #151515 !important;
+	    }
+	    #toTopHover {
+	        background-color: #151515 !important;
+	    }
+	    .tags-list li {
+	        border: 1px solid #151515 !important;
+	        color: #151515 !important;
+	    }
+	    .tags-list li:hover,
+	    a.open-panel {
+	        background-color: #151515 !important;
+	    }
+	    .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus,
+	    .panel-group .panel-heading a i,
+	    .tags-list li a {
+	        color: #FFFFFF !important;
+	    }
+	    .nav-pills > li > a:hover, .nav-pills > li > a:focus {
+	        color: #FFFFFF !important;
+	        background: none repeat scroll 0% 0% #151515 !important;
+	    }
+	    footer {
+	        background: #151515 !important;
+	    }
+	    footer h4 {
+	    	color: white !important;
+		}
+		footer a {
+	    	color: white !important;
+		}
+		footer a:hover, footer a:focus, footer a:active {
+	    	color: #151515 !important;
+		}
+		footer p {
+	    	color: white !important;
+		}
+		footer ul > li {
+	    	color: white !important;
+		}
+		footer hr {
+			border-color: white
+		}
+	    /* Button colors */
+	    .btn-base {
+	        color: #FFFFFF !important;
+	        background-color: #151515 !important;
+	        border: 1px solid #151515 !important;
+	    }
+	    .btn-base:before {
+	        background-color: #151515 !important;
+	    }
+	    .btn-base:hover:before, .btn-base:focus:before, .btn-base:active:before {
+	        color: #FFFFFF !important;
+	        background-color: #151515 !important;
+	        border-color: #151515 !important;
+	    }
+	    .btn-icon:before {
+	        transition: none !important;
+	    }
+	    .btn-base:hover, .btn-base:focus, .btn-base:active, .btn-base.active, .open .dropdown-toggle.btn-base {
+	        color: #FFFFFF !important;
+	        background-color: #151515 !important;
+	        border-color: #151515 !important;
+	    }
+	    .btn-two {
+	        color: #FFFFFF !important;
+	        border-color: #151515 !important;
+	        background-color: #151515 !important;
+	        border: 1px solid #151515 !important;
+	    }
+	    .btn-two:hover, .btn-two:focus, .btn-two:active, .btn-two.active, .open .dropdown-toggle.btn-two {
+	        color: #FFFFFF !important;
+	        background-color: #151515 !important;
+	        border-color: #151515 !important;
+	    }
+	    .btn-primary {
+	        background-color:  #151515 !important;
+	        border-color:  #151515 !important;
+	    }
+	    .open .dropdown-toggle.btn-primary {
+	        background-color:  #151515 !important;
+	        border-color:  #151515 !important;
+	    }
+	    .btn-one:hover, .btn-one:focus, .btn-one:active, .btn-one.active, .open .dropdown-toggle.btn-one {
+	        color:  #151515 !important;
+	    }
+	    .btn-four {
+	        border: 2px solid #151515!important;
+	        color: #151515 !important;
+	    }
+	    .btn-four:hover, .btn-four:focus, .btn-four:active, .btn-four.active, .open .dropdown-toggle.btn-four {
+	        background-color: #fff !important;
+	    }
+	    /* Dropdown-menu */
+	    .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+	        background: #151515 !important;
+	        color: #fff !important;
+	    }
+	    /* Ecom settings */
+	    .ribbon.base, .ball {
+	        background: #E6A04B !important;
+	        color: #fff;
+	        border-right: 5px solid #E6A04B !important;
+	    }
+	    .ribbon.base:before {
+	        border-top: 27px solid #E6A04B !important;
+	    }
+	    .ribbon.base:after {
+	        border-bottom: 27px solid #E6A04B !important;
+	    }
+	    .price {
+	        color: #C22F73 !important;
+	    }
+	    .discount-sticker {
+	        background-color: #E6A04B !important;
+	    }
+	    .bs-callout-primary {
+	        border-left-color: #151515 !important;
+	    }
+	    .ratings .fa-star {
+	    	color: #151515 !important;
+		}
+		.feature-label {
+			color: #151515 !important;
+		}
+
+/*General*/
+
+			.dw-offsetmenu-logo {
+				color: #333 !important;
+		    }
+			body {
+				background-color: #151515;
+		        background-size: cover; 
+		        overflow-y: scroll; 
+		    }
+			.shad {
+				-webkit-box-shadow: 0px 0px 8px 0px rgba(50, 50, 50, 0.75);
+	        	-moz-box-shadow: 0px 0px 8px 0px rgba(50, 50, 50, 0.75);
+	        	box-shadow: 0px 0px 8px 0px rgba(50, 50, 50, 0.75);
+			}
+		    .content-image {
+				border-radius: 6px;
+				-webkit-border-radius: 6px;
+				-moz-border-radius: 6px;
+			}
+			    .navbar-wp.affix .navbar-nav > li > a {
+			    	padding: 16px 16px !important;
+			    }
+		    .navbar-wp, .navbar-wp.affix, .navbar-wp .navbar-nav > li > a {
+		    	background-color: #151515;
+		    }
+
+		    .affix .dw-logotext, .affix .dw-slogantext, .dw-header-sm-title, .dw-offsetmenu-logo {
+				color: #151515 !important;
+			}
+	    	.dw-navbar-button > a, .navbar-wp.affix .navbar-nav > li > a {
+    			padding: 25px 10px 25px 10px !important;
+    			margin: 0px 0px !important;
+			}
+    	.dw-navbar-button > a {
+    		background-color: rgba(0, 0, 0, 0.0) !important;
+    	}
+
+    	.dw-navbar-button > a:hover, dw-navbar-button > a:active, dw-navbar-button > a:focus, .active > a {
+    		background-color: rgba(0, 0, 0, 0.0) !important;
+    	}
+			.dw-navbar-button > a:hover, dw-navbar-button > a:active, dw-navbar-button > a:focus, .active > a {
+				color: #151515 !important;
+				font-weight: 300 !important;
+				transition: all 0.3s ease-in-out 0s; 
+			}
+	    	.dw-navbar-button > a {
+				text-transform: none !important;
+			}
+			.pg-opt {
+				border-bottom: 0px;
+				background: none repeat scroll 0% 0% #FFF;
+			}
+
+			.dw-breadcrumb-title {
+				font-size: 14px !important;
+				padding: 5px 0px 5px 0px !important;
+			}
+
+			.dw-breadcrumb {
+				padding: 5px 0px 5px 0px !important;
+			}
+			.dw-breadcrumb {
+				float: left !important;
+			}
+	    	ul.dw-categories > li > ul > li > a {
+			    padding: 5px 35px;
+			}
+
+			ul.dw-categories, ul.dw-categories > li, ul.dw-categories > li > ul > li {
+				border: 0px solid #EEE;
+			}
+
+			ul.dw-categories > li > ul {
+			    background: none repeat scroll 0% 0% #FFF;
+			}
+
+			ul.dw-categories li a:hover, ul.dw-categories li a:focus, ul.dw-categories li a:active {
+			    background-color: #FFF !important;
+			    color: #151515 !important;
+			}
+
+			.list-active, .list-active > a {
+			    background-color: #FFF;
+			    color: #151515 !important;
+			}
+
+			.list-open-active {
+			    background-color: #FFF;
+			    color: #151515 !important;
+			}
+	    	ul.dw-categories li a:hover, ul.dw-categories a:focus, ul.dw-categories a:active {
+				border-left: 6px solid #151515;
+			}
+
+			ul.dw-categories .list-active > a {
+			    border-left: 6px solid #151515;
+			}
+
+			.btn-dw:hover, .btn-dw:focus, .btn-dw:active {
+
+			}
+	    	.btn-dw-primary, .btn-dw-secondary, .btn-dw-cart {
+	    		padding: 5px 15px;
+				border-radius: 200px !important;
+				border-width: 0px !important;
+			}
+
+			.btn-dw-primary:hover, .btn-dw-primary:focus, .btn-dw-primary:active {
+				background-color: #151515;
+	    		color: #FFF;
+	    		border-width: 0px !important;
+			}
+
+			.btn-dw-secondary:hover, .btn-dw-secondary:focus, .btn-dw-secondary:active {
+				background-color: #151515;
+	    		color: #FFF;
+	    		border-width: 0px !important;
+			}
+
+			.btn-dw-cart:hover, .btn-dw-cart:focus, .btn-dw-cart:active {
+				background-color: #C22F73;
+	    		color: #FFF;
+	    		border-width: 0px !important;
+			}
+	    	.dw-section-title span {
+	    		background-color: #151515;
+				display: inline-block;
+				padding: 8px 16px;
+				color: #FFF;
+	    	}
+	    	.dw-section-title span {
+	    		margin-bottom: 2px;
+	    	}
+
+	    	.dw-section-title {
+				border-bottom: 2px solid #151515;
+				margin-bottom: 10px;
+	    	}

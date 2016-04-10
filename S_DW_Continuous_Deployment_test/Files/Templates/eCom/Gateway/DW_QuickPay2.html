@@ -1,0 +1,22 @@
+﻿<h2>Payment</h2>
+
+<form action="https://secure.quickpay.dk/quickpay.php" method="post" target="_blank">
+    <input type="hidden" name="language" value="<!--@Ecom:Order.Gateway.LangCode-->" />
+    <input type="hidden" name="autocapture" value="0" />
+    <input type="hidden" name="ordernum" value="<!--@Ecom:Order.ID-->" />
+    <input type="hidden" name="merchant" value="<!--@Ecom:Order.Gateway.Merchant-->" />
+    <input type="hidden" name="amount" value="<!--@Ecom:Order.Price.PricePIP-->" />
+    <input type="hidden" name="currency" value="<!--@Ecom:Order.Price.Currency.Code-->" />
+    <input type="hidden" name="okpage" value="<!--@Ecom:Order.Gateway.Page.OK.Redir-->" />
+    <input type="hidden" name="errorpage" value="<!--@Ecom:Order.Gateway.Page.Error.Redir-->" />
+    <input type="hidden" name="resultpage" value="<!--@Ecom:Order.Gateway.Page.Result-->" />
+    <input type="hidden" name="md5checkV2" value="<!--@Ecom:Order.Gateway.MD5Key.Redir-->" />
+    <input type="submit" value="Click here to open secure payment"/>
+</form>
+
+<h3>Test Card Information</h3>
+<ul>
+	<li><strong>Card number: </strong>4571000000000000</li>
+	<li><strong>Card verification data: </strong>000</li>
+	<li><strong>Date of expiration : </strong>00/00</li>
+</ul>

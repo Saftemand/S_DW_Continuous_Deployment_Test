@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NavigationTree>
+  <Settings>
+    <Pageview ID="5355" AreaID="3029" MenuText="Tech Conference Sold Out!" Title="Tech Conference Sold Out!" NavigationName="LIClean" AreaName="Ecommerce" AreaFirstPageID="3408" Id="1" Sort="0" GeneralLogo="/Files/Templates/Designs/Dwsimple/images/LogoWhite.png" BackgroundImage="body-bg-3" LayoutMode="boxed" FooterAddress="Bjoernholms Alle 30&#xD;&#xA;8260 Viby J&#xD;&#xA;Denmark" FooterPhone="+45 70252090" FooterEmail="info@dynamicweb.dk" FooterCompanyName="Dynamicweb A/S" LayoutStyle="lw" NavigationSticky="True" NavigationPosition="navbar-right" NavigationStyle="navbar-normal" BackgroundColor="#E3E3E3" />
+    <LayoutNavigationSettings startlevel="1" endlevel="3" parentid="0" template="LIClean.xslt" startfrom="3403" />
+    <LayoutNavigationAttributes class="categories" id="leftnavigation" />
+    <GlobalTags>
+      <Global.Server.Date>04-03-2014</Global.Server.Date>
+      <Global.Pageview.Url>/Default.aspx?ID=5355&amp;Purge=True&amp;savexml=true</Global.Pageview.Url>
+      <Global.Pageview.LayoutTemplate>news.html</Global.Pageview.LayoutTemplate>
+      <Global.Pageview.Url.Raw>/Default.aspx?ID=5355&amp;Purge=True&amp;savexml=true</Global.Pageview.Url.Raw>
+      <Global.Page.ID>5355</Global.Page.ID>
+      <Global.Page.Name>Tech Conference Sold Out!</Global.Page.Name>
+      <Global.Area.ID>3029</Global.Area.ID>
+      <Global.Area.Name>Ecommerce</Global.Area.Name>
+      <Global.Area.Lang>da</Global.Area.Lang>
+      <Global.Area.LongLang>da-DK</Global.Area.LongLang>
+      <Global.Area.Culture.DisplayName>Danish (Denmark)</Global.Area.Culture.DisplayName>
+      <Global.Area.Culture.DisplayCountryName>Denmark</Global.Area.Culture.DisplayCountryName>
+      <Global.Area.Culture.NativeName>dansk (Danmark)</Global.Area.Culture.NativeName>
+      <Global.Area.Culture.NativeCountryName>Danmark</Global.Area.Culture.NativeCountryName>
+      <Global.Area.Culture.Name>da-DK</Global.Area.Culture.Name>
+      <Global.Area.Culture.CountryCode>DK</Global.Area.Culture.CountryCode>
+      <Global.eCommerce.Currency>Euro</Global.eCommerce.Currency>
+      <Global.eCommerce.Currency.Code>EUR</Global.eCommerce.Currency.Code>
+      <Global.eCommerce.Currency.IsDefault>True</Global.eCommerce.Currency.IsDefault>
+      <Global.eCommerce.Currency.IsCurrent>True</Global.eCommerce.Currency.IsCurrent>
+      <Global.eCommerce.Currency.Name>Euro</Global.eCommerce.Currency.Name>
+      <Global.eCommerce.Currency.PayGatewayCode>144</Global.eCommerce.Currency.PayGatewayCode>
+      <Global.eCommerce.Currency.Symbol>€ </Global.eCommerce.Currency.Symbol>
+      <Global.eCommerce.Currency.SymbolPlace>0</Global.eCommerce.Currency.SymbolPlace>
+      <Global.eCommerce.Currency.Rate>750</Global.eCommerce.Currency.Rate>
+      <Global.eCommerce.Currency.IntegerSeparator>.</Global.eCommerce.Currency.IntegerSeparator>
+      <Global.eCommerce.Currency.DecimalSeparator>,</Global.eCommerce.Currency.DecimalSeparator>
+      <Global.eCommerce.CurrencyName>Euro</Global.eCommerce.CurrencyName>
+      <Global.eCommerce.CurrencyRate>750</Global.eCommerce.CurrencyRate>
+      <Global.eCommerce.CurrencyCode>EUR</Global.eCommerce.CurrencyCode>
+      <Global.eCommerce.CartPageID>3405</Global.eCommerce.CartPageID>
+      <Global.Page.Top.Name>Content</Global.Page.Top.Name>
+      <Global.Page.Top.ID>5352</Global.Page.Top.ID>
+      <Global.Extranet.UserID>283</Global.Extranet.UserID>
+      <Global.Extranet.UserName>Nicolai</Global.Extranet.UserName>
+      <Global.Extranet.Password>Nicolai</Global.Extranet.Password>
+      <Global.Extranet.Name>Nicolai Høeg Pedersen</Global.Extranet.Name>
+      <Global.Extranet.Email>np@dynamicweb.dk</Global.Extranet.Email>
+      <Global.Extranet.ExternalLogin.ProviderID>0</Global.Extranet.ExternalLogin.ProviderID>
+      <Global.CookieOptInLevel>Functional</Global.CookieOptInLevel>
+      <Global.Request.UserAgent>Mozilla/5.0 (Windows NT 6.2; WOW64; rv:27.0) Gecko/20100101 Firefox/27.0</Global.Request.UserAgent>
+      <Global.Extranet.Groups>280, 281</Global.Extranet.Groups>
+      <Global.Page.Editor.Username>Angel</Global.Page.Editor.Username>
+      <Global.Page.Editor.Name>Angel</Global.Page.Editor.Name>
+      <Global.Request.Url>http://ecom.local.dynamicweb.dk/Default.aspx?ID=5355&amp;Purge=True&amp;savexml=true</Global.Request.Url>
+      <Global.Request.AbsoluteUri>http://ecom.local.dynamicweb.dk/Default.aspx?ID=5355&amp;Purge=True&amp;savexml=true</Global.Request.AbsoluteUri>
+      <Global.Request.Host>ecom.local.dynamicweb.dk</Global.Request.Host>
+      <Global.Request.OriginalString>http://ecom.local.dynamicweb.dk:80/Default.aspx?ID=5355&amp;Purge=True&amp;savexml=true</Global.Request.OriginalString>
+      <Global.Request.PathAndQuery>/Default.aspx?ID=5355&amp;Purge=True&amp;savexml=true</Global.Request.PathAndQuery>
+      <Global.Request.Port>80</Global.Request.Port>
+      <Global.Request.Query>?ID=5355&amp;Purge=True&amp;savexml=true</Global.Request.Query>
+      <Global.Request.Scheme>http</Global.Request.Scheme>
+      <Global.Device.IsDesktop>True</Global.Device.IsDesktop>
+      <Global.Device.IsOther>True</Global.Device.IsOther>
+    </GlobalTags>
+  </Settings>
+  <Page MenuText="Home" Allowclick="True" ShowInSitemap="True" ShowInLegend="True" Href="Default.aspx?ID=3408" FriendlyHref="/home-1" RelativeLevel="1" Sort="1" LastInLevel="False" ChildCount="0" class="L1" ID="3408" AreaID="3029" InPath="False" Active="False" AbsoluteLevel="1" Type="page" />
+  <Page MenuText="Products" MouseOver="Products" Allowclick="True" ShowInSitemap="True" ShowInLegend="True" Href="Default.aspx?ID=3403" FriendlyHref="/products" RelativeLevel="1" Sort="0" LastInLevel="False" ChildCount="6" class="L1" NavigationTag="products" ID="3403" AreaID="3029" InPath="False" Active="False" AbsoluteLevel="1" Type="page">
+    <Page SmallImage="/Billeder/Ecom/Products/10107.jpg" MenuText="Bikes" Allowclick="True" ShowInSitemap="True" ShowInLegend="False" Href="Default.aspx?ID=3403&amp;GroupID=GROUP5" FriendlyHref="/products/bikes" RelativeLevel="2" Sort="1" LastInLevel="True" ChildCount="5" class="L2" ID="3403" AreaID="3029" InPath="False" Active="False" AbsoluteLevel="2" Type="group">
+      <Page MenuText="Mountain bikes" Allowclick="True" ShowInSitemap="True" ShowInLegend="False" Href="Default.aspx?ID=3403&amp;GroupID=GROUP14" FriendlyHref="/products/bikes/mountain-bikes" RelativeLevel="3" Sort="1" LastInLevel="True" ChildCount="0" class="L3" ID="3403" AreaID="3029" InPath="False" Active="False" AbsoluteLevel="3" Type="group" />
+      <Page MenuText="Road bikes" Allowclick="True" ShowInSitemap="True" ShowInLegend="False" Href="Default.aspx?ID=3403&amp;GroupID=GROUP15" FriendlyHref="/products/bikes/road-bikes" RelativeLevel="3" Sort="2" LastInLevel="True" ChildCount="0" class="L3" ID="3403" AreaID="3029" InPath="False" Active="False" AbsoluteLevel="3" Type="group" />
+      <Page MenuText="Hybrid bikes" Allowclick="True" ShowInSitemap="True" ShowInLegend="False" Href="Default.aspx?ID=3403&amp;GroupID=GROUP16" FriendlyHref="/products/bikes/hybrid-bikes" RelativeLevel="3" Sort="3" LastInLevel="True" ChildCount="0" class="L3" ID="3403" AreaID="3029" InPath="False" Active="False" AbsoluteLevel="3" Type="group" />
+      <Page MenuText="Coasting bikes" Allowclick="True" ShowInSitemap="True" ShowInLegend="False" Href="Default.aspx?ID=3403&amp;GroupID=GROUP18" FriendlyHref="/products/bikes/coasting-bikes" RelativeLevel="3" Sort="4" LastInLevel="True" ChildCount="0" class="L3" ID="3403" AreaID="3029" InPath="False" Active="False" AbsoluteLevel="3" Type="group" />
+      <Page MenuText="Cruiser bikes" Allowclick="True" ShowInSitemap="True" ShowInLegend="False" Href="Default.aspx?ID=3403&amp;GroupID=GROUP19" FriendlyHref="/products/bikes/cruiser-bikes" RelativeLevel="3" Sort="5" LastInLevel="True" ChildCount="0" class="L3" ID="3403" AreaID="3029" InPath="False" Active="False" AbsoluteLevel="3" Type="group" />
+    </Page>
+    <Page MenuText="Eyewear" Allowclick="True" ShowInSitemap="True" ShowInLegend="False" Href="Default.aspx?ID=3403&amp;GroupID=GROUP22" FriendlyHref="/products/eyewear" RelativeLevel="2" Sort="2" LastInLevel="True" ChildCount="0" class="L2" ID="3403" AreaID="3029" InPath="False" Active="False" AbsoluteLevel="2" Type="group" />
+    <Page SmallImage="/Billeder/Ecom/Products/10042.jpg" MenuText="Accessories" Allowclick="True" ShowInSitemap="True" ShowInLegend="False" Href="Default.aspx?ID=3403&amp;GroupID=GROUP7" FriendlyHref="/products/accessories" RelativeLevel="2" Sort="3" LastInLevel="True" ChildCount="3" class="L2" ID="3403" AreaID="3029" InPath="False" Active="False" AbsoluteLevel="2" Type="group">
+      <Page MenuText="Helmets" Allowclick="True" ShowInSitemap="True" ShowInLegend="False" Href="Default.aspx?ID=3403&amp;GroupID=GROUP21" FriendlyHref="/products/accessories/helmets" RelativeLevel="3" Sort="1" LastInLevel="True" ChildCount="0" class="L3" ID="3403" AreaID="3029" InPath="False" Active="False" AbsoluteLevel="3" Type="group" />
+      <Page MenuText="Packs/Racks" Allowclick="True" ShowInSitemap="True" ShowInLegend="False" Href="Default.aspx?ID=3403&amp;GroupID=GROUP24" FriendlyHref="/products/accessories/packs-racks" RelativeLevel="3" Sort="2" LastInLevel="True" ChildCount="0" class="L3" ID="3403" AreaID="3029" InPath="False" Active="False" AbsoluteLevel="3" Type="group" />
+      <Page MenuText="Lights" Allowclick="True" ShowInSitemap="True" ShowInLegend="False" Href="Default.aspx?ID=3403&amp;GroupID=GROUP25" FriendlyHref="/products/accessories/lights2" RelativeLevel="3" Sort="3" LastInLevel="True" ChildCount="0" class="L3" ID="3403" AreaID="3029" InPath="False" Active="False" AbsoluteLevel="3" Type="group" />
+    </Page>
+    <Page SmallImage="/Billeder/Ecom/Products/10035.jpg" MenuText="Components" Allowclick="True" ShowInSitemap="True" ShowInLegend="False" Href="Default.aspx?ID=3403&amp;GroupID=GROUP8" FriendlyHref="/products/components" RelativeLevel="2" Sort="4" LastInLevel="True" ChildCount="5" class="L2" ID="3403" AreaID="3029" InPath="False" Active="False" AbsoluteLevel="2" Type="group">
+      <Page MenuText="Saddles" Allowclick="True" ShowInSitemap="True" ShowInLegend="False" Href="Default.aspx?ID=3403&amp;GroupID=GROUP34" FriendlyHref="/products/components/saddles" RelativeLevel="3" Sort="1" LastInLevel="True" ChildCount="0" class="L3" ID="3403" AreaID="3029" InPath="False" Active="False" AbsoluteLevel="3" Type="group" />
+      <Page MenuText="Frames" Allowclick="True" ShowInSitemap="True" ShowInLegend="False" Href="Default.aspx?ID=3403&amp;GroupID=GROUP17" FriendlyHref="/products/components/frames" RelativeLevel="3" Sort="2" LastInLevel="True" ChildCount="0" class="L3" ID="3403" AreaID="3029" InPath="False" Active="False" AbsoluteLevel="3" Type="group" />
+      <Page MenuText="Pedals" Allowclick="True" ShowInSitemap="True" ShowInLegend="False" Href="Default.aspx?ID=3403&amp;GroupID=GROUP33" FriendlyHref="/products/components/pedals" RelativeLevel="3" Sort="3" LastInLevel="True" ChildCount="0" class="L3" ID="3403" AreaID="3029" InPath="False" Active="False" AbsoluteLevel="3" Type="group" />
+      <Page MenuText="Chainrings" Allowclick="True" ShowInSitemap="True" ShowInLegend="False" Href="Default.aspx?ID=3403&amp;GroupID=GROUP20" FriendlyHref="/products/components/chainrings" RelativeLevel="3" Sort="4" LastInLevel="True" ChildCount="0" class="L3" ID="3403" AreaID="3029" InPath="False" Active="False" AbsoluteLevel="3" Type="group" />
+      <Page MenuText="Wheels" Allowclick="True" ShowInSitemap="True" ShowInLegend="False" Href="Default.aspx?ID=3403&amp;GroupID=GROUP31" FriendlyHref="/products/components/wheels" RelativeLevel="3" Sort="5" LastInLevel="True" ChildCount="0" class="L3" ID="3403" AreaID="3029" InPath="False" Active="False" AbsoluteLevel="3" Type="group" />
+    </Page>
+    <Page SmallImage="/Billeder/Ecom/Products/10052.jpg" MenuText="Campaign" Allowclick="True" ShowInSitemap="True" ShowInLegend="False" Href="Default.aspx?ID=3403&amp;GroupID=GROUP35" FriendlyHref="/products/campaign" RelativeLevel="2" Sort="5" LastInLevel="True" ChildCount="0" class="L2" ID="3403" AreaID="3029" InPath="False" Active="False" AbsoluteLevel="2" Type="group" />
+    <Page SmallImage="/Billeder/Ecom/Products/10065.jpg" MenuText="Clothing" Allowclick="True" ShowInSitemap="True" ShowInLegend="False" Href="Default.aspx?ID=3403&amp;GroupID=GROUP27" FriendlyHref="/products/clothing" RelativeLevel="2" Sort="6" LastInLevel="True" ChildCount="4" class="L2" ID="3403" AreaID="3029" InPath="False" Active="False" AbsoluteLevel="2" Type="group">
+      <Page MenuText="Men" Allowclick="True" ShowInSitemap="True" ShowInLegend="False" Href="Default.aspx?ID=3403&amp;GroupID=GROUP28" FriendlyHref="/products/clothing/men" RelativeLevel="3" Sort="1" LastInLevel="True" ChildCount="0" class="L3" ID="3403" AreaID="3029" InPath="False" Active="False" AbsoluteLevel="3" Type="group" />
+      <Page MenuText="Women" Allowclick="True" ShowInSitemap="True" ShowInLegend="False" Href="Default.aspx?ID=3403&amp;GroupID=GROUP29" FriendlyHref="/products/clothing/women" RelativeLevel="3" Sort="2" LastInLevel="True" ChildCount="0" class="L3" ID="3403" AreaID="3029" InPath="False" Active="False" AbsoluteLevel="3" Type="group" />
+      <Page MenuText="Accessories" Allowclick="True" ShowInSitemap="True" ShowInLegend="False" Href="Default.aspx?ID=3403&amp;GroupID=GROUP30" FriendlyHref="/products/clothing/accessories" RelativeLevel="3" Sort="3" LastInLevel="True" ChildCount="0" class="L3" ID="3403" AreaID="3029" InPath="False" Active="False" AbsoluteLevel="3" Type="group" />
+      <Page MenuText="Shoes" Allowclick="True" ShowInSitemap="True" ShowInLegend="False" Href="Default.aspx?ID=3403&amp;GroupID=GROUP32" FriendlyHref="/products/clothing/shoes" RelativeLevel="3" Sort="4" LastInLevel="True" ChildCount="0" class="L3" ID="3403" AreaID="3029" InPath="False" Active="False" AbsoluteLevel="3" Type="group" />
+    </Page>
+  </Page>
+  <Page MenuText="Tech Conference" Allowclick="True" ShowInSitemap="True" ShowInLegend="True" Href="Default.aspx?ID=5344" FriendlyHref="/tech-conference" RelativeLevel="1" Sort="3" LastInLevel="False" ChildCount="7" class="L1" ID="5344" AreaID="3029" InPath="False" Active="False" AbsoluteLevel="1" Type="page" />
+  <Page MenuText="Cart" MouseOver="Shopping Cart" Allowclick="True" ShowInSitemap="True" ShowInLegend="True" Href="Default.aspx?ID=3405" FriendlyHref="/cart-1" RelativeLevel="1" Sort="0" LastInLevel="False" ChildCount="2" class="L1" ID="3405" AreaID="3029" InPath="False" Active="False" AbsoluteLevel="1" Type="page" />
+  <Page MenuText="Full sample" Allowclick="True" ShowInSitemap="True" ShowInLegend="True" Href="Default.aspx?ID=5343" FriendlyHref="/full-sample" RelativeLevel="1" Sort="5" LastInLevel="True" ChildCount="0" class="L1" ID="5343" AreaID="3029" InPath="False" Active="False" AbsoluteLevel="1" Type="page" />
+</NavigationTree>
