@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Index>
-  <Settings />
-  <Instances Balancer="Dynamicweb.Indexing.Balancing.ActivePassive" />
-  <Builds />
-  <Schema>
-    <Fields />
-  </Schema>
-</Index>

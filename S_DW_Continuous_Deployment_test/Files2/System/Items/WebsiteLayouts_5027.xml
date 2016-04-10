@@ -1,7 +1,0 @@
-﻿<WebsiteItemLayouts>
-  <PageItemLayouts>
-    <ItemLayout systemname="Fron" template="" />
-    <ItemLayout systemname="News" template="" />
-  </PageItemLayouts>
-  <ParagraphItemLayouts />
-</WebsiteItemLayouts>

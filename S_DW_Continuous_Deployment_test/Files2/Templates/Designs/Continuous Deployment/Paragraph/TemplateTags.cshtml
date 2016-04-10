@@ -1,9 +1,0 @@
-<div class="container">
-	@TemplateTags()
-
-	@{
-		foreach (LoopItem user in GetLoop("Item.UserTest")){
-			<text>@user.TemplateTags();</text>
-		}
-	}
-</div>

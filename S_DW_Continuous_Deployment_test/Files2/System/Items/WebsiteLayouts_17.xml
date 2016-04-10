@@ -1,8 +1,0 @@
-﻿<WebsiteItemLayouts>
-  <PageItemLayouts>
-    <ItemLayout systemname="News" template="" />
-  </PageItemLayouts>
-  <ParagraphItemLayouts>
-    <ItemLayout systemname="FrontpageReference" template="" />
-  </ParagraphItemLayouts>
-</WebsiteItemLayouts>
