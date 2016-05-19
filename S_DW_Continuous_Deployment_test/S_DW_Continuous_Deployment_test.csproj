@@ -10447,6 +10447,10 @@
     <Content Include="Files\WrapReleaseNotes.docx" />
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="obj\Debug\S_DW_Continuous_Deployment_test.csprojResolveAssemblyReference.cache" />
+    <Content Include="Files\Templates\Designs\Continuous Deployment\sass\ie.scss" />
+    <Content Include="Files\Templates\Designs\Continuous Deployment\sass\print.scss" />
+    <Content Include="Files\Templates\Designs\Continuous Deployment\sass\screen.scss" />
+    <Content Include="Files\Templates\Designs\Continuous Deployment\config.rb" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
