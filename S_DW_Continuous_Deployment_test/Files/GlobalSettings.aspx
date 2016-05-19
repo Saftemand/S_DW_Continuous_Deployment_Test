@@ -513,11 +513,11 @@
       </ADSI-Domain2>
     </ActiveDirectory>
     <Database>
-      <Password>wrap123</Password>
+      <Password>wrap</Password>
       <Type>ms_sqlserver</Type>
       <UserName>wrap</UserName>
       <Database>wrap</Database>
-      <SQLServer>.\sqlexpress</SQLServer>
+      <SQLServer>MICHAEL-PC\SQLEXPRESS</SQLServer>
       <DWWebIP>
       </DWWebIP>
       <SQLServer2>
