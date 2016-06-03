@@ -9199,6 +9199,9 @@
     <Content Include="Files\Templates\Designs\Continuous Deployment\Navigation\sitemap-bottom_bootstrap.xslt" />
     <Content Include="Files\Templates\Designs\Continuous Deployment\Navigation\sitemap-bottom_bootstrap_sitemap-bottom_bootstrap.xml" />
     <Content Include="Files\Templates\Designs\Continuous Deployment\Paragraph\Default.html" />
+    <Content Include="Files\Templates\Designs\Continuous Deployment\sources\gulpfile.js" />
+    <Content Include="Files\Templates\Designs\Continuous Deployment\sources\javascripts\gulp-imports.js" />
+    <Content Include="Files\Templates\Designs\Continuous Deployment\sources\javascripts\main.js" />
     <Content Include="Files\Templates\Designs\Continuous Deployment\Translations.xml" />
     <Content Include="Files\Templates\Designs\Navigation\Breadcrumb.xslt" />
     <Content Include="Files\Templates\Designs\Navigation\LeftNavigationEcom.xslt" />
@@ -10451,6 +10454,10 @@
     <Content Include="Files\Templates\Designs\Continuous Deployment\sass\print.scss" />
     <Content Include="Files\Templates\Designs\Continuous Deployment\sass\screen.scss" />
     <Content Include="Files\Templates\Designs\Continuous Deployment\config.rb" />
+    <Content Include="Files\Templates\Designs\Continuous Deployment\sources\sass\ie.scss" />
+    <Content Include="Files\Templates\Designs\Continuous Deployment\sources\sass\print.scss" />
+    <Content Include="Files\Templates\Designs\Continuous Deployment\sources\sass\screen.scss" />
+    <Content Include="Files\Templates\Designs\Continuous Deployment\sources\package.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

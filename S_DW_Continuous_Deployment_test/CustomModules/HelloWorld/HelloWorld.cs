@@ -1,4 +1,5 @@
-﻿using Dynamicweb;
+﻿using System.Diagnostics;
+using Dynamicweb;
 using Dynamicweb.Extensibility;
 
 namespace CustomModules.HelloWorld
@@ -10,6 +11,7 @@ namespace CustomModules.HelloWorld
         public override string GetContent()
         {
             //TODO: Add code here
+            Debug.WriteLine("hej hej");
             return Properties["HelloText"].ToString();
         }
 
