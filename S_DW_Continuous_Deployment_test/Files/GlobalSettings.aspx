@@ -7,12 +7,12 @@
       <Email>noreply@dynamicweb.dk</Email>
       <CopyrightMetaInformation>Build by Dynamicweb</CopyrightMetaInformation>
       <SolutionID>310a9249-3daa-4094-bebe-03fb250dd5af</SolutionID>
-      <SolutionLastReportDate>2016-4-10 10:55:49</SolutionLastReportDate>
-      <SolutionLastFileSizeReportDate>2016-1-17 18:33:57</SolutionLastFileSizeReportDate>
-      <InstallationCrmID>0bd4f00f-f6fe-e511-aba9-00155d4f8211</InstallationCrmID>
-      <InstallationCheckSum>c8f53e167941a75197ebe125ebae86fb</InstallationCheckSum>
-      <SolutionFilesize>240052</SolutionFilesize>
-      <SolutionDatabaseSize>1030</SolutionDatabaseSize>
+      <SolutionLastReportDate>2016-6-3 21:34:36</SolutionLastReportDate>
+      <SolutionLastFileSizeReportDate>2016-6-3 21:34:34</SolutionLastFileSizeReportDate>
+      <InstallationCrmID>cb8b2d33-c229-e611-aba9-00155d4f8211</InstallationCrmID>
+      <InstallationCheckSum>9626d1b2a4966d70e15899ccb46c6d82</InstallationCheckSum>
+      <SolutionFilesize>123906</SolutionFilesize>
+      <SolutionDatabaseSize>1033</SolutionDatabaseSize>
       <SolutionLoginInfoLogo>../Images/logo-dynamicweb.png</SolutionLoginInfoLogo>
       <PartnerEmail>info@dynamicweb.dk</PartnerEmail>
       <SolutionLoginInfo>Created by Dynamicweb A/S</SolutionLoginInfo>
