@@ -12,7 +12,9 @@ namespace CustomModules.HelloWorld
         {
             //TODO: Add code here
             Debug.WriteLine("hej hej med dig forfra forfra igen igen");
-            return Properties["HelloText"].ToString();
+            
+            
+            return "hej med dig";
         }
 
     }
