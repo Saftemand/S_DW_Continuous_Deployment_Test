@@ -11,7 +11,7 @@ namespace CustomModules.HelloWorld
         public override string GetContent()
         {
             //TODO: Add code here
-            Debug.WriteLine("hej hej med dig forfra forfra");
+            Debug.WriteLine("hej hej med dig forfra forfra igen");
             return Properties["HelloText"].ToString();
         }
 
