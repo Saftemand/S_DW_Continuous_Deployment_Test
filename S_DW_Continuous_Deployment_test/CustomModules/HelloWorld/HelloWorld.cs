@@ -11,10 +11,7 @@ namespace CustomModules.HelloWorld
         public override string GetContent()
         {
             //TODO: Add code here
-            Debug.WriteLine("hej hej med dig forfra forfra igen igen");
-            
-            
-            return "hej med dig";
+            return "hej med dig igen";
         }
 
     }
